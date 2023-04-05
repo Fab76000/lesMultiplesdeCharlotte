@@ -18,15 +18,18 @@
 
     <div>
 
-        <p style="margin-top: 300px;">Au travers de mes diverses expériences et stages de formation visant à trouver ma
+        <p class="alinea" style="margin: 300px 50px 0 50px;">Au travers de mes diverses expériences et stages de
+            formation
+            visant à trouver ma
             voie
             professionnelle via la pratique artistique, j’ai eu la chance de découvrir le.s métier.s de médiatrice
-            culturelle (en galerie d'art, musée, parcs patrimoniaux…) puis de médiatrice artistique en relation d’aide.
+            culturelle (en galerie d'art, musée, parcs patrimoniaux…) puis de médiatrice artistique en relation
+            d’aide.<br>
             Distinguons tout d’abord cette dernière, la médiation artistique « en relation d’aide », de la médiation
             culturelle car celle-ci peut permettre un accompagnement thérapeutique des personnes et /ou des
-            groupes. Cependant, ayant traversé de front les deux pratiques, je dirais que j’ai pu me forger une
+            groupes.<br> Cependant, ayant traversé de front les deux pratiques, je dirais que j’ai pu me forger une
             expérience de formation et professionnelle peu commune, qui m’ont amené à presque être ma propre
-            créatrice de mon métier.
+            créatrice de mon métier.<br>
             Ainsi, pour repréciser en conclusion : la médiation artistique en relation d’aide peut amplement, elle
             aussi,
             tout comme la médiation culturelle, être à visée sociale par sa démarche, favorisant l’intégration dans la
@@ -35,7 +38,7 @@
             pédagogique : comme cette dernière, elle a
             recours à l’apprentissage informel, puisqu’elle
             utilise la méthode de l’apprentissage par
-            expérience.
+            expérience.<br>
             Depuis novembre 2018, je suis certifiée de la
             formation professionnelle de l’Inécat (Paris) en
             tant que médiatrice artistique en relation

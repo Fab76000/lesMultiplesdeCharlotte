@@ -91,9 +91,8 @@
 		<div class="row">
 			<div class="col-lg-12 col-lg-offset-1">
 				<form id="contact-form" method="post" action="">
-					<p>"Laissez-moi un message essentiel et sans nuages" à<br>
-						<span class="email">larchotterenard@protonmail.com</span>
-					</p>
+					<p>"Laissez-moi un message essentiel et sans nuages" à 
+					</p><span class="email"> larchotterenard@protonmail.com</span>
 					<div class="row">
 						<div class="col-md-6">
 							<label for="firstname">Prénom<span class="red">*</span></label>
@@ -135,18 +134,7 @@
 						</div>
 					</div>
 				</form>
-
-			</div>
-		</div>
-		<div id="Logo">
-			<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook"><img
-					src="images/logo-facebook.png" alt="logo Facebook"></a>
-			<a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram"><img
-					src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram"></a>
-		</div>
-	</div>
-
-
+				
 	<footer></footer>
 </body>
 

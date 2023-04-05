@@ -1,4 +1,3 @@
-
 <?php
 echo ' <header> <a href="Index.php">
     <h1> Les <span class="green">m</span>ultiples de <span class="red"> Charlotte</span></h1>
@@ -23,17 +22,6 @@ echo ' <header> <a href="Index.php">
 
         <li>
             <a class="ColoRed" href="Mediation.php">Médiation</a>
-            <ul class="sousmenu">
-                <li>
-                    <a class="ColoGreen" href="Mediation.php#atelierArtistique"> Ateliers artistiques</a>
-                </li>
-                <li>
-                    <a class="ColoGreen" href="#"> Médiation en relation d`\'aide</a>
-                </li>
-                <li>
-                    <a class="ColoGreen" href="#"> Médiation culturelle</a>
-                </li>
-            </ul>
         </li>
         <li>
             <a href="#">Liens amis</a>
