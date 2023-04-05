@@ -925,56 +925,21 @@ li {
 
 
 @media screen and (min-width: 150px) and (max-width:676px) {
-    #menuderoulant .ColoRed {
-        background-color: #b4e04d;
-        height: 25px;
-        width: 120px;
-    }
 
-    #menuderoulant li {
-        background-color: grey;
-        width: 120px;
-        height: 25px;
-        color: white
-    }
-
-
-
-    #menuderoulant li a:hover {
-        background-color: #4d0a63;
-        width: 120px;
-        height: 25px;
-
-    }
-
-
+    #menuderoulant .ColoRed,
+    #menuderoulant li,
+    #menuderoulant li a:hover,
     #menuderoulant .ColoRed:hover {
-        background-color: #cdbe1c;
-        height: 25px;
-        width: 120px;
-    }
 
-    #menuderoulant .ColoGreen {
-        background-color: rgb(231, 56, 56);
-
+        height: 30px;
+        width: 150px;
     }
 
 
-    #menuderoulant .sousmenu .ColoGreen:hover {
-        background-color: pink;
 
-    }
-
-    #menuderoulant .sousmenu li {
-
-        background-color: rgb(239, 176, 60);
-        width: 120px;
-    }
-
+    #menuderoulant .sousmenu li,
     #menuderoulant .sousmenu li a:hover {
-        background-color: #39aaa8;
-        width: 120px;
-
+        width: 150px;
     }
 
 }
