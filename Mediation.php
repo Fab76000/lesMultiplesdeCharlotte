@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Les multiples de Charlotte Goupil </title>
-    <link rel="stylesheet" type="text/css" href="styles.css?uid=<?= date(" Y-m-d-h-i-s") ?>">
+    <?php
+	$date = date("Y-m-d-h-i-s");
+	echo '<link rel="stylesheet" type="text/css" href="styles.css?uid=' . $date . '">';
+	?>
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
             <li><img src="images/Charlotte_voile_rose.jpg" alt="photo spectacle l'argent"></li>
         </ul>
     </div>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

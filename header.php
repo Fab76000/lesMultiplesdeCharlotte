@@ -1,5 +1,5 @@
 <?php
-echo ' <header> <a href="Index.php">
+echo ' <header id="header"> <a href="Index.php">
     <h1> Les <span class="green">m</span>ultiples de <span class="red"> Charlotte</span></h1>
 </a>
 <hr>

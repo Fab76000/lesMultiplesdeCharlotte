@@ -26,9 +26,9 @@ h1 {
     font-size: 35px;
 }
 
-#zut {
+/*#hack {
     background: #FBFBD0;
-}
+}*/
 
 /*HEADER*/
 header {
@@ -38,6 +38,11 @@ header {
     right: 0;
     background-color: #FBFBD0;
     z-index: 100;
+    /*////*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header h1 {
@@ -46,10 +51,22 @@ header h1 {
     font-weight: normal;
     font-family: 'Tangerine', "Times new roman", sans-serif;
     text-align: center;
-    font-size: 65px;
+    font-size: 4rem;
     /* Center the title of the header*/
     display: block;
-    justify-content: center;
+    /* justify-content: center;*/
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 2rem;
+    }
 }
 
 .green {
@@ -227,11 +244,11 @@ hr {
     margin-top: auto;
     width: 500px;
     height: 450px;
-    margin: 0 3px 0 3px;
+    margin: 3px;
 }
 
 #presentation {
-    font-size: 20px;
+    font-size: 2em;
     line-height: 1.4em;
     text-align: justify;
     color: #000;
@@ -254,9 +271,10 @@ img[alt] {
 
 
 
+
 /*FORM*/
 
-.container {
+/*.container {
     display: flex;
     justify-content: space-between;
     background-color: #1D7461;
@@ -285,7 +303,6 @@ form {
     min-height: 600px;
     font-size: 15px;
     font-family: 'Times new Roman', sans-serif;
-
 
 }
 
@@ -323,11 +340,6 @@ form {
 
 }
 
-.email {
-    font-style: italic;
-    margin-top: -15px;
-    margin-bottom: 20px;
-}
 
 #contact-form input[type=submit] {
 
@@ -335,32 +347,38 @@ form {
     margin: 15px auto 0px;
     padding: 10px 20px;
 
+}*/
+
+.container {
+    background-color: #1D7461;
+    min-width: 100%;
 }
 
 .button1 {
-    border: 1px solid #ddd;
-    background: #ddd;
-    color: #000;
+    /* border: 1px solid #ddd;*/
+
+    background-color: #741D34;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 5px;
-    transition: all 0.3s ease-in 0s;
-    position: relative;
-    bottom: 30px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in 0s;
+    display: flex;
+    bottom: -50px;
+    padding: 8px;
 }
 
 .button1:hover {
 
-    background-color: #741D34;
+    background-color: #f50646;
     color: #fff;
+
 }
 
 #Logo {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-
+    display: inline-flex;
 }
+
 
 #Logo img {
     width: 50px;
@@ -373,7 +391,7 @@ form {
 #contact-form .thank-you {
     text-align: center;
     position: relative;
-    bottom: 15px;
+    /*bottom: 15px;*/
     font-weight: bold;
     font-size: 15px;
     color: #741D34;
@@ -388,10 +406,8 @@ form {
     height: 4px;
     text-transform: none;
     position: relative;
-    top: -40px;
 
 }
-
 
 
 /*FOOTER*/
@@ -515,11 +531,11 @@ footer {
     margin-right: 20px;
 }
 
-#Bulles .photo:hover>img {
+/*#Bulles .photo:hover>img {
     width: 500px;
     height: 450px;
     transition: width 1.3s, height 1.3s;
-}
+}*/
 
 .text-overlay {
     position: absolute;
@@ -616,6 +632,11 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
+
+.containerArts .span-viv {
+    color: #0b3a2f;
+}
+
 
 .containerArts a:hover::before {
     inset: -4px;
@@ -754,10 +775,6 @@ footer {
 
 .Elles {
     font-style: italic;
-}
-
-.Autour {
-    font-weight: bold;
 }
 
 
@@ -924,7 +941,7 @@ li {
 }
 
 
-@media screen and (min-width: 150px) and (max-width:676px) {
+@media screen and (min-width:300px) and (max-width: 676px) {
 
     #menuderoulant .ColoRed,
     #menuderoulant li,
@@ -932,19 +949,84 @@ li {
     #menuderoulant .ColoRed:hover {
 
         height: 30px;
-        width: 150px;
+        width: 120px;
     }
 
 
 
     #menuderoulant .sousmenu li,
     #menuderoulant .sousmenu li a:hover {
-        width: 150px;
+        width: 120px;
     }
+
+    .Bio {
+        position: inherit;
+        float: none;
+        margin-top: 120px;
+        background: #FBFBD0;
+    }
+
+    .Bio img {
+        margin-top: 350px;
+    }
+
+    #presentation {
+        margin-top: 10px;
+
+    }
+
+    .presentation {
+        min-width: 98vw;
+        margin-top: -8px;
+    }
+
+    /* Continuer à réfléchir media queries (Attention changer taille ecran) pour adapter formulaire*/
+    .container {
+        display: block;
+        height: auto;
+        min-width: 200%;
+    }
+
+    #Logo {
+        display: inline-flex;
+    }
+
+    #photo_gauche_bas {
+        margin-top: 80px;
+        width: 250px;
+        height: 300px;
+
+    }
+
+
+
+    input[type=text],
+    input[type=email],
+    input[type=phone] {
+        max-width: 380px;
+    }
+
+    textarea {
+        max-width: 380px;
+    }
+
+    #Logo {
+        margin-right: 80em;
+    }
+
+    .presentation {
+        max-width: 97vw;
+        margin-left: 3px;
+    }
+
 
 }
 
-
+#MessageEssentiel {
+    break-inside: auto;
+    text-align: center;
+    margin-top: 5px;
+}
 
 
 iframe {

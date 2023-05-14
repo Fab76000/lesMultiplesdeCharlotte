@@ -13,10 +13,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
 </head>
 
-<body id="zut">
+<body id="hack">
 
 	<?php include 'header.php'; ?>
 
@@ -72,81 +71,69 @@
 			personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
 			toujours accompagnée de son acolyte de création, Alex Rasse, fait
 			naître à nos yeux et nos oreilles, un travail de recherche brute et vive
-			de mots passionnés.</p>
-		<p>Aujourd'hui présidente du festival Chants d'Elles, le festival des voix de
-			femmes, elle continue son travail de transmission des oeuvres d'autrui,
-			en particulier de la création artistique portée par des femmes et en
-			direction de publics tout à fait divers.
-			Enfin, suite à son travail sur le répertoire d'Allain Leprest où elle était
-			déjà accompagnée par , Charlotte devient ChaNoé pour revenir
-			aujourd'hui avec une forme slamée musicale. A partir de textes
-			personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
-			toujours accompagnée de son acolyte de création, Alex Rasse, fait
-			naître à nos yeux et nos oreilles, un travail de recherche brute et vive
-			de mots passionnés.</p>
+			de mots passionnés
+			</p>
 	</section>
 
-	<div class="container">
-		<img id="photo_gauche_bas" src="images/brancardiere_theatre_de_rue_BXL.jpg" alt="Charlotte en brancadière">
-		<div class="row">
-			<div class="col-lg-12 col-lg-offset-1">
-				<form id="contact-form" method="post" action="">
-					<p>"Laissez-moi un message essentiel et sans nuages" à 
-					</p><span class="email">larchotterenard@protonmail.com</span>
-					<div class="row">
-						<div class="col-md-6">
-							<label for="firstname">Prénom<span class="red">*</span></label>
-							<input id="firstname" type="text" name="firstname" class="form-control"
-								placeholder="Votre prénom">
-							<p class="comments"></p>
-						</div>
-						<div class="col-md-6">
-							<label for="name">Nom<span class="red">*</span></label>
-							<input id="name" type="text" name="name" class="form-control" placeholder="Votre nom">
-							<p class="comments"></p>
-						</div>
-						<div class="col-md-6">
-							<label for="email">Email<span class="red">*</span></label>
-							<input id="email" type="email" name="email" class="form-control" placeholder="Votre Email">
-							<p class="comments"></p>
-						</div>
-
-						<div class="col-md-6">
-							<label for="phone">Téléphone</label>
-							<input id="phone" type="tel" name="phone" class="form-control"
-								placeholder="Votre téléphone">
-							<p class="comments"></p>
-						</div>
-
-						<div class="col-md-12">
-							<label for="message">Message<span class="red">*</span></label>
-							<textarea id="message" name="message" class="form-control" placeholder="Votre message"
-								rows="4"></textarea>
-							<p class="comments"></p>
-						</div>
-
-						<div class="col-md-12">
-							<p class="red"><strong>* Ces informations sont requises</strong></p>
-						</div>
-
-						<div class="col-md-12">
-							<input type="submit" class="button1" value="Envoyer">
-						</div>
-					</div>
-				</form>
-
-			</div>
-		</div>
-		<div id="Logo">
-			<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook"><img
-					src="images/logo-facebook.png" alt="logo Facebook"></a>
-			<a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram"><img
-					src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram"></a>
-		</div>
-	</div>
 	
+	<div class="container">
+	<div class="row">
+    <div class="col-xl-8 offset-xl-2">
+      <p id="MessageEssentiel">Laissez-moi un message essentiel et sans nuages" à larchotterenard@protonmail.com</p>
+      <form id="contact-form" method="post" action="contact.php" role="form">
+        <div class="controls">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="firstname"><span class="red">*</span>Prénom</label>
+              <input id="firstname" type="text" name="firstname" class="form-control" placeholder="Veuillez entre votre prénom">
+              <p class="comments"></p>
+            </div>
+            <div class="col-md-6">
+              <label for="name"><span class="red">*</span>Nom</label>
+              <input id="name" type="text" name="name" class="form-control" placeholder="Veuillez entrer votre nom">
+              <p class="comments"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="email"><span class="red">*</span>Email</label>
+              <input id="email" type="email" name="email" class="form-control" placeholder="Veuillez entrer votre email">
+              <p class="comments"></p>
+            </div>
+            <div class="col-md-6">
+              <label for="_phone"><span class="red">*</span>Tél</label>
+              <input id="phone" type="phone" name="phone" class="form-control" placeholder="Veuillez entrer votre numéro de téléphone">
+              <p class="comments"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="message"><span class="red">*</span>Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="4"></textarea>
+              <p class="comments"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <input type="submit" class="button1" value="Envoyer">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="red"><strong>* Ces informations sont requises</strong></p>
+            </div>
+          </div>
+        </div>
+      </form>
+	  <div id="Logo" class="col-auto">
+      <a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook"><img src="images/logo-facebook.png" alt="logo Facebook" class="logo"></a>
+      <a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram"><img src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram" class="logo"></a>
+    </div>
+  </div>
+</div>
 
 	<footer></footer>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

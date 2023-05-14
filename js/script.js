@@ -12,13 +12,13 @@ $(document).ready(function () {
 
 	$('#Bulles .photo').hover(function () {
 		const overlay = $(this).find('.not-authorized-overlay')
-		overlay.toggle()
+		setTimeout(() => { ; overlay.toggle(); }, 250)
 	})
 
 });
 
 // Récupérer les éléments HTML nécessaires
-const photos = document.querySelectorAll('.photo');
+/*const photos = document.querySelectorAll('.photo');
 const overlays = document.querySelectorAll('.overlay');
 
 // Fonction pour retourner l'image et afficher le texte
@@ -31,7 +31,7 @@ function flipPhoto() {
 
 // Écouter l'événement de survol sur chaque photo
 photos.forEach(photo => photo.addEventListener('mouseover', flipPhoto));
-photos.forEach(photo => photo.addEventListener('mouseout', flipPhoto));
+photos.forEach(photo => photo.addEventListener('mouseout', flipPhoto));*/
 
 
 //Permet d'aller progressivement dans une section du menu

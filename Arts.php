@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css?uid=<?php echo date(" Y-m-d-h-i-s"); ?>">
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
                 </div>
                 <div class="containerArts">
                     <a href="#allain">
-                        <span>En savoir plus</span>
+                        <span class="span-allain">En savoir plus</span>
                     </a>
                 </div>
             </div>
@@ -49,7 +48,7 @@
                 </div>
                 <div class="containerArts">
                     <a href="#viventre">
-                        <span>En savoir plus</span>
+                        <span class="span-viv">En savoir plus</span>
                     </a>
                 </div>
             </div>
@@ -96,9 +95,11 @@
                 création d'auteur.e.s normand.e.s,
                 le lien étant fait par le compositeur, Etienne Goupil, un des musiciens des premières heures du regretté
                 chanteur-poète...
-                d'où "<span class="Autour">Autour</span> des Elles"
-
+                d'où "Autour des Elles"
             </p>
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:150px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg></a>
         </article>
 
 
@@ -120,21 +121,29 @@
                 musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
                 projets 2022" <br>
 
-                Pour commander votre EP, c'est via larchotterenard@protonmail.com !</p>
+                <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong></p>
+                <a href="#spectacles" style="display:flex; justify-content: end; margin-top:200px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg></a>
         </article>
 
         <section id="Mosaique">
 
-            <div><a href="images/Viventre-18_12_21-retouche%20-%2019.jpg"><img src="images/Viventre-18_12_21-retouche%20-%20petite%2019.jpg" alt="Photo de Viventre"></a>
+            <div><a href="images/Viventre-18_12_21-retouche%20-%2019.jpg"><img
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2019.jpg" alt="Photo de Viventre"></a>
             </div>
-            <div><a href="images/Viventre-18_12_21-retouche%20-%2022.jpg"><img src="images/Viventre-18_12_21-retouche%20-%20petite%2022.jpg" alt="Photo de Viventre"></a>
+            <div><a href="images/Viventre-18_12_21-retouche%20-%2022.jpg"><img
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2022.jpg" alt="Photo de Viventre"></a>
             </div>
 
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2025.jpg"><img src="images/Viventre-18_12_21-retouche%20-%20petite%2025.jpg" alt="Photo de Viventre"></a>
+            <div> <a href="images/Viventre-18_12_21-retouche%20-%2025.jpg"><img
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2025.jpg" alt="Photo de Viventre"></a>
             </div>
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2031.jpg"><img src="images/Viventre-18_12_21-retouche%20-petite%2031.jpg" alt="Photo de Viventre"></a>
+            <div> <a href="images/Viventre-18_12_21-retouche%20-%2031.jpg"><img
+                        src="images/Viventre-18_12_21-retouche%20-petite%2031.jpg" alt="Photo de Viventre"></a>
             </div>
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2036.jpg"><img src="images/Viventre-18_12_21-retouche%20-%20petite%2036.jpg" alt="Photo de Viventre"></a>
+            <div> <a href="images/Viventre-18_12_21-retouche%20-%2036.jpg"><img
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2036.jpg" alt="Photo de Viventre"></a>
             </div>
         </section>
 
@@ -152,17 +161,25 @@
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
             <p>"Pour voir la captation du spectacle : </p>
-            <p><iframe width="260" height="205" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p><iframe width="260" height="205" src="https://www.youtube.com/embed/4QuITiqTIxk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></p>
+                    <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg></a>
         </article>
 
 
         <section id="Mosaique1">
-            <div> <a href="images/2019_L'argent.jpg"><img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent"></a> </div>
+            <div> <a href="images/2019_L'argent.jpg"><img src="images/2019_L'argent_petite.jpg"
+                        alt="Photo de l'Argent"></a> </div>
             <div><a href="images/Argent_4123.jpg"><img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent"></a>
             </div>
             <div> <a href="images/Argent_4150.jpg"><img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent"></a>
             </div>
-            <div> <a href="images/Argent_4165_.jpg"><img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent"></a> </div>
+            <div> <a href="images/Argent_4165_.jpg"><img src="images/Argent_4165_petite.jpg"
+                        alt="Photo de l'Argent"></a> </div>
 
         </section>
 
@@ -225,43 +242,88 @@
         </ul>
 
         <div id="container-iframes">
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ctshwwMDoiA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ctshwwMDoiA"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mL48Xt1dUkY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/uvk5VtPmDCw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZFGkrxvuomk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
             </div>
 
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Lz2ASfwnM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mL48Xt1dUkY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0" width="560" height="400" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uvk5VtPmDCw"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZFGkrxvuomk"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Lz2ASfwnM"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <iframe
+                    src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
+                    width="560" height="400"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
 
             <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/B6TKhf3UAos" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B6TKhf3UAos"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -297,13 +359,15 @@
             <p class="mesEcritures">A propos de mes écritures</p>
         </div>
         <ul>
-            <li><a class="aEcriture" href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
+            <li><a class="aEcriture"
+                    href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
                     d'écriture avec Charlotte Goupil
                 </a>
             </li>
             <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/">Le blog du doigt dans
                     l'oeil</a></li>
-            <li><a href=" https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
+            <li><a
+                    href=" https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
                     Les artistes normands se pressent au festival 55
                 </a>
             </li>
@@ -313,10 +377,12 @@
             <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
         </div>
         <ul>
-            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
+            <li><a class="aEcriture"
+                    href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
                     A crier par les fenêtres</a>
             </li>
-            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
+            <li><a class="aBottom"
+                    href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
                     du confinement avec la poésie</a>
             </li>
         </ul>
@@ -325,7 +391,7 @@
 
     <footer></footer>
 
-
+    <script src="js/script.js"></script>
 </body>
 
 
