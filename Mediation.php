@@ -61,7 +61,7 @@
             <li><img src="images/Charlotte_voile_rose.jpg" alt="photo spectacle l'argent"></li>
         </ul>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" async></script>
 </body>
 
 </html>

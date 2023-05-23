@@ -7,15 +7,15 @@
     <title> Les multiples de Charlotte Goupil/Arts </title>
     <link rel="stylesheet" type="text/css" href="styles.css?uid=<?php echo date(" Y-m-d-h-i-s"); ?>">
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <?php include 'header.php'; ?>
 
-    <span id="spectacles"></span>
+    <span id="Spectacles"></span>
     <section id="Bulles">
-
         <div id="Chanoe" class="photo">
             <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex">
             <div class="text-overlay">
@@ -97,9 +97,12 @@
                 chanteur-poète...
                 d'où "Autour des Elles"
             </p>
-            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:150px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-</svg></a>
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:150px;"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                </svg></a>
         </article>
 
 
@@ -121,10 +124,15 @@
                 musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
                 projets 2022" <br>
 
-                <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong></p>
-                <a href="#spectacles" style="display:flex; justify-content: end; margin-top:200px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-</svg></a>
+                <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong>
+            </p>
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:200px;"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                </svg></a>
+              
         </article>
 
         <section id="Mosaique">
@@ -165,9 +173,12 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe></p>
-                    <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-</svg></a>
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                </svg></a>
         </article>
 
 
@@ -188,9 +199,7 @@
 
 
     <section id="Musique">
-
-
-        <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
+         <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
             scène
             du Bateau Ivre (ancien cabaret rouennais aujourd'hui disparu),<br>
             je ne suis pas devenue musicienne professionnelle tout de suite. Ma vocation artistique fut
@@ -201,7 +210,7 @@
             lire
             la
             musique,<br>
-            j'ai sûrement reçu une oreille musicale de ce bain familial</p>
+            j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
 
         <ul class="music-links">
             <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a>
@@ -391,7 +400,7 @@
 
     <footer></footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" async></script>
 </body>
 
 

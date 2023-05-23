@@ -18,7 +18,6 @@
 <body id="hack">
 
 	<?php include 'header.php'; ?>
-
 	<section id="Hero">
 		<div class="Bio"><img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Goupil"></div>
 		<h2 id="presentation">Charlotte Goupil</h2>
@@ -73,13 +72,13 @@
 			naître à nos yeux et nos oreilles, un travail de recherche brute et vive
 			de mots passionnés
 			</p>
-	</section>
+</section>
 
 	
 	<div class="container">
 	<div class="row">
     <div class="col-xl-8 offset-xl-2">
-      <p id="MessageEssentiel">Laissez-moi un message essentiel et sans nuages" à larchotterenard@protonmail.com</p>
+      <p id="MessageEssentiel">Laissez-moi un message essentiel et sans nuages" <br> à larchotterenard@protonmail.com</p>
       <form id="contact-form" method="post" action="contact.php" role="form">
         <div class="controls">
           <div class="row">
@@ -133,7 +132,7 @@
 </div>
 
 	<footer></footer>
-	<script src="js/script.js"></script>
+	<script src="js/script.js" async></script>
 </body>
 
 </html>
