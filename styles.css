@@ -955,7 +955,7 @@ iframe {
     }
 
     .menu li {
-        display: block;
+        display: none;
     }
 
     .menu li a {
@@ -967,7 +967,7 @@ iframe {
         display: none;
         width: 40px;
         height: 30px;
-        margin-right: 20px;
+        margin-top: 15px;
         cursor: pointer;
     }
 
@@ -979,18 +979,33 @@ iframe {
     }
 
     .menu {
-        display: none;
+        display: block;
+
     }
 
     .burger {
         display: block;
+
     }
 
-    #menuderoulant.collapsed {
-        display: none;
-    }
+    /*#menuderoulant.collapsed {
+         display: block;
+        margin-left: -10px;
+        margin-top: -40px;
+
+    }*/
 
     #menuderoulant.collapsed li {
         display: block;
     }
+
+    /*#menuderoulant li:hover>.sousmenu {
+        margin-left: 130px;
+        margin-top: -45px;
+
+    }*/
+
+
+
+
 }

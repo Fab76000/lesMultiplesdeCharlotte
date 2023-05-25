@@ -45,6 +45,7 @@ echo ' <!--<header id="header"> <a href="Index.php">
   </nav>
 </header>
 
+
 <script>document.addEventListener("DOMContentLoaded", function () {
     var burger = document.getElementById("burger");
     var menu = document.getElementById("menuderoulant");
