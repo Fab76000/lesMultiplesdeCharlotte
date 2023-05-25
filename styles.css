@@ -989,7 +989,7 @@ iframe {
     }
 
     /*#menuderoulant.collapsed {
-         display: block;
+        display: block;
         margin-left: -10px;
         margin-top: -40px;
 
@@ -999,13 +999,23 @@ iframe {
         display: block;
     }
 
-    /*#menuderoulant li:hover>.sousmenu {
+    /* #menuderoulant li:hover>.sousmenu {
         margin-left: 130px;
         margin-top: -45px;
 
     }*/
 
+    .burger.cross .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 0px);
+    }
 
+    .burger.cross .burger-line:nth-child(2) {
+        transform: rotate(-45deg) translate(7px, 0px);
+    }
+
+    .burger.cross .burger-line:nth-child(3) {
+        display: none;
+    }
 
 
 }

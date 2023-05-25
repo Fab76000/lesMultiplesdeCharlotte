@@ -52,6 +52,7 @@ echo ' <!--<header id="header"> <a href="Index.php">
 
     burger.addEventListener("click", function () {
       menu.classList.toggle("collapsed");
+      burger.classList.toggle("cross");
     });
   });</script>
 
