@@ -51,7 +51,7 @@ header h1 {
     font-weight: normal;
     font-family: 'Tangerine', "Times new roman", sans-serif;
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
     /* Center the title of the header*/
     display: block;
     /* justify-content: center;*/
@@ -260,7 +260,6 @@ img[alt] {
 }
 
 
-
 .container {
     background-color: #1D7461;
     min-width: 100%;
@@ -275,10 +274,8 @@ img[alt] {
     text-transform: uppercase;
     border-radius: 6px;
     transition: all 0.2s ease-in 0s;
-    display: flex;
     bottom: -50px;
     padding: 8px;
-    text-align: center;
 }
 
 .button1:hover {
@@ -854,6 +851,71 @@ li {
 
 @media screen and (min-width:300px) and (max-width: 676px) {
 
+
+
+    /* Continuer à réfléchir media queries (Attention changer taille ecran) pour adapter formulaire*/
+    .container {
+        display: block;
+        height: auto;
+        min-width: 200%;
+    }
+
+    #Logo {
+        display: inline-flex;
+    }
+
+    #photo_gauche_bas {
+        margin-top: 80px;
+        width: 250px;
+        height: 300px;
+
+    }
+
+
+    #Logo {
+        margin-right: 80em;
+    }
+
+    .presentation {
+        max-width: 97vw;
+        margin-left: 3px;
+    }
+
+
+}
+
+#MessageEssentiel {
+    break-inside: auto;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+iframe {
+    border: none;
+}
+
+.alinea {
+    text-indent: 40px;
+}
+
+
+
+/* Breakpoints usuels media queries 
+320px — 480px : les mobiles
+
+481px — 768px : iPads, tablettes
+769px — 1024px : petits écrans, ordinateurs portables
+1025px — 1200px : ordinateurs de bureau, écrans larges
+1201px et plus —  écrans extra larges, TV
+*/
+
+
+
+/*320px — 480px : les mobiles*/
+
+@media only screen and (min-width : 320px) and (max-width: 480px) and (orientation: portrait) {
+
     #menuderoulant .ColoRed,
     #menuderoulant li,
     #menuderoulant li a:hover,
@@ -891,66 +953,61 @@ li {
         margin-top: -8px;
     }
 
-    /* Continuer à réfléchir media queries (Attention changer taille ecran) pour adapter formulaire*/
-    .container {
-        display: block;
+    header h1 {
+        font-size: 50px;
+    }
+
+    hr {
+        display: none;
+    }
+
+
+    .burger {
+        width: 20px;
+        margin-top: 5px;
+    }
+
+    .burger-line {
+        height: 2px;
+    }
+
+
+    .Bio img {
+
+        width: 100vw;
         height: auto;
-        min-width: 200%;
+        margin: auto 0;
+        margin-top: 300px;
     }
 
-    #Logo {
-        display: inline-flex;
-    }
-
-    #photo_gauche_bas {
-        margin-top: 80px;
-        width: 250px;
-        height: 300px;
-
-    }
-
-
-
-    input[type=text],
-    input[type=email],
-    input[type=phone] {
-        max-width: 380px;
-    }
-
-    textarea {
-        max-width: 380px;
-    }
-
-    #Logo {
-        margin-right: 80em;
+    #presentation {
+        font-size: 1.5;
     }
 
     .presentation {
-        max-width: 97vw;
-        margin-left: 3px;
+        text-align: start;
+        font-size: 12px;
+    }
+
+    #menuderoulant.collapsed {
+        display: block;
+        margin-left: -70px;
+        margin-top: -40px;
+        box-shadow: #000 2px;
     }
 
 
-}
+    #menuderoulant li,
+    #menuderoulant li .ColoRed {
+        box-shadow: 2px 4px black;
+    }
 
-#MessageEssentiel {
-    break-inside: auto;
-    text-align: center;
-    margin-top: 5px;
-}
+    #menuderoulant.collapsed li:hover>.sousmenu {
+        display: block;
+        margin-left: 122px;
+        margin-top: -40px;
+    }
 
-
-iframe {
-    border: none;
-}
-
-.alinea {
-    text-indent: 40px;
-}
-
-
-
-@media only screen and (max-width: 600px) and (orientation: portrait) {
     .menu {
         display: none;
     }
@@ -989,33 +1046,200 @@ iframe {
 
     }
 
-    /*#menuderoulant.collapsed {
-        display: block;
-        margin-left: -10px;
-        margin-top: -40px;
-
-    }*/
-
     #menuderoulant.collapsed li {
         display: block;
     }
 
-    /* #menuderoulant li:hover>.sousmenu {
-        margin-left: 130px;
-        margin-top: -45px;
 
-    }*/
+
+    .burger.cross .burger-line {
+        margin-left: -100px;
+    }
+
 
     .burger.cross .burger-line:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 0px);
+        transform: rotate(45deg) translate(6px);
     }
 
     .burger.cross .burger-line:nth-child(2) {
-        transform: rotate(-45deg) translate(7px, 0px);
+        transform: rotate(-45deg) translate(7px);
     }
 
     .burger.cross .burger-line:nth-child(3) {
         display: none;
+    }
+
+
+    #MessageEssentiel {
+        max-width: 90vw;
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+    label {
+        font-size: 15px;
+    }
+
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+
+        max-width: 48%;
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    input[type=submit],
+    .red>strong {
+        font-size: 15px;
+    }
+
+    #Logo {
+        margin-top: -20px;
+    }
+
+    #Logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    :root {
+        --messageEssentiel-color: #fff;
+        --label-color: #000;
+    }
+
+    #MessageEssentiel {
+        color: var(--messageEssentiel-color);
+    }
+
+    label {
+        color: var(--label-color);
+    }
+
+
+
+
+    /*769px — 1024px : petits écrans, ordinateurs portables*/
+
+    /*1025px — 1200px : ordinateurs de bureau, écrans larges*/
+
+    /*1201px et plus —  écrans extra larges, TV*/
+
+
+}
+
+/* 481px — 768px : iPads, tablettes */
+
+@media only screen and (min-width : 481px) and (max-width: 768px) {
+    #MessageEssentiel {
+        max-width: 90vw;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+
+        max-width: 48%;
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    :root {
+        --messageEssentiel-color: #fff;
+        --label-color: #000;
+    }
+
+    #MessageEssentiel {
+        color: var(--messageEssentiel-color);
+    }
+
+    label {
+        color: var(--label-color);
+    }
+
+}
+
+@media only screen and (min-width: 675px) and (max-width:767px) {
+    #MessageEssentiel {
+        max-width: 90vw;
+        text-align: center;
+        font-size: 15px;
+        color: blue
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+
+        max-width: 100%;
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    :root {
+        --messageEssentiel-color: #fff;
+        --label-color: #000;
+    }
+
+    label {
+        color: var(--label-color);
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width:1024px) {
+    #MessageEssentiel {
+        max-width: 90vw;
+        text-align: center;
+        font-size: 15px;
+        color: blue
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+
+        max-width: 100%;
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    :root {
+        --messageEssentiel-color: #fff;
+        --label-color: #000;
+    }
+
+    label {
+        color: var(--label-color);
     }
 
 

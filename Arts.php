@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Les multiples de Charlotte Goupil/Arts </title>
-    <link rel="stylesheet" type="text/css" href="styles.css?uid=<?php echo date(" Y-m-d-h-i-s"); ?>">
+    <?php
+	$date = date("Y-m-d-h-i-s");
+	echo '<link rel="stylesheet" type="text/css" href="styles.css?uid=' . $date . '">';
+	?>
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
