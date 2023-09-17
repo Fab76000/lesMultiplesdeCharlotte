@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="styles.css?uid=' . $date . '">';
+	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
 	?>
 	<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -76,7 +76,7 @@
 	</section>
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-8 col-lg-8 offset-xl-2">
+			<div class="form-9 col-xl-8 col-lg-8 offset-xl-2">
 				<p id="MessageEssentiel">Laissez-moi un message essentiel et sans nuages" à
 					larchotterenard@protonmail.com</p>
 				<form id="contact-form" method="post" action="contact.php" role="form">
@@ -91,7 +91,7 @@
 							<div class="col-md-6">
 								<label for="name"><span class="red">*</span>Nom</label>
 								<input id="name" type="text" name="name" class="form-control"
-									placeholder="Veuillez entrer votre nom">
+									placeholder="Veuillez entrer votre nom"  autocomplete="on">
 								<p class="comments"></p>
 							</div>
 						</div>
@@ -99,13 +99,13 @@
 							<div class="col-md-6">
 								<label for="email"><span class="red">*</span>Email</label>
 								<input id="email" type="email" name="email" class="form-control"
-									placeholder="Veuillez entrer votre email">
+									placeholder="Veuillez entrer votre email"  autocomplete="on">
 								<p class="comments"></p>
 							</div>
 							<div class="col-md-6">
-								<label for="_phone"><span class="red">*</span>Tél</label>
+								<label for="phone"><span class="red">*</span>Tél</label>
 								<input id="phone" type="phone" name="phone" class="form-control"
-									placeholder="Veuillez entrer votre numéro de téléphone">
+									placeholder="Veuillez entrer votre numéro de téléphone"  autocomplete="on">
 								<p class="comments"></p>
 							</div>
 						</div>
