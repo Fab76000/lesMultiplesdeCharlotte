@@ -1,4 +1,11 @@
 /*GENERAL*/
+:root {
+    --messageEssentiel-color: #fff;
+    --label-color: #000;
+    --header-background-color: #FBFBD0;
+    --green-color: #1D7461;
+    --red-color: #741D34;
+}
 
 * {
     margin: 0;
@@ -36,7 +43,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FBFBD0;
+    background-color: var(--header-background-color);
     z-index: 100;
     /*////*/
     display: flex;
@@ -60,13 +67,13 @@ header h1 {
 
 
 .green {
-    color: #1D7461;
+    color: var(--green-color);
     font-style: normal;
     text-transform: uppercase;
 }
 
 .red {
-    color: #741D34;
+    color: var(--red-color);
     font-style: normal;
 }
 
@@ -107,17 +114,15 @@ hr {
     width: 12.375em;
     margin-right: 10px;
     border: 1px solid black;
-    background-color: #1D7461;
+    background-color: var(--green-color);
     text-align: center;
     border-radius: 2.81em;
     /*max-height: 2.81em;*/
     box-shadow: 5px 5px black;
-    background: #1D7461;
-
 }
 
 #menuderoulant .ColoRed {
-    background-color: #741d34;
+    background-color: var(--red-color);
     width: 12.395em;
 
 
@@ -125,7 +130,7 @@ hr {
 }
 
 #menuderoulant .sousmenu .ColoRed2 {
-    background-color: #741d34;
+    background-color: var(--red-color);
     padding: 15px;
     width: 12.375em;
 
@@ -165,14 +170,14 @@ hr {
 }
 
 #menuderoulant li a:hover {
-    background-color: #741D34;
+    background-color: var(--red-color);
     border-radius: 2.81em;
     width: 12.28em;
     color: white;
 }
 
 #menuderoulant .ColoRed:hover {
-    background-color: #1D7461;
+    background-color: var(--green-color);
 
 }
 
@@ -188,14 +193,14 @@ hr {
 }
 
 #menuderoulant .sousmenu li a:hover {
-    background-color: #741D34;
+    background-color: var(--red-color);
     border-radius: 2.81em;
     width: 12.29em;
 
 }
 
 #menuderoulant .ColoGreen {
-    background-color: #741D34;
+    background-color: var(--red-color);
     border-radius: 2.81em;
     width: 12.28em;
     /*198px*/
@@ -204,7 +209,7 @@ hr {
 }
 
 #menuderoulant .sousmenu .ColoGreen:hover {
-    background-color: #1D7461;
+    background-color: var(--green-color);
     width: 12.28em;
 }
 
@@ -248,7 +253,7 @@ hr {
 }
 
 .presentation {
-    background: #FBFBD0;
+    background: var(--header-background-color);
 }
 
 img[alt] {
@@ -268,7 +273,7 @@ img[alt] {
 .button1 {
     /* border: 1px solid #ddd;*/
 
-    background-color: #741D34;
+    background-color: var(--red-color);
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -304,7 +309,7 @@ img[alt] {
     /*bottom: 15px;*/
     font-weight: bold;
     font-size: 15px;
-    color: #741D34;
+    color: var(--red-color);
 
 }
 
@@ -312,7 +317,7 @@ img[alt] {
     font-style: italic;
     font-size: 14px;
     font-weight: bold;
-    color: #741D34;
+    color: var(--red-color);
     height: 4px;
     text-transform: none;
     position: relative;
@@ -390,7 +395,7 @@ footer {
 }
 
 .text {
-    color: #741d34;
+    color: var(--red-color);
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -468,7 +473,7 @@ footer {
 }
 
 .text {
-    color: #741d34;
+    color: var(--red-color);
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -481,7 +486,7 @@ footer {
 
 
 #Charlotte .text {
-    color: #1D7461;
+    color: var(--green-color)
 }
 
 
@@ -501,7 +506,7 @@ footer {
     background: #fff;
     width: 150px;
     height: 50px;
-    color: #741D34;
+    color: var(--red-color);
 }
 
 .containerArts a::before,
@@ -509,7 +514,7 @@ footer {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #741D34;
+    background-color: var(--red-color);
     transition: 0.5s;
 }
 
@@ -530,7 +535,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #741D34;
+    color: var(--red-color);
     border: 2px solid #000;
     overflow: hidden;
     font-size: 20px;
@@ -584,7 +589,7 @@ footer {
     padding: 10px;
     border: 3px solid black;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px #1D7461;
+    box-shadow: 10px 10px 10px var(--green-color);
     padding: 10px 10px 30px 10px;
 }
 
@@ -597,7 +602,7 @@ footer {
     padding: 10px;
     border: 3px solid black;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px #741D34;
+    box-shadow: 10px 10px 10px var(--red-color);
     padding: 10px 10px 30px 10px;
 }
 
@@ -746,7 +751,7 @@ figure {
 
 div p.mesEcritures {
     font-weight: bold;
-    color: #1D7461;
+    color: var(--green-color);
     display: flex;
     justify-content: center;
     margin-top: -30px;
@@ -755,7 +760,7 @@ div p.mesEcritures {
 #Ecriture a,
 #Musique a {
 
-    color: #741D34;
+    color: var(--red-color);
     display: block;
 
 }
@@ -763,7 +768,7 @@ div p.mesEcritures {
 
 #Ecriture a:hover {
 
-    color: #1D7461;
+    color: var(--green-color);
 }
 
 .monBlog {
@@ -852,8 +857,6 @@ li {
 @media screen and (min-width:300px) and (max-width: 676px) {
 
 
-
-    /* Continuer à réfléchir media queries (Attention changer taille ecran) pour adapter formulaire*/
     .container {
         display: block;
         height: auto;
@@ -901,14 +904,6 @@ iframe {
 
 
 
-/* Breakpoints usuels media queries 
-320px — 480px : les mobiles
-
-481px — 768px : iPads, tablettes
-769px — 1024px : petits écrans, ordinateurs portables
-1025px — 1200px : ordinateurs de bureau, écrans larges
-1201px et plus —  écrans extra larges, TV
-*/
 
 
 
@@ -996,6 +991,11 @@ iframe {
         box-shadow: #000 2px;
     }
 
+    #menuderoulant.collapsed li {
+        display: block;
+    }
+
+
 
     #menuderoulant li,
     #menuderoulant li .ColoRed {
@@ -1009,7 +1009,8 @@ iframe {
     }
 
     .menu {
-        display: none;
+
+        display: block;
     }
 
     .menu li {
@@ -1035,22 +1036,6 @@ iframe {
         background-color: black;
         margin-bottom: 5px;
     }
-
-    .menu {
-        display: block;
-
-    }
-
-    .burger {
-        display: block;
-
-    }
-
-    #menuderoulant.collapsed li {
-        display: block;
-    }
-
-
 
     .burger.cross .burger-line {
         margin-left: -100px;
@@ -1109,10 +1094,6 @@ iframe {
     }
 
 
-    :root {
-        --messageEssentiel-color: #fff;
-        --label-color: #000;
-    }
 
     #MessageEssentiel {
         color: var(--messageEssentiel-color);
@@ -1123,13 +1104,6 @@ iframe {
     }
 
 
-
-
-    /*769px — 1024px : petits écrans, ordinateurs portables*/
-
-    /*1025px — 1200px : ordinateurs de bureau, écrans larges*/
-
-    /*1201px et plus —  écrans extra larges, TV*/
 
 
 }
@@ -1174,7 +1148,79 @@ iframe {
 
 }
 
-@media only screen and (min-width: 675px) and (max-width:767px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    .menu {
+        display: none;
+    }
+
+    .menu li {
+        display: none;
+    }
+
+    .menu li a {
+
+        text-decoration: none;
+    }
+
+    .burger {
+        display: none;
+        width: 30px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 70px;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        display: block;
+
+    }
+
+    .burger {
+        display: block;
+
+    }
+
+
+
+    #menuderoulant.collapsed li {
+        display: block;
+    }
+
+
+
+    .burger.cross .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 0px);
+    }
+
+    .burger.cross .burger-line:nth-child(2) {
+        transform: rotate(-45deg) translate(7px, 0px);
+    }
+
+    .burger.cross .burger-line:nth-child(3) {
+        display: none;
+    }
+
+    #menuderoulant li,
+    #menuderoulant li .ColoRed {
+        width: 9.375em;
+    }
+
+    #menuderoulant li a:hover {
+        width: 9.375em;
+    }
+}
+
+
+
+@media only screen and (min-width: 675px) and (max-width:768px) {
     #MessageEssentiel {
         max-width: 90vw;
         text-align: center;
@@ -1198,10 +1244,6 @@ iframe {
         display: flex;
     }
 
-    :root {
-        --messageEssentiel-color: #fff;
-        --label-color: #000;
-    }
 
     label {
         color: var(--label-color);
@@ -1209,12 +1251,12 @@ iframe {
 
 }
 
-@media only screen and (min-width: 769px) and (max-width:1024px) {
+@media only screen and (min-width: 769px) and (max-width: 991px) {
     #MessageEssentiel {
         max-width: 90vw;
         text-align: center;
         font-size: 15px;
-        color: blue
+        color: rgb(40, 172, 181)
     }
 
     label {
@@ -1233,14 +1275,53 @@ iframe {
         display: flex;
     }
 
-    :root {
-        --messageEssentiel-color: #fff;
-        --label-color: #000;
-    }
+
 
     label {
         color: var(--label-color);
     }
 
+
+}
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #MessageEssentiel {
+        max-width: 90vw;
+        text-align: center;
+        font-size: 15px;
+        color: rgb(222, 101, 15)
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+
+        max-width: 100%;
+
+    }
+
+    input[type=submit] {
+        display: flex;
+        margin: auto;
+    }
+
+
+
+    label {
+        color: var(--label-color);
+    }
+
+    .form-9 {
+        margin: auto;
+    }
 
 }
