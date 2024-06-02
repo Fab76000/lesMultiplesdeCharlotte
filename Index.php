@@ -22,7 +22,7 @@
 	<section id="Hero">
 		<div class="Bio"><img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Goupil"></div>
 		<h2 id="presentation">Charlotte Goupil</h2>
-		<p class="presentation">Après un bac L théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
+		<div class="presentation"><p>Après un bac L théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
 			conseils de sa professeure Annie Franscisi et s'inscrit en Licence d'Arts
 			du Spectacle de Caen. En 2ème année de Licence, elle part à Londres
 			pour suivre une année Erasmus en "English and Drama School". <br> De
@@ -61,8 +61,8 @@
 			d'Allain Leprest, Charlotte rencontre son pianiste actuel Alexandre
 			Rasse, de son nom de scène Alex Rasse, avec qui elle tournera
 			plusieurs années et sur plusieurs scènes.<br>
-			Aujourd'hui présidente du festival Chants d'Elles, le festival des voix de
-			femmes, elle continue son travail de transmission des oeuvres d'autrui,
+			Présidente du festival Chants d'Elles, le festival des voix de
+			femmes, des éditions 2020, 2021 et 2022, elle continue son travail de transmission des oeuvres d'autrui :
 			en particulier de la création artistique portée par des femmes et en
 			direction de publics tout à fait divers.
 			Enfin, suite à son travail sur le répertoire d'Allain Leprest où elle était
@@ -72,12 +72,13 @@
 			toujours accompagnée de son acolyte de création, Alex Rasse, fait
 			naître à nos yeux et nos oreilles, un travail de recherche brute et vive
 			de mots passionnés
-		</p>
+		</p></div>
+		
 	</section>
 	<div class="container">
 		<div class="row">
 			<div class="form-9 col-xl-8 col-lg-8 offset-xl-2">
-				<p id="MessageEssentiel">Laissez-moi un message essentiel et sans nuages" à
+				<p id="MessageEssentiel">Laissez-moi un message "essentiel et sans nuages" à
 					larchotterenard@protonmail.com</p>
 				<form id="contact-form" method="post" action="contact.php" role="form">
 					<div class="controls">

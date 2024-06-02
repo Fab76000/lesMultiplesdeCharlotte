@@ -7,7 +7,7 @@
     <title> Les multiples de Charlotte Goupil </title>
     <?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="styles.css?uid=' . $date . '">';
+	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
 	?>
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

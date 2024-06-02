@@ -7,11 +7,11 @@
     <title> Les multiples de Charlotte Goupil/Arts </title>
     <?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="styles.css?uid=' . $date . '">';
+	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
 	?>
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -135,7 +135,7 @@
                     <path fill-rule="evenodd"
                         d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
-              
+            
         </article>
 
         <section id="Mosaique">
@@ -202,7 +202,7 @@
 
 
     <section id="Musique">
-         <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
+        <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
             scène
             du Bateau Ivre (ancien cabaret rouennais aujourd'hui disparu),<br>
             je ne suis pas devenue musicienne professionnelle tout de suite. Ma vocation artistique fut
@@ -379,7 +379,7 @@
             <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/">Le blog du doigt dans
                     l'oeil</a></li>
             <li><a
-                    href=" https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
+                    href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
                     Les artistes normands se pressent au festival 55
                 </a>
             </li>
@@ -404,6 +404,7 @@
     <footer></footer>
 
     <script src="js/script.js" async></script>
+    
 </body>
 
 

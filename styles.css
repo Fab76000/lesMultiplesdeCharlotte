@@ -274,7 +274,7 @@ img[alt] {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 6px;
-    transition: all 0.2s ease-in 0s;
+    transition: all 0.1s ease-in 0s;
     display: flex;
     bottom: -50px;
     padding: 8px;
@@ -283,7 +283,7 @@ img[alt] {
 
 .button1:hover {
 
-    background-color: #f50646;
+    background-color: #510c1e;
     color: #fff;
 
 }
@@ -354,15 +354,15 @@ footer {
 #Mosaique>img {
     display: block;
     border-radius: 50%;
-    width: 450px;
-    height: 400px;
+    width: 350px;
+    height: 300px;
     margin-right: 20px;
 }
 
 #Mosaique:hover>img {
-    width: 500px;
-    height: 450px;
-    transition: width 1.3s, height 1.3s;
+    width: 400px;
+    height: 350px;
+    transition: width 1s, height 1s;
 
 }
 
@@ -373,7 +373,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: .5s ease;
+    transition: .1s ease;
 }
 
 
@@ -384,7 +384,7 @@ footer {
     left: 0;
     right: 0;
     display: none;
-    transition: .5s ease;
+    transition: .1s ease;
     background-color: #fff;
     margin-right: 20px;
     border-radius: 50%;
@@ -450,7 +450,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: .5s ease;
+    transition: .1s ease;
     display: inline-block;
 
 }
@@ -462,7 +462,7 @@ footer {
     left: 0;
     right: 0;
     display: none;
-    transition: .5s ease;
+    transition: .1s ease;
     background-color: #fff;
     margin-right: 20px;
     border-radius: 50%;
@@ -1019,4 +1019,102 @@ iframe {
     }
 
 
+}
+
+/* Styles de base pour la mise en page */
+body {
+    display: flex;
+    /* Utilisation de Flexbox */
+    justify-content: center;
+    /* Centrage horizontal */
+}
+
+/* Styles pour chaque section */
+section {
+    width: 100%;
+    max-width: 800px;
+    /* Largeur maximale pour chaque section */
+    margin: 20px 0;
+    /* Espacement entre les sections */
+    padding: 0 20px;
+    /* Espacement intérieur pour le contenu */
+}
+
+/* Styles pour les images */
+.photo {
+    position: relative;
+    /* Position relative pour les superpositions */
+    margin-bottom: 20px;
+    /* Espacement entre les photos */
+}
+
+.photo img {
+    width: 100%;
+    /* Pour que les images occupent toute la largeur du conteneur */
+    height: auto;
+    /* Pour maintenir le rapport hauteur/largeur */
+}
+
+/* Styles pour les superpositions de texte */
+.text-overlay {
+    position: absolute;
+    /* Position absolue pour les superpositions de texte */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent pour le texte */
+    display: flex;
+    flex-direction: column;
+    /* Disposition en colonne pour le texte */
+    justify-content: center;
+    /* Centrage vertical */
+    padding: 20px;
+    /* Espacement intérieur pour le texte */
+    color: white;
+    /* Couleur du texte */
+}
+
+/* Styles pour les titres */
+.text h2 {
+    font-size: 24px;
+    /* Taille de police pour les titres */
+    margin-bottom: 10px;
+    /* Espacement entre les titres et les paragraphes */
+}
+
+/* Styles pour les paragraphes */
+.text p {
+    font-size: 16px;
+    /* Taille de police pour les paragraphes */
+}
+
+/* Styles pour les liens "En savoir plus" */
+.containerArts {
+    margin-top: 10px;
+    /* Espacement entre le texte et le lien */
+}
+
+/* Media query pour une mise en page en colonne sur les tailles d'écran correspondant aux téléphones */
+@media screen and (max-width: 767px) {
+    body {
+        flex-direction: column;
+        /* Disposition en colonne pour les tailles d'écran de téléphone */
+        align-items: center;
+        /* Centrage horizontal */
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centrez les éléments horizontalement */
+    }
+
+    .photo {
+        width: 100%;
+        margin-bottom: 20px;
+        /* Espacement entre les éléments */
+    }
 }

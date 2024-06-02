@@ -1,21 +1,20 @@
-//Permet le changement de plusieurs images au clic
-/*$(document).ready(function () {
+//Permet le changement de plusieurs images au clic$(document).ready(function () {
 
-	$('#Bulles .photo').click(function () {
-		const overlay = $(this).find('.not-authorized-overlay')
-		overlay.toggle()
-	})
-
-});*/
 
 $(document).ready(function () {
+	// Initial hiding of overlays
+	$('.not-authorized-overlay').hide();
 
-	$('#Bulles .photo').hover(function () {
-		const overlay = $(this).find('.not-authorized-overlay')
-		setTimeout(() => { ; overlay.toggle(); }, 250)
-	})
-
+	$('#Bulles .photo').hover(
+		function () {
+			const overlay = $(this).find('.not-authorized-overlay');
+			overlay.toggle();
+		}
+	);
 });
+
+
+
 
 // Récupérer les éléments HTML nécessaires
 /*const photos = document.querySelectorAll('.photo');
