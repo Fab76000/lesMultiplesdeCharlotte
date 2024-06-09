@@ -216,35 +216,35 @@
             j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
 
         <ul class="music-links">
-            <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a>
-            </li>
+            <!-- <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a>
+            </li>-->
             <li><a href=" https://www.youtube.com/watch?v=1ENzQan2JhU">Le rêve</a>
             </li>
-            <li><a href=" https://www.youtube.com/watch?v=al5KVGetoXg"> Concert hommage à Allain Leprest - Bruxelles</a>
-            </li>
+            <!-- <li><a href=" https://www.youtube.com/watch?v=al5KVGetoXg"> Concert hommage à Allain Leprest - Bruxelles</a>
+            </li> -->
             <li><a href="https://www.youtube.com/watch?v=RklwZVsxQnY&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=2">
                     Leprest à l'improvsite</a>
             </li>
-            <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a>
+            <!-- <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a>
             </li>
             <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a>
             </li>
-            <li><a href=" https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino </a>
+            <li><a href=" https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino </a> -->
             </li>
             <li><a href="https://www.youtube.com/watch?v=Te_6mXfvRKY">Teaser Autour des Elles d'Allain 2016</a>
             </li>
-            <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a>
-            </li>
+            <!-- <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a>
+            </li> -->
             <li><a href="https://www.youtube.com/watch?v=VLplFrMCfwE">Interview de Charlotte Goupil par Emmanuel
                     Gouache</a>
             </li>
-            <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert
+            <!-- <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert
                     inauguration place Leprest - Mont Saint Aignan</a>
-            </li>
+            </li> -->
             <li><a href="https://vimeo.com/293555303">Teaser Autour des Elles d’Allain - 2018</a></li>
-            <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour
+            <!-- <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour
                     des Elles d'Allain Extraits</a>
-            </li>
+            </li> -->
             <li><a href=" https://www.youtube.com/watch?v=JC6vuz2HncE"> TEASER VIVENTRE</a>
             </li>
             <li><a href=" https://www.youtube.com/watch?v=IWingOXoCv8">Choupote - extrait du spectacle VIVENTRE du
@@ -254,29 +254,37 @@
         </ul>
 
         <div id="container-iframes">
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ctshwwMDoiA"
+            <div class="grid-item">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ctshwwMDoiA"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
+                </iframe> -->
+                <iframe
+                    src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
+                    width="560" height="400"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                </iframe> -->
             </div>
 
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
+            <div class="grid-item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mL48Xt1dUkY"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/mL48Xt1dUkY"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
@@ -285,54 +293,53 @@
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
-                </iframe>
+                </iframe> -->
             </div>
 
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZFGkrxvuomk"
+            <div class="grid-item">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFGkrxvuomk"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe> -->
+            
+                <!-- <iframe width="560" height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe> -->
+            </div>
+
+            <div class="grid-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Lz2ASfwnM"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                
+            </div>
+
+            <div class="grid-item">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/B6TKhf3UAos"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <div class="grid-item"><iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Lz2ASfwnM"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe
-                    src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
-                    width="560" height="400"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/B6TKhf3UAos"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
