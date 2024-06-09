@@ -5,12 +5,12 @@
   </a>
   <hr>
   <nav>
-  <div class="parent-container">
-        <div class="burger" id="burger">
-            <div class="burger-line" ></div>
+    <div class="parent-container">
+      <div class="burger" id="burger">
             <div class="burger-line"></div>
-            <div class="burger-line"></div>
-        </div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
     </div>
     <ul id="menuderoulant" class="menu">
       <li>
