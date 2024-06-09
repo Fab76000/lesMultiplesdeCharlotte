@@ -22,6 +22,7 @@ html {
     background-color: #FBFBD0;
     margin: 0px;
     height: 100%;
+    overflow-x: hidden;
 
 }
 
@@ -269,10 +270,14 @@ img[alt] {
 }
 
 
-.container {
-    background-color: #1D7461;
-    min-width: 100%;
+#contact-form {
+    background: #1D7461;
+    padding: 50px;
+    width: auto;
+
 }
+
+
 
 .button1 {
     /* border: 1px solid #ddd;*/
@@ -635,49 +640,7 @@ footer {
     transform: skew(25deg);
 }
 
-/* Media queries pour les écrans moyens */
-@media (max-width: 768px) {
-    #Bulles {
-        grid-template-columns: 1fr;
-    }
 
-    #Bulles .photo {
-        width: 300px;
-        /* Largeur ajustée pour écran moyen */
-        height: 300px;
-        /* Hauteur ajustée pour écran moyen */
-    }
-
-    .text {
-        font-size: 16px;
-        /* Taille de police ajustée pour écran moyen */
-    }
-
-    .containerArts {
-        left: 25%;
-        margin-top: 80%;
-    }
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 480px) {
-    #Bulles .photo {
-        width: 200px;
-        /* Largeur ajustée pour petit écran */
-        height: 200px;
-        /* Hauteur ajustée pour petit écran */
-    }
-
-    .text {
-        font-size: 12px;
-        /* Taille de police ajustée pour petit écran */
-    }
-
-    .containerArts {
-        left: 20%;
-        margin-top: 85%;
-    }
-}
 
 /*ARTS*/
 
@@ -966,43 +929,32 @@ li {
 }
 
 
-@media screen and (min-width:300px) and (max-width: 676px) {
+@media screen and (min-width:300px) and (max-width:480px) {
 
 
     .container {
         display: block;
-        height: auto;
-        min-width: 200%;
+        /* Ajustement de la disposition pour les petits écrans */
+        min-width: auto;
+        /* Suppression de la largeur minimale excessive */
     }
 
     #Logo {
         display: inline-flex;
-    }
-
-    #photo_gauche_bas {
-        margin-top: 80px;
-        width: 250px;
-        height: 300px;
-
-    }
-
-
-    #Logo {
         margin-right: 80em;
     }
 
     .presentation {
         max-width: 97vw;
         margin-left: 3px;
+        color: purple;
     }
-
 
     #MessageEssentiel {
         break-inside: auto;
         text-align: center;
         margin-top: 5px;
     }
-
 
     iframe {
         border: none;
@@ -1012,228 +964,52 @@ li {
         text-indent: 40px;
     }
 
+    .button1 {
 
-}
-
-
-
-
-
-
-/*320px — 480px : les mobiles*/
-
-@media only screen and (min-width : 320px) and (max-width: 480px) and (orientation: portrait) {
-
-    #menuderoulant .ColoRed,
-    #menuderoulant li,
-    #menuderoulant li a:hover,
-    #menuderoulant .ColoRed:hover {
-
-        height: 30px;
-        width: 120px;
-    }
-
-
-
-    #menuderoulant .sousmenu li,
-    #menuderoulant .sousmenu li a:hover {
-        width: 120px;
-    }
-
-    .Bio {
-        position: inherit;
-        float: none;
-        margin-top: 120px;
-        background: #FBFBD0;
-    }
-
-    .Bio img {
-        margin-top: 350px;
-    }
-
-    #presentation {
-        margin-top: 10px;
-
-    }
-
-    .presentation {
-        min-width: 98vw;
-        margin-top: -8px;
-    }
-
-    header h1 {
-        font-size: 50px;
-    }
-
-    hr {
-        display: none;
-    }
-
-    .parent-container {
         display: flex;
-        justify-content: center;
-        /* Centre horizontalement */
-        align-items: center;
-        /* Centre verticalement */
-        height: 100vh;
-        /* S'assure que le conteneur prend toute la hauteur de la vue */
+        justify-content: left;
     }
 
-    .burger {
-        width: 20px;
-        margin-top: 5px;
+    .not-authorized-overlay h2 {
+
+        margin-top: -80px;
+        font-size: small;
+
     }
 
-
-    .burger-line {
-        height: 2px;
+    .not-authorized-overlay .text p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
+    .containerArts {
+        margin-left: 15px;
 
-    .Bio img {
 
-        width: 100vw;
-        height: auto;
-        margin: auto 0;
-        margin-top: 300px;
     }
 
-    #presentation {
-        font-size: 1.5;
+    .containerArts a {
+        width: 95px;
+        height: 35px;
+        margin-bottom: 65px;
+
     }
 
-    .presentation {
-        text-align: start;
+    .containerArts a span {
         font-size: 12px;
+
     }
-
-    #menuderoulant.collapsed {
-        display: block;
-        margin-left: -70px;
-        margin-top: -40px;
-        box-shadow: #000 2px;
-    }
-
-    #menuderoulant.collapsed li {
-        display: block;
-    }
-
-
-
-    #menuderoulant li,
-    #menuderoulant li .ColoRed {
-        box-shadow: 2px 4px black;
-    }
-
-    #menuderoulant.collapsed li:hover>.sousmenu {
-        display: block;
-        margin-left: 122px;
-        margin-top: -40px;
-    }
-
-    .menu {
-
-        display: block;
-    }
-
-    .menu li {
-        display: none;
-    }
-
-    .menu li a {
-
-        text-decoration: none;
-    }
-
-    .burger {
-        display: none;
-        width: 30px;
-        height: 20px;
-        margin-top: 15px;
-        cursor: pointer;
-    }
-
-    .burger-line {
-        width: 100%;
-        height: 4px;
-        background-color: black;
-        margin-bottom: 5px;
-    }
-
-    .burger.cross .burger-line {
-        margin-left: -100px;
-    }
-
-
-    .burger.cross .burger-line:nth-child(1) {
-        transform: rotate(45deg) translate(6px);
-    }
-
-    .burger.cross .burger-line:nth-child(2) {
-        transform: rotate(-45deg) translate(7px);
-    }
-
-    .burger.cross .burger-line:nth-child(3) {
-        display: none;
-    }
-
-
-    #MessageEssentiel {
-        max-width: 90vw;
-        text-align: center;
-        font-size: 15px;
-    }
-
-
-    label {
-        font-size: 15px;
-    }
-
-
-    input[type=text],
-    input[type=email],
-    input[type=phone],
-    textarea {
-
-        max-width: 48%;
-    }
-
-    input[type=submit] {
-        display: flex;
-    }
-
-    input[type=submit],
-    .red>strong {
-        font-size: 15px;
-    }
-
-    #Logo {
-        margin-top: -20px;
-    }
-
-    #Logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-
-
-    #MessageEssentiel {
-        color: var(--messageEssentiel-color);
-    }
-
-    label {
-        color: var(--label-color);
-    }
-
-
 
 
 }
+
+
 
 /* 481px — 768px : iPads, tablettes */
 
-@media only screen and (min-width : 481px) and (max-width: 768px) {
+@media only screen and (min-width : 481px) and (max-width: 674px) {
 
     /* Media query pour les écrans de 768px et moins */
 
@@ -1264,8 +1040,12 @@ li {
 
     #presentation {
         margin-top: 10px;
+        color: chocolate;
     }
 
+    .presentation {
+        color: chocolate;
+    }
 
     #MessageEssentiel {
         max-width: 90vw;
@@ -1277,13 +1057,13 @@ li {
         font-size: 15px;
     }
 
-    input[type=text],
+    /* input[type=text],
     input[type=email],
     input[type=phone],
     textarea {
 
         max-width: 48%;
-    }
+    }*/
 
     input[type=submit] {
         display: flex;
@@ -1345,11 +1125,9 @@ li {
     }
 
 
-
     #menuderoulant.collapsed li {
         display: block;
     }
-
 
 
     .burger.cross .burger-line:nth-child(1) {
@@ -1373,7 +1151,6 @@ li {
         width: 9.375em;
     }
 }
-
 
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
@@ -1400,9 +1177,12 @@ li {
         display: flex;
     }
 
-
     label {
         color: var(--label-color);
+    }
+
+    .presentation {
+        color: burlywood;
     }
 
 }
@@ -1432,14 +1212,11 @@ li {
     }
 
 
-
     label {
         color: var(--label-color);
     }
 
-
 }
-
 
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1453,7 +1230,6 @@ li {
     label {
         font-size: 15px;
     }
-
 
 
     input[type=text],
@@ -1471,7 +1247,6 @@ li {
     }
 
 
-
     label {
         color: var(--label-color);
     }
@@ -1480,4 +1255,48 @@ li {
         margin: auto;
     }
 
+}
+
+/* Media queries pour les écrans moyens */
+@media (max-width: 768px) {
+    #Bulles {
+        grid-template-columns: 1fr;
+    }
+
+    #Bulles .photo {
+        width: 300px;
+        /* Largeur ajustée pour écran moyen */
+        height: 300px;
+        /* Hauteur ajustée pour écran moyen */
+    }
+
+    .text {
+        font-size: 16px;
+        /* Taille de police ajustée pour écran moyen */
+    }
+
+    .containerArts {
+        left: 25%;
+        margin-top: 80%;
+    }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 480px) {
+    #Bulles .photo {
+        width: 200px;
+        /* Largeur ajustée pour petit écran */
+        height: 200px;
+        /* Hauteur ajustée pour petit écran */
+    }
+
+    .text {
+        font-size: 12px;
+        /* Taille de police ajustée pour petit écran */
+    }
+
+    .containerArts {
+        left: 20%;
+        margin-top: 85%;
+    }
 }
