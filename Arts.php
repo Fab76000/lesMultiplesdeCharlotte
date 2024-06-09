@@ -215,41 +215,44 @@
             musique,<br>
             j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
 
-        <ul class="music-links">
-            <!-- <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a>
-            </li>-->
-            <li><a href=" https://www.youtube.com/watch?v=1ENzQan2JhU">Le rêve</a>
+        <!-- <ul class="music-links">
+            <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a>
             </li>
-            <li><a href="https://www.youtube.com/watch?v=RklwZVsxQnY&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=2">
-                    Leprest à l'improvsite</a>
-            </li>
-            <!-- <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a>
-            </li>
-            <li><a href=" https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino </a> -->
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=Te_6mXfvRKY">Teaser Autour des Elles d'Allain 2016</a>
-            </li>
-            <!-- <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a>
-            </li> -->
-            <li><a href="https://www.youtube.com/watch?v=VLplFrMCfwE">Interview de Charlotte Goupil par Emmanuel
-                    Gouache</a>
-            </li>
-            <!-- <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert
-                    inauguration place Leprest - Mont Saint Aignan</a>
-            </li> -->
             <li><a href="https://vimeo.com/293555303">Teaser Autour des Elles d’Allain - 2018</a></li>
-            <!-- <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour
-                    des Elles d'Allain Extraits</a>
-            </li> -->
             <li><a href=" https://www.youtube.com/watch?v=JC6vuz2HncE"> TEASER VIVENTRE</a>
             </li>
             <li><a href=" https://www.youtube.com/watch?v=IWingOXoCv8">Choupote - extrait du spectacle VIVENTRE du
                     Slam'dit - ChaNoé Goupil & Alex Rasse
                 </a>
             </li>
-        </ul>
+            <li><a href="https://www.youtube.com/watch?v=VLplFrMCfwE">Interview de Charlotte Goupil par Emmanuel
+                    Gouache</a>
+            </li>
+            <li><a href=" https://www.youtube.com/watch?v=1ENzQan2JhU">Le rêve</a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=RklwZVsxQnY&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=2">
+                    Leprest à l'improvsite</a>
+            </li>
+            <li><a href=" https://www.youtube.com/watch?v=al5KVGetoXg"> Concert hommage à Allain Leprest - Bruxelles</a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a>
+            </li>
+            <li><a href=" https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino </a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=Te_6mXfvRKY">Teaser Autour des Elles d'Allain 2016</a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a>
+            </li> 
+        
+            <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert
+                    inauguration place Leprest - Mont Saint Aignan</a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour
+                    des Elles d'Allain Extraits</a>
+            </li> 
+        </ul> -->
 
         <div id="container-iframes">
             <div class="grid-item">
