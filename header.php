@@ -13,17 +13,17 @@
       </div>
     </div>
     <ul id="menuderoulant" class="menu">
-      <li>
-        <a href="Arts.php">Arts</a>
-        <ul class="sousmenu">
-          <li><a href="Arts.php">Spectacles</a></li>
-          <li><a href="Arts.php#Musique">Musique</a></li>
-          <li><a href="Arts.php#Ecriture">Ecriture</a></li>
-        </ul>
-      </li>
-      <li><a class="ColoRed" href="Mediation.php">Médiation</a></li>
-      <li><a href="#">Liens amis</a></li>
+  <li>
+    <a href="Arts.php">Arts</a>
+    <ul class="sousmenu">
+      <li><a href="Arts.php#Spectacles">Spectacles</a></li>
+      <li><a href="Arts.php#Musique">Musique</a></li>
+      <li><a href="Arts.php#Ecriture">Ecriture</a></li>
     </ul>
+  </li>
+  <li><a class="ColoRed" href="Mediation.php">Médiation</a></li>
+  <li><a href="#">Liens amis</a></li>
+</ul>
   </nav>
 </header>
 
