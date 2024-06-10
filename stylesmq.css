@@ -830,8 +830,7 @@ div p.mesEcritures {
     margin-top: -30px;
 }
 
-#Ecriture a,
-#Musique a {
+#Ecriture a {
 
     color: var(--red-color);
     display: block;
