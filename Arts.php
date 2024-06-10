@@ -264,6 +264,7 @@
                 <iframe
                     src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
                     width="560" height="400"
+                    title="Teaser Autour des Elles d’Allain - 2018"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg"
@@ -275,12 +276,13 @@
 
             <div class="grid-item">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
-                    title="YouTube video player"
+                    title="Teaser Viventre"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
-                    title="YouTube video player"
+                    title="Choupote - extrait du spectacle VIVENTRE du
+                    Slam'dit - ChaNoé Goupil & Alex Rasse"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -312,7 +314,8 @@
 
             <div class="grid-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
-                    title="YouTube video player"
+                    title="Interview de Charlotte Goupil par Emmanuel
+                    Gouache"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -322,7 +325,7 @@
                     allowfullscreen>
                 </iframe> -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
-                    title="YouTube video player"
+                    title="Le rêve"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -336,12 +339,12 @@
                     allowfullscreen>
                 </iframe> -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
-                    title="YouTube video player"
+                    title="Leprest à l'improvsite"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY"
-                    title="YouTube video player"
+                    title="Teaser Autour des Elles d'Allain 2016"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
