@@ -255,101 +255,56 @@
         </ul> -->
 
         <div id="container-iframes">
+        <div id="container-iframes">
+        <div class="grid-container">
             <div class="grid-item">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ctshwwMDoiA"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
                 <iframe
                     src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
-                    width="560" height="400"
+                    width="560" height="315"
                     title="Teaser Autour des Elles d’Allain - 2018"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/al5KVGetoXg"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
             </div>
-
             <div class="grid-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
                     title="Teaser Viventre"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                    allowfullscreen></iframe>
+            </div>
+            <div class="grid-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
                     title="Choupote - extrait du spectacle VIVENTRE du
                     Slam'dit - ChaNoé Goupil & Alex Rasse"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/mL48Xt1dUkY"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/uvk5VtPmDCw"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
+                    allowfullscreen></iframe>
             </div>
-
-            <div class="grid-item">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFGkrxvuomk"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
-            
-                <!-- <iframe width="560" height="315"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
-            </div>
-
             <div class="grid-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
                     title="Interview de Charlotte Goupil par Emmanuel
                     Gouache"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Lz2ASfwnM"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
+                    allowfullscreen></iframe>
+            </div>
+            <div class="grid-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
                     title="Le rêve"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                
+                    allowfullscreen></iframe>
             </div>
-
             <div class="grid-item">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/B6TKhf3UAos"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe> -->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
                     title="Leprest à l'improvsite"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                    allowfullscreen></iframe>
+            </div>
+            <div class="grid-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY"
                     title="Teaser Autour des Elles d'Allain 2016"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                    allowfullscreen></iframe>
             </div>
         </div>
+    </div>
     </section>
 
     <span id="Ecriture0"></span>
