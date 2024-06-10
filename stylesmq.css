@@ -770,6 +770,10 @@ footer {
     margin-top: 400px;
 }
 
+#Musique p {
+    margin-left: 100px;
+}
+
 .music-links,
 li,
 a:link,
