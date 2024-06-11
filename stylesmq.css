@@ -1039,6 +1039,15 @@ li {
         text-align: left;
     }
 
+    #Allain,
+    #Viventre,
+    #Argent {
+        width: 70%;
+    }
+
+    #iframeArgent {
+        width: 100%;
+    }
 
     /* 481px — 768px : iPads, tablettes */
 
