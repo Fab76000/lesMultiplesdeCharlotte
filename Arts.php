@@ -265,8 +265,6 @@
         </div>
     </div>
     
-    Copy
-Insert
 <div style="display: flex; justify-content: center; align-items: center; margin-top: -3800px;">
     <div style="text-align: left; max-width: 50%;">
         <p>Si vous souhaitez voir plus de vidéos, cliquez sur les liens suivants: </p>

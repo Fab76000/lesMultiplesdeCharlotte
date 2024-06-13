@@ -677,28 +677,7 @@ footer {
 }
 
 /* REPRENDRE CETTE PARTIE POUR CHANGER PHOTO */
-/* 
-#Mosaique {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 400px;
 
-}
-
-#Mosaique img {
-
-    width: 280px;
-    height: 270px;
-    margin-right: 10px;
-
-}
-
-#Mosaique img:hover {
-
-    width: 300px;
-    height: 290px;
-} */
 
 #Mosaique1 {
     margin-top: 170px;
@@ -724,20 +703,6 @@ footer {
     height: 350px;
 }
 
-#Mosaique img {
-
-    display: block;
-    width: 290px;
-    height: 300px;
-    transition: width 1s ease-in-out, height 1s ease-in-out;
-
-}
-
-#Mosaique div:hover img {
-    width: 300px;
-    height: 350px;
-
-}
 
 
 #Arts h1 {
@@ -1042,7 +1007,6 @@ li {
         width: 360px;
         height: 200px;
 
-
     }
 
     #Musique p {
@@ -1057,12 +1021,18 @@ li {
     }
 
     #iframeArgent {
-        width: 100%;
+        width: 80%;
+        margin-left: calc(50% - 110px) !important;
     }
 
-    #Mosaique {
-        margin-top: 550px;
+    #Mosaique,
+    #Mosaique1 {
+
+        justify-content: center;
+        flex-direction: column;
+
     }
+
 
     /* 481px — 768px : iPads, tablettes */
 
