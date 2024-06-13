@@ -701,26 +701,44 @@ footer {
 } */
 
 #Mosaique1 {
+    margin-top: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    position: relative;
+    gap: 5px;
 
 }
 
 #Mosaique1 img {
 
-    width: 280px;
-    height: 270px;
-    margin-right: 10px;
-
+    display: block;
+    width: 290px;
+    height: 300px;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-#Mosaique1 img:hover {
+#Mosaique1 div:hover img {
 
     width: 300px;
-    height: 290px;
+    height: 350px;
 }
+
+#Mosaique img {
+
+    display: block;
+    width: 290px;
+    height: 300px;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+
+}
+
+#Mosaique div:hover img {
+    width: 300px;
+    height: 350px;
+
+}
+
 
 #Arts h1 {
 
