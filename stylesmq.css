@@ -907,6 +907,33 @@ li {
 @media screen and (min-width:300px) and (max-width:480px) {
 
 
+
+    /* #menuderoulant li {
+        font-size: 12px;
+    } */
+
+    #menuderoulant,
+    #menuderoulant li #menuderoulant .ColoRed,
+    #menuderoulant .sousmenu .ColoRed2,
+    #menuderoulant li a:hover,
+    #menuderoulant .sousmenu li,
+    #menuderoulant .sousmenu li a:hover,
+    #menuderoulant li a:link,
+    #menuderoulant li a:visited {
+
+        width: 100%;
+        max-width: 481px;
+        font-size: 12px;
+    }
+
+
+    #menuderoulant .sousmenu {
+        width: 110px;
+        /* Increase the width of the submenu */
+        z-index: 1;
+        /* Ensure the submenu appears above other elements */
+    }
+
     .container {
         display: block;
         /* Ajustement de la disposition pour les petits écrans */
