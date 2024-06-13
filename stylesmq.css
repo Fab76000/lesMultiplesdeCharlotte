@@ -348,32 +348,28 @@ footer {
 
 /*MOSAIQUE IMAGES*/
 
-#Arts #Mosaique {
-    margin-top: 150px;
+#Mosaique {
+    margin-top: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-
-
-#Mosaique {
     position: relative;
-
+    gap: 5px;
 }
 
-#Mosaique>img {
+
+#Mosaique img {
+
     display: block;
-    border-radius: 50%;
-    width: 450px;
-    height: 400px;
-    margin-right: 20px;
+    width: 290px;
+    height: 300px;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+
 }
 
-#Mosaique:hover>img {
-    width: 500px;
-    height: 450px;
-    transition: width 1.3s, height 1.3s;
+#Mosaique div:hover img {
+    width: 300px;
+    height: 350px;
 
 }
 
@@ -670,7 +666,6 @@ footer {
 
 #Viventre {
 
-
     margin-top: 550px;
     min-height: 450px;
     width: 1400px;
@@ -682,7 +677,7 @@ footer {
 }
 
 /* REPRENDRE CETTE PARTIE POUR CHANGER PHOTO */
-
+/* 
 #Mosaique {
     display: flex;
     justify-content: center;
@@ -703,7 +698,7 @@ footer {
 
     width: 300px;
     height: 290px;
-}
+} */
 
 #Mosaique1 {
     display: flex;
@@ -1021,8 +1016,6 @@ li {
 
     }
 
-
-
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1047,6 +1040,10 @@ li {
 
     #iframeArgent {
         width: 100%;
+    }
+
+    #Mosaique {
+        margin-top: 550px;
     }
 
     /* 481px — 768px : iPads, tablettes */

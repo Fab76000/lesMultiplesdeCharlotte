@@ -141,23 +141,22 @@
         <section id="Mosaique">
 
             <div><a href="images/Viventre-18_12_21-retouche%20-%2019.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2019.jpg" alt="Photo de Viventre"></a>
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2019.jpg" alt=""></a>
             </div>
             <div><a href="images/Viventre-18_12_21-retouche%20-%2022.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2022.jpg" alt="Photo de Viventre"></a>
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2022.jpg" alt=""></a>
             </div>
 
             <div> <a href="images/Viventre-18_12_21-retouche%20-%2025.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2025.jpg" alt="Photo de Viventre"></a>
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2025.jpg" alt=""></a>
             </div>
             <div> <a href="images/Viventre-18_12_21-retouche%20-%2031.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-petite%2031.jpg" alt="Photo de Viventre"></a>
+                        src="images/Viventre-18_12_21-retouche%20-petite%2031.jpg" alt=""></a>
             </div>
             <div> <a href="images/Viventre-18_12_21-retouche%20-%2036.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2036.jpg" alt="Photo de Viventre"></a>
+                        src="images/Viventre-18_12_21-retouche%20-%20petite%2036.jpg" alt=""></a>
             </div>
         </section>
-
         <article id="Argent" class="spectacles">
             <h1>L'Argent</h1>
             <p>Lecture théâtralisée d'après une nouvelle de Marie Desplechin sur le thème de "l'Argent", la maille, le
