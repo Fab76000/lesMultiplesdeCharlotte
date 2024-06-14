@@ -23,7 +23,6 @@ html {
     margin: 0px;
     height: 100%;
     overflow-x: hidden;
-
 }
 
 a h1 {
@@ -674,6 +673,15 @@ footer {
     border-radius: 5px;
     box-shadow: 10px 10px 10px var(--red-color);
     padding: 10px 10px 30px 10px;
+}
+
+#Allain p,
+#Viventre p,
+#Argent p,
+#Musique p,
+#Ecriture p,
+.presentation p {
+    line-height: 2;
 }
 
 /* REPRENDRE CETTE PARTIE POUR CHANGER PHOTO */
