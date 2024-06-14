@@ -16,8 +16,8 @@
   <li>
     <a href="Arts.php">Arts</a>
     <ul class="sousmenu">
-      <li><a href="Arts.php#Spectacles">Spectacles</a></li>
-      <li><a href="Arts.php#Musique">Musique</a></li>
+      <li><a href="Arts.php#titreSpectacles">Spectacles</a></li>
+      <li><a href="Arts.php#titreMusique">Musique</a></li>
       <li><a href="Arts.php#Ecriture">Ecriture</a></li>
     </ul>
   </li>

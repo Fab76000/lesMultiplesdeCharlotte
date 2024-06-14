@@ -15,8 +15,10 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+<span id="titreSpectacles"></span>
 
+    <?php include 'header.php'; ?>
+    <h2 id="spectaclesH2">Spectacles</h2>
     <span id="Spectacles"></span>
     <section id="Bulles">
         <div id="Chanoe" class="photo">
@@ -192,14 +194,17 @@
             <div> <a href="images/Argent_4150.jpg"><img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent"></a>
             </div>
             <div> <a href="images/Argent_4165_.jpg"><img src="images/Argent_4165_petite.jpg"
-                        alt="Photo de l'Argent"></a> </div>
+                        alt="Photo de l'Argent"></a>
+            </div>
 
         </section>
+        <span id="titreMusique"></span>
 
     </section>
 
-
+</li><li><a href="Arts.php#titreMusique">Musique</a></li>
     <section id="Musique">
+        <h2>Musique</h2>
         <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
             scène
             du Bateau Ivre (ancien cabaret rouennais aujourd'hui disparu),<br>

@@ -16,11 +16,9 @@
 
 <body>
     <?php include 'header.php'; ?>
-
-
-    <div>
-        <h1 id="Mediation">Médiation</h1>
-        <p class="alinea" style="margin: 300px 50px 0 50px;">Au travers de mes diverses expériences et stages de
+    <section id="Mediation">
+        <h2>Médiation</h2>
+        <p class="alinea" style="margin: 80px 50px 0 50px;">Au travers de mes diverses expériences et stages de
             formation
             visant à trouver ma
             voie
@@ -49,7 +47,7 @@
             propose aux publics de tous genres, capacités,
             âges et horizons : écriture, théâtre, chant,
             conte…</p>
-    </div>
+</section>
 
     <div class="grid-wrap">
         <ul>
