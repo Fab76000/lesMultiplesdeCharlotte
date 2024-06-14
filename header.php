@@ -36,6 +36,7 @@
       menu.classList.toggle("collapsed");
       burger.classList.toggle("cross");
     });
-  });</script>
+  });
+  </script>
 
 

@@ -680,7 +680,8 @@ footer {
 #Argent p,
 #Musique p,
 #Ecriture p,
-.presentation p {
+.presentation p,
+#Mediation p {
     line-height: 2;
 }
 
@@ -1382,5 +1383,4 @@ li {
         left: 20%;
         margin-top: 85%;
     }
-}
 }
