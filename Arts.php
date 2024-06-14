@@ -265,11 +265,11 @@
         </div>
     </div>
     
-<div style="display: flex; justify-content: left; align-items: left; margin-top: -3700px;">
-    <div style="text-align: left; max-width: 50%;">
+<div id="container-links">
+    <div id="container-links-p">
         <p>Si vous souhaitez voir plus de vidéos, cliquez sur les liens suivants: </p>
         </div>
-        <div  style="text-align: right; max-width: 50%;">
+        <div id="container-links-ul">
         <ul class="music-links">
             <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
             <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
