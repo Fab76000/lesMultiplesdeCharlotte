@@ -265,9 +265,11 @@
         </div>
     </div>
     
-<div style="display: flex; justify-content: center; align-items: center; margin-top: -3800px;">
+<div style="display: flex; justify-content: left; align-items: left; margin-top: -3700px;">
     <div style="text-align: left; max-width: 50%;">
         <p>Si vous souhaitez voir plus de vidéos, cliquez sur les liens suivants: </p>
+        </div>
+        <div  style="text-align: right; max-width: 50%;">
         <ul class="music-links">
             <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
             <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
@@ -278,6 +280,7 @@
             <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
             <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour des Elles d'Allain Extraits</a></li>
         </ul>
+        </div>
     </div>
 </div>
 
