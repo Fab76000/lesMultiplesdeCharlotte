@@ -18,6 +18,7 @@
 <span id="titreSpectacles"></span>
 
     <?php include 'header.php'; ?>
+    <h1 id="ArtsH1">Arts</h1>
     <h2 id="spectaclesH2">Spectacles</h2>
     <span id="Spectacles"></span>
     <section id="Bulles">
@@ -201,8 +202,8 @@
         <span id="titreMusique"></span>
 
     </section>
+</li>
 
-</li><li><a href="Arts.php#titreMusique">Musique</a></li>
     <section id="Musique">
         <h2>Musique</h2>
         <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
@@ -287,15 +288,14 @@
         </div>
     </div>
 </div>
-
+<span id="titreEcriture"></span>
     </section>
 
 
 
-    <span id="Ecriture0"></span>
     <section id="Ecriture">
-        <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
-
+    <h2 id="EcritureH2">Ecriture</h2>
+    
         <p>
             "Si j'écris c'est que passé, avenir et parfois présent, m'envahissent de leurs pensées abruptes et
             naissantes à chaque seconde que la Nature fait.
@@ -316,8 +316,9 @@
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
 
+        <h3>Mes écrits</h3>
 
-
+        <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
         <div>
             <p class="mesEcritures">A propos de mes écritures</p>
         </div>

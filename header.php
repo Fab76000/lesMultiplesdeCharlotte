@@ -18,7 +18,7 @@
     <ul class="sousmenu">
       <li><a href="Arts.php#titreSpectacles">Spectacles</a></li>
       <li><a href="Arts.php#titreMusique">Musique</a></li>
-      <li><a href="Arts.php#Ecriture">Ecriture</a></li>
+      <li><a href="Arts.php#titreEcriture">Ecriture</a></li>
     </ul>
   </li>
   <li><a class="ColoRed" href="Mediation.php">Médiation</a></li>

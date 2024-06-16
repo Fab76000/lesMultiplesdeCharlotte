@@ -261,7 +261,7 @@ hr {
     line-height: 1.4em;
     text-align: justify;
     color: #000;
-    margin-top: 350px;
+
     background: #FBFBD0;
 }
 
@@ -499,7 +499,7 @@ footer {
 
 /* Styles pour la section Bulles */
 #Bulles {
-    margin-top: 150px;
+    margin-top: 100px;
     /* Ajuster la marge supérieure */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -694,8 +694,13 @@ footer {
     line-height: 2;
 }
 
+#ArtsH1 {
+    margin-top: 250px;
+    margin-left: calc(50% - 400px);
+}
+
 #spectaclesH2 {
-    margin-top: 300px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -744,14 +749,6 @@ footer {
     margin-bottom: 3px;
 }
 
-#Arts h3 {
-    font-size: 20px;
-    text-align: left;
-    margin-bottom: 3px;
-    position: relative;
-    top: -30px;
-    left: 370px;
-}
 
 #Arts p {
 
@@ -820,8 +817,13 @@ a:visited {
     margin-top: 550px;
 }
 
-#Ecriture p {
+#EcritureH2 {
+    margin-bottom: 50px;
+}
 
+
+#Ecriture p {
+    margin-top: -25px;
     padding: 40px;
     display: flex;
     flex-wrap: nowrap;
@@ -852,6 +854,7 @@ div p.mesEcritures {
     font-weight: bold;
     font-size: 20px;
 }
+
 
 .aEcriture {
     margin-top: -30px;

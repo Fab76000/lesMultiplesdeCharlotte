@@ -18,9 +18,10 @@
 <body id="hack">
 
 	<?php include 'header.php'; ?>
-
 	<section id="Hero">
-		<div class="Bio"><img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Goupil"></div>
+	<h1>Accueil</h1>
+		<div class="Bio">
+		<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Goupil"></div>
 		<h2 id="presentation">Charlotte Goupil</h2>
 		<div class="presentation"><p>Après un bac L théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
 			conseils de sa professeure Annie Franscisi et s'inscrit en Licence d'Arts
