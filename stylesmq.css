@@ -77,6 +77,8 @@ h2 {
     text-align: center;
 }
 
+
+
 .green {
     color: var(--green-color);
     font-style: normal;
@@ -694,6 +696,10 @@ footer {
     line-height: 2;
 }
 
+#Ecriture p {
+    font-style: italic;
+}
+
 #ArtsH1 {
     margin-top: 250px;
     margin-left: calc(50% - 400px);
@@ -819,6 +825,10 @@ a:visited {
 
 #EcritureH2 {
     margin-bottom: 50px;
+}
+
+#mesEcritsH3 {
+    margin-left: 45px;
 }
 
 
@@ -1093,7 +1103,7 @@ li {
 
     #container-links-p p {
         margin-left: 50px;
-        margin-top: -600px;
+
 
     }
 

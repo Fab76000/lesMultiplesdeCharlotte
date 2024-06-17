@@ -79,7 +79,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="form-9 col-xl-8 col-lg-8 col-md-12 col-sm-12 offset-xl-2">
-				<p id="MessageEssentiel">Laissez-moi un message "essentiel et sans nuages" à
+				<p id="MessageEssentiel">Laissez-moi un message <span style="font-style: italic;">"essentiel et sans nuages"</span> à
 					larchotterenard@protonmail.com</p>
 				<form id="contact-form" method="post" action="contact.php" role="form" >
 					<div class="controls">

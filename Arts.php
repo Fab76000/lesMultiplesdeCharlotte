@@ -126,9 +126,9 @@
 
                 Retours de spectateur.ice.s : <br>
 
-                "Merci pour cette création, ma curiosité a été comblée. J'ai apprécié la subtilité de votre poésie, sa
+                <span style="font-style: italic;"> "Merci pour cette création, ma curiosité a été comblée. J'ai apprécié la subtilité de votre poésie, sa
                 musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
-                projets 2022" <br>
+                projets 2022" </span> <br>
 
                 <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong>
             </p>
@@ -173,7 +173,7 @@
                 (Edward, Bonnie, Franz et Sylvia), et de leurs enfants (Dimitri, Ernesto, Virginie et Fortunée) à propos
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
-            <p>"Pour voir la captation du spectacle : </p>
+            <p>Pour voir la captation du spectacle : </p>
             <p><iframe id="iframeArgent" width="350" height="350" style="margin-left: calc(50% - 200px);" src="https://www.youtube.com/embed/4QuITiqTIxk"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -200,7 +200,6 @@
 
         </section>
         <span id="titreMusique"></span>
-
     </section>
 </li>
 
@@ -214,10 +213,7 @@
             effet
             premièrement le théâtre.<br>
             Mais d'un père compositeur et pianiste de scène dans sa jeunesse.. même si je ne sais pas
-            lire
-            la
-            musique,<br>
-            j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
+            lire la musique,<br> j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
 
         <div id="container-iframes">
         <div class="grid-container">
@@ -316,7 +312,7 @@
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
 
-        <h3>Mes écrits</h3>
+        <h3 id="mesEcritsH3">Mes écrits</h3>
 
         <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
         <div>
@@ -358,7 +354,5 @@
     <script src="js/script.js" async></script>
     
 </body>
-
-
 
 </html>
