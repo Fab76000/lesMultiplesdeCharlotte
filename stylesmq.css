@@ -710,9 +710,16 @@ footer {
     text-align: center;
 }
 
+#container-links-p p {
+    margin-top: -3780px;
+}
+
 #container-links-ul ul {
     line-height: 3;
+    margin-top: -40px;
 }
+
+
 
 /* REPRENDRE CETTE PARTIE POUR CHANGER PHOTO */
 
