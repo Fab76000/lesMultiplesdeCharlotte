@@ -112,13 +112,23 @@
 									placeholder="Veuillez entrer votre numéro de téléphone"  autocomplete="on">
 								<p class="comments"></p>
 							</div>
+							<div class="col-md-12">
+								<label for="subject"><span class="red">*</span>Sujet</label>
+								<select id="subject" name="subject" class="form-control">
+									<option value="">Quel est le sujet de votre message ?</option>
+									<option value="Je voudrais plus d'infos sur tes services">Je voudrais plus d'infos sur tes services</option>
+									<option value="J'aimerais recevoir un devis">J'aimerais recevoir un devis</option>
+									<option value="Autre message du site">Autre</option>
+								</select>
+								<p class="comments"></p>
+							</div>
 						</div>
-						<div class="row">
+						<div class="row mt-4">
 							<div class="col-md-12">
 								<label for="message"><span class="red">*</span>Message</label>
 								<textarea id="message" name="message" class="form-control" placeholder="Votre Message"
-									rows="4"></textarea>
-								<p class="comments"></p>
+									rows="8"></textarea>
+								<p class="comments mb-4"></p>
 							</div>
 						</div>
 						<div class="row">

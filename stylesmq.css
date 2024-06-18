@@ -5,6 +5,7 @@
     --header-background-color: #FBFBD0;
     --green-color: #1D7461;
     --red-color: #741D34;
+    --thank-you-color: #253D0D;
 }
 
 * {
@@ -302,6 +303,7 @@ img[alt] {
     transition: all 0.2s ease-in 0s;
     bottom: -50px;
     padding: 8px;
+    width: inherit;
 }
 
 .button1:hover {
@@ -1024,6 +1026,7 @@ li {
 
         display: flex;
         justify-content: left;
+        width: inherit;
     }
 
     .not-authorized-overlay h2 {

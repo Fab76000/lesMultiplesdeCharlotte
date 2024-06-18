@@ -1,6 +1,6 @@
 <?php
 
-    $array = array("firstname" => "", "name" => "", "email" => "", "phone" => "", "message" => "", "firstnameError" => "", "nameError" => "", "emailError" => "", "phoneError" => "", "messageError" => "", "isSuccess" => false);
+    $array = array("firstname" => "", "name" => "", "email" => "", "phone" => "","subject" => "", "message" => "", "firstnameError" => "", "nameError" => "", "emailError" => "", "phoneError" => "",  "subjectError" => "", "messageError" => "", "isSuccess" => false);
     $emailTo = "fabienne_berges@yahoo.fr";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -9,6 +9,7 @@
         $array["name"] = test_input($_POST["name"]);
         $array["email"] = test_input($_POST["email"]);
         $array["phone"] = test_input($_POST["phone"]);
+        $array["subject"] = test_input($_POST["subject"]);
         $array["message"] = test_input($_POST["message"]);
         $array["isSuccess"] = true; 
         $emailText = "";
@@ -52,6 +53,11 @@
         {
             $emailText .= "Phone: {$array['phone']}\n";
         }
+        if (empty($array["subject"]))
+        {
+            $array["subjectError"] = "Désolé, vous avez oublié d'indiquer le sujet de votre message";
+            $array["isSuccess"] = false; 
+        }
 
         if (empty($array["message"]))
         {
@@ -66,7 +72,7 @@
         if($array["isSuccess"]) 
         {
             $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-            mail($emailTo, "Un message de votre site", $emailText, $headers);
+            mail($emailTo, $array["subject"] , $emailText, $headers);
         }
         
         echo json_encode($array);
@@ -83,12 +89,12 @@
     }
     function test_input($data) 
     {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
     }
- 
+
 ?>
 
 
