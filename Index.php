@@ -77,13 +77,14 @@
 		</p></div>
 		
 	</section>
-	<div class="container">
+	<div class="container mt-4">
 		<div class="row">
 			<div class="form-9 col-xl-8 col-lg-8 col-md-12 col-sm-12 offset-xl-2">
-				<p id="MessageEssentiel">Laissez-moi un message <span style="font-style: italic;">"essentiel et sans nuages"</span> à
-					larchotterenard@protonmail.com</p>
+				<h2>Formulaire de contact</h2>
 				<form id="contact-form" method="post" action="contact.php" role="form" >
 					<div class="controls">
+					<p id="MessageEssentiel">Laissez-moi un message <span style="font-style: italic;">"essentiel et sans nuages"</span> à
+					larchotterenard@protonmail.com</p>
 						<div class="row">
 							<div class="col-md-6">
 								<label for="firstname"><span class="red">*</span>Prénom</label>
