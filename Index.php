@@ -16,7 +16,9 @@
 </head>
 
 <body id="hack">
+
 	<?php include 'header.php'; ?>
+	<?php include 'nav.php'; ?>
 	<section id="Hero">
 	<h1>Accueil</h1>
 		<div class="Bio">
