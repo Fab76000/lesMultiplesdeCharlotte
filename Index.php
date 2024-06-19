@@ -16,7 +16,6 @@
 </head>
 
 <body id="hack">
-
 	<?php include 'header.php'; ?>
 	<section id="Hero">
 	<h1>Accueil</h1>
