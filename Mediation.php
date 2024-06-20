@@ -9,7 +9,7 @@
 	$date = date("Y-m-d-h-i-s");
 	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
 	?>
-    <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
 </head>
