@@ -1150,6 +1150,9 @@ li {
 
     }
 
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
@@ -1286,6 +1289,10 @@ li {
         flex-direction: column;
 
     }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -1341,6 +1348,10 @@ li {
 
     }
 
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }
 
 
@@ -1393,6 +1404,9 @@ li {
 
     }
 
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (min-width: 1191px) {
