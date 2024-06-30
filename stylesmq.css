@@ -1153,6 +1153,12 @@ li {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #container-links-ul ul {
+
+        margin-top: 50px;
+
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
@@ -1239,6 +1245,11 @@ li {
 
     }
 
+    #container-links-ul ul {
+
+        margin-top: 50px;
+
+    }
 }
 
 
@@ -1292,6 +1303,12 @@ li {
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    #container-links-ul ul {
+
+        margin-top: 50px;
+
     }
 }
 
@@ -1352,6 +1369,12 @@ li {
         grid-template-columns: repeat(1, 1fr);
 
     }
+
+    #container-links-ul ul {
+
+        margin-top: 50px;
+
+    }
 }
 
 
@@ -1406,6 +1429,13 @@ li {
 
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    #container-links-ul ul {
+
+        margin-top: 50px;
+
     }
 }
 
