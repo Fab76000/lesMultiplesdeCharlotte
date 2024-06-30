@@ -634,7 +634,6 @@ footer {
 
 #ArtsH1 {
     margin-top: 250px;
-    margin-left: 150px;
 
 }
 
@@ -1059,7 +1058,7 @@ li {
 
     #ArtsH1 {
         margin-top: 350px;
-        margin-left: auto;
+
     }
 }
 
@@ -1157,6 +1156,15 @@ li {
     #container-links-ul ul {
 
         margin-top: 50px;
+
+    }
+
+    #Hero h1 {
+        margin-right: 800px;
+    }
+
+    #ArtsH1 {
+        margin-top: 350px;
 
     }
 }
