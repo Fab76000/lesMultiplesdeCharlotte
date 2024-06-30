@@ -1328,12 +1328,14 @@ li {
         margin-left: 3px;
     }
 
-    #Mosaique img {
+    #Mosaique img,
+    #Mosaique1 img {
         width: 150px;
         height: 200px;
     }
 
-    #Mosaique div:hover img {
+    #Mosaique div:hover img,
+    #Mosaique1 div:hover img {
         width: 170px;
         height: 250px;
 
@@ -1342,7 +1344,7 @@ li {
 }
 
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1190px) {
     #MessageEssentiel {
         max-width: 90vw;
         text-align: center;
@@ -1378,19 +1380,35 @@ li {
         margin: auto;
     }
 
-
-
-    #Mosaique img {
+    #Mosaique img,
+    #Mosaique1 img {
         width: 150px;
         height: 200px;
     }
 
-    #Mosaique div:hover img {
+    #Mosaique div:hover img,
+    #Mosaique1 div:hover img {
         width: 170px;
         height: 250px;
 
     }
 
+}
+
+@media only screen and (min-width: 1191px) {
+
+    #Mosaique img,
+    #Mosaique1 img {
+        width: 250px;
+        height: 300px;
+    }
+
+    #Mosaique div:hover img,
+    #Mosaique1 div:hover img {
+        width: 270px;
+        height: 350px;
+
+    }
 }
 
 /* Media queries pour les écrans moyens */
