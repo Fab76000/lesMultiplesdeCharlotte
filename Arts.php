@@ -81,7 +81,7 @@
     </section>
 
 
-    <section id="Arts">
+    <section id="Arts" class="container">
         <span id="allain"></span>
         <article id="Allain" class="spectacles">
             <h1>Autour des Elles d'Allain</h1>

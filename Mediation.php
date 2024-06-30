@@ -17,7 +17,7 @@
 <body>
     <?php include 'header.php'; ?>
     <section id="Mediation">
-        <h2>Médiation</h2>
+        <h1>Médiation</h1>
         <p class="alinea" style="margin: 80px 50px 0 50px;">Au travers de mes diverses expériences et stages de
             formation
             visant à trouver ma

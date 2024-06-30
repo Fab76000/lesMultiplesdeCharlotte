@@ -435,7 +435,7 @@ footer {
 
 /* Styles pour la section Bulles */
 #Bulles {
-    margin-top: 100px;
+
     /* Ajuster la marge supérieure */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -595,29 +595,26 @@ footer {
     min-height: 1800px;
 }
 
-#Allain,
-#Argent {
-
+.spectacles {
     margin-top: 550px;
     min-height: 450px;
-    width: 1400px;
+    width: 80%;
     padding: 10px;
     border: 3px solid black;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px var(--green-color);
     padding: 10px 10px 30px 10px;
+}
+
+#Allain,
+#Argent {
+
+    box-shadow: 10px 10px 10px var(--green-color);
 }
 
 #Viventre {
 
-    margin-top: 550px;
-    min-height: 450px;
-    width: 1400px;
-    padding: 10px;
-    border: 3px solid black;
-    border-radius: 5px;
     box-shadow: 10px 10px 10px var(--red-color);
-    padding: 10px 10px 30px 10px;
+
 }
 
 #Allain p,
@@ -636,7 +633,8 @@ footer {
 
 #ArtsH1 {
     margin-top: 250px;
-    margin-left: calc(50% - 400px);
+    margin-left: 150px;
+
 }
 
 #spectaclesH2 {
@@ -681,8 +679,6 @@ footer {
     width: 300px;
     height: 350px;
 }
-
-
 
 #Arts h1 {
 
@@ -888,11 +884,6 @@ li {
 @media screen and (min-width:80px) and (max-width:480px) {
 
 
-
-    /* #menuderoulant li {
-        font-size: 12px;
-    } */
-
     #menuderoulant,
     #menuderoulant li #menuderoulant .ColoRed,
     #menuderoulant .sousmenu .ColoRed2,
@@ -1065,24 +1056,24 @@ li {
 
     }
 
-    #Mediation h2 {
-        margin-top: 400px;
-        text-align: center;
+    #ArtsH1 {
+        margin-top: 350px;
+        margin-left: auto;
     }
-
 }
 
-/* 481px — 768px : iPads, tablettes */
 
+/* 481px — 768px : iPads, tablettes */
 @media only screen and (min-width : 481px) and (max-width: 674px) {
 
     /* Media query pour les écrans de 768px et moins */
 
     #Hero {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        /* Centre les éléments en colonne */
     }
+
 
     .Bio {
         margin-right: 0;
@@ -1094,7 +1085,7 @@ li {
         width: 70%;
         height: auto;
         /* Pour conserver les proportions de l'image */
-        margin: 250px 0 20px 0;
+        margin: 0 0 20px 0;
 
         /* Ajoute une marge inférieure */
     }
@@ -1124,13 +1115,6 @@ li {
         font-size: 15px;
     }
 
-    /* input[type=text],
-    input[type=email],
-    input[type=phone],
-    textarea {
-
-        max-width: 48%;
-    }*/
 
     input[type=submit] {
         display: flex;
@@ -1157,6 +1141,8 @@ li {
         justify-content: left;
         width: inherit;
     }
+
+
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
@@ -1234,6 +1220,9 @@ li {
         justify-content: left;
         width: inherit;
     }
+
+
+
 }
 
 
