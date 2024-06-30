@@ -371,6 +371,7 @@ footer {
     align-items: center;
     position: relative;
     gap: 5px;
+
 }
 
 
@@ -1074,7 +1075,6 @@ li {
         align-items: center;
     }
 
-
     .Bio {
         margin-right: 0;
         margin-bottom: 20px;
@@ -1142,6 +1142,13 @@ li {
         width: inherit;
     }
 
+    #Mosaique,
+    #Mosaique1 {
+
+        justify-content: center;
+        flex-direction: column;
+
+    }
 
 }
 
@@ -1221,7 +1228,13 @@ li {
         width: inherit;
     }
 
+    #Mosaique,
+    #Mosaique1 {
 
+        justify-content: center;
+        flex-direction: column;
+
+    }
 
 }
 
@@ -1266,6 +1279,13 @@ li {
         margin-left: 3px;
     }
 
+    #Mosaique,
+    #Mosaique1 {
+
+        justify-content: center;
+        flex-direction: column;
+
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -1307,6 +1327,18 @@ li {
         max-width: 97vw;
         margin-left: 3px;
     }
+
+    #Mosaique img {
+        width: 150px;
+        height: 200px;
+    }
+
+    #Mosaique div:hover img {
+        width: 170px;
+        height: 250px;
+
+    }
+
 }
 
 
@@ -1344,6 +1376,19 @@ li {
 
     .form-9 {
         margin: auto;
+    }
+
+
+
+    #Mosaique img {
+        width: 150px;
+        height: 200px;
+    }
+
+    #Mosaique div:hover img {
+        width: 170px;
+        height: 250px;
+
     }
 
 }
