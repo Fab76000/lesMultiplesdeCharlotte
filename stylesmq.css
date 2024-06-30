@@ -1098,13 +1098,16 @@ li {
     #presentation {
         margin-top: 10px;
         color: chocolate;
+        margin-right: 680px;
     }
 
     .presentation {
         color: chocolate;
-        max-width: 97vw;
-        margin-left: 3px;
+        max-width: 50%;
+        margin-left: -430px;
+
     }
+
 
     #MessageEssentiel {
         max-width: 90vw;
