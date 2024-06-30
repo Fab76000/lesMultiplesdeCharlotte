@@ -74,9 +74,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-#Mediation h2 {
+#Mediation h1 {
     margin-top: 350px;
     text-align: center;
+
 }
 
 
@@ -634,6 +635,7 @@ footer {
 
 #ArtsH1 {
     margin-top: 250px;
+    text-align: center;
 
 }
 
