@@ -74,12 +74,11 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 #Mediation h1 {
     margin-top: 350px;
     text-align: center;
-
 }
-
 
 
 .green {
@@ -241,12 +240,10 @@ hr {
     width: 900px;
     margin: 0 auto;
     background: #FBFBD0;
-
-}
-
-#Hero h1 {
     margin-top: 400px;
+
 }
+
 
 .Bio {
     position: relative;
@@ -256,10 +253,18 @@ hr {
 }
 
 
-.Bio img {
+/* .Bio img {
     margin-top: 10px;
     width: 550px;
     height: 450px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+} */
+.Bio img {
+    margin-top: 10px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
     margin-right: 20px;
 }
@@ -270,6 +275,7 @@ hr {
     text-align: justify;
     color: #000;
     background: #FBFBD0;
+    font-weight: inherit;
 }
 
 .presentation {
@@ -1164,9 +1170,6 @@ li {
 
     }
 
-    #Hero h1 {
-        margin-right: 800px;
-    }
 
     #ArtsH1 {
         margin-top: 350px;
