@@ -928,9 +928,11 @@ li {
     }
 
     #presentation {
-        margin-top: 500px;
-
+        color: purple;
+        max-width: 97vw;
+        margin-left: 3px;
     }
+
 
     .presentation {
         max-width: 97vw;
@@ -1093,7 +1095,7 @@ li {
     }
 
     .Bio img {
-        max-width: 70%;
+        max-width: 100%;
         height: auto;
     }
 
