@@ -253,14 +253,6 @@ hr {
 }
 
 
-/* .Bio img {
-    margin-top: 10px;
-    width: 550px;
-    height: 450px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-} */
-
 .Bio img {
     margin-top: 10px;
     max-width: 450px;
@@ -1186,7 +1178,6 @@ li {
 
     }
 
-    /* A travailler pour s'adapter au responsive */
     .not-authorized-overlay h2 {
 
         margin-top: -80px;
@@ -1431,6 +1422,7 @@ li {
         margin-top: 50px;
 
     }
+
 }
 
 
@@ -1508,6 +1500,10 @@ li {
         width: 270px;
         height: 350px;
 
+    }
+
+    .text {
+        margin-top: -50px;
     }
 }
 
