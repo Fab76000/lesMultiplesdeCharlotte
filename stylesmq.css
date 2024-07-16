@@ -983,15 +983,14 @@ li {
 
 
     .containerArts {
-        margin-left: 15px;
-
+        margin-left: 30px;
 
     }
 
     .containerArts a {
         width: 95px;
         height: 35px;
-        margin-bottom: 65px;
+        margin-bottom: 55px;
 
     }
 
@@ -1074,6 +1073,8 @@ li {
         margin-top: 350px;
 
     }
+
+
 }
 
 
@@ -1531,25 +1532,5 @@ li {
     .containerArts {
         left: 25%;
         margin-top: 80%;
-    }
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 480px) {
-    #Bulles .photo {
-        width: 200px;
-        /* Largeur ajustée pour petit écran */
-        height: 200px;
-        /* Hauteur ajustée pour petit écran */
-    }
-
-    .text {
-        font-size: 12px;
-        /* Taille de police ajustée pour petit écran */
-    }
-
-    .containerArts {
-        left: 20%;
-        margin-top: 85%;
     }
 }
