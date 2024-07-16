@@ -1092,13 +1092,14 @@ li {
         display: flex;
         justify-content: center;
         width: 100%;
+        max-width: fit-content;
     }
 
     .Bio img {
-        max-width: 100%;
+        min-width: 50%;
         height: auto;
+        max-width: 70%;
     }
-
 
     hr {
         display: none;
@@ -1107,16 +1108,21 @@ li {
     #presentation {
         margin-top: 10px;
         color: chocolate;
-        margin-right: 680px;
+        margin-right: 670px;
     }
 
     .presentation {
-        color: chocolate;
-        max-width: 50%;
-        margin-left: -430px;
-
+        width: 100%;
     }
 
+    .presentation p {
+        margin-left: 3px;
+        text-align: left;
+        margin-right: 400px;
+        color: chocolate;
+        min-width: 97vw;
+        max-width: 80%;
+    }
 
     #MessageEssentiel {
         max-width: 90vw;
@@ -1269,6 +1275,7 @@ li {
         margin-top: 50px;
 
     }
+
 }
 
 
