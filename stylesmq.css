@@ -1179,11 +1179,40 @@ li {
 
     }
 
-
     #ArtsH1 {
         margin-top: 350px;
+        color: pink;
 
     }
+
+    /* A travailler pour s'adapter au responsive */
+    .not-authorized-overlay h2 {
+
+        margin-top: -80px;
+        font-size: small;
+
+    }
+
+
+
+    .containerArts {
+        margin-left: 30px;
+
+
+    }
+
+    .containerArts a {
+        width: 105px;
+        height: 45px;
+        margin-bottom: 55px;
+
+    }
+
+    .containerArts a span {
+        font-size: 14px;
+
+    }
+
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
