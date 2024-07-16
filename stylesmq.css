@@ -1117,28 +1117,18 @@ li {
         max-width: 90vw;
         text-align: center;
         font-size: 15px;
+        color: var(--messageEssentiel-color);
+
     }
 
     label {
         font-size: 15px;
+        color: var(--label-color);
     }
 
 
     input[type=submit] {
         display: flex;
-    }
-
-    :root {
-        --messageEssentiel-color: #fff;
-        --label-color: #000;
-    }
-
-    #MessageEssentiel {
-        color: var(--messageEssentiel-color);
-    }
-
-    label {
-        color: var(--label-color);
     }
 
     .button1 {
@@ -1156,6 +1146,19 @@ li {
         justify-content: center;
         flex-direction: column;
 
+    }
+
+    #Mosaique img {
+
+        display: block;
+        width: 250px;
+        height: 260px;
+
+    }
+
+    #Mosaique div:hover img {
+        width: 260px;
+        height: 280px;
     }
 
     .grid-container {
@@ -1204,7 +1207,6 @@ li {
     #burger {
         margin-left: calc(50% - 15px);
     }
-
 
 }
 
