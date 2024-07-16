@@ -1094,10 +1094,6 @@ li {
         max-width: 70%;
     }
 
-    hr {
-        display: none;
-    }
-
     #presentation {
         margin-top: 10px;
         color: chocolate;
@@ -1204,6 +1200,11 @@ li {
         font-size: 14px;
 
     }
+
+    #burger {
+        margin-left: calc(50% - 15px);
+    }
+
 
 }
 
