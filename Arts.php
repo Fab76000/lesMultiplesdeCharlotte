@@ -174,7 +174,7 @@
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
             <p>Pour voir la captation du spectacle : </p>
-            <p><iframe id="iframeArgent" width="350" height="350" style="margin-left: calc(50% - 200px);" src="https://www.youtube.com/embed/4QuITiqTIxk"
+            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe></p>

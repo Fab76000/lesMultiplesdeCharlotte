@@ -653,10 +653,6 @@ footer {
 }
 
 
-
-/* REPRENDRE CETTE PARTIE POUR CHANGER PHOTO */
-
-
 #Mosaique1 {
     margin-top: 170px;
     display: flex;
@@ -700,8 +696,6 @@ footer {
     margin-top: 15px;
 
 }
-
-
 
 .Elles {
     font-style: italic;
@@ -753,6 +747,10 @@ a:visited {
     height: 0;
     padding-bottom: 56.25%;
     position: relative;
+}
+
+#iframeArgent {
+    margin-left: calc(50% - 140px);
 }
 
 /* ----------------Ecriture------------------*/
@@ -1184,12 +1182,8 @@ li {
 
     }
 
-
-
     .containerArts {
         margin-left: 30px;
-
-
     }
 
     .containerArts a {
@@ -1201,13 +1195,21 @@ li {
 
     .containerArts a span {
         font-size: 14px;
-
     }
 
     #burger {
         margin-left: calc(50% - 15px);
     }
 
+    #iframeArgent {
+        width: 80vw;
+        max-width: 350px;
+        /* height: auto; */
+        /* Maintient le ratio d'aspect */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
