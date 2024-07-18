@@ -1159,9 +1159,7 @@ li {
         height: 280px;
     }
 
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+
 
     #container-links-ul ul {
 
@@ -1209,6 +1207,16 @@ li {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    iframe {
+        width: 360px;
+        height: 200px;
+
     }
 }
 
