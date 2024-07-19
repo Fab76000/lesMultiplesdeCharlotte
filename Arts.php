@@ -143,22 +143,51 @@
 
         <section id="Mosaique">
 
-            <div><a href="images/Viventre-18_12_21-retouche%20-%2019.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2019.jpg" alt=""></a>
-            </div>
-            <div><a href="images/Viventre-18_12_21-retouche%20-%2022.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2022.jpg" alt=""></a>
-            </div>
-
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2025.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2025.jpg" alt=""></a>
-            </div>
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2031.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-petite%2031.jpg" alt=""></a>
-            </div>
-            <div> <a href="images/Viventre-18_12_21-retouche%20-%2036.jpg"><img
-                        src="images/Viventre-18_12_21-retouche%20-%20petite%2036.jpg" alt=""></a>
-            </div>
+        <div>
+    <a href="images/Viventre-18_12_21-retouche - 19.jpg">
+        <picture>
+            <source srcset="images/Viventre-18_12_21-retouche-petite-19.webp" type="image/webp">
+            <source srcset="images/Viventre-18_12_21-retouche-petite-19.jpg" type="image/jpeg">
+            <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite">
+        </picture>
+    </a>
+</div>
+<div>
+    <a href="images/Viventre-18_12_21-retouche - 22.jpg">
+        <picture>
+            <source srcset="images/Viventre-18_12_21-retouche-petite-22.webp" type="image/webp">
+            <source srcset="images/Viventre-18_12_21-retouche-petite-22.jpg" type="image/jpeg">
+            <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite">
+        </picture>
+    </a>
+</div>
+<div>
+    <a href="images/Viventre-18_12_21-retouche - 25.jpg">
+        <picture>
+            <source srcset="images/Viventre-18_12_21-retouche-petite-25.webp" type="image/webp">
+            <source srcset="images/Viventre-18_12_21-retouche-petite-25.jpg" type="image/jpeg">
+            <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite">
+        </picture>
+    </a>
+</div>
+<div>
+    <a href="images/Viventre-18_12_21-retouche - 31.jpg">
+        <picture>
+            <source srcset="images/Viventre-18_12_21-retouche-petite-31.webp" type="image/webp">
+            <source srcset="images/Viventre-18_12_21-retouche-petite-31.jpg" type="image/jpeg">
+            <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite">
+        </picture>
+    </a>
+</div>
+<div>
+    <a href="images/Viventre-18_12_21-retouche - 36.jpg">
+        <picture>
+            <source srcset="images/Viventre-18_12_21-retouche-petite-36.webp" type="image/webp">
+            <source srcset="images/Viventre-18_12_21-retouche-petite-36.jpg" type="image/jpeg">
+            <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite">
+        </picture>
+    </a>
+</div>
         </section>
         <article id="Argent" class="spectacles">
             <h1>L'Argent</h1>
