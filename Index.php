@@ -23,7 +23,7 @@
 			<picture>
 				<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
 				<source srcset="images/Charlotte_Narcisse.jpg" type="image/jpeg">
-				<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse">
+				<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse" loading="lazy">
 			</picture>
 		</div>
 		<h2 id="presentation">Charlotte Goupil</h2>

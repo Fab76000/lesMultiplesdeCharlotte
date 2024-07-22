@@ -26,7 +26,7 @@
             <picture>
                 <source srcset="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
                 <source srcset="images/couverture_album_Les_elles_d_alain.jpg" type="image/jpeg">
-                <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex">
+                <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex" loading="lazy">
             </picture>
             <div class="text-overlay"></div>
             <div class="not-authorized-overlay">
@@ -48,7 +48,7 @@
             <picture>
                 <source srcset="images/Viventre.webp" type="image/webp">
                 <source srcset="images/Viventre.jpg" type="image/jpeg">
-                <img src="images/Viventre.jpg" alt="Viventre">
+                <img src="images/Viventre.jpg" alt="Viventre" loading="lazy">
             </picture>
             <div class="text-overlay">
             </div>
@@ -70,7 +70,7 @@
             <picture>
                 <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
                 <source srcset="images/Charlotte_voile_rose.jpg" type="image/jpeg">
-                <img src="images/Charlotte_voile_rose.jpg" alt="Viventre">
+                <img src="images/Charlotte_voile_rose.jpg" alt="Viventre" loading="lazy">
             </picture>
             <div class="text-overlay">
             </div>
@@ -143,7 +143,7 @@
                     <picture>
                         <source srcset="images/Viventre-18_12_21-retouche-petite-19.webp" type="image/webp">
                         <source srcset="images/Viventre-18_12_21-retouche-petite-19.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite">
+                        <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -152,7 +152,7 @@
                     <picture>
                         <source srcset="images/Viventre-18_12_21-retouche-petite-22.webp" type="image/webp">
                         <source srcset="images/Viventre-18_12_21-retouche-petite-22.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite">
+                        <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -161,7 +161,7 @@
                     <picture>
                         <source srcset="images/Viventre-18_12_21-retouche-petite-25.webp" type="image/webp">
                         <source srcset="images/Viventre-18_12_21-retouche-petite-25.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite">
+                        <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -170,7 +170,7 @@
                     <picture>
                         <source srcset="images/Viventre-18_12_21-retouche-petite-31.webp" type="image/webp">
                         <source srcset="images/Viventre-18_12_21-retouche-petite-31.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite">
+                        <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -179,7 +179,7 @@
                     <picture>
                         <source srcset="images/Viventre-18_12_21-retouche-petite-36.webp" type="image/webp">
                         <source srcset="images/Viventre-18_12_21-retouche-petite-36.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite">
+                        <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -198,7 +198,7 @@
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
             <p>Pour voir la captation du spectacle : </p>
-            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></p>
             <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
@@ -209,7 +209,7 @@
                     <picture>
                         <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
                         <source srcset="images/2019_L'argent_petite.jpg" type="image/jpeg">
-                        <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent">
+                        <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -218,7 +218,7 @@
                     <picture>
                         <source srcset="images/Argent_4123_petite.webp" type="image/webp">
                         <source srcset="images/Argent_4123_petite.jpg" type="image/jpeg">
-                        <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent">
+                        <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -227,7 +227,7 @@
                     <picture>
                         <source srcset="images/Argent_4150_petite.webp" type="image/webp">
                         <source srcset="images/Argent_4150_petite.jpg" type="image/jpeg">
-                        <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent">
+                        <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -236,7 +236,7 @@
                     <picture>
                         <source srcset="images/Argent_4165_petite.webp" type="image/webp">
                         <source srcset="images/Argent_4165_petite.jpg" type="image/jpeg">
-                        <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent">
+                        <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -259,27 +259,27 @@
         <div id="container-iframes">
             <div class="grid-container">
                 <div class="grid-item">
-                    <iframe src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0" width="560" height="315" title="Teaser Autour des Elles d’Allain - 2018" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0" width="560" height="315" title="Teaser Autour des Elles d’Allain - 2018" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE" title="Teaser Viventre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE" title="Teaser Viventre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8" title="Choupote - extrait du spectacle VIVENTRE du
-                    Slam'dit - ChaNoé Goupil & Alex Rasse" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    Slam'dit - ChaNoé Goupil & Alex Rasse" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE" title="Interview de Charlotte Goupil par Emmanuel
-                    Gouache" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    Gouache" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU" title="Le rêve" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU" title="Le rêve" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY" title="Leprest à l'improvsite" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY" title="Leprest à l'improvsite" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY" title="Teaser Autour des Elles d'Allain 2016" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY" title="Teaser Autour des Elles d'Allain 2016" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </div>
