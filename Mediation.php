@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Les multiples de Charlotte Goupil </title>
     <?php
-	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
-	?>
+    $date = date("Y-m-d-h-i-s");
+    echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+    ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
@@ -47,7 +47,7 @@
             propose aux publics de tous genres, capacités,
             âges et horizons : écriture, théâtre, chant,
             conte…</p>
-</section>
+    </section>
 
     <div class="grid-wrap">
         <ul>

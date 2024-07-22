@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Les multiples de Charlotte Goupil/Arts </title>
     <?php
-	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
-	?>
+    $date = date("Y-m-d-h-i-s");
+    echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+    ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<span id="titreSpectacles"></span>
+    <span id="titreSpectacles"></span>
 
     <?php include 'header.php'; ?>
     <h1 id="ArtsH1">Arts</h1>
@@ -23,14 +23,18 @@
     <span id="Spectacles"></span>
     <section id="Bulles">
         <div id="Chanoe" class="photo">
-            <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex">
-            <div class="text-overlay">
-            </div>
+            <picture>
+                <source srcset="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
+                <source srcset="images/couverture_album_Les_elles_d_alain.jpg" type="image/jpeg">
+                <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex">
+            </picture>
+            <div class="text-overlay"></div>
             <div class="not-authorized-overlay">
                 <div class="text">
                     <h2>AUTOUR DES ELLES D'ALLAIN</h2>
-                    <p> Autour des Elles d'Allain prend la forme d'un réel spectacle où chant,
-                        jeu et interprétation pianistique dialoguent.</p>
+                    <p>Autour des Elles d'Allain prend la forme d'un réel spectacle où chant,
+                        jeu et interprétation pianistique dialoguent.
+                    </p>
                 </div>
                 <div class="containerArts">
                     <a href="#allain">
@@ -39,9 +43,13 @@
                 </div>
             </div>
         </div>
-
+        </div>
         <div id="Charlotte" class="photo">
-            <img src="images/Viventre.jpg" alt="viventre">
+            <picture>
+                <source srcset="images/Viventre.webp" type="image/webp">
+                <source srcset="images/Viventre.jpg" type="image/jpeg">
+                <img src="images/Viventre.jpg" alt="Viventre">
+            </picture>
             <div class="text-overlay">
             </div>
             <div class="not-authorized-overlay">
@@ -50,7 +58,6 @@
                     <p>Sur des textes personnels évoquant l'art, les rencontres et les luttes,
                         VIVENTRE est une création sonore, visuelle et textuelle.<br>
                     </p>
-
                 </div>
                 <div class="containerArts">
                     <a href="#viventre">
@@ -59,9 +66,12 @@
                 </div>
             </div>
         </div>
-
         <div id="Larchotte" class="photo">
-            <img src="images/Charlotte_voile_rose.jpg" alt="Charlotte">
+            <picture>
+                <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
+                <source srcset="images/Charlotte_voile_rose.jpg" type="image/jpeg">
+                <img src="images/Charlotte_voile_rose.jpg" alt="Viventre">
+            </picture>
             <div class="text-overlay">
             </div>
             <div class="not-authorized-overlay">
@@ -79,8 +89,6 @@
             </div>
         </div>
     </section>
-
-
     <section id="Arts" class="container">
         <span id="allain"></span>
         <article id="Allain" class="spectacles">
@@ -103,15 +111,10 @@
                 chanteur-poète...
                 d'où "Autour des Elles"
             </p>
-            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:150px;"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:150px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
         </article>
-
-
         <span id="viventre"></span>
         <article id="Viventre" class="spectacles">
             <h1>VIVENTRE</h1>
@@ -123,71 +126,63 @@
             </p>
             <p> Dispositif de vidéo pour projection d'oeuvres contemporaines pendant le récital slamé.
                 Revue de presse et médias :
-
                 Retours de spectateur.ice.s : <br>
-
                 <span style="font-style: italic;"> "Merci pour cette création, ma curiosité a été comblée. J'ai apprécié la subtilité de votre poésie, sa
-                musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
-                projets 2022" </span> <br>
-
+                    musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
+                    projets 2022" </span> <br>
                 <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong>
             </p>
-            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:200px;"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:200px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
-            
+
         </article>
-
         <section id="Mosaique">
-
-        <div>
-    <a href="images/Viventre-18_12_21-retouche - 19.jpg">
-        <picture>
-            <source srcset="images/Viventre-18_12_21-retouche-petite-19.webp" type="image/webp">
-            <source srcset="images/Viventre-18_12_21-retouche-petite-19.jpg" type="image/jpeg">
-            <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite">
-        </picture>
-    </a>
-</div>
-<div>
-    <a href="images/Viventre-18_12_21-retouche - 22.jpg">
-        <picture>
-            <source srcset="images/Viventre-18_12_21-retouche-petite-22.webp" type="image/webp">
-            <source srcset="images/Viventre-18_12_21-retouche-petite-22.jpg" type="image/jpeg">
-            <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite">
-        </picture>
-    </a>
-</div>
-<div>
-    <a href="images/Viventre-18_12_21-retouche - 25.jpg">
-        <picture>
-            <source srcset="images/Viventre-18_12_21-retouche-petite-25.webp" type="image/webp">
-            <source srcset="images/Viventre-18_12_21-retouche-petite-25.jpg" type="image/jpeg">
-            <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite">
-        </picture>
-    </a>
-</div>
-<div>
-    <a href="images/Viventre-18_12_21-retouche - 31.jpg">
-        <picture>
-            <source srcset="images/Viventre-18_12_21-retouche-petite-31.webp" type="image/webp">
-            <source srcset="images/Viventre-18_12_21-retouche-petite-31.jpg" type="image/jpeg">
-            <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite">
-        </picture>
-    </a>
-</div>
-<div>
-    <a href="images/Viventre-18_12_21-retouche - 36.jpg">
-        <picture>
-            <source srcset="images/Viventre-18_12_21-retouche-petite-36.webp" type="image/webp">
-            <source srcset="images/Viventre-18_12_21-retouche-petite-36.jpg" type="image/jpeg">
-            <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite">
-        </picture>
-    </a>
-</div>
+            <div>
+                <a href="images/Viventre-18_12_21-retouche - 19.jpg">
+                    <picture>
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-19.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-19.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite">
+                    </picture>
+                </a>
+            </div>
+            <div>
+                <a href="images/Viventre-18_12_21-retouche - 22.jpg">
+                    <picture>
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-22.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-22.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite">
+                    </picture>
+                </a>
+            </div>
+            <div>
+                <a href="images/Viventre-18_12_21-retouche - 25.jpg">
+                    <picture>
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-25.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-25.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite">
+                    </picture>
+                </a>
+            </div>
+            <div>
+                <a href="images/Viventre-18_12_21-retouche - 31.jpg">
+                    <picture>
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-31.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-31.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite">
+                    </picture>
+                </a>
+            </div>
+            <div>
+                <a href="images/Viventre-18_12_21-retouche - 36.jpg">
+                    <picture>
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-36.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-retouche-petite-36.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite">
+                    </picture>
+                </a>
+            </div>
         </section>
         <article id="Argent" class="spectacles">
             <h1>L'Argent</h1>
@@ -203,34 +198,52 @@
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
             <p>Pour voir la captation du spectacle : </p>
-            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></p>
-            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
         </article>
-
-
         <section id="Mosaique1">
-            <div> <a href="images/2019_L'argent.jpg"><img src="images/2019_L'argent_petite.jpg"
-                        alt="Photo de l'Argent"></a> </div>
-            <div><a href="images/Argent_4123.jpg"><img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent"></a>
+            <div>
+                <a href="images/2019_L'argent.jpg">
+                    <picture>
+                        <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
+                        <source srcset="images/2019_L'argent_petite.jpg" type="image/jpeg">
+                        <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent">
+                    </picture>
+                </a>
             </div>
-            <div> <a href="images/Argent_4150.jpg"><img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent"></a>
+            <div>
+                <a href="images/Argent_4123.jpg">
+                    <picture>
+                        <source srcset="images/Argent_4123_petite.webp" type="image/webp">
+                        <source srcset="images/Argent_4123_petite.jpg" type="image/jpeg">
+                        <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent">
+                    </picture>
+                </a>
             </div>
-            <div> <a href="images/Argent_4165_.jpg"><img src="images/Argent_4165_petite.jpg"
-                        alt="Photo de l'Argent"></a>
+            <div>
+                <a href="images/Argent_4150.jpg">
+                    <picture>
+                        <source srcset="images/Argent_4150_petite.webp" type="image/webp">
+                        <source srcset="images/Argent_4150_petite.jpg" type="image/jpeg">
+                        <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent">
+                    </picture>
+                </a>
             </div>
-
+            <div>
+                <a href="images/Argent_4165_.jpg">
+                    <picture>
+                        <source srcset="images/Argent_4165_petite.webp" type="image/webp">
+                        <source srcset="images/Argent_4165_petite.jpg" type="image/jpeg">
+                        <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent">
+                    </picture>
+                </a>
+            </div>
         </section>
         <span id="titreMusique"></span>
     </section>
-</li>
+    </li>
 
     <section id="Musique">
         <h2>Musique</h2>
@@ -243,84 +256,57 @@
             premièrement le théâtre.<br>
             Mais d'un père compositeur et pianiste de scène dans sa jeunesse.. même si je ne sais pas
             lire la musique,<br> j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
-
         <div id="container-iframes">
-        <div class="grid-container">
-            <div class="grid-item">
-                <iframe
-                    src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0"
-                    width="560" height="315"
-                    title="Teaser Autour des Elles d’Allain - 2018"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE"
-                    title="Teaser Viventre"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8"
-                    title="Choupote - extrait du spectacle VIVENTRE du
-                    Slam'dit - ChaNoé Goupil & Alex Rasse"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE"
-                    title="Interview de Charlotte Goupil par Emmanuel
-                    Gouache"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU"
-                    title="Le rêve"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY"
-                    title="Leprest à l'improvsite"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="grid-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY"
-                    title="Teaser Autour des Elles d'Allain 2016"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <iframe src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0" width="560" height="315" title="Teaser Autour des Elles d’Allain - 2018" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE" title="Teaser Viventre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8" title="Choupote - extrait du spectacle VIVENTRE du
+                    Slam'dit - ChaNoé Goupil & Alex Rasse" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE" title="Interview de Charlotte Goupil par Emmanuel
+                    Gouache" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU" title="Le rêve" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY" title="Leprest à l'improvsite" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY" title="Teaser Autour des Elles d'Allain 2016" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-    </div>
-    
-<div id="container-links">
-    <div id="container-links-p">
-        <p>Si vous souhaitez voir plus de vidéos, cliquez sur les liens suivants: </p>
+
+        <div id="container-links">
+            <div id="container-links-p">
+                <p>Si vous souhaitez voir plus de vidéos, cliquez sur les liens suivants: </p>
+            </div>
+            <div id="container-links-ul">
+                <ul class="music-links">
+                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour des Elles d'Allain Extraits</a></li>
+                </ul>
+            </div>
         </div>
-        <div id="container-links-ul">
-        <ul class="music-links">
-            <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
-            <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
-            <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a></li>
-            <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a></li>
-            <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino</a></li>
-            <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
-            <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
-            <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour des Elles d'Allain Extraits</a></li>
-        </ul>
         </div>
-    </div>
-</div>
-<span id="titreEcriture"></span>
+        <span id="titreEcriture"></span>
     </section>
-
-
-
     <section id="Ecriture">
-    <h2 id="EcritureH2">Ecriture</h2>
-    
+        <h2 id="EcritureH2">Ecriture</h2>
+
         <p>
             "Si j'écris c'est que passé, avenir et parfois présent, m'envahissent de leurs pensées abruptes et
             naissantes à chaque seconde que la Nature fait.
@@ -340,23 +326,19 @@
             musicalité d'eux-mêmes, mais aussi bien sûr de quelques notes que ma voix engendrerait …
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
-
         <h3 id="mesEcritsH3">Mes écrits</h3>
-
         <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
         <div>
             <p class="mesEcritures">A propos de mes écritures</p>
         </div>
         <ul>
-            <li><a class="aEcriture"
-                    href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
+            <li><a class="aEcriture" href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
                     d'écriture avec Charlotte Goupil
                 </a>
             </li>
             <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/">Le blog du doigt dans
                     l'oeil</a></li>
-            <li><a
-                    href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
+            <li><a href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
                     Les artistes normands se pressent au festival 55
                 </a>
             </li>
@@ -366,22 +348,16 @@
             <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
         </div>
         <ul>
-            <li><a class="aEcriture"
-                    href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
+            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
                     A crier par les fenêtres</a>
             </li>
-            <li><a class="aBottom"
-                    href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
+            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
                     du confinement avec la poésie</a>
             </li>
         </ul>
-
     </section>
-
     <footer></footer>
-
     <script src="js/script.js" async></script>
-    
 </body>
 
 </html>

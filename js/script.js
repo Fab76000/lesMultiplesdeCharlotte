@@ -4,11 +4,9 @@
 $(document).ready(function () {
 	// Initial hiding of overlays
 	$('.not-authorized-overlay').hide();
-
 	$('#Bulles .photo').hover(
 		function () {
-			const overlay = $(this).find('.not-authorized-overlay');
-			overlay.toggle();
+			$(this).find('.not-authorized-overlay').fadeToggle(200);
 		}
 	);
 });
