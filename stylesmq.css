@@ -436,11 +436,8 @@ footer {
 
 /* Styles pour la section Bulles */
 #Bulles {
-
-    /* Ajuster la marge supérieure */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -451,9 +448,7 @@ footer {
     overflow: hidden;
     border-radius: 50%;
     width: 450px;
-    /* Largeur d'origine pour écran large */
     height: 400px;
-    /* Hauteur d'origine pour écran large */
     margin: 20px auto;
     transition: transform 0.3s ease;
 }
