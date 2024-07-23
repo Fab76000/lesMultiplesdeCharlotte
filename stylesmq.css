@@ -1202,7 +1202,19 @@ li {
     iframe {
         width: 360px;
         height: 200px;
+    }
 
+    #menuderoulant {
+        width: 550px;
+    }
+
+    #menuderoulant li,
+    #menuderoulant li .ColoRed {
+        width: 9.375em;
+    }
+
+    #menuderoulant li a:hover {
+        width: 9.375em;
     }
 }
 
