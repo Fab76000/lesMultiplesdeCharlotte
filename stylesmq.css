@@ -1056,17 +1056,13 @@ li {
 
     #ArtsH1 {
         margin-top: 350px;
-
     }
 
 
 }
 
 
-/* 481px — 768px : iPads, tablettes */
 @media only screen and (min-width : 481px) and (max-width: 674px) {
-
-    /* Media query pour les écrans de 768px et moins */
 
     #Hero {
         display: flex;
@@ -1165,14 +1161,11 @@ li {
     #ArtsH1 {
         margin-top: 350px;
         color: pink;
-
     }
 
     .not-authorized-overlay h2 {
-
         margin-top: -80px;
         font-size: small;
-
     }
 
     .containerArts {
@@ -1183,7 +1176,6 @@ li {
         width: 105px;
         height: 45px;
         margin-bottom: 55px;
-
     }
 
     .containerArts a span {
@@ -1293,22 +1285,19 @@ li {
 
     #Mosaique,
     #Mosaique1 {
-
         justify-content: center;
         flex-direction: column;
-
     }
 
     #container-links-ul ul {
-
         margin-top: 50px;
-
     }
 
 }
 
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
+
     #MessageEssentiel {
         max-width: 90vw;
         text-align: center;
@@ -1365,9 +1354,42 @@ li {
         margin-top: 50px;
 
     }
+
+    #Bulles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .not-authorized-overlay h2 {
+
+        margin-top: -80px;
+        font-size: small;
+
+    }
+
+
+    .containerArts {
+        margin-left: 30px;
+    }
+
+    .containerArts a {
+        width: 95px;
+        height: 35px;
+        margin-bottom: 55px;
+    }
+
+    .containerArts a span {
+        font-size: 14px;
+    }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
+
+    #ArtsH1 {
+        margin-top: 250px;
+        color: rgb(236, 14, 14);
+    }
+
     #MessageEssentiel {
         max-width: 90vw;
         text-align: center;
@@ -1417,20 +1439,24 @@ li {
     #Mosaique1 div:hover img {
         width: 170px;
         height: 250px;
-
     }
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
-
     }
 
     #container-links-ul ul {
 
         margin-top: 50px;
-
     }
 
+    #Bulles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .not-authorized-overlay h2 {
+        margin-top: -80px;
+    }
 }
 
 
@@ -1493,9 +1519,14 @@ li {
         margin-top: 50px;
 
     }
+
+    #Bulles {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-@media only screen and (min-width: 1191px) {
+/* @media only screen and (min-width: 1191px) {
 
     #Mosaique img,
     #Mosaique1 img {
@@ -1513,12 +1544,26 @@ li {
     .text {
         margin-top: -50px;
     }
-}
+
+    #Bulles {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+} */
 
 /* Media queries pour les écrans moyens */
 @media (max-width: 768px) {
+
+    #ArtsH1 {
+        margin-top: 250px;
+        color: rgb(11, 61, 34);
+
+    }
+
     #Bulles {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        ;
     }
 
     #Bulles .photo {
