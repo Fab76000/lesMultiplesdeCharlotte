@@ -628,7 +628,7 @@ footer {
 }
 
 #ArtsH1 {
-    margin-top: 250px;
+    margin-top: 350px;
     text-align: center;
 
 }
@@ -1160,7 +1160,6 @@ li {
 
     #ArtsH1 {
         margin-top: 350px;
-        color: pink;
     }
 
     .not-authorized-overlay h2 {
@@ -1386,8 +1385,7 @@ li {
 @media only screen and (min-width: 769px) and (max-width: 991px) {
 
     #ArtsH1 {
-        margin-top: 250px;
-        color: rgb(236, 14, 14);
+        margin-top: 350px;
     }
 
     #MessageEssentiel {
@@ -1555,15 +1553,10 @@ li {
 /* Media queries pour les écrans moyens */
 @media (max-width: 768px) {
 
-    #ArtsH1 {
-        margin-top: 250px;
-        color: rgb(11, 61, 34);
-
-    }
 
     #Bulles {
         grid-template-columns: repeat(1, 1fr);
-        ;
+
     }
 
     #Bulles .photo {
