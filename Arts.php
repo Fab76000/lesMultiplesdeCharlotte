@@ -290,14 +290,14 @@
             </div>
             <div id="container-links-ul">
                 <ul class="music-links">
-                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">Autour des Elles d'Allain Extraits</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA" loading="lazy">Il neige</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg" loading="lazy">Concert hommage à Allain Leprest - Bruxelles</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s" loading="lazy">Récital hONdiCAP sur Leprest</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw" loading="lazy">L'horloger</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk" loading="lazy">"Le sud" avec Zabou & Martial - El Camino</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0" loading="lazy">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3" loading="lazy">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4" loading="lazy">Autour des Elles d'Allain Extraits</a></li>
                 </ul>
             </div>
         </div>
