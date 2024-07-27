@@ -139,47 +139,47 @@
         </article>
         <section id="Mosaique">
             <div>
-                <a href="images/Viventre-18_12_21-retouche - 19.jpg">
+                <a href="images/Viventre-18_12_21- 19.jpg">
                     <picture>
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-19.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-19.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21-petite-19.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-petite-19.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
             <div>
-                <a href="images/Viventre-18_12_21-retouche - 22.jpg">
+                <a href="images/Viventre-18_12_21- 22.jpg">
                     <picture>
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-22.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-22.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-22.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21 - petite 22.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21- 22.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21- 22.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
             <div>
-                <a href="images/Viventre-18_12_21-retouche - 25.jpg">
+                <a href="images/Viventre-18_12_21 - 25.jpg">
                     <picture>
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-25.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-25.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-25.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_2125.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21- petite- 25.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21- petite- 25.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
             <div>
-                <a href="images/Viventre-18_12_21-retouche - 31.jpg">
+                <a href="images/Viventre-18_12_21- 31.jpg">
                     <picture>
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-31.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-31.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21-petite-31.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21-petite-31.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
             <div>
-                <a href="images/Viventre-18_12_21-retouche - 36.jpg">
+                <a href="images/Viventre-18_12_21- 36.jpg">
                     <picture>
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-36.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-retouche-petite-36.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-retouche-petite-36.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21-petite-36.webp" type="image/webp">
+                        <source srcset="images/Viventre-18_12_21 - petite 36.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21 - petite 36.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -357,7 +357,7 @@
         </ul>
     </section>
     <footer></footer>
-    <script src="js/script.js" async></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
