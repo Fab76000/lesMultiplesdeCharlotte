@@ -376,7 +376,7 @@
         <h3 id="mesEcritsH3">Mes écrits</h3>
         <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
         <div>
-            <p class="mesEcritures">A propos de mes écritures</p>
+            <p class="mesEcritures">À propos de mes écritures</p>
         </div>
         <ul>
             <li><a class="aEcriture" href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
@@ -396,7 +396,7 @@
         </div>
         <ul>
             <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
-                    A crier par les fenêtres</a>
+                    À crier par les fenêtres</a>
             </li>
             <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
                     du confinement avec la poésie</a>
