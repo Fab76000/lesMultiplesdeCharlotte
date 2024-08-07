@@ -746,6 +746,13 @@ a:visited {
     position: relative;
 }
 
+
+.thumbnail {
+    width: 560px;
+    height: 315px;
+    object-fit: cover;
+}
+
 #iframeArgent {
     margin-left: calc(50% - 140px);
 }
@@ -935,6 +942,8 @@ li {
     }
 
     iframe {
+        width: 360px;
+        height: 200px;
         border: none;
     }
 
@@ -1010,12 +1019,7 @@ li {
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    iframe {
-        width: 360px;
-        height: 200px;
-
+        gap: 20px;
     }
 
     #Musique p {
@@ -1060,6 +1064,10 @@ li {
         margin-top: 200px;
     }
 
+    .thumbnail {
+        width: 360px;
+        height: 215px;
+    }
 }
 
 
@@ -1150,8 +1158,6 @@ li {
         width: 260px;
         height: 280px;
     }
-
-
 
     #container-links-ul ul {
 
@@ -1305,6 +1311,14 @@ li {
         margin-top: 50px;
     }
 
+    .grid-container {
+        gap: 20px;
+    }
+
+    .thumbnail {
+        width: 360px;
+        height: 215px;
+    }
 }
 
 

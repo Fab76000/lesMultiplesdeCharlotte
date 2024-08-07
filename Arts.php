@@ -259,27 +259,74 @@
         <div id="container-iframes">
             <div class="grid-container">
                 <div class="grid-item">
-                    <iframe src="https://player.vimeo.com/video/293555303?h=bcc9928181&color=ffd43b&title=0&byline=0&portrait=0" width="560" height="315" title="Teaser Autour des Elles d’Allain - 2018" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="293555303" data-provider="vimeo">
+                        <picture>
+                            <source srcset="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.webp" type="image/webp">
+                            <source srcset="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.jpg" type="image/jpeg">
+                            <img src="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.jpg" alt="Teaser Autour des Elles d’Allain - 2018" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JC6vuz2HncE" title="Teaser Viventre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="JC6vuz2HncE" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature1.webp" type="image/webp">
+                            <source srcset="images/miniature1.jpg" type="image/jpeg">
+                            <img src="images/miniature1.jpg" alt="Teaser Viventre" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IWingOXoCv8" title="Choupote - extrait du spectacle VIVENTRE du
-                    Slam'dit - ChaNoé Goupil & Alex Rasse" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="IWingOXoCv8" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature2.webp" type="image/webp">
+                            <source srcset="images/miniature2.jpg" type="image/jpeg">
+                            <img src="images/miniature2.jpg" alt="Choupote - extrait du spectacle VIVENTRE du Slam'dit - ChaNoé Goupil & Alex Rasse" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VLplFrMCfwE" title="Interview de Charlotte Goupil par Emmanuel
-                    Gouache" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="VLplFrMCfwE" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature3.webp" type="image/webp">
+                            <source srcset="images/miniature3.jpg" type="image/jpeg">
+                            <img src="images/miniature3.jpg" alt="Interview de Charlotte Goupil par Emmanuel Gouache" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1ENzQan2JhU" title="Le rêve" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="1ENzQan2JhU" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature4.webp" type="image/webp">
+                            <source srcset="images/miniature4.jpg" type="image/jpeg">
+                            <img src="images/miniature4.jpg" alt="Le rêve" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RklwZVsxQnY" title="Leprest à l'improvsite" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="RklwZVsxQnY" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature5.webp" type="image/webp">
+                            <source srcset="images/miniature5.jpg" type="image/jpeg">
+                            <img src="images/miniature5.jpg" alt="Leprest à l'improvsite" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Te_6mXfvRKY" title="Teaser Autour des Elles d'Allain 2016" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper" data-video-id="Te_6mXfvRKY" data-provider="youtube">
+                        <picture>
+                            <source srcset="images/miniature6.webp" type="image/webp">
+                            <source srcset="images/miniature6.jpg" type="image/jpeg">
+                            <img src="images/miniature6.jpg" alt="Teaser Autour des Elles d'Allain 2016" class="thumbnail" loading="lazy">
+                        </picture>
+                        <div class="play-button"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -358,6 +405,39 @@
     </section>
     <footer></footer>
     <script src="js/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(wrapper => {
+                wrapper.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-video-id');
+                    const provider = this.getAttribute('data-provider');
+                    let iframeSrc;
+
+                    if (provider === 'youtube') {
+                        iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    } else if (provider === 'vimeo') {
+                        iframeSrc = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+                    } else {
+                        console.error('Unknown provider:', provider);
+                        return;
+                    }
+
+                    const iframe = document.createElement('iframe');
+                    iframe.setAttribute('width', '560');
+                    iframe.setAttribute('height', '315');
+                    iframe.setAttribute('src', iframeSrc);
+                    iframe.setAttribute('title', 'Video player');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                    iframe.setAttribute('allowfullscreen', true);
+                    iframe.setAttribute('loading', 'lazy');
+                    this.innerHTML = '';
+                    this.appendChild(iframe);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
