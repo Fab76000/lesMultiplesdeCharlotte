@@ -722,6 +722,22 @@ a:visited {
     list-style-type: none;
 }
 
+.music-links li:nth-child(odd) a {
+    color: var(--red-color);
+}
+
+.music-links li:nth-child(even) a {
+    color: var(--green-color);
+}
+
+.music-links li:nth-child(odd) a:hover {
+    color: var(--green-color);
+}
+
+.music-links li:nth-child(even) a:hover {
+    color: var(--red-color);
+}
+
 #container-iframes {
     margin-top: 100px;
     display: grid;
