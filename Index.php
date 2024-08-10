@@ -22,7 +22,6 @@
 		<div class="Bio">
 			<picture>
 				<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
-				<source srcset="images/Charlotte_Narcisse.jpg" type="image/jpeg">
 				<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse" loading="lazy">
 			</picture>
 		</div>

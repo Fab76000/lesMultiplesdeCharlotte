@@ -54,42 +54,36 @@
             <li>
                 <picture>
                     <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
-                    <source srcset="images/2019_L'argent_petite.jpg" type="image/jpeg">
                     <img src="images/2019_L'argent_petite.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
             <li>
                 <picture>
                     <source srcset="images/Argent_4150_petite.webp" type="image/webp">
-                    <source srcset="images/Argent_4150_petite.jpg" type="image/jpeg">
                     <img src="images/Argent_4150_petite.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
             <li>
                 <picture>
                     <source srcset="images/brancardiere_theatre_de_rue_BXL.webp" type="image/webp">
-                    <source srcset="images/brancardiere_theatre_de_rue_BXL.jpg" type="image/jpeg">
                     <img src="images/brancardiere_theatre_de_rue_BXL.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
             <li>
                 <picture>
                     <source srcset="images/Charlotte_argent.webp" type="image/webp">
-                    <source srcset="images/Charlotte_argent.jpg" type="image/jpeg">
                     <img src="images/Charlotte_argent.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
             <li>
                 <picture>
                     <source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
-                    <source srcset="images/Charlotte_Narcisse.jpg" type="image/jpeg">
                     <img src="images/Charlotte_Narcisse.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
             <li>
                 <picture>
                     <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
-                    <source srcset="images/Charlotte_voile_rose.jpg" type="image/jpeg">
                     <img src="images/Charlotte_voile_rose.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
             </li>
