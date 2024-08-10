@@ -1,0 +1,26 @@
+# Ignorer le répertoire vendor
+/vendor/
+
+# Ignorer les fichiers de configuration de Composer
+composer.lock
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les fichiers temporaires
+*.tmp
+*.swp
+.DS_Store
+
+# Ignorer les fichiers de cache
+/cache/
+
+# Ignorer les fichiers de configuration locaux
+.env
+
+# Ignorer les fichiers générés
+/build/
+/dist/
+
+# Ignorer les fichiers de sauvegarde
+*~ 
