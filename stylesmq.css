@@ -293,7 +293,12 @@ img[alt] {
 
 }
 
-
+#MessageEssentiel {
+    max-width: 90vw;
+    text-align: center;
+    font-size: 15px;
+    color: var(--messageEssentiel-color);
+}
 
 .button1 {
     /* border: 1px solid #ddd;*/
@@ -968,13 +973,6 @@ li {
         margin-left: 3px;
     }
 
-
-    #MessageEssentiel {
-        break-inside: auto;
-        text-align: center;
-        margin-top: 5px;
-    }
-
     iframe {
         width: 360px;
         height: 200px;
@@ -1135,13 +1133,6 @@ li {
         max-width: 80%;
     }
 
-    #MessageEssentiel {
-        max-width: 90vw;
-        text-align: center;
-        font-size: 15px;
-        color: var(--messageEssentiel-color);
-    }
-
     label {
         font-size: 15px;
         color: var(--label-color);
@@ -1243,6 +1234,8 @@ li {
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
+
+
     .menu {
         display: none;
     }
@@ -1339,12 +1332,6 @@ li {
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
 
-    #MessageEssentiel {
-        max-width: 90vw;
-        text-align: center;
-        font-size: 15px;
-    }
-
     label {
         font-size: 15px;
     }
@@ -1423,12 +1410,6 @@ li {
         margin-top: 200px;
     }
 
-    #MessageEssentiel {
-        max-width: 90vw;
-        text-align: center;
-        font-size: 15px;
-    }
-
     label {
         font-size: 15px;
     }
@@ -1491,11 +1472,6 @@ li {
 
 
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
-    #MessageEssentiel {
-        max-width: 90vw;
-        text-align: center;
-        font-size: 15px;
-    }
 
     label {
         font-size: 15px;
