@@ -958,7 +958,6 @@ li {
     }
 
     #presentation {
-        color: purple;
         max-width: 97vw;
         margin-left: 3px;
     }
@@ -967,7 +966,6 @@ li {
     .presentation {
         max-width: 97vw;
         margin-left: 3px;
-        color: purple;
     }
 
 
@@ -998,10 +996,8 @@ li {
 
 
     .not-authorized-overlay h2 {
-
         margin-top: -80px;
         font-size: small;
-
     }
 
     .not-authorized-overlay .text p {
@@ -1012,7 +1008,6 @@ li {
         -moz-box-orient: vertical;
         overflow: hidden;
     }
-
 
     .containerArts {
         margin-left: 30px;
@@ -1076,10 +1071,8 @@ li {
 
     #Mosaique,
     #Mosaique1 {
-
         justify-content: center;
         flex-direction: column;
-
     }
 
 
@@ -1087,13 +1080,10 @@ li {
         margin-left: 100px;
         margin-top: -4300px;
         margin-left: 10px;
-
     }
 
     #container-links-ul ul {
-
         margin-top: 30px;
-
     }
 
     #ArtsH1 {
@@ -1130,7 +1120,6 @@ li {
 
     #presentation {
         margin-top: 10px;
-        color: chocolate;
         margin-right: 670px;
     }
 
@@ -1142,7 +1131,6 @@ li {
         margin-left: 3px;
         text-align: left;
         margin-right: 400px;
-        color: chocolate;
         min-width: 97vw;
         max-width: 80%;
     }
@@ -1152,7 +1140,6 @@ li {
         text-align: center;
         font-size: 15px;
         color: var(--messageEssentiel-color);
-
     }
 
     label {
@@ -1176,18 +1163,14 @@ li {
 
     #Mosaique,
     #Mosaique1 {
-
         justify-content: center;
         flex-direction: column;
-
     }
 
     #Mosaique img {
-
         display: block;
         width: 250px;
         height: 260px;
-
     }
 
     #Mosaique div:hover img {
@@ -1196,9 +1179,7 @@ li {
     }
 
     #container-links-ul ul {
-
         margin-top: 50px;
-
     }
 
     #ArtsH1 {
@@ -1293,12 +1274,10 @@ li {
 
     .menu {
         display: block;
-
     }
 
     .burger {
         display: block;
-
     }
 
 
@@ -1364,7 +1343,6 @@ li {
         max-width: 90vw;
         text-align: center;
         font-size: 15px;
-        color: blue
     }
 
     label {
@@ -1388,23 +1366,19 @@ li {
     }
 
     #presentation {
-        color: burlywood;
         max-width: 97vw;
         margin-left: 3px;
     }
 
     .presentation {
-        color: burlywood;
         max-width: 97vw;
         margin-left: 3px;
     }
 
     #Mosaique,
     #Mosaique1 {
-
         justify-content: center;
         flex-direction: column;
-
     }
 
     .grid-container {
@@ -1422,10 +1396,8 @@ li {
     }
 
     .not-authorized-overlay h2 {
-
         margin-top: -80px;
         font-size: small;
-
     }
 
 
@@ -1455,7 +1427,6 @@ li {
         max-width: 90vw;
         text-align: center;
         font-size: 15px;
-        color: rgb(40, 172, 181)
     }
 
     label {
@@ -1466,7 +1437,6 @@ li {
     input[type=email],
     input[type=phone],
     textarea {
-
         max-width: 100%;
     }
 
@@ -1507,7 +1477,6 @@ li {
     }
 
     #container-links-ul ul {
-
         margin-top: 50px;
     }
 
@@ -1526,21 +1495,17 @@ li {
         max-width: 90vw;
         text-align: center;
         font-size: 15px;
-        color: rgb(222, 101, 15)
     }
 
     label {
         font-size: 15px;
     }
 
-
     input[type=text],
     input[type=email],
     input[type=phone],
     textarea {
-
         max-width: 100%;
-
     }
 
     input[type=submit] {
@@ -1567,18 +1532,14 @@ li {
     #Mosaique1 div:hover img {
         width: 170px;
         height: 250px;
-
     }
 
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     #container-links-ul ul {
-
         margin-top: 50px;
-
     }
 
     #Bulles {
