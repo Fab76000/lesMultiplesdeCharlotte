@@ -142,8 +142,8 @@
                 <a href="images/Viventre-18_12_21- 19.jpg">
                     <picture>
                         <source srcset="images/Viventre-18_12_21-petite-19.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-petite-19.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21-petite 19.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-petite 19.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
@@ -169,8 +169,8 @@
                 <a href="images/Viventre-18_12_21- 31.jpg">
                     <picture>
                         <source srcset="images/Viventre-18_12_21-petite-31.webp" type="image/webp">
-                        <source srcset="images/Viventre-18_12_21-petite-31.jpg" type="image/jpeg">
-                        <img src="images/Viventre-18_12_21-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
+                        <source srcset="images/Viventre-18_12_21-petite 31.jpg" type="image/jpeg">
+                        <img src="images/Viventre-18_12_21-petite 31.jpg" alt="Viventre Image Petite" loading="lazy">
                     </picture>
                 </a>
             </div>
