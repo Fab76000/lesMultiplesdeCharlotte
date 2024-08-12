@@ -5,7 +5,7 @@
     --header-background-color: #FBFBD0;
     --green-color: #1D7461;
     --red-color: #741D34;
-    --thank-you-color: #253D0D;
+    --thank-you-color: #76e706;
 }
 
 * {
@@ -338,10 +338,9 @@ img[alt] {
 #contact-form .thank-you {
     text-align: center;
     position: relative;
-    /*bottom: 15px;*/
     font-weight: bold;
-    font-size: 15px;
-    color: var(--red-color);
+    font-size: 18px;
+    color: var(--thank-you-color);
 
 }
 
