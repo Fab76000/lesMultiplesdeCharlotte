@@ -128,6 +128,7 @@ hr {
 #menuderoulant li {
     /* travail sur le menu deroulant (horizontal)*/
     /*float: left;*/
+    position: relative;
     width: 12.375em;
     margin-right: 10px;
     border: 1px solid black;
