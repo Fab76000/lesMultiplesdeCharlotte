@@ -18,10 +18,18 @@
     <?php include 'header.php'; ?>
     <section id="Mediation">
         <h1>Médiation</h1>
-        <p class="alinea" style="margin: 80px 50px 0 50px;">Au travers de mes diverses expériences et stages de
-            formation
-            visant à trouver ma
-            voie
+        <p class="alinea" style="margin: 80px 50px 0 50px;">Médiatrice Artistique & Culturelle, artiste pluridisciplinaire travaillant principalement sur
+            les régions Nord (Paris compris) et Ouest ; je vous propose des ateliers d’écritures plurielles
+            (textes, théâtres, plastiques) par un accompagnement doux et coloré dans votre création
+            personnelle.
+            Pour une (re)découverte de l’identité créatrice de chacun, j’adapte ma démarche
+            aux différents publics et à leurs demandes : <br><br>
+
+            o Une ambiance chaleureuse et un dialogue bienveillant, interculturel et intergénérationnel <br>
+            o Un mieux-être et une sensibilisation par l’art à la dynamique de groupe <br><br>
+
+
+            Au travers de mes diverses expériences et stages de formation visant à trouver ma voie
             professionnelle via la pratique artistique, j’ai eu la chance de découvrir le.s métier.s de médiatrice
             culturelle (en galerie d'art, musée, parcs patrimoniaux…) puis de médiatrice artistique en relation
             d’aide.<br>
@@ -47,48 +55,44 @@
             propose aux publics de tous genres, capacités,
             âges et horizons : écriture, théâtre, chant,
             conte…</p>
+
     </section>
 
     <div class="grid-wrap">
-        <ul>
-            <li>
+        <div class="grid-items">
+            <div class="grid-item">
                 <picture>
-                    <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
-                    <img src="images/2019_L'argent_petite.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                    <source srcset="images/mediation-PierreOlingue-23300.webp" type="image/webp">
+                    <img src="images/mediation-PierreOlingue-23300.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <picture>
-                    <source srcset="images/Argent_4150_petite.webp" type="image/webp">
-                    <img src="images/Argent_4150_petite.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                    <source srcset="images/mediation-ThierryDujardin-2510.webp" type="image/webp">
+                    <img src="images/mediation-ThierryDujardin-2510.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <picture>
-                    <source srcset="images/brancardiere_theatre_de_rue_BXL.webp" type="image/webp">
-                    <img src="images/brancardiere_theatre_de_rue_BXL.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                    <source srcset="images/mediation-ThierryDujardin-2520.webp" type="image/webp">
+                    <img src="images/mediation-ThierryDujardin-2520.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <picture>
-                    <source srcset="images/Charlotte_argent.webp" type="image/webp">
-                    <img src="images/Charlotte_argent.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                    <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
+                    <img src="images/mediation-MathieuOlingue-MarionMotte-7294.webp" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <picture>
-                    <source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
-                    <img src="images/Charlotte_Narcisse.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                    <source srcset="images/mediation-ThierryDujardin-2525.webp" type="image/webp">
+                    <img src="images/mediation-ThierryDujardin-2525.jpeg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
-            </li>
-            <li>
-                <picture>
-                    <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
-                    <img src="images/Charlotte_voile_rose.jpg" alt="Photo spectacle l'argent" loading="lazy">
-                </picture>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>
