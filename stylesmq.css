@@ -926,13 +926,20 @@ figcaption {
     position: relative;
 }
 
+.grid-wrap .grid-items figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .grid-wrap .grid-items img {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.grid-wrap .grid-items .caption {
+.grid-wrap .grid-items figcaption {
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -943,7 +950,6 @@ figcaption {
     font-size: 0.8em;
     border-radius: 3px;
     pointer-events: none;
-    /* Évite que la légende interfère avec les interactions de la souris */
 }
 
 .grid-wrap .grid-items .grid-item:nth-child(1) {
@@ -969,11 +975,6 @@ figcaption {
 .grid-wrap .grid-items .grid-item:nth-child(5) {
     grid-row: span 2;
     grid-column: span 4;
-}
-
-.grid-wrap .grid-items img {
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -1608,17 +1609,17 @@ figcaption {
 
     .grid-wrap .grid-items .grid-item:nth-child(3) {
         grid-row: span 4;
-        grid-column: span 2;
+        grid-column: span 3;
     }
 
     .grid-wrap .grid-items .grid-item:nth-child(4) {
         grid-row: span 4;
-        grid-column: span 8;
+        grid-column: span 3;
     }
 
     .grid-wrap .grid-items .grid-item:nth-child(5) {
         grid-row: span 4;
-        grid-column: span 8;
+        grid-column: span 6;
     }
 
 }
