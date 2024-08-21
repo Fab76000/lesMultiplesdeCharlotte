@@ -231,7 +231,7 @@
         </section>
         <span id="titreMusique"></span>
     </section>
-    </li>
+
 
     <section id="Musique">
         <h2>Musique</h2>
@@ -333,7 +333,7 @@
         <span id="titreEcriture"></span>
     </section>
     <section id="Ecriture">
-        <h2 id="EcritureH2">Ecriture</h2>
+        <h2 id="EcritureH2">Écriture</h2>
 
         <p>
             "Si j'écris c'est que passé, avenir et parfois présent, m'envahissent de leurs pensées abruptes et
@@ -384,7 +384,7 @@
             </li>
         </ul>
     </section>
-    <footer></footer>
+    <?php include 'footer.php'; ?>
     <script src="js/script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

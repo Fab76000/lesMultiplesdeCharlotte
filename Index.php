@@ -153,9 +153,9 @@
 				</div>
 			</div>
 		</div>
-
-		<footer></footer>
-		<script src="js/script.js" defer></script>
+	</div>
+	<script src="js/script.js" defer></script>
+	<?php include 'footer.php'; ?>
 </body>
 
 </html>
