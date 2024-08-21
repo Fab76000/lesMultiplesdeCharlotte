@@ -839,6 +839,7 @@ a:visited {
 }
 
 #mesEcritsH3 {
+    margin-top: 50px;
     margin-left: 45px;
 }
 
@@ -862,6 +863,7 @@ div p.mesEcritures {
 
     color: var(--red-color);
     display: block;
+    margin-bottom: 25px;
 
 }
 
