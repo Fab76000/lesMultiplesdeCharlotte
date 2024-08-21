@@ -889,6 +889,19 @@ div p.mesEcritures {
 }
 
 /* ----------MEDIATION------------*/
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: right;
+}
 
 /***tuto designer du web***/
 
@@ -901,7 +914,7 @@ div p.mesEcritures {
 
 .grid-wrap .grid-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-auto-flow: dense;
     gap: 2px;
     justify-content: center;
@@ -913,11 +926,29 @@ div p.mesEcritures {
     position: relative;
 }
 
+.grid-wrap .grid-items img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.grid-wrap .grid-items .caption {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* Fond semi-transparent */
+    color: white;
+    padding: 3px 5px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    pointer-events: none;
+    /* Évite que la légende interfère avec les interactions de la souris */
+}
+
 .grid-wrap .grid-items .grid-item:nth-child(1) {
-    /* grid-row: span 2;
-    grid-column: span 6; */
-    grid-area: 1/1/3/7;
-    ;
+    grid-row: span 2;
+    grid-column: span 6;
 }
 
 .grid-wrap .grid-items .grid-item:nth-child(2) {

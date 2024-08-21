@@ -65,30 +65,35 @@
                     <source srcset="images/mediation-PierreOlingue-23300.webp" type="image/webp">
                     <img src="images/mediation-PierreOlingue-23300.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
+                <span class="caption">© Pierre Olingue</span>
             </div>
             <div class="grid-item">
                 <picture>
                     <source srcset="images/mediation-ThierryDujardin-2510.webp" type="image/webp">
                     <img src="images/mediation-ThierryDujardin-2510.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
+                <span class="caption">© Thierry Dujardin</span>
             </div>
             <div class="grid-item">
                 <picture>
                     <source srcset="images/mediation-ThierryDujardin-2520.webp" type="image/webp">
                     <img src="images/mediation-ThierryDujardin-2520.jpg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
+                <span class="caption">© Thierry Dujardin</span>
             </div>
             <div class="grid-item">
                 <picture>
                     <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
                     <img src="images/mediation-MathieuOlingue-MarionMotte-7294.webp" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
+                <span class="caption">© Mathieu Olingue et Marion Motte</span>
             </div>
             <div class="grid-item">
                 <picture>
                     <source srcset="images/mediation-ThierryDujardin-2525.webp" type="image/webp">
                     <img src="images/mediation-ThierryDujardin-2525.jpeg" alt="Photo spectacle l'argent" loading="lazy">
                 </picture>
+                <span class="caption">© Thierry Dujardin</span>
             </div>
         </div>
     </div>
