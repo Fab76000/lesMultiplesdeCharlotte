@@ -25,7 +25,7 @@
 					<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
 					<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse" loading="lazy">
 				</picture>
-				<figcaption>© Narcisse</figcaption>
+				<figcaption>© Steeve Narcisse</figcaption>
 			</figure>
 		</div>
 		</div>
