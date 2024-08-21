@@ -238,15 +238,12 @@ hr {
 
 
 /*BIO*/
-
 #Hero {
     width: 900px;
     margin: 0 auto;
     background: #FBFBD0;
     margin-top: 200px;
-
 }
-
 
 .Bio {
     position: relative;
@@ -255,6 +252,12 @@ hr {
     background: #FBFBD0;
 }
 
+.Bio figure {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    /* Assure que le conteneur figure s'adapte à l'image */
+}
 
 .Bio img {
     margin-top: 10px;
@@ -263,6 +266,19 @@ hr {
     height: auto;
     margin-bottom: 20px;
     margin-right: 20px;
+    display: block;
+}
+
+.Bio figcaption {
+
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 20px;
+    /* Place la légende en bas de l'image */
+    left: 0;
+    /* Aligne la légende à gauche */
+    text-align: left;
+    /* Inclut le padding dans la largeur totale */
 }
 
 #presentation {
@@ -1020,7 +1036,6 @@ figcaption {
         margin-left: 3px;
     }
 
-
     .presentation {
         max-width: 97vw;
         margin-left: 3px;
@@ -1456,6 +1471,7 @@ figcaption {
         color: var(--label-color);
     }
 
+
     #presentation {
         max-width: 97vw;
         margin-left: 3px;
@@ -1557,6 +1573,7 @@ figcaption {
     label {
         color: var(--label-color);
     }
+
 
     #presentation {
         max-width: 97vw;
@@ -1702,6 +1719,8 @@ figcaption {
         grid-row: span 4;
         grid-column: span 5;
     }
+
+
 }
 
 /* @media only screen and (min-width: 1191px) {
@@ -1730,7 +1749,7 @@ figcaption {
 
 } */
 
-/* Media queries pour les écrans moyens */
+
 @media (max-width: 768px) {
 
 
@@ -1755,5 +1774,4 @@ figcaption {
         left: 25%;
         margin-top: 80%;
     }
-
 }

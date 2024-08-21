@@ -20,11 +20,17 @@
 	<?php include 'header.php'; ?>
 	<section id="Hero">
 		<div class="Bio">
-			<picture>
-				<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
-				<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse" loading="lazy">
-			</picture>
+			<figure>
+				<picture>
+					<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
+					<img src="images/Charlotte_Narcisse.jpg" alt="Charlotte Narcisse" loading="lazy">
+				</picture>
+				<figcaption>© Narcisse</figcaption>
+			</figure>
 		</div>
+		</div>
+
+
 		<h2 id="presentation">Charlotte Goupil</h2>
 		<div class="presentation">
 			<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
