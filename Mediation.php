@@ -93,7 +93,7 @@
                         <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
                         <img src="images/mediation-MathieuOlingue-MarionMotte-7294.webp" alt="Photo spectacle l'argent" loading="lazy">
                     </picture>
-                    <figcaption>© Mathieu Olingue et Marion Motte</figcaption>
+                    <figcaption>© Mathieu Olingue</figcaption>
                 </figure>
             </div>
             <div class="grid-item">
