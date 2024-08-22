@@ -24,3 +24,5 @@ composer.lock
 
 # Ignorer les fichiers de sauvegarde
 *~ 
+# Ignorer le fichier desktop.ini
+desktop.ini
