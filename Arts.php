@@ -190,7 +190,7 @@
                 de leur relation, de fait, à cause ou malgré...l'argent.
             </p>
             <p>Pour voir la captation du spectacle : </p>
-            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></p>
+            <p><iframe id="iframeArgent" width="350" height="350" src="https://www.youtube.com/embed/4QuITiqTIxk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></p>
             <a href="#spectacles" style="display:flex; justify-content: end; margin-top:100px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                 </svg></a>
@@ -318,14 +318,14 @@
             </div>
             <div id="container-links-ul">
                 <ul class="music-links">
-                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA" loading="lazy">Il neige</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg" loading="lazy">Concert hommage à Allain Leprest - Bruxelles</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s" loading="lazy">Récital hONdiCAP sur Leprest</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw" loading="lazy">L'horloger</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk" loading="lazy">"Le sud" avec Zabou & Martial - El Camino</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0" loading="lazy">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3" loading="lazy">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4" loading="lazy">Autour des Elles d'Allain Extraits</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA" loading="lazy" rel="noopener noreferrer">Il neige</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg" loading="lazy" rel="noopener noreferrer">Concert hommage à Allain Leprest - Bruxelles</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s" loading="lazy" rel="noopener noreferrer">Récital hONdiCAP sur Leprest</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw" loading="lazy" rel="noopener noreferrer">L'horloger</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk" loading="lazy" rel="noopener noreferrer">"Le sud" avec Zabou & Martial - El Camino</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0" loading="lazy" rel="noopener noreferrer">"Une Valse pour Rien" C.Goupil & R.Jéhanne</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3" loading="lazy" rel="noopener noreferrer">Concert inauguration place Leprest - Mont Saint Aignan</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4" loading="lazy" rel="noopener noreferrer">Autour des Elles d'Allain Extraits</a></li>
                 </ul>
             </div>
         </div>
@@ -355,7 +355,7 @@
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
         <h3 id="mesEcritsH3">Mes écrits</h3>
-        <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
+        <a href="http://dmjlarchotte.blogspot.com/?view=magazine" rel="noopener noreferrer">Mon blog</a>
         <div>
             <p class="mesEcritures">À propos de mes écritures</p>
         </div>
@@ -364,23 +364,35 @@
                     d'écriture avec Charlotte Goupil
                 </a>
             </li>
-            <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/">Le blog du doigt dans
+            <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/" rel="noopener noreferrer">Le blog du doigt dans
                     l'oeil</a></li>
-            <li><a href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55">
+            <li><a href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55" rel="noopener noreferrer">
                     Les artistes normands se pressent au festival 55
                 </a>
             </li>
-            <li><a href=" https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0">Viventre du slamdit</a></li>
+            <li><a href=" https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0" rel="noopener noreferrer">Viventre du slamdit</a></li>
         </ul>
         <div>
             <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
         </div>
         <ul>
-            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
+            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/" rel="noopener noreferrer">
                     À crier par les fenêtres</a>
             </li>
-            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
+            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html" rel="noopener noreferrer">S'évader
                     du confinement avec la poésie</a>
+            </li>
+        </ul>
+        <div>
+            <p class="mesEcritures">Quelques exemples d'ateliers d'ecriture</p>
+        </div>
+        <ul>
+            <li><a class="aEcriture" href="https://www.youtube.com/watch?v=VLplFrMCfwE" rel="noopener noreferrer">
+                    Une interview de Charlotte Goupil</a>
+            </li>
+            <li><a class=" aBottom" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n1-avec-charlotte-goupil%EF%B8%8Fl%C3%A9nah-comslingerie-on-ne-sen-lace-jam/1954323744582804/" rel="noopener noreferrer">
+                    Atelier d'écriture avec Charlotte Goupil
+                </a>
             </li>
         </ul>
     </section>

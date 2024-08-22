@@ -154,8 +154,8 @@
 
 				</form>
 				<div id="Logo" class="col-auto">
-					<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook"><img src="images/logo-facebook.png" alt="logo Facebook" class="logo"></a>
-					<a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram"><img src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram" class="logo"></a>
+					<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook" rel="noopener noreferrer"><img src="images/logo-facebook.png" alt="logo Facebook" class="logo"></a>
+					<a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram" rel="noopener noreferrer"><img src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram" class="logo"></a>
 				</div>
 			</div>
 		</div>
