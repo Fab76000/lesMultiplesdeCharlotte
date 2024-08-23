@@ -24,7 +24,7 @@
     <section id="Bulles">
         <div id="Chanoe" class="photo">
             <picture>
-                <source src="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
+                <source srcset="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
                 <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex" loading="lazy">
             </picture>
             <div class="text-overlay"></div>
@@ -45,7 +45,7 @@
         </div>
         <div id="Charlotte" class="photo">
             <picture>
-                <source src="images/Viventre.webp" type="image/webp">
+                <source srcset="images/Viventre.webp" type="image/webp">
                 <img src="images/Viventre.jpg" alt="Viventre" loading="lazy">
             </picture>
             <div class="text-overlay">
@@ -66,7 +66,7 @@
         </div>
         <div id="Larchotte" class="photo">
             <picture>
-                <source src="images/Charlotte_voile_rose.webp" type="image/webp">
+                <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
                 <img src="images/Charlotte_voile_rose.jpg" alt="Viventre" loading="lazy">
             </picture>
             <div class="text-overlay">
@@ -277,7 +277,7 @@
                     <div class="video-wrapper" data-video-id="VLplFrMCfwE" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature3.webp" type="image/webp">
-                            <img srcset="images/miniature3.jpg" alt="Interview de Charlotte Goupil par Emmanuel Gouache" class="thumbnail" loading="lazy">
+                            <img src="images/miniature3.jpg" alt="Interview de Charlotte Goupil par Emmanuel Gouache" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>

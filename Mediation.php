@@ -91,7 +91,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
-                        <img src="images/mediation-MathieuOlingue-MarionMotte-7294.webp" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-MathieuOlingue-MarionMotte-7294.jpg" alt="Photo spectacle l'argent" loading="lazy">
                     </picture>
                     <figcaption>© Mathieu Olingue</figcaption>
                 </figure>
