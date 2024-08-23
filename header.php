@@ -26,7 +26,6 @@
   </nav>
 </header>
 
-
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var burger = document.getElementById("burger");
