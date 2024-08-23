@@ -21,7 +21,7 @@
         </ul>
       </li>
       <li><a class="ColoRed" href="Mediation.php">Médiation</a></li>
-      <li><a href="#">Liens amis</a></li>
+      <li><a href="Links.php">Liens amis</a></li>
     </ul>
   </nav>
 </header>
