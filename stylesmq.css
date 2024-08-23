@@ -27,6 +27,10 @@ html {
     overflow-y: auto;
 }
 
+iframe {
+    border: none; /* Ou border: 0; */
+}
+
 a h1 {
     color: black;
 }
@@ -142,8 +146,6 @@ hr {
 #menuderoulant .ColoRed {
     background-color: var(--red-color);
     width: 12.395em;
-
-
     border-radius: 2.81em;
 }
 
@@ -994,6 +996,159 @@ figcaption {
 }
 
 
+/*---LIENS AMIS ---*/
+
+#Links {
+    margin-top: 50px;
+    margin-bottom: 2800px;
+    text-align: center;
+}
+
+#LinksH1 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.gradient-border {
+    border: 10px solid;
+    /* Ajustez l'épaisseur selon vos besoins */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #1D7461, #741D34, #741D34, #1D7461);
+    position: relative;
+    padding: 50px 20px;
+    margin: 150px;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(45deg, #1D7461, #741D34, #741D34, #1D7461);
+}
+
+.gradient-border>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+.corner-top-left-image,
+.corner-bottom-right-image {
+    position: absolute;
+    width: 10%;
+    max-width: 100px;
+    height: auto;
+
+}
+
+.corner-top-left-image {
+    top: 10px;
+    left: 10px;
+}
+
+.corner-bottom-right-image {
+    bottom: 10px;
+    right: 10px;
+}
+
+.corner-top-left-image img,
+.corner-bottom-right-image img {
+    width: 100%;
+    height: auto;
+    /* Gardez le ratio de l'image */
+    object-fit: cover;
+}
+
+#Links figcaption {
+    position: absolute;
+    font-size: 0.8em;
+    color: #000;
+}
+
+.corner-top-left-image,
+.corner-bottom-right-image {
+    position: absolute;
+    width: 15%;
+    /* Ajustez la largeur selon vos besoins */
+    max-width: 70px;
+    /* Limitez la taille maximale */
+    height: auto;
+    /* Laissez la hauteur s'ajuster automatiquement */
+}
+
+.corner-top-left-image {
+    top: 10px;
+    /* Ajustez la position selon vos besoins */
+    left: 10px;
+}
+
+.corner-bottom-right-image {
+    bottom: 10px;
+    /* Ajustez la position selon vos besoins */
+    right: 10px;
+}
+
+.corner-top-left-image,
+.corner-bottom-right-image {
+    position: absolute;
+    width: 15%;
+    /* Ajustez la largeur selon vos besoins */
+    max-width: 70px;
+    /* Limitez la taille maximale */
+    height: auto;
+    /* Laissez la hauteur s'ajuster automatiquement */
+}
+
+.corner-top-left-image {
+    top: 10px;
+    /* Ajustez la position selon vos besoins */
+    left: 10px;
+}
+
+.corner-bottom-right-image {
+    bottom: 10px;
+    /* Ajustez la position selon vos besoins */
+    right: 10px;
+}
+
+.corner-top-left-image img,
+.corner-bottom-right-image img {
+    width: 100%;
+    height: auto;
+    /* Gardez le ratio de l'image */
+    object-fit: cover;
+}
+
+#Links figcaption {
+    position: absolute;
+    font-size: 0.5em;
+    color: #fff;
+    /* Couleur du texte en blanc */
+
+    padding: 5px;
+    /* Ajoute un peu d'espace autour du texte */
+
+}
+
+/* Positionnement spécifique pour chaque figcaption */
+.corner-top-left-image figcaption {
+    bottom: 0;
+    /* Positionne le figcaption en haut à gauche */
+    left: 0;
+    /* Aligne le figcaption à gauche */
+}
+
+.corner-bottom-right-image figcaption {
+    bottom: 0;
+    /* Positionne le figcaption en bas à droite */
+    right: 0;
+    /* Aligne le figcaption à droite */
+}
+
+/*---MEDIA QUERIES ---*/
+
 @media screen and (min-width:80px) and (max-width:480px) {
 
 
@@ -1749,9 +1904,47 @@ figcaption {
 
 } */
 
+@media (min-width: 80px) and (max-width: 1200px) {
+    .gradient-border {
+        padding: 60px 10px;
+        margin: 40px;
+    }
+
+    .corner-top-left-image,
+    .corner-bottom-right-image {
+        width: 15%;
+        /* Ajustez la largeur pour les petits écrans */
+        max-width: 60px;
+        /* Limitez la taille maximale */
+    }
+
+
+    .gradient-border p:first-of-type {
+        margin-top: 30px;
+    }
+
+    .gradient-border p:last-of-type {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 500px) {
+    .linksParagraph {
+        margin-top: -50px;
+        padding: 20px;
+    }
+
+}
+
+@media (min-width: 1201px) {
+    .gradient-border {
+        padding: 50px 20px;
+        margin: 40px;
+    }
+
+}
 
 @media (max-width: 768px) {
-
 
     #Bulles {
         grid-template-columns: repeat(1, 1fr);
