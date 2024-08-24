@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Les multiples de Charlotte Goupil/Arts </title>
+    <title>Spectacles de Charlotte Goupil | Chanson, Slam et Lecture théâtralisée</title>
+    <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d'Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L'Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
     <?php
     $date = date("Y-m-d-h-i-s");
     echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -398,6 +397,8 @@
     </section>
     <?php include 'footer.php'; ?>
     <script src="js/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const videoWrappers = document.querySelectorAll('.video-wrapper');
