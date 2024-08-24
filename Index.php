@@ -142,7 +142,7 @@
 						</label><br>
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<input type="submit" class="button1" value="Envoyer">
+								<input type="submit" class="button-form" value="Envoyer">
 							</div>
 						</div>
 						<div class="row">
@@ -160,7 +160,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/script.js" defer></script>
+	<script src="js/script.min.js" defer></script>
 	<?php include 'footer.php'; ?>
 </body>
 
