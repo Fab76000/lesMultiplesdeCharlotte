@@ -1,7 +1,7 @@
 /*GENERAL*/
 :root {
     --messageEssentiel-color: #fff;
-    --label-color: #000;
+    --label-color: #fff;
     --header-background-color: #FBFBD0;
     --green-color: #1D7461;
     --red-color: #741D34;
@@ -30,6 +30,15 @@ html {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+label[for=firstname],
+label[for=name],
+label[for=email],
+label[for=phone],
+label[for=subject],
+label[for=message] {
+    color: var(--label-color);
 }
 
 iframe {
@@ -1322,10 +1331,7 @@ figcaption {
         max-width: 80%;
     }
 
-    label {
-        font-size: 15px;
-        color: var(--label-color);
-    }
+
 
 
     input[type=submit] {
@@ -1555,9 +1561,7 @@ figcaption {
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
 
-    label {
-        font-size: 15px;
-    }
+
 
     input[type=text],
     input[type=email],
@@ -1571,9 +1575,6 @@ figcaption {
         display: flex;
     }
 
-    label {
-        color: var(--label-color);
-    }
 
 
     #presentation {
@@ -1658,9 +1659,7 @@ figcaption {
         margin-top: 200px;
     }
 
-    label {
-        font-size: 15px;
-    }
+
 
     input[type=text],
     input[type=email],
@@ -1673,10 +1672,6 @@ figcaption {
         display: flex;
     }
 
-
-    label {
-        color: var(--label-color);
-    }
 
 
     #presentation {
@@ -1748,9 +1743,6 @@ figcaption {
 
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
 
-    label {
-        font-size: 15px;
-    }
 
     input[type=text],
     input[type=email],
@@ -1764,10 +1756,6 @@ figcaption {
         margin: auto;
     }
 
-
-    label {
-        color: var(--label-color);
-    }
 
     .form-9 {
         margin: auto;

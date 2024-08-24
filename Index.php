@@ -77,7 +77,7 @@
 				direction de publics tout à fait divers.
 				Enfin, suite à son travail sur le répertoire d'Allain Leprest où elle était
 				déjà accompagnée par Alex Rasse , Charlotte devient ChaNoé pour revenir
-				aujourd'hui avec une forme slamée musicale.<br> A partir de textes
+				aujourd'hui avec une forme slamée musicale.<br> À partir de textes
 				personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
 				toujours accompagnée de son acolyte de création, Alex Rasse, fait
 				naître à nos yeux et nos oreilles, un travail de recherche brute et vive
