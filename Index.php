@@ -93,7 +93,7 @@
 				<h2>Formulaire de contact</h2>
 				<form id="contact-form" method="post" action="contact.php" role="form">
 					<div class="controls">
-						<p id="MessageEssentiel">Laissez-moi un message <span style="font-style: italic;">"essentiel et sans nuages"</span> à
+						<p id="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span> à
 							larchotterenard@protonmail.com</p>
 						<div class="row">
 							<div class="col-md-6">

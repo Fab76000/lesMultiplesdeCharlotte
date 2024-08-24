@@ -325,6 +325,11 @@ img[alt] {
     color: var(--messageEssentiel-color);
 }
 
+.essentiel {
+    font-family: "Tangerine", "Times new roman", sans-serif;
+    font-size: 30px;
+}
+
 .button-form {
     background-color: var(--red-color);
     color: #fff;
