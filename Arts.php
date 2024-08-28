@@ -136,42 +136,57 @@
         <section id="Mosaique">
             <div>
                 <a href="images/Viventre-19.jpg">
-                    <picture>
-                        <source srcset="images/Viventre-petite-19.webp" type="image/webp">
-                        <img src="images/Viventre-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Viventre-petite-19.webp" type="image/webp">
+                            <img src="images/Viventre-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
+                        </picture>
+                        <figcaption>© Cédric Dominas</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Viventre-22.jpg">
-                    <picture>
-                        <source srcset="images/Viventre-petite-22.webp" type="image/webp">
-                        <img src="images/Viventre-22.jpg" alt="Viventre Image Petite" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Viventre-petite-22.webp" type="image/webp">
+                            <img src="images/Viventre-22.jpg" alt="Viventre Image Petite" loading="lazy">
+                        </picture>
+                        <figcaption>© Cédric Dominas</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Viventre-25.jpg">
-                    <picture>
-                        <source srcset="images/Viventre-25.webp" type="image/webp">
-                        <img src="images/Viventre-petite-25.jpg" alt="Viventre Image Petite" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Viventre-25.webp" type="image/webp">
+                            <img src="images/Viventre-petite-25.jpg" alt="Viventre Image Petite" loading="lazy">
+                        </picture>
+                        <figcaption>© Cédric Dominas</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Viventre-31.jpg">
-                    <picture>
-                        <source srcset="images/Viventre-petite-31.webp" type="image/webp">
-                        <img src="images/Viventre-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Viventre-petite-31.webp" type="image/webp">
+                            <img src="images/Viventre-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
+                        </picture>
+                        <figcaption>© Cédric Dominas</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Viventre-36.jpg">
-                    <picture>
-                        <source srcset="images/Viventre-petite-36.webp" type="image/webp">
-                        <img src="images/Viventre-petite-36.jpg" alt="Viventre Image Petite" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Viventre-petite-36.webp" type="image/webp">
+                            <img src="images/Viventre-petite-36.jpg" alt="Viventre Image Petite" loading="lazy">
+                        </picture>
+                        <figcaption>© Cédric Dominas</figcaption>
+                    </figure>
                 </a>
             </div>
         </section>
@@ -197,34 +212,46 @@
         <section id="Mosaique1">
             <div>
                 <a href="images/2019_L'argent.jpg">
-                    <picture>
-                        <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
-                        <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
+                            <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                        </picture>
+                        <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Argent_4123.jpg">
-                    <picture>
-                        <source srcset="images/Argent_4123_petite.webp" type="image/webp">
-                        <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Argent_4123_petite.webp" type="image/webp">
+                            <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                        </picture>
+                        <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Argent_4150.jpg">
-                    <picture>
-                        <source srcset="images/Argent_4150_petite.webp" type="image/webp">
-                        <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Argent_4150_petite.webp" type="image/webp">
+                            <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <picture>
+                                <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                    </figure>
                 </a>
             </div>
             <div>
                 <a href="images/Argent_4165_.jpg">
-                    <picture>
-                        <source srcset="images/Argent_4165_petite.webp" type="image/webp">
-                        <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent" loading="lazy">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <source srcset="images/Argent_4165_petite.webp" type="image/webp">
+                            <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <picture>
+                                <figcaption>© Paris-Normandie</figcaption>
+                    </figure>
                 </a>
             </div>
         </section>
