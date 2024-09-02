@@ -24,7 +24,7 @@
         <figure id="Chanoe" class="photo">
             <picture>
                 <source srcset="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
-                <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex" loading="lazy">
+                <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="" loading="lazy">
             </picture>
             <figcaption>© LN Devique</figcaption>
             <div class="text-overlay"></div>
@@ -45,7 +45,7 @@
         <figure id="Charlotte" class="photo">
             <picture>
                 <source srcset="images/Viventre.webp" type="image/webp">
-                <img src="images/Viventre.jpg" alt="Viventre" loading="lazy">
+                <img src="images/Viventre.jpg" alt="" loading="lazy">
             </picture>
             <figcaption>© Angélique Gourié</figcaption>
             <div class="text-overlay">
@@ -67,7 +67,7 @@
         <figure id="Larchotte" class="photo">
             <picture>
                 <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
-                <img src="images/Charlotte_voile_rose.jpg" alt="Viventre" loading="lazy">
+                <img src="images/Charlotte_voile_rose.jpg" alt="" loading="lazy">
             </picture>
             <figcaption>© Paris-Normandie</figcaption>
             <div class="text-overlay">
@@ -141,7 +141,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Viventre-petite-19.webp" type="image/webp">
-                            <img src="images/Viventre-petite-19.jpg" alt="Viventre Image Petite" loading="lazy">
+                            <img src="images/Viventre-petite-19.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Cédric Dominas</figcaption>
                     </figure>
@@ -152,7 +152,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Viventre-petite-22.webp" type="image/webp">
-                            <img src="images/Viventre-22.jpg" alt="Viventre Image Petite" loading="lazy">
+                            <img src="images/Viventre-22.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Cédric Dominas</figcaption>
                     </figure>
@@ -163,7 +163,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Viventre-25.webp" type="image/webp">
-                            <img src="images/Viventre-petite-25.jpg" alt="Viventre Image Petite" loading="lazy">
+                            <img src="images/Viventre-petite-25.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Cédric Dominas</figcaption>
                     </figure>
@@ -174,7 +174,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Viventre-petite-31.webp" type="image/webp">
-                            <img src="images/Viventre-petite-31.jpg" alt="Viventre Image Petite" loading="lazy">
+                            <img src="images/Viventre-petite-31.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Cédric Dominas</figcaption>
                     </figure>
@@ -185,7 +185,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Viventre-petite-36.webp" type="image/webp">
-                            <img src="images/Viventre-petite-36.jpg" alt="Viventre Image Petite" loading="lazy">
+                            <img src="images/Viventre-petite-36.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Cédric Dominas</figcaption>
                     </figure>
@@ -217,7 +217,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/2019_L'argent_petite.webp" type="image/webp">
-                            <img src="images/2019_L'argent_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <img src="images/2019_L'argent_petite.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                     </figure>
@@ -228,7 +228,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Argent_4123_petite.webp" type="image/webp">
-                            <img src="images/Argent_4123_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <img src="images/Argent_4123_petite.jpg" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                     </figure>
@@ -239,7 +239,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Argent_4150_petite.webp" type="image/webp">
-                            <img src="images/Argent_4150_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <img src="images/Argent_4150_petite.jpg" alt="" loading="lazy">
                             <picture>
                                 <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                     </figure>
@@ -250,7 +250,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/Argent_4165_petite.webp" type="image/webp">
-                            <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent" loading="lazy">
+                            <img src="images/Argent_4165_petite.jpg" alt="" loading="lazy">
                             <picture>
                                 <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                     </figure>
@@ -278,7 +278,7 @@
                     <div class="video-wrapper" data-video-id="293555303" data-provider="vimeo">
                         <picture>
                             <source srcset="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.webp" type="image/webp">
-                            <img src="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.jpg" alt="Teaser Autour des Elles d’Allain - 2018" class="thumbnail" loading="lazy">
+                            <img src="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -287,7 +287,7 @@
                     <div class="video-wrapper" data-video-id="JC6vuz2HncE" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature1.webp" type="image/webp">
-                            <img src="images/miniature1.jpg" alt="Teaser Viventre" class="thumbnail" loading="lazy">
+                            <img src="images/miniature1.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -296,7 +296,7 @@
                     <div class="video-wrapper" data-video-id="IWingOXoCv8" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature2.webp" type="image/webp">
-                            <img src="images/miniature2.jpg" alt="Choupote - extrait du spectacle VIVENTRE du Slam'dit - ChaNoé Goupil & Alex Rasse" class="thumbnail" loading="lazy">
+                            <img src="images/miniature2.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -305,7 +305,7 @@
                     <div class="video-wrapper" data-video-id="VLplFrMCfwE" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature3.webp" type="image/webp">
-                            <img src="images/miniature3.jpg" alt="Interview de Charlotte Goupil par Emmanuel Gouache" class="thumbnail" loading="lazy">
+                            <img src="images/miniature3.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -314,7 +314,7 @@
                     <div class="video-wrapper" data-video-id="1ENzQan2JhU" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature4.webp" type="image/webp">
-                            <img src="images/miniature4.jpg" alt="Le rêve" class="thumbnail" loading="lazy">
+                            <img src="images/miniature4.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -323,7 +323,7 @@
                     <div class="video-wrapper" data-video-id="RklwZVsxQnY" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature5.webp" type="image/webp">
-                            <img src="images/miniature5.jpg" alt="Leprest à l'improvsite" class="thumbnail" loading="lazy">
+                            <img src="images/miniature5.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>
@@ -332,7 +332,7 @@
                     <div class="video-wrapper" data-video-id="Te_6mXfvRKY" data-provider="youtube">
                         <picture>
                             <source srcset="images/miniature6.webp" type="image/webp">
-                            <img src="images/miniature6.jpg" alt="Teaser Autour des Elles d'Allain 2016" class="thumbnail" loading="lazy">
+                            <img src="images/miniature6.jpg" alt="" class="thumbnail" loading="lazy">
                         </picture>
                         <div class="play-button"></div>
                     </div>

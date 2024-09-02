@@ -63,7 +63,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-PierreOlingue-23300.webp" type="image/webp">
-                        <img src="images/mediation-PierreOlingue-23300.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-PierreOlingue-23300.jpg" alt="" loading="lazy">
                     </picture>
                     <figcaption>© Pierre Olingue</figcaption>
                 </figure>
@@ -72,7 +72,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-ThierryDujardin-2510.webp" type="image/webp">
-                        <img src="images/mediation-ThierryDujardin-2510.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-ThierryDujardin-2510.jpg" alt="" loading="lazy">
                     </picture>
                     <figcaption>© Thierry Dujardin</figcaption>
                 </figure>
@@ -81,7 +81,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-ThierryDujardin-2520.webp" type="image/webp">
-                        <img src="images/mediation-ThierryDujardin-2520.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-ThierryDujardin-2520.jpg" alt="" loading="lazy">
                     </picture>
                     <figcaption>© Thierry Dujardin</figcaption>
                 </figure>
@@ -90,7 +90,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
-                        <img src="images/mediation-MathieuOlingue-MarionMotte-7294.jpg" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-MathieuOlingue-MarionMotte-7294.jpg" alt="" loading="lazy">
                     </picture>
                     <figcaption>© Mathieu Olingue</figcaption>
                 </figure>
@@ -99,7 +99,7 @@
                 <figure>
                     <picture>
                         <source srcset="images/mediation-ThierryDujardin-2525.webp" type="image/webp">
-                        <img src="images/mediation-ThierryDujardin-2525.jpeg" alt="Photo spectacle l'argent" loading="lazy">
+                        <img src="images/mediation-ThierryDujardin-2525.jpeg" alt="" loading="lazy">
                     </picture>
                     <figcaption>© Thierry Dujardin</figcaption>
                 </figure>
