@@ -29,7 +29,6 @@
 		</div>
 		</div>
 
-
 		<h2 id="presentation">Charlotte Goupil</h2>
 		<div class="presentation">
 			<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
