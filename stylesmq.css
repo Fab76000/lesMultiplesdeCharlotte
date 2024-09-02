@@ -639,7 +639,28 @@ img[alt] {
     transform: skew(25deg);
 }
 
+#Bulles figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 160px;
+    text-align: center;
+    width: 30%;
+    padding: initial;
+}
 
+#Chanoe figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 160px;
+    text-align: center;
+    width: 30%;
+    padding: initial;
+}
+
+
+#Bulles figure:hover figcaption {
+    display: none;
+}
 
 /*ARTS*/
 
@@ -1290,6 +1311,20 @@ figcaption {
         width: 360px;
         height: 215px;
     }
+
+    #Bulles figcaption {
+        position: absolute;
+        bottom: 10px;
+        left: 75px;
+        width: 50%;
+    }
+
+    #Chanoe figcaption {
+        position: absolute;
+        bottom: 10px;
+        left: 100px;
+
+    }
 }
 
 
@@ -1511,8 +1546,6 @@ figcaption {
         width: 9.375em;
     }
 
-
-
     #Mosaique,
     #Mosaique1 {
         justify-content: center;
@@ -1575,8 +1608,6 @@ figcaption {
         display: flex;
     }
 
-
-
     #presentation {
         max-width: 97vw;
         margin-left: 3px;
@@ -1600,7 +1631,6 @@ figcaption {
     #container-links-ul ul {
 
         margin-top: 50px;
-
     }
 
     #Bulles {
@@ -1904,4 +1934,13 @@ figcaption {
         left: 25%;
         margin-top: 80%;
     }
+
+    #Bulles figcaption,
+    #Chanoe figcaption {
+        position: absolute;
+        bottom: 10px;
+        left: 75px;
+        width: 50%;
+    }
+
 }

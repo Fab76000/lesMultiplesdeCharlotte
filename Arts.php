@@ -21,11 +21,12 @@
     <h2 id="spectaclesH2">Spectacles</h2>
     <span id="Spectacles"></span>
     <section id="Bulles">
-        <div id="Chanoe" class="photo">
+        <figure id="Chanoe" class="photo">
             <picture>
                 <source srcset="images/couverture_album_Les_elles_d_alain.webp" type="image/webp">
                 <img src="images/couverture_album_Les_elles_d_alain.jpg" alt="Charlotte et Alex" loading="lazy">
             </picture>
+            <figcaption>© LN Devique</figcaption>
             <div class="text-overlay"></div>
             <div class="not-authorized-overlay">
                 <div class="text">
@@ -40,13 +41,13 @@
                     </a>
                 </div>
             </div>
-        </div>
-        </div>
-        <div id="Charlotte" class="photo">
+        </figure>
+        <figure id="Charlotte" class="photo">
             <picture>
                 <source srcset="images/Viventre.webp" type="image/webp">
                 <img src="images/Viventre.jpg" alt="Viventre" loading="lazy">
             </picture>
+            <figcaption>© Angélique Gourié</figcaption>
             <div class="text-overlay">
             </div>
             <div class="not-authorized-overlay">
@@ -62,12 +63,13 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div id="Larchotte" class="photo">
+        </figure>
+        <figure id="Larchotte" class="photo">
             <picture>
                 <source srcset="images/Charlotte_voile_rose.webp" type="image/webp">
                 <img src="images/Charlotte_voile_rose.jpg" alt="Viventre" loading="lazy">
             </picture>
+            <figcaption>© Paris-Normandie</figcaption>
             <div class="text-overlay">
             </div>
             <div class="not-authorized-overlay">
@@ -83,7 +85,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </figure>
     </section>
     <section id="Arts" class="container">
         <span id="allain"></span>
@@ -250,7 +252,7 @@
                             <source srcset="images/Argent_4165_petite.webp" type="image/webp">
                             <img src="images/Argent_4165_petite.jpg" alt="Photo de l'Argent" loading="lazy">
                             <picture>
-                                <figcaption>© Paris-Normandie</figcaption>
+                                <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                     </figure>
                 </a>
             </div>

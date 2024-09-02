@@ -81,7 +81,7 @@
 				personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
 				toujours accompagnée de son acolyte de création, Alex Rasse, fait
 				naître à nos yeux et nos oreilles, un travail de recherche brute et vive
-				de mots passionnés
+				de mots passionnés.
 			</p>
 		</div>
 
