@@ -3,22 +3,37 @@ $(document).ready(function () {
     function highlightNames() {
         const colorsOfNames = {
             "Charlotte Goupil": "#741D34",
-            "Fabienne Bergès": "#1D7461"
+            "Fabienne Bergès": "#1D7461",
+            "l'Éditeur": "#741D34",
+            "le Développeur": "#1D7461"
         };
-
         const mainContent = $("#mentionsLegales, #politiqueConfidentialite");
         let content = mainContent.html();
-
-        for (const [name, color] of Object.entries(colorsOfNames)) {
-            const regex = new RegExp(name, 'g');
-            content = content.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
+        // Remplacer les noms en dehors des balises <h3>
+        content = content.replace(
+            /(<h3>.*?<\/h3>)|([^<>]+)(?=<(?!\/h3))/g,
+            function (match, h3Content, textContent) {
+                if (h3Content) {
+                    // Si c'est le contenu d'une balise <h3>, le laisser tel quel
+                    return h3Content;
+                } else if (textContent) {
+                    // Pour le texte en dehors des balises <h3>, appliquer la coloration
+                    for (const [name, color] of Object.entries(colorsOfNames)) {
+                        const regex = new RegExp(escapeRegExp(name), 'g');
+                        textContent = textContent.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
+                    }
+                    return textContent;
+                }
+                return match;
+            }
+        );
         mainContent.html(content);
     }
-
     // Vérifiez si l'URL correspond à la page spécifique
     if (window.location.pathname === "/Multiples_Charlotte/MentionsLegales.php" || window.location.pathname === "/Multiples_Charlotte/PolitiqueConfidentialite.php") {
-
         highlightNames();
     }
 }),
@@ -46,7 +61,6 @@ $(function () {
     $("#myNavbar a").on("click", function () {
         $("#myNavbar").collapse("hide");
     });
-
     function validateField($field, validationFunction) {
         const value = $field.val().trim();
         const $errorMessage = $field.next(".comments");
@@ -58,37 +72,29 @@ $(function () {
             return false; // Le message d'erreur sera affiché lors de la soumission
         }
     }
-
     // Validation en temps réel pour chaque champ
     $("#firstname, #name").on('input', function () {
         validateField($(this), value => value !== "" && validateNameAndFirstname(value));
     });
-
     $("#email").on('input', function () {
         validateField($(this), validateEmail);
     });
-
     $("#phone").on('input', function () {
         validateField($(this), validatePhone);
     });
-
     $("#subject").on('change', function () {
         validateField($(this), value => value !== "");
     });
-
     $("#message").on('input', function () {
         validateField($(this), value => value !== "");
     });
-
     $("#data-consent").on('change', function () {
         validateField($(this), value => $(this).is(":checked"));
     });
-
     $("#contact-form").submit(function (event) {
         event.preventDefault(); // Empêche l'envoi par défaut du formulaire
         $(".comments").empty(); // Vide les messages d'erreur précédents
         let isValid = true;
-
         // Vérification des champs
         isValid = validateField($("#firstname"), value => value !== "" && validateNameAndFirstname(value)) && isValid;
         isValid = validateField($("#name"), value => value !== "" && validateNameAndFirstname(value)) && isValid;
@@ -97,7 +103,6 @@ $(function () {
         isValid = validateField($("#subject"), value => value !== "") && isValid;
         isValid = validateField($("#message"), value => value !== "") && isValid;
         isValid = validateField($("#data-consent"), value => $("#data-consent").is(":checked")) && isValid;
-
         // Affichage des messages d'erreur si nécessaire
         if (!$("#firstname").val().trim()) {
             $("#firstname").next(".comments").html("Merci de m'indiquer votre prénom");
@@ -124,7 +129,6 @@ $(function () {
         if (!$("#data-consent").is(":checked")) {
             $("#data-consent").next(".comments").html("Vous devez accepter les termes et conditions");
         }
-
         // Envoi du formulaire si tout est valide
         if (isValid) {
             let formData = $("#contact-form").serialize(); // Sérialise les données du formulaire
@@ -152,7 +156,6 @@ $(function () {
             });
         }
     });
-
     function validateNameAndFirstname(value) {
         const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]*$/;  // Inclut les accents, espaces, apostrophes et tirets
         return nameRegex.test(value);
