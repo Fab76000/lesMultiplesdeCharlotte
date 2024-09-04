@@ -382,47 +382,47 @@
             musicalité d'eux-mêmes, mais aussi bien sûr de quelques notes que ma voix engendrerait …
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
-        <h3 id="mesEcritsH3">Mes écrits</h3>
-        <a href="http://dmjlarchotte.blogspot.com/?view=magazine" target="_blank" rel="noopener noreferrer">Mon blog</a>
-        <div>
-            <p class="mesEcritures">À propos de mes écritures</p>
-        </div>
-        <ul>
-            <li><a class="aEcriture" href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/" target="_blank" rel="noopener noreferrer">Atelier
-                    d'écriture avec Charlotte Goupil
-                </a>
-            </li>
-            <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/" target="_blank" rel="noopener noreferrer">Le blog du doigt dans
-                    l'oeil</a></li>
-            <li><a href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55" target="_blank" rel="noopener noreferrer">
-                    Les artistes normands se pressent au festival 55
-                </a>
-            </li>
-            <li><a href=" https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0" target="_blank" rel="noopener noreferrer">Viventre du slamdit</a></li>
-        </ul>
-        <div>
-            <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
-        </div>
-        <ul>
-            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/" target="_blank" rel="noopener noreferrer">
-                    À crier par les fenêtres</a>
-            </li>
-            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html" target="_blank" rel="noopener noreferrer">S'évader
-                    du confinement avec la poésie</a>
-            </li>
-        </ul>
-        <div>
-            <p class="mesEcritures">Quelques exemples d'ateliers d'ecriture</p>
-        </div>
-        <ul>
-            <li><a class="aEcriture" href="https://www.youtube.com/watch?v=VLplFrMCfwE" target="_blank" rel="noopener noreferrer">
-                    Une interview de Charlotte Goupil</a>
-            </li>
-            <li><a class=" aBottom" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n1-avec-charlotte-goupil%EF%B8%8Fl%C3%A9nah-comslingerie-on-ne-sen-lace-jam/1954323744582804/" target="_blank" rel="noopener noreferrer">
-                    Atelier d'écriture avec Charlotte Goupil
-                </a>
-            </li>
-        </ul>
+        <h3 id="mesEcritsH3">Mes écrits</h2>
+            <a href="http://dmjlarchotte.blogspot.com/?view=magazine" target="_blank" rel="noopener noreferrer">Mon blog</a>
+            <div>
+                <p class="mesEcritures">À propos de mes écritures</p>
+            </div>
+            <ul>
+                <li><a class="aEcriture" href=" https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/" target="_blank" rel="noopener noreferrer">Atelier
+                        d'écriture avec Charlotte Goupil
+                    </a>
+                </li>
+                <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/" target="_blank" rel="noopener noreferrer">Le blog du doigt dans
+                        l'oeil</a></li>
+                <li><a href="https://www.agri-culture.fr/article/culturel-festival/les-artistes-normands-se-pressent-au-festival-55" target="_blank" rel="noopener noreferrer">
+                        Les artistes normands se pressent au festival 55
+                    </a>
+                </li>
+                <li><a href=" https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0" target="_blank" rel="noopener noreferrer">Viventre du slamdit</a></li>
+            </ul>
+            <div>
+                <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
+            </div>
+            <ul>
+                <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/" target="_blank" rel="noopener noreferrer">
+                        À crier par les fenêtres</a>
+                </li>
+                <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html" target="_blank" rel="noopener noreferrer">S'évader
+                        du confinement avec la poésie</a>
+                </li>
+            </ul>
+            <div>
+                <p class="mesEcritures">Quelques exemples d'ateliers d'ecriture</p>
+            </div>
+            <ul>
+                <li><a class="aEcriture" href="https://www.youtube.com/watch?v=VLplFrMCfwE" target="_blank" rel="noopener noreferrer">
+                        Une interview de Charlotte Goupil</a>
+                </li>
+                <li><a class=" aBottom" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n1-avec-charlotte-goupil%EF%B8%8Fl%C3%A9nah-comslingerie-on-ne-sen-lace-jam/1954323744582804/" target="_blank" rel="noopener noreferrer">
+                        Atelier d'écriture avec Charlotte Goupil
+                    </a>
+                </li>
+            </ul>
     </section>
     <?php include 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -96,7 +96,8 @@ h2 {
 }
 
 
-#Mediation h1 {
+#Mediation h1,
+#politiqueConfidentialite h1 {
     margin-top: 200px;
     text-align: center;
 }
@@ -1132,7 +1133,11 @@ figcaption {
 }
 
 #mentionsLegales h2,
-#mentionsLegales p {
+#mentionsLegales p,
+#politiqueConfidentialite h2,
+#politiqueConfidentialite h3,
+#politiqueConfidentialite h4,
+#politiqueConfidentialite p {
     margin-left: 20px;
     text-align: left;
 }
@@ -1145,13 +1150,6 @@ figcaption {
     margin-top: 40px;
 }
 
-.editor {
-    color: var(--editor-color);
-}
-
-.developer {
-    color: var(--developer-color);
-}
 
 /*---MEDIA QUERIES ---*/
 
