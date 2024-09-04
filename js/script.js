@@ -4,8 +4,9 @@ $(document).ready(function () {
         const colorsOfNames = {
             "Charlotte Goupil": "#741D34",
             "Fabienne Bergès": "#1D7461",
-            "l'Éditeur": "#741D34",
-            "le Développeur": "#1D7461"
+            "Éditeur": "#741D34",
+            "Développeur": "#1D7461",
+            "https://multiples-charlotte.fr": "#741D34",
         };
         const mainContent = $("#mentionsLegales, #politiqueConfidentialite");
         let content = mainContent.html();
