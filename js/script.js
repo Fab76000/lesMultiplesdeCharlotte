@@ -1,5 +1,55 @@
 
 $(document).ready(function () {
+
+    if (localStorage.getItem('cookiesChoice') === null) {
+        $('#cookie-consent-banner').show();
+    }
+    function handleCookieChoice(accepted) {
+        // Enregistrer le choix
+        localStorage.setItem('cookiesChoice', accepted ? 'accepted' : 'declined');
+
+        // Cacher le bandeau
+        $('#cookie-consent-banner').hide();
+
+        if (accepted) {
+            // Si accepté, définir les cookies
+            const firstname = $('#firstname').val() || '';
+            const name = $('#name').val() || '';
+            const email = $('#email').val() || '';
+            const phone = $('#phone').val() || '';
+
+            const expiration = new Date();
+            expiration.setTime(expiration.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 jours
+
+            document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/`;
+            document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/`;
+            document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/`;
+            document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/`;
+
+            console.log("Cookies acceptés et définis");
+        } else {
+            // Si refusé, supprimer les cookies existants
+            document.cookie = "user_firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "user_name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "user_email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "user_phone=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+            console.log("Cookies refusés et supprimés");
+        }
+    }
+
+    // Gérer le clic sur le bouton "Accepter"
+    $('#accept-cookies').click(function () {
+        handleCookieChoice(true);
+    });
+
+    // Gérer le clic sur le bouton "Refuser"
+    $('#decline-cookies').click(function () {
+        handleCookieChoice(false);
+    });
+
+    // Vérifier et afficher la bannière au chargement de la page si nécessaire
+
     function highlightNames() {
         const colorsOfNames = {
             "Charlotte Goupil": "#741D34",
@@ -94,6 +144,10 @@ $(function () {
     });
     $("#contact-form").submit(function (event) {
         event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+        if (localStorage.getItem('cookiesAccepted') !== 'true') {
+            alert("Vous devez accepter l'utilisation des cookies pour soumettre le formulaire.");
+            return; // Ne soumet pas le formulaire
+        }
         $(".comments").empty(); // Vide les messages d'erreur précédents
         let isValid = true;
         // Vérification des champs
@@ -132,7 +186,7 @@ $(function () {
         }
         // Envoi du formulaire si tout est valide
         if (isValid) {
-            let formData = $("#contact-form").serialize(); // Sérialise les données du formulaire
+            let formData = $("#contact-form").serialize();
             $.ajax({
                 type: "POST",
                 url: "php/contact.php",
@@ -142,7 +196,12 @@ $(function () {
                     if (response.isSuccess) {
                         $("#contact-form").append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
                         $("#contact-form")[0].reset();
-                        $("#contact-form .thank-you").delay(3000).fadeOut("slow"); // Réinitialise le formulaire
+                        $("#contact-form .thank-you").delay(3000).fadeOut("slow");
+
+                        if (response.cookiesSet) {
+                            console.log("Cookies have been set successfully");
+                            // Vous pouvez ajouter ici du code pour informer l'utilisateur que ses informations ont été sauvegardées
+                        }
                     } else {
                         // Affichage des messages d'erreur renvoyés par le serveur
                         $("#firstname").next(".comments").html(response.firstnameError);

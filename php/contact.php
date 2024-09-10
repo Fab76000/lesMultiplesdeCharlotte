@@ -53,11 +53,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($array["isSuccess"]) {
+        // Envoi de l'email
         $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
         mail($emailTo, $array["subject"], $emailText, $headers);
-    }
 
-    echo json_encode($array);
+        if ($array["isSuccess"]) {
+            // Envoi de l'email
+            $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
+            mail($emailTo, $array["subject"], $emailText, $headers);
+
+            // Définir les cookies
+            $expiration = time() + (30 * 24 * 60 * 60); // 30 jours
+            setcookie("user_firstname", $array["firstname"], $expiration, "/");
+            setcookie("user_name", $array["name"], $expiration, "/");
+            setcookie("user_email", $array["email"], $expiration, "/");
+            setcookie("user_phone", $array["phone"], $expiration, "/");
+
+            $array["cookiesSet"] = true;
+        }
+
+        echo json_encode($array);
+    }
 }
 
 function isEmail($email) {
@@ -72,4 +88,3 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-?>

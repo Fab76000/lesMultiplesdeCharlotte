@@ -58,7 +58,66 @@ h1 {
     background: #FBFBD0;
 }*/
 
+#cookie-consent-banner {
+    display: block !important;
+    /* Force l'affichage pour le débogage */
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
 
+#cookie-consent-banner p,
+#cookie-consent-banner h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+#cookie-consent-banner button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cookie-consent-banner img {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    /* Espace entre l'image et le texte */
+}
+
+.cookie-corner-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cookie-corner-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#accept-cookies {
+    background-color: #37699e;
+    color: white;
+}
+
+#decline-cookies {
+    background-color: #37699e;
+    color: white;
+}
 
 /*HEADER*/
 header {
