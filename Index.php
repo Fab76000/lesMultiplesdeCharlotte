@@ -134,10 +134,11 @@
 								<p class="comments mb-4"></p>
 							</div>
 						</div>
-						<label for="data-consent">
-							<input type="checkbox" id="data-consent" name="data_consent">
-							En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.
-						</label><br>
+						<label for="data-consent"></label>
+						<input type="checkbox" id="data-consent" name="data-consent">
+						En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.
+
+						<p class="comments mb-4"></p>
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<input type="submit" class="button-form" value="Envoyer">

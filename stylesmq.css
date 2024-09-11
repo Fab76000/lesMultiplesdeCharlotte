@@ -59,7 +59,7 @@ h1 {
 }*/
 
 #cookie-consent-banner {
-    display: block !important;
+    display: block;
     /* Force l'affichage pour le débogage */
     background-color: #f1f1f1;
     padding: 20px;
