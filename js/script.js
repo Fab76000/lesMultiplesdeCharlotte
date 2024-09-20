@@ -30,10 +30,10 @@ $(document).ready(function () {
         const expiration = new Date();
         expiration.setTime(expiration.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 jours
 
-        document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/`;
+        document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
+        document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
+        document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
+        document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
     }
 
     function deleteCookies() {

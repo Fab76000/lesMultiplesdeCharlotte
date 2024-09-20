@@ -1,13 +1,3 @@
-<?php
-session_start();
-$id_session = session_id();
-
-if (isset($_COOKIE["PHPSESSID"]) && $_COOKIE["PHPSESSID"] == $id_session) {
-	$_SESSION["cookiesSet"] = true;
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
