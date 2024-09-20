@@ -1,27 +1,52 @@
 $(document).ready(function () {
-
+    // Vérifier si l'utilisateur a déjà fait un choix de cookies
     if (localStorage.getItem('cookiesChoice') === null) {
-        $('#cookie-consent-banner').show();
+        $('#cookie-consent-banner').show();  // Affiche la bannière si aucun choix n'a été fait
+    } else {
+        $('#cookie-consent-banner').hide();  // Cache la bannière si un choix a été fait
     }
 
     function handleCookieChoice(accepted) {
-        // Enregistrer le choix
-        localStorage.setItem('cookiesChoice', accepted ? 'true' : 'false');
+        if (typeof accepted !== 'boolean') {
+            console.error('handleCookieChoice: accepted must be a boolean');
+            return;
+        }
 
-        // Cacher le bandeau
-        $('#cookie-consent-banner').hide();
+        // Enregistrer le choix de l'utilisateur dans le localStorage
+        if (localStorage) {
+            localStorage.setItem('cookiesChoice', accepted ? 'true' : 'false');
+        } else {
+            console.error('handleCookieChoice: localStorage is not supported');
+            return;
+        }
+
+        // Cacher la bannière
+        if ($('#cookie-consent-banner')) {
+            $('#cookie-consent-banner').hide();
+        } else {
+            console.error('handleCookieChoice: #cookie-consent-banner is not found');
+            return;
+        }
 
         if (accepted) {
             // Si accepté, définir les cookies
             setCookies();
-            console.log("Cookies acceptés et définis");
         } else {
             // Si refusé, supprimer les cookies
             deleteCookies();
-            console.log("Cookies refusés et supprimés");
         }
     }
 
+    // Gestion du clic sur "Accepter"
+    $('#accept-cookies').click(function () {
+        handleCookieChoice(true);
+    });
+
+    // Gestion du clic sur "Refuser"
+    $('#decline-cookies').click(function () {
+        handleCookieChoice(false);
+    });
+    // Fonction pour définir les cookies (à adapter côté serveur pour HttpOnly)
     function setCookies() {
         const firstname = $('#firstname').val() || '';
         const name = $('#name').val() || '';
@@ -30,12 +55,13 @@ $(document).ready(function () {
         const expiration = new Date();
         expiration.setTime(expiration.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 jours
 
-        document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
-        document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
-        document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
-        document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; secure; HttpOnly; sameSite=Strict`;
+        document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/; secure; SameSite=Strict`;
+        document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/; secure; SameSite=Strict`;
+        document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/; secure; SameSite=Strict`;
+        document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; secure; SameSite=Strict`;
     }
 
+    // Fonction pour supprimer les cookies (ceux gérables côté client)
     function deleteCookies() {
         document.cookie = "user_firstname=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "user_name=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
@@ -43,53 +69,7 @@ $(document).ready(function () {
         document.cookie = "user_phone=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
     }
 
-    // Gérer le clic sur le bouton "Accepter"
-    $('#accept-cookies').click(function () {
-        handleCookieChoice(true);
-    });
-
-    // Gérer le clic sur le bouton "Refuser"
-    $('#decline-cookies').click(function () {
-        handleCookieChoice(false);
-    });
-
-
-    function validateField($field, validationFunction) {
-        const value = $field.attr('type') === 'checkbox' ? $field.is(":checked") : $field.val().trim();
-        const $errorMessage = $field.next(".comments");
-
-        if (validationFunction(value)) {
-            $errorMessage.empty(); // Efface le message d'erreur
-            return true;
-        } else {
-            if ($field.attr('type') === 'checkbox') {
-                $errorMessage.html("Vous devez accepter les termes et conditions");
-            }
-            return false;
-        }
-    }
-
-    // Validation en temps réel pour chaque champ
-    $("#firstname, #name").on('input', function () {
-        validateField($(this), value => value !== "" && validateNameAndFirstname(value));
-    });
-    $("#email").on('input', function () {
-        validateField($(this), validateEmail);
-    });
-    $("#phone").on('input', function () {
-        validateField($(this), validatePhone);
-    });
-    $("#subject").on('change', function () {
-        validateField($(this), value => value !== "");
-    });
-    $("#message").on('input', function () {
-        validateField($(this), value => value !== "");
-    });
-    $("#data-consent").on('change', function () {
-        validateField($(this), value => value === true);
-    });
-
-    // Gérer la soumission du formulaire
+    // Validation des champs et soumission du formulaire
     $("#contact-form").submit(function (event) {
         event.preventDefault(); // Empêche l'envoi par défaut du formulaire
 
@@ -105,37 +85,7 @@ $(document).ready(function () {
         isValid = validateField($("#message"), value => value !== "") && isValid;
         isValid = validateField($("#data-consent"), value => value === true) && isValid;
 
-        // Affichage des messages d'erreur si nécessaire
-        if (!$("#firstname").val().trim()) {
-            $("#firstname").next(".comments").html("Merci de m'indiquer votre prénom");
-        } else if (!validateNameAndFirstname($("#firstname").val().trim())) {
-            $("#firstname").next(".comments").html("Le prénom ne doit pas contenir de chiffres");
-        }
-        if (!$("#name").val().trim()) {
-            $("#name").next(".comments").html("Votre nom est aussi nécessaire");
-        } else if (!validateNameAndFirstname($("#name").val().trim())) {
-            $("#name").next(".comments").html("Le nom ne doit pas contenir de chiffres");
-        }
-        if (!validateEmail($("#email").val())) {
-            $("#email").next(".comments").html("Merci de m'indiquer votre e-mail");
-        }
-        if (!$("#phone").val().trim()) {
-            $("#phone").next(".comments").html("Désolé, vous avez oublié d'indiquer votre numéro de téléphone");
-        } else if (!validatePhone($("#phone").val().trim())) {
-            $("#phone").next(".comments").html("Le numéro de téléphone doit contenir uniquement des chiffres");
-        }
-        if (!$("#subject").val().trim()) {
-            $("#subject").next(".comments").html("Désolé, vous avez oublié d'indiquer le sujet de votre message");
-        }
-        if (!$("#message").val().trim()) {
-            $("#message").next(".comments").html("Vous avez oublié d'écrire votre message");
-        }
-        if (!$("#data-consent").is(":checked")) {
-            $("#data-consent").next(".comments").html("Vous devez accepter les termes et conditions");
-            isValid = false;
-        }
-
-        // Envoi du formulaire si tout est valide
+        // Si tout est valide, envoi du formulaire
         if (isValid) {
             let formData = $("#contact-form").serialize();
 
@@ -151,15 +101,13 @@ $(document).ready(function () {
                     if (response.isSuccess) {
                         $("#contact-form").append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
                         $("#contact-form")[0].reset();
-                        $("#contact-form .thank-you").delay(3000).fadeOut("slow");
+                        $(".thank-you").delay(3000).fadeOut("slow");
 
-                        // Définir les cookies si acceptés
                         if (localStorage.getItem('cookiesChoice') === 'true') {
                             setCookies();
-                            console.log("Cookies have been set successfully");
                         }
                     } else {
-                        // Affichage des messages d'erreur renvoyés par le serveur
+                        // Affichage des erreurs
                         $("#firstname").next(".comments").html(response.firstnameError);
                         $("#name").next(".comments").html(response.nameError);
                         $("#email").next(".comments").html(response.emailError);
@@ -173,6 +121,7 @@ $(document).ready(function () {
         }
     });
 
+    // Fonctions de validation
     function validateNameAndFirstname(value) {
         const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]*$/;
         return nameRegex.test(value);
@@ -189,14 +138,25 @@ $(document).ready(function () {
     }
 
 
+
     function setCookies() {
         const expiration = new Date();
-        expiration.setTime(expiration.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 jours
+        expiration.setTime(expiration.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 jours
 
-        document.cookie = `user_firstname=${$("#firstname").val()}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_name=${$("#name").val()}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_email=${$("#email").val()}; expires=${expiration.toUTCString()}; path=/`;
-        document.cookie = `user_phone=${$("#phone").val()}; expires=${expiration.toUTCString()}; path=/`;
+
+        function escapeCookieValue(value) {
+            return encodeURIComponent(value).replace(/%20/g, '+'); // Encode et remplace les espaces par des +
+        }
+
+        const firstname = escapeCookieValue($("#firstname").val() || '');
+        const name = escapeCookieValue($("#name").val() || '');
+        const email = escapeCookieValue($("#email").val() || '');
+        const phone = escapeCookieValue($("#phone").val() || '');
+
+        document.cookie = `user_firstname=${firstname}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
+        document.cookie = `user_name=${name}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
+        document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
+        document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
     }
 });
 function highlightNames() {
