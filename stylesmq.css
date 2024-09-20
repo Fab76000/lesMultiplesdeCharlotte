@@ -76,8 +76,7 @@ h1 {
     z-index: 5;
 }
 
-#cookie-consent-banner p,
-#cookie-consent-banner h3 {
+#cookie-consent-banner p {
     margin-top: 15px;
     text-align: left;
 }
@@ -1385,7 +1384,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
@@ -1550,7 +1549,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
@@ -1676,7 +1675,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
@@ -1779,7 +1778,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
@@ -1959,7 +1958,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
@@ -2076,7 +2075,7 @@ figcaption {
     }
 
     #cookie-consent-banner h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #cookie-consent-banner img {
