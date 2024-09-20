@@ -68,8 +68,42 @@ $(document).ready(function () {
         document.cookie = "user_email=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "user_phone=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
     }
+    function validateField($field, validationFunction) {
+        const value = $field.attr('type') === 'checkbox' ? $field.is(":checked") : $field.val().trim();
+        const $errorMessage = $field.next(".comments");
 
-    // Validation des champs et soumission du formulaire
+        if (validationFunction(value)) {
+            $errorMessage.empty(); // Efface le message d'erreur
+            return true;
+        } else {
+            if ($field.attr('type') === 'checkbox') {
+                $errorMessage.html("Vous devez accepter les termes et conditions");
+            }
+            return false;
+        }
+    }
+
+    // Validation en temps réel pour chaque champ
+    $("#firstname, #name").on('input', function () {
+        validateField($(this), value => value !== "" && validateNameAndFirstname(value));
+    });
+    $("#email").on('input', function () {
+        validateField($(this), validateEmail);
+    });
+    $("#phone").on('input', function () {
+        validateField($(this), validatePhone);
+    });
+    $("#subject").on('change', function () {
+        validateField($(this), value => value !== "");
+    });
+    $("#message").on('input', function () {
+        validateField($(this), value => value !== "");
+    });
+    $("#data-consent").on('change', function () {
+        validateField($(this), value => value === true);
+    });
+
+    // Gérer la soumission du formulaire
     $("#contact-form").submit(function (event) {
         event.preventDefault(); // Empêche l'envoi par défaut du formulaire
 
@@ -85,7 +119,37 @@ $(document).ready(function () {
         isValid = validateField($("#message"), value => value !== "") && isValid;
         isValid = validateField($("#data-consent"), value => value === true) && isValid;
 
-        // Si tout est valide, envoi du formulaire
+        // Affichage des messages d'erreur si nécessaire
+        if (!$("#firstname").val().trim()) {
+            $("#firstname").next(".comments").html("Merci de m'indiquer votre prénom");
+        } else if (!validateNameAndFirstname($("#firstname").val().trim())) {
+            $("#firstname").next(".comments").html("Le prénom ne doit pas contenir de chiffres");
+        }
+        if (!$("#name").val().trim()) {
+            $("#name").next(".comments").html("Votre nom est aussi nécessaire");
+        } else if (!validateNameAndFirstname($("#name").val().trim())) {
+            $("#name").next(".comments").html("Le nom ne doit pas contenir de chiffres");
+        }
+        if (!validateEmail($("#email").val())) {
+            $("#email").next(".comments").html("Merci de m'indiquer votre e-mail");
+        }
+        if (!$("#phone").val().trim()) {
+            $("#phone").next(".comments").html("Désolé, vous avez oublié d'indiquer votre numéro de téléphone");
+        } else if (!validatePhone($("#phone").val().trim())) {
+            $("#phone").next(".comments").html("Le numéro de téléphone doit contenir uniquement des chiffres");
+        }
+        if (!$("#subject").val().trim()) {
+            $("#subject").next(".comments").html("Désolé, vous avez oublié d'indiquer le sujet de votre message");
+        }
+        if (!$("#message").val().trim()) {
+            $("#message").next(".comments").html("Vous avez oublié d'écrire votre message");
+        }
+        if (!$("#data-consent").is(":checked")) {
+            $("#data-consent").next(".comments").html("Vous devez accepter les termes et conditions");
+            isValid = false;
+        }
+
+        // Envoi du formulaire si tout est valide
         if (isValid) {
             let formData = $("#contact-form").serialize();
 
@@ -101,13 +165,15 @@ $(document).ready(function () {
                     if (response.isSuccess) {
                         $("#contact-form").append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
                         $("#contact-form")[0].reset();
-                        $(".thank-you").delay(3000).fadeOut("slow");
+                        $("#contact-form .thank-you").delay(3000).fadeOut("slow");
 
+                        // Définir les cookies si acceptés
                         if (localStorage.getItem('cookiesChoice') === 'true') {
                             setCookies();
+                            console.log("Cookies have been set successfully");
                         }
                     } else {
-                        // Affichage des erreurs
+                        // Affichage des messages d'erreur renvoyés par le serveur
                         $("#firstname").next(".comments").html(response.firstnameError);
                         $("#name").next(".comments").html(response.nameError);
                         $("#email").next(".comments").html(response.emailError);
@@ -120,6 +186,7 @@ $(document).ready(function () {
             });
         }
     });
+
 
     // Fonctions de validation
     function validateNameAndFirstname(value) {
@@ -136,7 +203,6 @@ $(document).ready(function () {
         const phoneRegex = /^[0-9 ]*$/;
         return phoneRegex.test(phone);
     }
-
 
 
     function setCookies() {
