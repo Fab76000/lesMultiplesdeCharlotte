@@ -68,25 +68,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
         mail($emailTo, $array["subject"], $emailText, $headers);
 
-        if ($array["isSuccess"]) {
-            // Envoi de l'email
-            $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-            mail($emailTo, $array["subject"], $emailText, $headers);
-
-            // Définir les cookies seulement si acceptés
-            if ($cookiesAccepted) {
-                $expiration = time() + (30 * 24 * 60 * 60); // 30 jours
-                setcookie("user_firstname", $array["firstname"], $expiration, "/", "", true, true);
-                setcookie("user_name", $array["name"], $expiration, "/", "", true, true);
-                setcookie("user_email", $array["email"], $expiration, "/", "", true, true);
-                setcookie("user_phone", $array["phone"], $expiration, "/", "", true, true);
-                $array["cookiesSet"] = true;
-            }
+        // Définir les cookies seulement si acceptés
+        if ($cookiesAccepted) {
+            $expiration = time() + (30 * 24 * 60 * 60); // 30 jours
+            setcookie("user_firstname", $array["firstname"], $expiration, "/", "", true, true);
+            setcookie("user_name", $array["name"], $expiration, "/", "", true, true);
+            setcookie("user_email", $array["email"], $expiration, "/", "", true, true);
+            setcookie("user_phone", $array["phone"], $expiration, "/", "", true, true);
+            $array["cookiesSet"] = true;
         }
-
-        echo json_encode($array);
     }
+
+    echo json_encode($array);
 }
+
 
 function isEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
