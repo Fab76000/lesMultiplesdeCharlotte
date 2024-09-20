@@ -154,7 +154,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-
 #Mediation h1,
 #politiqueConfidentialite h1 {
     margin-top: 200px;
@@ -1214,7 +1213,6 @@ figcaption {
 
 @media screen and (min-width:80px) and (max-width:480px) {
 
-
     #menuderoulant,
     #menuderoulant li #menuderoulant .ColoRed,
     #menuderoulant .sousmenu .ColoRed2,
@@ -1228,7 +1226,6 @@ figcaption {
         max-width: 481px;
         font-size: 12px;
     }
-
 
     #menuderoulant .sousmenu {
         width: 110px;
@@ -1349,7 +1346,6 @@ figcaption {
         flex-direction: column;
     }
 
-
     #container-links-p p {
         margin-left: 100px;
         margin-top: -4300px;
@@ -1380,7 +1376,22 @@ figcaption {
         position: absolute;
         bottom: 10px;
         left: 100px;
+    }
 
+    #cookie-consent-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
     }
 }
 
@@ -1422,9 +1433,6 @@ figcaption {
         min-width: 97vw;
         max-width: 80%;
     }
-
-
-
 
     input[type=submit] {
         display: flex;
@@ -1534,10 +1542,25 @@ figcaption {
         grid-row: span 2;
         grid-column: span 6;
     }
+
+    #cookie-consent-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-
 
     .menu {
         display: none;
@@ -1580,7 +1603,6 @@ figcaption {
     #menuderoulant.collapsed li {
         display: block;
     }
-
 
     .burger.cross .burger-line:nth-child(1) {
         transform: rotate(45deg) translate(6px, 0px);
@@ -1646,12 +1668,30 @@ figcaption {
         grid-row: span 4;
         grid-column: span 2;
     }
+
+    #cookie-consent-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    #accept-cookies {
+        margin-bottom: 2px;
+    }
 }
 
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
-
-
 
     input[type=text],
     input[type=email],
@@ -1699,7 +1739,6 @@ figcaption {
         font-size: small;
     }
 
-
     .containerArts {
         margin-left: 30px;
     }
@@ -1738,6 +1777,20 @@ figcaption {
         grid-row: span 4;
         grid-column: span 6;
     }
+
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    #accept-cookies {
+        margin-bottom: 2px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -1745,8 +1798,6 @@ figcaption {
     #ArtsH1 {
         margin-top: 200px;
     }
-
-
 
     input[type=text],
     input[type=email],
@@ -1758,8 +1809,6 @@ figcaption {
     input[type=submit] {
         display: flex;
     }
-
-
 
     #presentation {
         max-width: 97vw;
@@ -1825,11 +1874,23 @@ figcaption {
         grid-column: span 6;
     }
 
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    #accept-cookies {
+        margin-bottom: 2px;
+    }
 }
 
 
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
-
 
     input[type=text],
     input[type=email],
@@ -1842,7 +1903,6 @@ figcaption {
         display: flex;
         margin: auto;
     }
-
 
     .form-9 {
         margin: auto;
@@ -1873,7 +1933,6 @@ figcaption {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
     .grid-wrap .grid-items .grid-item:nth-child(1) {
         grid-row: span 4;
         grid-column: span 3;
@@ -1899,7 +1958,19 @@ figcaption {
         grid-column: span 5;
     }
 
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
 
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    #accept-cookies {
+        margin-bottom: 2px;
+    }
 }
 
 /* @media only screen and (min-width: 1191px) {
@@ -1942,7 +2013,6 @@ figcaption {
         /* Limitez la taille maximale */
     }
 
-
     .gradient-border p:first-of-type {
         margin-top: 30px;
     }
@@ -1957,7 +2027,6 @@ figcaption {
         margin-top: -50px;
         padding: 20px;
     }
-
 }
 
 @media (min-width: 1201px) {
@@ -2000,4 +2069,19 @@ figcaption {
         width: 50%;
     }
 
+    #cookie-consent-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #cookie-consent-banner h2 {
+        font-size: 18px;
+    }
+
+    #cookie-consent-banner img {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+    }
 }
