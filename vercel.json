@@ -1,6 +1,6 @@
 {
     "functions": {
-        "*.php": {
+        "Index.php": {
             "runtime": "vercel-php@0.7.1"
         }
     },
@@ -8,6 +8,12 @@
         {
             "src": "/(.*)",
             "dest": "/Index.php"
+        }
+    ],
+    "builds": [
+        {
+            "src": "Index.php",
+            "use": "@vercel/php"
         }
     ]
 }
