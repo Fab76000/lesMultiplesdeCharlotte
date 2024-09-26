@@ -240,9 +240,13 @@ function highlightNames() {
     }
     // Remplacer les noms en dehors des balises <h3>
     content = content.replace(
-        /(<h3>.*?<\/h3>)|([^<>]+)(?=<(?!\/h3))/g,
-        function (match, h3Content, textContent) {
-            if (h3Content) {
+        /(<h2>.*?<\/h2>)|(<h3>.*?<\/h3>)|([^<>]+)(?=<(?!\/h3))/g,
+        function (match, h2Content, h3Content, textContent) {
+            if (h2Content) {
+                // Si c'est le contenu d'une balise <h2>, le laisser tel quel
+                return h2Content;
+            }
+            else if (h3Content) {
                 // Si c'est le contenu d'une balise <h3>, le laisser tel quel
                 return h3Content;
             } else if (textContent) {
@@ -258,11 +262,11 @@ function highlightNames() {
     );
     mainContent.html(content);
 }
+
 // Vérifiez si l'URL correspond à la page spécifique
 if (window.location.pathname === "/Multiples_Charlotte/MentionsLegales.php" || window.location.pathname === "/Multiples_Charlotte/PolitiqueConfidentialite.php") {
     highlightNames();
 }
-
 
 $(".not-authorized-overlay").hide();
 
