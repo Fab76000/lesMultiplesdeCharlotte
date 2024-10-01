@@ -9,13 +9,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+	echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
 	?>
 	<link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>
 
 <body id="hack">
-
 	<?php include 'header.php'; ?>
 	<section id="Hero">
 		<div class="Bio">
@@ -136,7 +135,6 @@
 						<label for="data-consent"></label>
 						<input type="checkbox" id="data-consent" name="data-consent">
 						En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.
-
 						<p class="comments mb-4"></p>
 						<div class="row">
 							<div class="col-md-12 text-center">
@@ -149,7 +147,6 @@
 							</div>
 						</div>
 					</div>
-
 				</form>
 				<div id="Logo" class="col-auto">
 					<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook" target="_blank" rel="noopener noreferrer"><img src="images/logo-facebook.png" alt="logo Facebook" class="logo"></a>

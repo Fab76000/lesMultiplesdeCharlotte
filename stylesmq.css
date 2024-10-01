@@ -10,7 +10,6 @@
     --editor-color: #741D34;
     --developer-color: #1D7461;
     --user-color: #06cbf3;
-
 }
 
 * {
@@ -18,7 +17,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none !important;
-
 }
 
 body,
@@ -43,7 +41,6 @@ label[for=message] {
 
 iframe {
     border: none;
-    /* Ou border: 0; */
 }
 
 a h1 {
@@ -54,13 +51,8 @@ h1 {
     font-size: 35px;
 }
 
-/*#hack {
-    background: #FBFBD0;
-}*/
-
 #cookie-consent-banner {
     display: none;
-    /* Force l'affichage pour le débogage */
     background-color: #f1f1f1;
     padding: 20px;
     border: 2px solid black;
@@ -93,7 +85,6 @@ h1 {
     width: 70px;
     height: 70px;
     padding: 5px;
-    /* Espace entre l'image et le texte */
 }
 
 .cookie-corner-left {
@@ -126,12 +117,10 @@ header {
     right: 0; */
     background-color: var(--header-background-color);
     z-index: 100;
-    /*////*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 header h1 {
@@ -141,14 +130,11 @@ header h1 {
     font-family: "Tangerine", "Times new roman", sans-serif;
     text-align: center;
     font-size: 6rem;
-    /* Center the title of the header*/
     display: block;
-    /* justify-content: center;*/
     margin-top: 20px;
 }
 
 h2 {
-
     text-align: center;
     margin-bottom: 10px;
 }
@@ -158,7 +144,6 @@ h2 {
     margin-top: 200px;
     text-align: center;
 }
-
 
 .green {
     color: var(--green-color);
@@ -176,7 +161,6 @@ h2 {
 hr {
     width: 30vw;
     /*335px*/
-
     margin: auto;
 }
 
@@ -195,7 +179,6 @@ hr {
     /*important*/
     margin-top: 35px;
     background-color: #FBFBD0;
-
     /* Keep the menu aligned whatever the size of the screen*/
     display: flex;
     justify-content: center;
@@ -204,7 +187,6 @@ hr {
 
 #menuderoulant li {
     /* travail sur le menu deroulant (horizontal)*/
-    /*float: left;*/
     position: relative;
     width: 12.375em;
     margin-right: 10px;
@@ -212,7 +194,6 @@ hr {
     background-color: var(--green-color);
     text-align: center;
     border-radius: 2.81em;
-    /*max-height: 2.81em;*/
     box-shadow: 5px 5px black;
 }
 
@@ -226,7 +207,6 @@ hr {
     background-color: var(--red-color);
     padding: 15px;
     width: 12.375em;
-
 }
 
 #menuderoulant .sousmenu {
@@ -259,7 +239,6 @@ hr {
     margin: 0 auto;
     padding: 4px 8px;
     text-decoration: none;
-
 }
 
 #menuderoulant li a:hover {
@@ -271,13 +250,11 @@ hr {
 
 #menuderoulant .ColoRed:hover {
     background-color: var(--green-color);
-
 }
 
 #menuderoulant .sousmenu li a :link,
 #menuderoulant .sousmenu li a:visited visited {
     /*permet de garder le même style que les liens soient visités ou pas*/
-    /*display: inline-block;*/
     color: #fff;
     margin: 0;
     padding: 0;
@@ -289,14 +266,12 @@ hr {
     background-color: var(--red-color);
     border-radius: 2.81em;
     width: 12.29em;
-
 }
 
 #menuderoulant .ColoGreen {
     background-color: var(--red-color);
     border-radius: 2.81em;
     width: 12.28em;
-    /*198px*/
     text-decoration: none;
     color: white;
 }
@@ -331,7 +306,6 @@ hr {
     position: relative;
     margin: 0;
     display: inline-block;
-    /* Assure que le conteneur figure s'adapte à l'image */
 }
 
 .Bio img {
@@ -345,15 +319,11 @@ hr {
 }
 
 .Bio figcaption {
-
     color: rgba(255, 255, 255, 0.9);
     position: absolute;
     bottom: 20px;
-    /* Place la légende en bas de l'image */
     left: 0;
-    /* Aligne la légende à gauche */
     text-align: left;
-    /* Inclut le padding dans la largeur totale */
 }
 
 #presentation {
@@ -374,15 +344,12 @@ img[alt] {
     font-size: 15px;
     text-shadow: 2px 2px white;
     display: flex;
-
 }
-
 
 #contact-form {
     background: #1D7461;
     padding: 50px;
     width: auto;
-
 }
 
 #MessageEssentiel {
@@ -411,7 +378,6 @@ img[alt] {
 }
 
 .button-form:hover {
-
     background-color: #932c47;
     color: #fff;
 }
@@ -419,7 +385,6 @@ img[alt] {
 #Logo {
     display: inline-flex;
 }
-
 
 #Logo img {
     width: 50px;
@@ -449,10 +414,8 @@ img[alt] {
 
 /*FOOTER*/
 
-
 #footer {
     width: 100%;
-    /* Prend toute la largeur de l'écran */
     background-color: black;
     color: white;
     padding: 20px 0;
@@ -466,16 +429,11 @@ img[alt] {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    /* Espace entre les éléments */
     flex-wrap: wrap;
-    /* Permet d'aller à la ligne si l'espace est insuffisant */
     width: 100%;
-    /* Assure que le contenu prend toute la largeur du footer */
     max-width: 100%;
     padding: 0 20px;
-    /* Ajoute un peu de padding à gauche et à droite */
     box-sizing: border-box;
-    /* Inclut le padding dans la largeur */
 }
 
 #footer a {
@@ -486,7 +444,6 @@ img[alt] {
 #footer a:hover {
     text-decoration: underline;
 }
-
 
 /*MOSAIQUE IMAGES*/
 
@@ -499,9 +456,7 @@ img[alt] {
     gap: 5px;
 }
 
-
 #Mosaique img {
-
     display: block;
     width: 290px;
     height: 300px;
@@ -521,7 +476,6 @@ img[alt] {
     right: 0;
     transition: .5s ease;
 }
-
 
 .not-authorized-overlay {
     position: absolute;
@@ -549,11 +503,9 @@ img[alt] {
     text-align: center;
 }
 
-
 #Charlotte .text {
     color: #1D7461;
 }
-
 
 /* Styles pour la section Bulles */
 #Bulles {
@@ -589,7 +541,6 @@ img[alt] {
     right: 0;
     transition: .5s ease;
     display: none;
-    /* Caché par défaut */
 }
 
 .not-authorized-overlay {
@@ -599,7 +550,6 @@ img[alt] {
     left: 0;
     right: 0;
     display: none;
-    /* Caché par défaut */
     transition: .5s ease;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
@@ -614,7 +564,6 @@ img[alt] {
 .text {
     color: var(--red-color);
     font-size: 20px;
-    /* Taille de police d'origine */
     text-align: center;
     padding: 10px;
 }
@@ -715,7 +664,6 @@ img[alt] {
     padding: initial;
 }
 
-
 #Bulles figure:hover figcaption {
     display: none;
 }
@@ -723,7 +671,6 @@ img[alt] {
 /*ARTS*/
 
 #Arts {
-
     display: flex;
     flex-direction: column;
     margin-top: 20em;
@@ -745,14 +692,11 @@ img[alt] {
 
 #Allain,
 #Argent {
-
     box-shadow: 10px 10px 10px var(--green-color);
 }
 
 #Viventre {
-
     box-shadow: 10px 10px 10px var(--red-color);
-
 }
 
 #Allain p,
@@ -788,7 +732,6 @@ img[alt] {
     margin-top: -40px;
 }
 
-
 #Mosaique1 {
     margin-top: 170px;
     display: flex;
@@ -796,11 +739,9 @@ img[alt] {
     align-items: center;
     position: relative;
     gap: 5px;
-
 }
 
 #Mosaique1 img {
-
     display: block;
     width: 290px;
     height: 300px;
@@ -808,13 +749,11 @@ img[alt] {
 }
 
 #Mosaique1 div:hover img {
-
     width: 300px;
     height: 350px;
 }
 
 #Arts h1 {
-
     text-align: left;
     margin-bottom: 5px;
 }
@@ -827,18 +766,13 @@ img[alt] {
 
 
 #Arts p {
-
     font-size: 18px;
     margin-top: 15px;
-
 }
 
 .Elles {
     font-style: italic;
 }
-
-
-/* Button return*/
 
 /* -----------------Musique-------------*/
 
@@ -900,9 +834,7 @@ a:visited {
     position: relative;
 }
 
-
 .thumbnail {
-
     width: 560px;
     height: 315px;
     object-fit: cover;
@@ -948,7 +880,6 @@ a:visited {
     margin-left: 45px;
 }
 
-
 #Ecriture p {
     margin-top: -25px;
     padding: 40px;
@@ -965,16 +896,12 @@ div p.mesEcritures {
 }
 
 #Ecriture a {
-
     color: var(--red-color);
     display: block;
     margin-bottom: 25px;
-
 }
 
-
 #Ecriture a:hover {
-
     color: var(--green-color);
 }
 
@@ -983,10 +910,8 @@ div p.mesEcritures {
     font-size: 20px;
 }
 
-
 .aEcriture {
     margin-top: -30px;
-
 }
 
 .aBottom {
@@ -1007,8 +932,6 @@ figcaption {
     padding: 10px;
     text-align: right;
 }
-
-/***tuto designer du web***/
 
 .grid-wrap {
     position: relative;
@@ -1049,7 +972,6 @@ figcaption {
     bottom: 5px;
     right: 5px;
     background-color: rgba(0, 0, 0, 0.25);
-    /* Fond semi-transparent */
     color: white;
     padding: 3px 5px;
     font-size: 0.8em;
@@ -1082,7 +1004,6 @@ figcaption {
     grid-column: span 4;
 }
 
-
 /*---LIENS AMIS ---*/
 
 #Links {
@@ -1097,13 +1018,11 @@ figcaption {
 }
 
 #Links a {
-
     color: var(--links-color) !important;
 }
 
 .gradient-border {
     border: 10px solid;
-    /* Ajustez l'épaisseur selon vos besoins */
     border-image-slice: 1;
     border-image-source: linear-gradient(45deg, #1D7461, #741D34, #741D34, #1D7461);
     position: relative;
@@ -1133,12 +1052,10 @@ figcaption {
     height: auto;
 }
 
-
 .corner-top-left-image img,
 .corner-bottom-right-image img {
     width: 100%;
     height: auto;
-    /* Gardez le ratio de l'image */
     object-fit: cover;
 }
 
@@ -1163,10 +1080,8 @@ figcaption {
     font-size: 0.5em;
     color: #fff;
     padding: 5px;
-
 }
 
-/* Positionnement spécifique pour chaque figcaption */
 .corner-top-left-image figcaption {
     bottom: 0;
     left: 0;
@@ -1207,7 +1122,6 @@ figcaption {
     margin-top: 40px;
 }
 
-
 /*---MEDIA QUERIES ---*/
 
 @media screen and (min-width:80px) and (max-width:480px) {
@@ -1220,7 +1134,6 @@ figcaption {
     #menuderoulant .sousmenu li a:hover,
     #menuderoulant li a:link,
     #menuderoulant li a:visited {
-
         width: 100%;
         max-width: 481px;
         font-size: 12px;
@@ -1228,16 +1141,12 @@ figcaption {
 
     #menuderoulant .sousmenu {
         width: 110px;
-        /* Increase the width of the submenu */
         z-index: 1;
-        /* Ensure the submenu appears above other elements */
     }
 
     .container {
         display: block;
-        /* Ajustement de la disposition pour les petits écrans */
         min-width: auto;
-        /* Suppression de la largeur minimale excessive */
     }
 
     #Logo {
@@ -1281,24 +1190,20 @@ figcaption {
 
     .containerArts {
         margin-left: 30px;
-
     }
 
     .containerArts a {
         width: 95px;
         height: 35px;
         margin-bottom: 55px;
-
     }
 
     .containerArts a span {
         font-size: 12px;
-
     }
 
     .parent-container {
         margin-left: calc(50% - 80px);
-        /* Ajoute une hauteur de 100% de la hauteur de la fenêtre */
     }
 
     .burger {
@@ -1315,7 +1220,6 @@ figcaption {
         width: 100%;
         height: 2px;
         background-color: #000;
-
     }
 
     .grid-container {
@@ -1488,8 +1392,6 @@ figcaption {
     #iframeArgent {
         width: 80vw;
         max-width: 350px;
-        /* height: auto; */
-        /* Maintient le ratio d'aspect */
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -1570,7 +1472,6 @@ figcaption {
     }
 
     .menu li a {
-
         text-decoration: none;
     }
 
@@ -1689,14 +1590,12 @@ figcaption {
     }
 }
 
-
 @media only screen and (min-width: 675px) and (max-width:768px) {
 
     input[type=text],
     input[type=email],
     input[type=phone],
     textarea {
-
         max-width: 100%;
     }
 
@@ -1725,7 +1624,6 @@ figcaption {
     }
 
     #container-links-ul ul {
-
         margin-top: 50px;
     }
 
@@ -1815,7 +1713,6 @@ figcaption {
     }
 
     .presentation {
-
         max-width: 97vw;
         margin-left: 3px;
     }
@@ -1887,7 +1784,6 @@ figcaption {
         margin-bottom: 2px;
     }
 }
-
 
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
 
@@ -1973,29 +1869,23 @@ figcaption {
 }
 
 /* @media only screen and (min-width: 1191px) {
-
     #Mosaique img,
     #Mosaique1 img {
         width: 250px;
         height: 300px;
     }
-
     #Mosaique div:hover img,
     #Mosaique1 div:hover img {
         width: 270px;
         height: 350px;
-
     }
-
     .text {
         margin-top: -50px;
     }
-
     #Bulles {
         display: grid;
         grid-template-rows: repeat(1, 1fr);
     }
-
 } */
 
 @media (min-width: 80px) and (max-width: 1200px) {
@@ -2040,19 +1930,15 @@ figcaption {
 
     #Bulles {
         grid-template-columns: repeat(1, 1fr);
-
     }
 
     #Bulles .photo {
         width: 300px;
-        /* Largeur ajustée pour écran moyen */
-        height: 300px;
-        /* Hauteur ajustée pour écran moyen */
+        height: 300px
     }
 
     .text {
         font-size: 16px;
-        /* Taille de police ajustée pour écran moyen */
     }
 
     .containerArts {

@@ -8,7 +8,7 @@
     <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d'Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L'Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>

@@ -8,7 +8,7 @@
     <meta name="description" content="Découvrez les partenaires et collaborateurs de Charlotte Goupil : Chants d'Elles, Alexandre Rasse, Correl'Arts. Explorez des liens vers des artistes inspirants et des projets culturels en Normandie.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>

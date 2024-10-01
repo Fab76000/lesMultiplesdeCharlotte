@@ -8,7 +8,7 @@
     <meta name="description" content="Découvrez les ateliers de médiation artistique et culturelle de Charlotte Goupil. Écriture, théâtre, arts plastiques pour tous publics. Accompagnement bienveillant et créatif en Normandie et région parisienne.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>
