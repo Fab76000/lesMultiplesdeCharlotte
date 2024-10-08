@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Les multiples de Charlotte Goupil </title>
+
+    <title>Politique de confidentialité | Charlotte Goupil</title>
+    <meta name="description" content="Découvrez notre politique de confidentialité.">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");

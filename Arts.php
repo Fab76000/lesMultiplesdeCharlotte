@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectacles de Charlotte Goupil | Chanson, Slam et Lecture théâtralisée</title>
-    <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d'Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L'Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
+    <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d&#39;Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L&#39;Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
     <?php
     $date = date("Y-m-d-h-i-s");
     echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
