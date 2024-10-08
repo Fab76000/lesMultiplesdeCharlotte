@@ -19,15 +19,17 @@
     <h1 id="LinksH1">Liens amis</h1>
 
     <section id="Links" class="gradient-border">
-        <figure class="corner-top-left-image">
-            <picture>
-                <source srcset="images/Charlotte_statue.webp" type="image/webp">
-                <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
-            </picture>
-            <figcaption>© Charlotte Goupil</figcaption>
-        </figure>
-
-
+        <div>
+            <a href="images/Charlotte_statue.jpg">
+                <figure class="corner-top-left-image">
+                    <picture>
+                        <source srcset="images/Charlotte_statue.webp" type="image/webp">
+                        <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
+                    </picture>
+                    <figcaption>© Jean Marc De Pas</figcaption>
+                </figure>
+            </a>
+        </div>
         <p>Vous trouverez ici quelques liens amis;
             <br><br>
             Ces sites vous enverront vers des sites de partenaires, collaborateur·rice·s, ami·e·s inspiré·e·s et inspirant·e·s.
@@ -55,18 +57,22 @@
             <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
         </p>
         <br><br>
-        <p>Enfin, vous pouvez retrouver le chemin vers mes mots :
+        <p>Enfin, vous pouvez retrouver le chemin vers mes mots, là aussi &#128521 :
             <br><br>
             <strong>Dans mon jardin, </strong><em><a href="https://dmjlarchotte.blogspot.com/?view=mosaic">https://dmjlarchotte.blogspot.com/?view=mosaic</a></em>
         </p>
 
-        <figure class="corner-bottom-right-image">
-            <picture>
-                <source srcset="images/Charlotte_statue.webp" type="image/webp">
-                <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
-            </picture>
-            <figcaption>© Charlotte Goupil</figcaption>
-        </figure>
+        <div>
+            <a href="images/Charlotte_statue.jpg">
+                <figure class="corner-bottom-right-image">
+                    <picture>
+                        <source srcset="images/Charlotte_statue.webp" type="image/webp">
+                        <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
+                    </picture>
+                    <figcaption>© Jean Marc De Pas</figcaption>
+                </figure>
+            </a>
+        </div>
     </section>
     <?php include 'footer.php'; ?>
 </body>
