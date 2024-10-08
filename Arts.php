@@ -347,16 +347,16 @@
             </div>
             <div id="container-links-ul">
                 <ul class="music-links">
-                    <li><a href="https://vimeo.com/753899801" loading="lazy">"Sur La Moustache de Georges"</a></li>
-                    <li><a href="https://www.flickr.com/photos/festivalchantsdelles/albums/72157720181824030/" loading="lazy">Festival chants d'Elles</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA" loading="lazy">Il neige</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg" loading="lazy">Concert hommage à Allain Leprest - Bruxelles</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s" loading="lazy">Récital hONdiCAP sur Leprest</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw" loading="lazy">L'horloger</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk" loading="lazy">"Le sud" avec Zabou & Martial - El Camino</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0" loading="lazy">"Une Valse pour Rien" avec C.Goupil & R.Jéhanne</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3" loading="lazy">Concert inauguration de la place Leprest - Mont Saint Aignan</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4" loading="lazy">"Autour des Elles d'Allain" - Extraits</a></li>
+                    <li><a href="https://vimeo.com/753899801">"Sur La Moustache de Georges"</a></li>
+                    <li><a href="https://www.flickr.com/photos/festivalchantsdelles/albums/72157720181824030/">Festival chants d'Elles</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA">Il neige</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg">Concert hommage à Allain Leprest - Bruxelles</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=mL48Xt1dUkY&t=156s">Récital hONdiCAP sur Leprest</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=uvk5VtPmDCw">L'horloger</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ZFGkrxvuomk">"Le sud" avec Zabou & Martial - El Camino</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eBX4y7A8gZ0">"Une Valse pour Rien" avec C.Goupil & R.Jéhanne</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j6Lz2ASfwnM&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=3">Concert inauguration de la place Leprest - Mont Saint Aignan</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">"Autour des Elles d'Allain" - Extraits</a></li>
                 </ul>
             </div>
         </div>
@@ -403,10 +403,10 @@
             <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
         </div>
         <ul>
-            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/" loading="lazy">
+            <li><a class="aEcriture" href="https://zh-cn.facebook.com/lafactoriemaisondepoesie/videos/po%C3%A8me-%C3%A0-crier-par-les-fen%C3%AAtres-couvre-feu/513972332580916/">
                     À crier par les fenêtres</a>
             </li>
-            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html" loading="lazy">S'évader
+            <li><a class="aBottom" href=" https://france3-regions.francetvinfo.fr/normandie/eure/louviers/culture-domicile-poesie-moyen-s-evader-confinement-1812920.html">S'évader
                     du confinement avec la poésie</a>
             </li>
         </ul>
@@ -414,10 +414,10 @@
             <p class="mesEcritures">Quelques exemples d'ateliers d'ecriture</p>
         </div>
         <ul>
-            <li><a class="aEcriture" href="https://www.youtube.com/watch?v=VLplFrMCfwE" loading="lazy">
+            <li><a class="aEcriture" href="https://www.youtube.com/watch?v=VLplFrMCfwE">
                     Une interview de Charlotte Goupil</a>
             </li>
-            <li><a class=" aBottom" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n1-avec-charlotte-goupil%EF%B8%8Fl%C3%A9nah-comslingerie-on-ne-sen-lace-jam/1954323744582804/" loading="lazy">
+            <li><a class=" aBottom" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n1-avec-charlotte-goupil%EF%B8%8Fl%C3%A9nah-comslingerie-on-ne-sen-lace-jam/1954323744582804/">
                     Atelier d'écriture avec Charlotte Goupil
                 </a>
             </li>
