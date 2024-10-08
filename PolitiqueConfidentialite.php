@@ -19,13 +19,13 @@
     <section id="politiqueConfidentialite" class="alinea" style="margin: 80px 50px 0 50px;">
         <h1>Politique de confidentialité</h1>
         <h2>Qui sommes-nous ?</h2>
-        <p>L’adresse de notre site est : <a href="https://multiples-charlotte.fr" rel="noopener noreferrer">https://multiples-charlotte.fr</a></p>
+        <p>L’adresse de notre site est : <a href="https://multiples-charlotte.fr">https://multiples-charlotte.fr</a></p>
         <h2>Identité et Coordonnées des Responsables des Données</h2>
         <p>Responsable du Traitement :</strong> Charlotte Goupil, 22 rue de l'ancienne prison
             76000 Rouen, France, charlotte.transcourt@gmail.com</p>
         <p>Développeur du site :</strong> Fabienne Bergès, 84 rue Méridienne, 76000 Rouen, France</p>
         <p>Nous n’avons pas de Délégué à la Protection des Données (DPO) désigné.</p>
-        <p>Sur le site <a href="https://multiples-charlotte.fr/" rel="noopener noreferrer">https://multiples-charlotte.fr</a>, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+        <p>Sur le site <a href="https://multiples-charlotte.fr/">https://multiples-charlotte.fr</a>, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
         <h2>Types de Données Collectées</h2>
         <p><strong>Données d’identification :</strong> nom, prénom</p>
         <p><strong>Données de contact :</strong> adresse email, numéro de téléphone</p>

@@ -35,29 +35,29 @@
         <br><br>
         <p><strong>Chants d'Elles</strong>, festival des voix de femmes, pour qui j'ai été spectatrice, collaboratrice, artiste et même Présidente de l’association.
             <br><br>
-            <em><a href="https://www.festivalchantsdelles.org" target="_blank" rel="noopener noreferrer">https://www.festivalchantsdelles.org</a></em>
+            <em><a href="https://www.festivalchantsdelles.org">https://www.festivalchantsdelles.org</a></em>
         </p>
         <br>
         <p><strong>Alexandre Rasse</strong>, artiste et musicien de talent.
             Il m'accompagne au piano à travers les années depuis 2016.
             <br><br>
-            <em><a href="https://alexandrerasse.fr" target="_blank" rel="noopener noreferrer">https://alexandrerasse.fr</a></em>
+            <em><a href="https://alexandrerasse.fr">https://alexandrerasse.fr</a></em>
         </p>
         <br><br>
         <p><strong>Correl'Arts</strong> est une association créée en 2015,
             née d’amitiés et de passions communes pour la musique, le partage et la transmission.
             <br><br>
-            <em><a href="https://correlarts.wixsite.com/Index" target="_blank" rel="noopener noreferrer">https://correlarts.wixsite.com/Index</a></em>
+            <em><a href="https://correlarts.wixsite.com/Index">https://correlarts.wixsite.com/Index</a></em>
         </p>
         <br><br>
         <p><strong>Le blog de Léna h. Coms</strong> qui contient un article sur l’atelier d’écriture du 12 août 2018 au Dansoir – Karine Saporta (Ouistreham) sous la direction de Charlotte Goupil, médiatrice culturelle, actrice et chanteuse, lors du vernissage final de l’exposition "Déambule" de Jill Guillais, artiste plasticienne.
             <br><br>
-            <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html" target="_blank" rel="noopener noreferrer">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
+            <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
         </p>
         <br><br>
         <p>Enfin, vous pouvez retrouver le chemin vers mes mots :
             <br><br>
-            <strong>Dans mon jardin, </strong><em><a href="https://dmjlarchotte.blogspot.com/?view=mosaic" target="_blank" rel="noopener noreferrer">https://dmjlarchotte.blogspot.com/?view=mosaic</a></em>
+            <strong>Dans mon jardin, </strong><em><a href="https://dmjlarchotte.blogspot.com/?view=mosaic">https://dmjlarchotte.blogspot.com/?view=mosaic</a></em>
         </p>
 
         <figure class="corner-bottom-right-image">
