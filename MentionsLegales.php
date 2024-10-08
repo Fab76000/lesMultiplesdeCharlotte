@@ -13,7 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>
 
-<body id="hack">
+<body id="">
     <?php include 'header.php'; ?>
     <section id="mentionsLegales">
         <h1>Mentions légales</h1>
