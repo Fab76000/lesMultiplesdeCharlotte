@@ -22,7 +22,7 @@
 body,
 html {
     font-family: 'Times new roman', sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     background-color: #FBFBD0;
     margin: 0px;
     height: 100%;
@@ -355,7 +355,6 @@ img[alt] {
 #MessageEssentiel {
     max-width: 90vw;
     text-align: center;
-    font-size: 15px;
     color: var(--messageEssentiel-color);
 }
 
@@ -403,7 +402,6 @@ img[alt] {
 
 .comments {
     font-style: italic;
-    font-size: 14px;
     font-weight: bold;
     color: var(--red-color);
     height: 4px;
@@ -1296,6 +1294,10 @@ figcaption {
         height: 60px;
         padding: 5px;
     }
+
+    label[for=subject] {
+        margin-top: 35px;
+    }
 }
 
 
@@ -1334,7 +1336,7 @@ figcaption {
         text-align: left;
         margin-right: 400px;
         min-width: 97vw;
-        max-width: 80%;
+        max-width: 50%;
     }
 
     input[type=submit] {
@@ -1587,6 +1589,14 @@ figcaption {
 
     #accept-cookies {
         margin-bottom: 2px;
+    }
+
+    #accept-cookies button {
+        font-size: 14px;
+    }
+
+    label[for=subject] {
+        margin-top: 35px;
     }
 }
 
@@ -1935,10 +1945,6 @@ figcaption {
     #Bulles .photo {
         width: 300px;
         height: 300px
-    }
-
-    .text {
-        font-size: 16px;
     }
 
     .containerArts {
