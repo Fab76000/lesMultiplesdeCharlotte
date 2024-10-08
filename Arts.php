@@ -108,7 +108,7 @@
                 le lien étant fait par le compositeur, Etienne Goupil, un des musiciens des premières heures du regretté
                 chanteur-poète...
                 d'où "Autour des Elles"
-            <p style="margin-bottom: -100px;"><a style="color:var( --red-color)" ; href="http://morglaz.over-blog.com/2018/12/autour-des-elles-d-allain-charlotte-goupil-au-paris.html" loading="lazy">Article sur Autour des Elles d'Allain</a></p>
+            <p style="margin-bottom: -100px;"><a style="color:var(--red-color);" href="http://morglaz.over-blog.com/2018/12/autour-des-elles-d-allain-charlotte-goupil-au-paris.html">Article sur Autour des Elles d'Allain</a></p>
             </p>
             <a href="#Bulles" style="display:flex; justify-content: end; margin-top:150px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" alt="Flèche retour vers le haut de la page">
                     <path fill-rule=" evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
@@ -386,18 +386,18 @@
             pour, peut-être, bientôt, écrire mes propres morceaux et de belles chansons ?"
         </p>
         <h3 id="mesEcritsH3">Mes écrits</h2>
-            <a href="http://dmjlarchotte.blogspot.com/?view=magazine" loading="lazy">Mon blog</a>
+            <a href="http://dmjlarchotte.blogspot.com/?view=magazine">Mon blog</a>
             <div>
                 <p class="mesEcritures">À propos de mes écritures</p>
             </div>
             <ul>
-                <li><a class="aEcriture" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/" loading="lazy">Atelier
+                <li><a class="aEcriture" href="https://www.facebook.com/ZingSOU/videos/atelier-d%C3%A9criture-n2-avec-charlotte-goupil%EF%B8%8Fmercredi-27-d%C3%A9cembre-19h-21hsur-inscr/1955378794477299/">Atelier
                         d'écriture avec Charlotte Goupil
                     </a>
                 </li>
-                <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/" loading="lazy">Le blog du doigt dans
+                <li><a href="https://leblogdudoigtdansloeil.wordpress.com/tag/charlotte-goupil/">Le blog du doigt dans
                         l'oeil</a></li>
-                <li><a href="https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0" loading="lazy">Viventre du slamdit</a></li>
+                <li><a href="https://www.proarti.fr/collect/project/viventre-du-slamdit-1/0">Viventre du slamdit</a></li>
             </ul>
             <div>
                 <p class="mesEcritures">Mes engagements à la Factorie, Maison de la poésie normande:</p>
