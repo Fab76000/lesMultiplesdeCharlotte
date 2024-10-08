@@ -1064,13 +1064,13 @@ figcaption {
 }
 
 .corner-top-left-image {
-    top: 10px;
-    left: 10px;
+    top: -50px;
+    left: -5px;
 }
 
 .corner-bottom-right-image {
-    bottom: 10px;
-    right: 10px;
+    bottom: -50px;
+    right: 5px;
 }
 
 #Links figcaption {
@@ -1298,6 +1298,17 @@ figcaption {
     label[for=subject] {
         margin-top: 35px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
+
 }
 
 
@@ -1461,6 +1472,16 @@ figcaption {
         height: 60px;
         padding: 5px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
@@ -1598,6 +1619,16 @@ figcaption {
     label[for=subject] {
         margin-top: 35px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
 }
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
@@ -1698,6 +1729,16 @@ figcaption {
     #accept-cookies {
         margin-bottom: 2px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -1793,6 +1834,16 @@ figcaption {
     #accept-cookies {
         margin-bottom: 2px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1190px) {
@@ -1876,6 +1927,16 @@ figcaption {
     #accept-cookies {
         margin-bottom: 2px;
     }
+
+    .corner-top-left-image {
+        top: -50px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -50px;
+        right: -5px;
+    }
 }
 
 /* @media only screen and (min-width: 1191px) {
@@ -1919,6 +1980,7 @@ figcaption {
     .gradient-border p:last-of-type {
         margin-bottom: 30px;
     }
+
 }
 
 @media (min-width: 500px) {
@@ -1934,6 +1996,15 @@ figcaption {
         margin: 40px;
     }
 
+    .corner-top-left-image {
+        top: -40px;
+        left: -5px;
+    }
+
+    .corner-bottom-right-image {
+        bottom: -40px;
+        right: -5px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1975,4 +2046,5 @@ figcaption {
         height: 60px;
         padding: 5px;
     }
+
 }
