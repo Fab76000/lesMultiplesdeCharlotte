@@ -1122,7 +1122,7 @@ figcaption {
 
 /*---MEDIA QUERIES ---*/
 
-@media screen and (min-width:80px) and (max-width:480px) {
+@media screen and (max-width:480px) {
 
     #menuderoulant,
     #menuderoulant li #menuderoulant .ColoRed,
