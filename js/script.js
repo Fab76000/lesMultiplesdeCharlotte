@@ -264,7 +264,7 @@ function highlightNames() {
 }
 
 // Vérifiez si l'URL correspond à la page spécifique
-if (window.location.pathname === "/Multiples_Charlotte/MentionsLegales.php" || window.location.pathname === "/Multiples_Charlotte/PolitiqueConfidentialite.php") {
+if (window.location.pathname === "/Multiples_Charlotte/mentionsLegales.php" || window.location.pathname === "/Multiples_Charlotte/politiqueConfidentialite.php") {
     highlightNames();
 }
 

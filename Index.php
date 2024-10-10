@@ -165,7 +165,7 @@
 		<img src="images/cookie.webp" alt="Cookie" class="cookie-corner-right">
 		<p>Nous utilisons des cookies pour améliorer votre expérience sur notre site.
 			Ces cookies nous permettent de collecter des données techniques, telles que vos données de navigation, afin d'analyser et d'optimiser notre site. Voici comment nous utilisons vos données :</p>
-		<p>Vous pouvez également consulter notre <a href="PolitiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
+		<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
 		<button id="accept-cookies">Accepter</button>
 		<button id="decline-cookies">Refuser&nbsp</button>
 	</div>
