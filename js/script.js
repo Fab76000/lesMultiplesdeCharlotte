@@ -11,7 +11,6 @@ $(document).ready(function () {
             console.error('handleCookieChoice: accepted must be a boolean');
             return;
         }
-
         // Enregistrer le choix de l'utilisateur dans le localStorage
         if (localStorage) {
             localStorage.setItem('cookiesChoice', accepted ? 'true' : 'false');
@@ -27,7 +26,6 @@ $(document).ready(function () {
             console.error('handleCookieChoice: #cookie-consent-banner is not found');
             return;
         }
-
         if (accepted) {
             // Si accepté, définir les cookies
             setCookies();
@@ -36,12 +34,10 @@ $(document).ready(function () {
             deleteCookies();
         }
     }
-
     // Gestion du clic sur "Accepter"
     $('#accept-cookies').click(function () {
         handleCookieChoice(true);
     });
-
     // Gestion du clic sur "Refuser"
     $('#decline-cookies').click(function () {
         handleCookieChoice(false);
