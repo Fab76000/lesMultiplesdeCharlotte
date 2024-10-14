@@ -106,7 +106,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<label for="email"><span class="red">*</span>Email</label>
-								<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="20">
+								<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="50">
 								<p class="comments"></p>
 							</div>
 							<div class="col-md-6">
