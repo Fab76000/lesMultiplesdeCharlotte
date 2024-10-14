@@ -128,7 +128,7 @@
 						<div class="row mt-4">
 							<div class="col-md-12">
 								<label for="message"><span class="red">*</span>Message</label>
-								<textarea id="message-textarea" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000"></textarea>
+								<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000"></textarea>
 								<p class="comments mb-4"></p>
 							</div>
 						</div>
