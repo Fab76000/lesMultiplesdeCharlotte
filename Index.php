@@ -94,33 +94,33 @@
 						<div class="row">
 							<div class="col-md-6">
 								<label for="firstname"><span class="red">*</span>Prénom</label>
-								<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Veuillez entre votre prénom">
+								<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Prénom" autocomplete="on" maxlength="20">
 								<p class="comments"></p>
 							</div>
 							<div class="col-md-6">
 								<label for="name"><span class="red">*</span>Nom</label>
-								<input id="name" type="text" name="name" class="form-control" placeholder="Veuillez entrer votre nom" autocomplete="on">
+								<input id="name" type="text" name="name" class="form-control" placeholder="Nom" autocomplete="on" maxlength="20">
 								<p class="comments"></p>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<label for="email"><span class="red">*</span>Email</label>
-								<input id="email" type="email" name="email" class="form-control" placeholder="Veuillez entrer votre email" autocomplete="on">
+								<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="20">
 								<p class="comments"></p>
 							</div>
 							<div class="col-md-6">
 								<label for="phone"><span class="red">*</span>Tél</label>
-								<input id="phone" type="phone" name="phone" class="form-control" placeholder="Veuillez entrer votre numéro de téléphone" autocomplete="on">
+								<input id="phone" type="phone" name="phone" class="form-control" placeholder="Numéro de téléphone" autocomplete="on" maxlength="10">
 								<p class="comments"></p>
 							</div>
-							<div class="col-md-12">
+							<div class="col-md-12 col-sm-12">
 								<label for="subject"><span class="red">*</span>Sujet</label>
 								<select id="subject" name="subject" class="form-control">
-									<option value="">Quel est le sujet de votre message ?</option>
-									<option value="Je voudrais plus d'infos sur tes services">Je voudrais plus d'infos sur tes services</option>
-									<option value="J'aimerais recevoir un devis">J'aimerais recevoir un devis</option>
-									<option value="Autre message du site">Autre</option>
+									<option value="">Choisir une option</option>
+									<option value="Demande d'infos">Demande d'infos</option>
+									<option value="Demande de devis">Demande de devis</option>
+									<option value="Autre">Autre</option>
 								</select>
 								<p class="comments"></p>
 							</div>
@@ -128,7 +128,7 @@
 						<div class="row mt-4">
 							<div class="col-md-12">
 								<label for="message"><span class="red">*</span>Message</label>
-								<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8"></textarea>
+								<textarea id="message-textarea" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000"></textarea>
 								<p class="comments mb-4"></p>
 							</div>
 						</div>

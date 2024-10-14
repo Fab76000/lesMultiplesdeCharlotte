@@ -39,6 +39,10 @@ label[for=message] {
     color: var(--label-color);
 }
 
+#message-textarea {
+    max-height: 400px;
+}
+
 iframe {
     border: none;
 }
@@ -1008,6 +1012,13 @@ figcaption {
     margin-top: 50px;
     margin-bottom: 2800px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
+    align-items: flex-start;
+    /* Aligne les éléments à gauche */
+
 }
 
 #LinksH1 {
@@ -1017,6 +1028,14 @@ figcaption {
 
 #Links a {
     color: var(--links-color) !important;
+}
+
+#Links p,
+#Links a {
+    width: 100%;
+    /* Assure-toi que les paragraphes et les liens prennent toute la largeur */
+    word-wrap: break-word;
+    /* Permet de couper les mots longs */
 }
 
 .gradient-border {
@@ -1307,6 +1326,21 @@ figcaption {
     .corner-bottom-right-image {
         bottom: -50px;
         right: -5px;
+    }
+
+    #Links p,
+    #Links a {
+        font-size: 12px;
+        /* Réduit la taille de police pour les petits écrans */
+        line-height: 1.4;
+        /* Augmente l'espacement entre les lignes */
+    }
+
+    #Links a {
+        display: block;
+        /* Met chaque lien sur une nouvelle ligne */
+        overflow-wrap: break-word;
+        /* Casse les mots longs */
     }
 
 }
@@ -1628,6 +1662,21 @@ figcaption {
     .corner-bottom-right-image {
         bottom: -50px;
         right: -5px;
+    }
+
+    #Links p,
+    #Links a {
+        font-size: 14px;
+        /* Réduit la taille de police pour les petits écrans */
+        line-height: 1.4;
+        /* Augmente l'espacement entre les lignes */
+    }
+
+    #Links a {
+        display: block;
+        /* Met chaque lien sur une nouvelle ligne */
+        overflow-wrap: break-word;
+        /* Casse les mots longs */
     }
 }
 
