@@ -26,3 +26,7 @@ composer.lock
 *~ 
 # Ignorer le fichier desktop.ini
 desktop.ini
+
+# Ignorer le dossier PHPMailer
+
+PHPMailer/
