@@ -50,7 +50,8 @@
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter Charlotte Goupil à l'adresse email : charlotte.transcourt@gmail.com</p>
     </section>
     <?php include 'footer.php'; ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
 
