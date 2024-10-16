@@ -30,3 +30,6 @@ desktop.ini
 # Ignorer le dossier PHPMailer
 
 PHPMailer/
+
+# Ignorer le node_modules
+node_modules/
