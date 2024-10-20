@@ -67,8 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Envoi de l'email
         $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
         mail($emailTo, $array["subject"], $emailText, $headers);
-        $headers .= "X-Mailer: PHP/" . phpversion();
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
         // Définir les cookies seulement si acceptés
         if ($cookiesAccepted) {
             $expiration = time() + (30 * 24 * 60 * 60); // 30 jours
