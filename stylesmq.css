@@ -1343,6 +1343,10 @@ figcaption {
         /* Casse les mots longs */
     }
 
+    .button-form {
+        margin-top: 15px;
+    }
+
     .comments {
         font-size: 10px;
     }
@@ -1681,6 +1685,10 @@ figcaption {
         /* Met chaque lien sur une nouvelle ligne */
         overflow-wrap: break-word;
         /* Casse les mots longs */
+    }
+
+    .button-form {
+        margin-top: 15px;
     }
 
     .comments {
