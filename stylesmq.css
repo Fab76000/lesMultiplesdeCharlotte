@@ -2113,7 +2113,7 @@ figcaption {
         padding: 5px;
     }
 
-    @media (max-width: 600px) and (orientation: landscape) {
+    @media (max-width: 768px) and (orientation: landscape) {
 
         .button-form {
             margin-top: 15px;
