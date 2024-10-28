@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cookiesAccepted = isset($_POST["cookiesAccepted"]) ? $_POST["cookiesAccepted"] === "true" : false;
 
     if (empty($array["firstname"])) {
-        $array["firstnameError"] = "Merci de m'indiquer votre prénom";
+        $array["firstnameError"] = "Merci d'indiquer votre prénom";
         $array["isSuccess"] = false;
     } else {
         $emailText .= "Firstname: {$array['firstname']}\n";
