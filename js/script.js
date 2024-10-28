@@ -117,7 +117,7 @@ $(document).ready(function () {
 
         // Affichage des messages d'erreur si nécessaire
         if (!$("#firstname").val().trim()) {
-            $("#firstname").next(".comments").html("Merci de m'indiquer votre prénom");
+            $("#firstname").next(".comments").html("Merci d'indiquer votre prénom");
         } else if (!validateNameAndFirstname($("#firstname").val().trim())) {
             $("#firstname").next(".comments").html("Le prénom ne doit pas contenir de chiffres");
         }
