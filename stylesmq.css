@@ -1525,6 +1525,11 @@ figcaption {
         right: -5px;
     }
 
+    #MessageEssentiel {
+        max-width: 70vw;
+    }
+
+
     .button-form {
         margin-top: 15px;
     }
@@ -1693,6 +1698,10 @@ figcaption {
         /* Met chaque lien sur une nouvelle ligne */
         overflow-wrap: break-word;
         /* Casse les mots longs */
+    }
+
+    #MessageEssentiel {
+        max-width: 70vw;
     }
 
     .button-form {
