@@ -39,10 +39,6 @@ label[for=message] {
     color: var(--label-color);
 }
 
-#message-textarea {
-    max-height: 400px;
-}
-
 iframe {
     border: none;
 }
@@ -1343,6 +1339,10 @@ figcaption {
         /* Casse les mots longs */
     }
 
+    #MessageEssentiel {
+        max-width: 70vw;
+    }
+
     .button-form {
         margin-top: 15px;
     }
@@ -1523,6 +1523,14 @@ figcaption {
     .corner-bottom-right-image {
         bottom: -50px;
         right: -5px;
+    }
+
+    .button-form {
+        margin-top: 15px;
+    }
+
+    .comments {
+        font-size: 10px;
     }
 }
 
@@ -2113,14 +2121,4 @@ figcaption {
         padding: 5px;
     }
 
-    @media (max-width: 768px) and (orientation: landscape) {
-
-        .button-form {
-            margin-top: 15px;
-        }
-
-        .comments {
-            font-size: 8px;
-        }
-    }
 }
