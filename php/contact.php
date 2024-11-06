@@ -1,7 +1,7 @@
 <?php
 
 $array = array("firstname" => "", "name" => "", "email" => "", "phone" => "", "subject" => "", "message" => "", "data-consent" => "",  "firstnameError" => "", "nameError" => "", "emailError" => "", "phoneError" => "", "subjectError" => "", "messageError" => "", "data-consentError" => "",  "isSuccess" => false, "cookiesSet" => false);
-$emailTo = "fabienne@fabienneberges.com";
+$emailTo = "larchotterenard@protonmail.com";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $array["firstname"] = test_input($_POST["firstname"]);
