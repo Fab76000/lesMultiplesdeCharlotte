@@ -1008,9 +1008,8 @@ figcaption {
     margin-top: 50px;
     margin-bottom: 2800px;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* Aligne les éléments en colonne */
     align-items: flex-start;
     /* Aligne les éléments à gauche */
@@ -1353,6 +1352,13 @@ figcaption {
 
     #Viventre strong {
         overflow-wrap: break-word;
+    }
+
+    #Links figcaption {
+        position: absolute;
+        font-size: 0.25em;
+        color: #fff;
+        padding: 5px;
     }
 
 }
@@ -1718,6 +1724,13 @@ figcaption {
 
     #Viventre strong {
         overflow-wrap: break-word;
+    }
+
+    #Links figcaption {
+        position: absolute;
+        font-size: 0.25em;
+        color: #fff;
+        padding: 5px;
     }
 }
 
