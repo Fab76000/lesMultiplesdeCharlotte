@@ -265,14 +265,11 @@
     <section id="Musique">
         <h2>Musique</h2>
         <p>Si ce qu'on raconte de ma mythologie familiale est que ma mère changeait mes langes sur la
-            scène
-            du Bateau Ivre (ancien cabaret rouennais aujourd'hui disparu),<br>
-            je ne suis pas devenue musicienne professionnelle tout de suite. Ma vocation artistique fut
-            en
-            effet
-            premièrement le théâtre.<br>
-            Mais d'un père compositeur et pianiste de scène dans sa jeunesse.. même si je ne sais pas
-            lire la musique,<br> j'ai sûrement reçu une oreille musicale de ce bain familial.</p>
+            scène du Bateau Ivre (ancien cabaret rouennais aujourd'hui disparu), je ne suis pas devenue musicienne professionnelle tout de suite.
+            <br>Ma vocation artistique fut en effet premièrement le théâtre.
+            Mais d'un père compositeur et pianiste de scène dans sa jeunesse, même si je ne sais pas
+            lire la musique, j'ai sûrement reçu une oreille musicale de ce bain familial.
+        </p>
         <div id="container-iframes">
             <div class="grid-container">
                 <div class="grid-item">
@@ -365,7 +362,6 @@
     </section>
     <section id="Ecriture">
         <h2 id="EcritureH2">Écriture</h2>
-
         <p>
             "Si j'écris c'est que passé, avenir et parfois présent, m'envahissent de leurs pensées abruptes et
             naissantes à chaque seconde que la Nature fait.

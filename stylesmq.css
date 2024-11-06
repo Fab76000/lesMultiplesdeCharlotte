@@ -779,7 +779,7 @@ img[alt] {
 }
 
 #Musique p {
-    margin-left: 65px;
+    margin: 0 40px 0 40px;
 }
 
 .music-links,
@@ -1189,14 +1189,15 @@ figcaption {
 
     .not-authorized-overlay h2 {
         margin-top: -80px;
-        font-size: small;
+        font-size: 80%;
     }
 
     .not-authorized-overlay .text p {
         display: -webkit-box;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
-        line-clamp: 4;
+        line-clamp: 5;
+        -moz-line-clamp: 5;
         -moz-box-orient: vertical;
         overflow: hidden;
     }
@@ -1241,8 +1242,7 @@ figcaption {
     }
 
     #Musique p {
-        margin-left: calc(50% - 200px);
-        text-align: left;
+        margin-left: calc(50% - 100px);
     }
 
     #Allain,
@@ -1253,7 +1253,7 @@ figcaption {
 
     #iframeArgent {
         width: 80%;
-        margin-left: calc(50% - 110px) !important;
+        margin-left: calc(50% - 80px) !important;
     }
 
     #Mosaique,
@@ -1349,6 +1349,10 @@ figcaption {
 
     .comments {
         font-size: 10px;
+    }
+
+    #Viventre strong {
+        overflow-wrap: break-word;
     }
 
 }
@@ -1528,7 +1532,6 @@ figcaption {
     #MessageEssentiel {
         max-width: 70vw;
     }
-
 
     .button-form {
         margin-top: 15px;
@@ -1711,6 +1714,10 @@ figcaption {
     .comments {
 
         font-size: 10px;
+    }
+
+    #Viventre strong {
+        overflow-wrap: break-word;
     }
 }
 

@@ -32,7 +32,7 @@
 			<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
 				conseils de sa professeure Annie Franscisi et s'inscrit en Licence d'Arts
 				du Spectacle de Caen. En 2ème année de Licence, elle part à Londres
-				pour suivre une année Erasmus en "English and Drama School". <br> De
+				pour suivre une année Erasmus en "English and Drama School". <br><br> De
 				retour en Normandie, elle poursuit sa formation sur le jeu de l'acteur
 				au sein des classes du comédien de l' Actéa, "compagnie dans la Cité
 				". Elle reprend par la suite un Master de recherche théâtrale qu'elle
@@ -42,7 +42,7 @@
 				Via une équivalence de Licence, elle entre à l'ésam (école supèrieure
 				des arts et médias de Caen-Cherbourg) en 2ème année, ce qui lui
 				permet d'établir un échange bilatéral entre cette école et une école
-				d'art contemporain à Bruxelles. <br>Au sein de cette autre école, l'ERG
+				d'art contemporain à Bruxelles. <br><br>Au sein de cette autre école, l'ERG
 				(Ecole de Recherche Graphique), elle se forme à l'installation performance,
 				option principale de son échange.
 				Peu après, elle se forme au jeu face caméra et radiophonique via
@@ -52,10 +52,10 @@
 				Offshort (ex festival OFF du festival du film Grolandais de Quend), elle
 				réalise avec l'aide du réalisateur scénariste Christophe Hermans et du
 				chef opérateur Frederic Noirhomme le court- métrage intitulé « La
-				théorie de l'autruche » adaptant le scénario de ce stage. <br>
+				théorie de l'autruche » adaptant le scénario de ce stage. <br><br>
 				De retour en France en 2013, elle voyage entre la Normandie et Paris
 				pour suivre une formation de médiation artistique en relation d'aide au
-				sein de l'Inécat, école d'art-thérapie.<br>
+				sein de l'Inécat, école d'art-thérapie.<br><br>
 				En 2015, elle rencontre deux femmes passionnées de musique et de scène,
 				avec qui elle décide de monter une structure associative de spectacles
 				vivants et d'ateliers de médiations (artistiques et culturelles) :
@@ -67,14 +67,14 @@
 				thèmes et personnages féminins du répertoire du chanteur-poète
 				d'Allain Leprest, Charlotte rencontre son pianiste actuel Alexandre
 				Rasse, de son nom de scène Alex Rasse, avec qui elle tournera
-				plusieurs années et sur plusieurs scènes.<br>
+				plusieurs années et sur plusieurs scènes.<br><br>
 				Présidente du festival Chants d'Elles, le festival des voix de
 				femmes, des éditions 2020, 2021 et 2022, elle continue son travail de transmission des oeuvres d'autrui :
 				en particulier de la création artistique portée par des femmes et en
 				direction de publics tout à fait divers.
 				Enfin, suite à son travail sur le répertoire d'Allain Leprest où elle était
-				déjà accompagnée par Alex Rasse , Charlotte devient ChaNoé pour revenir
-				aujourd'hui avec une forme slamée musicale.<br> À partir de textes
+				déjà accompagnée par Alex Rasse, Charlotte devient ChaNoé pour revenir
+				aujourd'hui avec une forme slamée musicale.<br><br> À partir de textes
 				personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
 				toujours accompagnée de son acolyte de création, Alex Rasse, fait
 				naître à nos yeux et nos oreilles, un travail de recherche brute et vive
