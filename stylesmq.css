@@ -1546,6 +1546,13 @@ figcaption {
     .comments {
         font-size: 10px;
     }
+
+    #Links figcaption {
+        position: absolute;
+        font-size: 0.25em;
+        color: #fff;
+        padding: 5px;
+    }
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
