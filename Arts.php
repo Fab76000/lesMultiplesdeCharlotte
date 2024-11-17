@@ -110,7 +110,6 @@
                     chanteur-poète...
                     d'où "Autour des Elles"
                 <p style="margin-bottom: -100px;"><a style="color:var(--red-color);" href="http://morglaz.over-blog.com/2018/12/autour-des-elles-d-allain-charlotte-goupil-au-paris.html">Article sur Autour des Elles d'Allain</a></p>
-                </p>
                 <a href="#Bulles" style="display:flex; justify-content: end; margin-top:150px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" alt="Flèche retour vers le haut de la page">
                         <path fill-rule=" evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                     </svg></a>
@@ -241,8 +240,8 @@
                             <picture>
                                 <source srcset="images/Argent_4150_petite.webp" type="image/webp">
                                 <img src="images/Argent_4150_petite.jpg" alt="" loading="lazy">
-                                <picture>
-                                    <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                            </picture>
+                            <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                         </figure>
                     </a>
                 </div>
@@ -252,8 +251,8 @@
                             <picture>
                                 <source srcset="images/Argent_4165_petite.webp" type="image/webp">
                                 <img src="images/Argent_4165_petite.jpg" alt="" loading="lazy">
-                                <picture>
-                                    <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                            </picture>
+                            <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
                         </figure>
                     </a>
                 </div>
@@ -354,7 +353,6 @@
                         <li><a href="https://www.youtube.com/watch?v=B6TKhf3UAos&list=PLA3VSx-wfHVkrFeWYSAJCi7zc3WgYCIp6&index=4">"Autour des Elles d'Allain" - Extraits</a></li>
                     </ul>
                 </div>
-            </div>
             </div>
             <span id="titreEcriture"></span>
         </section>

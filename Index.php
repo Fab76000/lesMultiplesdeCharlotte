@@ -27,7 +27,6 @@
 					<figcaption>© Steeve Narcisse</figcaption>
 				</figure>
 			</div>
-			</div>
 			<h2 id="presentation">Charlotte Goupil</h2>
 			<div class="presentation">
 				<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
@@ -168,7 +167,7 @@
 				Ces cookies nous permettent de collecter des données techniques, telles que vos données de navigation, afin d'analyser et d'optimiser notre site. Voici comment nous utilisons vos données :</p>
 			<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
 			<button id="accept-cookies">Accepter</button>
-			<button id="decline-cookies">Refuser&nbsp</button>
+			<button id="decline-cookies">Refuser&nbsp;</button>
 		</div>
 	</main>
 	<?php include 'footer.php'; ?>

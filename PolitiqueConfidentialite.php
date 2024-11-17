@@ -23,9 +23,9 @@
             <h3>Qui sommes-nous ?</h3>
             <p>L’adresse de notre site est : <a href="https://multiples-charlotte.fr">https://multiples-charlotte.fr</a></p>
             <h3>Identité et Coordonnées des Responsables des Données</h3>
-            <p>Responsable du Traitement :</strong> Charlotte Goupil, 22 rue de l'ancienne prison
+            <p><strong>Responsable du Traitement :</strong> Charlotte Goupil, 22 rue de l'ancienne prison
                 76000 Rouen, France, charlotte.transcourt@gmail.com</p>
-            <p>Développeur du site :</strong> Fabienne Bergès, 84 rue Méridienne, 76000 Rouen, France</p>
+            <p><strong>Développeur du site :</strong> Fabienne Bergès, 84 rue Méridienne, 76000 Rouen, France</p>
             <p>Nous n’avons pas de Délégué à la Protection des Données (DPO) désigné.</p>
             <p>Sur le site <a href="https://multiples-charlotte.fr/">https://multiples-charlotte.fr</a>, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
             <h3>Types de Données Collectées</h3>
@@ -40,13 +40,13 @@
                 <p><strong>Consentement :</strong> Lorsque vous nous contactez via le formulaire de contact, vous nous donnez votre consentement pour traiter vos données à cette fin.</p>
                 <p><strong>Intérêts légitimes :</strong> Pour améliorer notre site et répondre efficacement à vos demandes.</p>
                 <h3>Partage des Données</h3>
-                <p>Vos données personnelles ne sont pas partagées avec des tiers. Elles sont uniquement utilisées pour répondre à vos demandes de contact et pour améliorer notre site.
+                <p>Vos données personnelles ne sont pas partagées avec des tiers. Elles sont uniquement utilisées pour répondre à vos demandes de contact et pour améliorer notre site.</p>
                 <h3> Contenu embarqué depuis d’autres sites :</h3>
                 <p>Les articles de ce site peuvent inclure des contenus intégrés (par exemple des vidéos, images, articles…).</p>
                 <p>Le contenu intégré depuis d’autres sites se comporte de la même manière que si le visiteur se rendait sur cet autre site. Ces sites web pourraient collecter des données sur vous, utiliser des cookies, embarquer des outils de suivis tiers, suivre vos interactions avec ces contenus embarqués si vous disposez d’un compte connecté sur leur site web.</p>
                 <h3>Durée de Conservation des Données</h3>
                 <p>Nous conservons vos données personnelles aussi longtemps que nécessaire pour répondre à vos demandes et pour les analyses nécessaires à l'amélioration de notre site.
-                    Les données de contact seront conservées pendant 7 jours à partir de la date de la dernière interaction avec vous.</li>
+                    Les données de contact seront conservées pendant 7 jours à partir de la date de la dernière interaction avec vous.
                 </p>
                 <h3>Sécurité des Données</h3>
                 <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre les accès non autorisés, la divulgation, la modification ou la destruction.
@@ -54,8 +54,7 @@
                 <p>Les informations que nous collectons sont protégées par des moyens électroniques de confidentiellité.</p>
                 <h3>Clause de non-responsabilité et limitations de responsabilité</h3>
                 <h4>1. Responsabilités du Développeur</h4>
-                <p>
-                    Fabienne Bergès, ci-après dénommée 'le Développeur', a créé et livré le site web initial à Charlotte Goupil, ci-après dénommée 'l'Éditeur'. Il est expressément stipulé que :</p>
+                <p>Fabienne Bergès, ci-après dénommée 'le Développeur', a créé et livré le site web initial à Charlotte Goupil, ci-après dénommée 'l'Éditeur'. Il est expressément stipulé que :</p>
                 <h5>Responsabilité post-livraison :</h5>
                 <p>Le Développeur décline toute responsabilité quant au contenu, aux mises à jour, et à la gestion du site web après sa livraison initiale à l'Éditeur. Cela inclut, sans s'y limiter, les textes, images, vidéos, liens et tout autre contenu ajouté ou modifié après la livraison.</p>
                 <h5>Traitement des données personnelles : </h5>
@@ -68,7 +67,6 @@
                 <p> Le Développeur s'engage à mettre en œuvre tous les moyens raisonnables pour assurer la sécurité du logiciel développé, conformément aux bonnes pratiques et standards de l'industrie. Cependant, aucun système informatique n'est totalement exempt de failles de sécurité. La responsabilité du Développeur ne pourra être engagée en cas de dommages résultant de failles de sécurité, d'intrusions ou d'attaques informatiques, sauf en cas de faute lourde ou intentionnelle de sa part. La responsabilité du Développeur, toutes causes confondues, est limitée au montant total des sommes effectivement perçues au titre du présent contrat.
                 </p>
                 <h4>2. Responsabilités de l'Éditeur</h4>
-                <p>
                 <h5>Conformité légale :</h5>
                 <p>L'Éditeur est seul responsable de s'assurer que le contenu et l'utilisation du site web sont conformes à toutes les lois et réglementations applicables, notamment le Règlement Général sur la Protection des Données (RGPD).</p>
                 <h5>Modifications ultérieures :</h5>
@@ -76,9 +74,7 @@
                 <h5>Gestion des données : </h5>
                 <p> L'Éditeur reste seul responsable des mesures nécessaires à la sauvegarde et à la protection des données. Il lui appartient de mettre en œuvre une politique de sécurité adaptée, de procéder à des audits réguliers, et de former ses utilisateurs aux bonnes pratiques.
                     L'Éditeur reconnaît avoir lu, compris et accepté cette clause de non-responsabilité, et s'engage à assumer l'entière responsabilité du site web, de son contenu et de son utilisation après la livraison initiale par le Développeur.</p>
-                </p>
                 <h4>3. Limitations de responsabilité envers les Utilisateurs</h4>
-                <p>
                 <h5>Contenu du site :</h5>
                 <p>L'utilisateur utilise le site à ses propres risques. Le site est fourni "tel quel" sans garantie d'aucune sorte, expresse ou implicite.</p>
                 <h5>Sécurité :</h5>
@@ -108,16 +104,22 @@
                 <p>Vous pouvez gérer vos préférences en matière de cookies via les paramètres de votre navigateur.
                     Cependant, la désactivation des cookies peut affecter votre expérience sur notre site.</p>
                 <h3>Droit de Réclamation</h3>
-                <p>Si vous estimez que nous avons violé vos droits en matière de protection des données, vous avez le droit de déposer une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) à l'adresse suivante : CNIL, 3 Pl. de Fontenoy-Unesco, 75007 Paris.</p>
+                <p>Si vous estimez que nous avons violé vos droits en matière de protection des données,
+                    vous avez le droit de déposer une réclamation auprès de la Commission Nationale de l'Informatique
+                    et des Libertés (CNIL) à l'adresse suivante : CNIL, 3 Pl. de Fontenoy-Unesco, 75007 Paris.</p>
                 <h3>Litiges</h3>
                 <p> Tout litige en relation avec l'utilisation de <a href=" https://multiples-charlotte.fr"> https://multiples-charlotte.fr</a> est soumis au droit Français.
                     À défaut de solution amiable entre les parties pour tout différent survenant entre elles et en dehors des cas où la loi ne le permet pas,
                     il est fait attribution exclusive de juridiction et compétences aux tribunaux de Rouen,
                     nonobstant pluralité de défendeurs ou appels en garantie, et ce même en cas de référé. </p>
+            </ol>
         </section>
+
     </main>
+
     <?php include 'footer.php'; ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
 </body>
