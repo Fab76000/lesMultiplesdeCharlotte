@@ -17,7 +17,7 @@
 
     <?php include 'header.php'; ?>
     <main>
-        <h1 id="LinksH1">Liens amis</h1>
+        <h2 id="LinksH2">Liens amis</h2>
         <section id="Links" class="gradient-border">
             <div>
                 <a href="images/Charlotte_statue.jpg">

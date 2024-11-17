@@ -134,15 +134,16 @@ header h1 {
     margin-top: 20px;
 }
 
+#Mediation h2,
+#LinksH2,
+#politiqueConfidentialite h2 {
+    margin-top: 200px;
+    text-align: center;
+}
+
 h2 {
     text-align: center;
     margin-bottom: 10px;
-}
-
-#Mediation h1,
-#politiqueConfidentialite h1 {
-    margin-top: 200px;
-    text-align: center;
 }
 
 .green {
@@ -711,7 +712,7 @@ img[alt] {
     font-style: italic;
 }
 
-#ArtsH1 {
+#ArtsH2 {
     margin-top: 200px;
     text-align: center;
 }
@@ -1016,10 +1017,7 @@ figcaption {
 
 }
 
-#LinksH1 {
-    margin-top: 200px;
-    text-align: center;
-}
+
 
 #Links a {
     color: var(--links-color) !important;
@@ -1112,25 +1110,25 @@ figcaption {
     text-align: center;
 }
 
-#mentionsLegales h1 {
+#mentionsLegales h2 {
     margin-bottom: 100px;
 }
 
-#mentionsLegales h2,
+#mentionsLegales h3,
 #mentionsLegales p,
-#politiqueConfidentialite h2,
 #politiqueConfidentialite h3,
 #politiqueConfidentialite h4,
+#politiqueConfidentialite h5,
 #politiqueConfidentialite p {
     margin-left: 20px;
     text-align: left;
 }
 
-#mentionsLegales h2:nth-of-type(1) {
+#mentionsLegales h3:nth-of-type(1) {
     margin-top: 100px;
 }
 
-#mentionsLegales h2:not(:first-of-type) {
+#mentionsLegales h3:not(:first-of-type) {
     margin-top: 40px;
 }
 
@@ -1271,7 +1269,7 @@ figcaption {
         margin-top: 30px;
     }
 
-    #ArtsH1 {
+    #ArtsH2 {
         margin-top: 200px;
     }
 
@@ -1427,7 +1425,7 @@ figcaption {
         margin-top: 50px;
     }
 
-    #ArtsH1 {
+    #ArtsH2 {
         margin-top: 200px;
     }
 
@@ -1853,7 +1851,7 @@ figcaption {
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
 
-    #ArtsH1 {
+    #ArtsH2 {
         margin-top: 200px;
     }
 

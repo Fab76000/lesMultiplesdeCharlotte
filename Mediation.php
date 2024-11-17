@@ -17,7 +17,7 @@
     <?php include 'header.php'; ?>
     <main>
         <section id="Mediation">
-            <h1>Médiation</h1>
+            <h2>Médiation</h2>
             <p class="alinea" style="margin: 80px 50px 0 50px;">Médiatrice Artistique & Culturelle, artiste pluridisciplinaire travaillant principalement sur
                 les régions Nord (Paris compris) et Ouest ; je vous propose des ateliers d’écritures plurielles
                 (textes, théâtres, plastiques) par un accompagnement doux et coloré dans votre création

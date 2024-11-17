@@ -18,7 +18,7 @@
 
     <?php include 'header.php'; ?>
     <main>
-        <h1 id="ArtsH1">Arts</h1>
+        <h2 id="ArtsH2">Arts</h2>
         <h2 id="spectaclesH2">Spectacles</h2>
         <span id="Spectacles"></span>
         <section id="Bulles">
@@ -91,8 +91,8 @@
         <section id="Arts" class="container">
             <span id="allain"></span>
             <article id="Allain" class="spectacles">
-                <h1>Autour des Elles d'Allain</h1>
-                <h2>Hommage à Allain Leprest</h2>
+                <h2>Autour des Elles d'Allain</h2>
+                <h3>Hommage à Allain Leprest</h3>
                 <p>Après plusieurs résidences, dont la dernière prévue au printemps 2021 pour une création lumière
                     et ajouts d'éléments scéniques, Autour des <span class="Elles">Elles</span> d'Allain
                     prend dès lors la forme d'un réel spectacle où chant, jeu et interprétation pianistique
@@ -117,7 +117,7 @@
             </article>
             <span id="viventre"></span>
             <article id="Viventre" class="spectacles">
-                <h1>VIVENTRE</h1>
+                <h2>VIVENTRE</h2>
                 <p>Sur des textes personnels évoquant l'art, les rencontres et les luttes, VIVENTRE est une création sonore,
                     visuelle et textuelle.
                     Pièce pluridisciplinaire (un Slam'dit) toujours en mouvement, parfois en image, où la musique joue un
@@ -194,7 +194,7 @@
                 </div>
             </section>
             <article id="Argent" class="spectacles">
-                <h1>L'Argent</h1>
+                <h2>L'Argent</h2>
                 <p>Lecture théâtralisée d'après une nouvelle de Marie Desplechin sur le thème de "l'Argent", la maille, le
                     flouze, la tune, le blé...
                     De quelques bas de laine, du troc, du vol, des gros sous, ou encore de la manche,
@@ -440,7 +440,6 @@
                         console.error('Unknown provider:', provider);
                         return;
                     }
-
                     const iframe = document.createElement('iframe');
                     iframe.setAttribute('width', '560');
                     iframe.setAttribute('height', '315');
