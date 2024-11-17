@@ -16,65 +16,65 @@
 <body>
 
     <?php include 'header.php'; ?>
-    <h1 id="LinksH1">Liens amis</h1>
-
-    <section id="Links" class="gradient-border">
-        <div>
-            <a href="images/Charlotte_statue.jpg">
-                <figure class="corner-top-left-image">
-                    <picture>
-                        <source srcset="images/Charlotte_statue.webp" type="image/webp">
-                        <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
-                    </picture>
-                    <figcaption>© Jean Marc De Pas</figcaption>
-                </figure>
-            </a>
-        </div>
-        <p>Vous trouverez ici quelques liens amis;
+    <main>
+        <h1 id="LinksH1">Liens amis</h1>
+        <section id="Links" class="gradient-border">
+            <div>
+                <a href="images/Charlotte_statue.jpg">
+                    <figure class="corner-top-left-image">
+                        <picture>
+                            <source srcset="images/Charlotte_statue.webp" type="image/webp">
+                            <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
+                        </picture>
+                        <figcaption>© Jean Marc De Pas</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <p>Vous trouverez ici quelques liens amis;
+                <br><br>
+                Ces sites vous enverront vers des sites de partenaires, collaborateur·rice·s, ami·e·s inspiré·e·s et inspirant·e·s.
+            </p>
             <br><br>
-            Ces sites vous enverront vers des sites de partenaires, collaborateur·rice·s, ami·e·s inspiré·e·s et inspirant·e·s.
-        </p>
-        <br><br>
-        <p><strong>Chants d'Elles</strong>, festival des voix de femmes, pour qui j'ai été spectatrice, collaboratrice, artiste et même Présidente de l’association.
+            <p><strong>Chants d'Elles</strong>, festival des voix de femmes, pour qui j'ai été spectatrice, collaboratrice, artiste et même Présidente de l’association.
+                <br><br>
+                <em><a href="https://www.festivalchantsdelles.org">https://www.festivalchantsdelles.org</a></em>
+            </p>
+            <br>
+            <p><strong>Alexandre Rasse</strong>, artiste et musicien de talent.
+                Il m'accompagne au piano à travers les années depuis 2016.
+                <br><br>
+                <em><a href="https://alexandrerasse.fr">https://alexandrerasse.fr</a></em>
+            </p>
             <br><br>
-            <em><a href="https://www.festivalchantsdelles.org">https://www.festivalchantsdelles.org</a></em>
-        </p>
-        <br>
-        <p><strong>Alexandre Rasse</strong>, artiste et musicien de talent.
-            Il m'accompagne au piano à travers les années depuis 2016.
+            <p><strong>Correl'Arts</strong> est une association créée en 2015,
+                née d’amitiés et de passions communes pour la musique, le partage et la transmission.
+                <br><br>
+                <em><a href="https://correlarts.wixsite.com/Index">https://correlarts.wixsite.com/Index</a></em>
+            </p>
             <br><br>
-            <em><a href="https://alexandrerasse.fr">https://alexandrerasse.fr</a></em>
-        </p>
-        <br><br>
-        <p><strong>Correl'Arts</strong> est une association créée en 2015,
-            née d’amitiés et de passions communes pour la musique, le partage et la transmission.
+            <p><strong>Le blog de Léna h. Coms</strong> qui contient un article sur l’atelier d’écriture du 12 août 2018 au Dansoir – Karine Saporta (Ouistreham) sous la direction de Charlotte Goupil, médiatrice culturelle, actrice et chanteuse, lors du vernissage final de l’exposition "Déambule" de Jill Guillais, artiste plasticienne.
+                <br><br>
+                <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
+            </p>
             <br><br>
-            <em><a href="https://correlarts.wixsite.com/Index">https://correlarts.wixsite.com/Index</a></em>
-        </p>
-        <br><br>
-        <p><strong>Le blog de Léna h. Coms</strong> qui contient un article sur l’atelier d’écriture du 12 août 2018 au Dansoir – Karine Saporta (Ouistreham) sous la direction de Charlotte Goupil, médiatrice culturelle, actrice et chanteuse, lors du vernissage final de l’exposition "Déambule" de Jill Guillais, artiste plasticienne.
-            <br><br>
-            <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
-        </p>
-        <br><br>
-        <p>Enfin, vous pouvez retrouver le chemin vers mes mots, là aussi &#128521 :
-            <br><br>
-            <strong>Dans mon jardin, </strong><em><a href="https://dmjlarchotte.blogspot.com/?view=mosaic">https://dmjlarchotte.blogspot.com/?view=mosaic</a></em>
-        </p>
-
-        <div>
-            <a href="images/Charlotte_statue.jpg">
-                <figure class="corner-bottom-right-image">
-                    <picture>
-                        <source srcset="images/Charlotte_statue.webp" type="image/webp">
-                        <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
-                    </picture>
-                    <figcaption>© Jean Marc De Pas</figcaption>
-                </figure>
-            </a>
-        </div>
-    </section>
-    <?php include 'footer.php'; ?>
+            <p>Enfin, vous pouvez retrouver le chemin vers mes mots, là aussi &#128521 :
+                <br><br>
+                <strong>Dans mon jardin, </strong><em><a href="https://dmjlarchotte.blogspot.com/?view=mosaic">https://dmjlarchotte.blogspot.com/?view=mosaic</a></em>
+            </p>
+            <div>
+                <a href="images/Charlotte_statue.jpg">
+                    <figure class="corner-bottom-right-image">
+                        <picture>
+                            <source srcset="images/Charlotte_statue.webp" type="image/webp">
+                            <img src="images/Charlotte_statue.jpg" alt="" loading="lazy">
+                        </picture>
+                        <figcaption>© Jean Marc De Pas</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+        <main>
+            <?php include 'footer.php'; ?>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
