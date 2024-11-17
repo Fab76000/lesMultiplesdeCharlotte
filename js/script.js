@@ -221,7 +221,7 @@ $(document).ready(function () {
         document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
     }
 });
-function highlightNames() {
+/*function highlightNames() {
     const colorsOfNames = {
         "Charlotte Goupil": "#741D34",
         "Fabienne Bergès": "#1D7461",
@@ -262,7 +262,7 @@ function highlightNames() {
 // Vérifiez si l'URL correspond à la page spécifique
 if (window.location.pathname === "/mentionsLegales.php" || window.location.pathname === "/politiqueConfidentialite.php") {
     highlightNames();
-}
+}*/
 
 $(".not-authorized-overlay").hide();
 

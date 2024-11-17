@@ -49,6 +49,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
+    <script>
+        function highlightNames() {
+            const colorsOfNames = {
+                "Charlotte Goupil": "#741D34",
+                "Fabienne Bergès": "#1D7461",
+                "Éditeur": "#741D34",
+                "Développeur": "#1D7461",
+                "https://multiples-charlotte.fr": "#741D34",
+            };
+            const mainContent = $("#mentionsLegales");
+
+            if (mainContent.length === 0) {
+                return;
+            }
+
+            console.log("Section trouvée, traitement des <p> et <strong>");
+
+            mainContent.find('p, strong').each(function() {
+                let textContent = $(this).html();
+
+                console.log("Contenu avant remplacement : ", textContent);
+
+                for (const [name, color] of Object.entries(colorsOfNames)) {
+                    const regex = new RegExp(escapeRegExp(name), 'g');
+                    textContent = textContent.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
+                }
+                console.log("Contenu après remplacement : ", textContent);
+                $(this).html(textContent);
+            });
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        $(document).ready(function() {
+            if (window.location.pathname.includes("mentionsLegales.php")) {
+                highlightNames();
+            } else {
+                console.log("Pas sur la bonne page, fonction non appelée");
+            }
+        });
+    </script>
 </body>
 
 </html>

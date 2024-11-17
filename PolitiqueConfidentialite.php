@@ -114,7 +114,6 @@
                     nonobstant pluralité de défendeurs ou appels en garantie, et ce même en cas de référé. </p>
             </ol>
         </section>
-
     </main>
 
     <?php include 'footer.php'; ?>
@@ -122,6 +121,41 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
+    <script>
+        function highlightNames() {
+            const colorsOfNames = {
+                "Charlotte Goupil": "#741D34",
+                "Fabienne Bergès": "#1D7461",
+                "Éditeur": "#741D34",
+                "Développeur": "#1D7461",
+                "https://multiples-charlotte.fr": "#741D34",
+            };
+            const mainContent = $("#politiqueConfidentialite");
+            if (mainContent.length === 0) {
+                return;
+            }
+            mainContent.find('p, strong').each(function() {
+                let textContent = $(this).html();
+                for (const [name, color] of Object.entries(colorsOfNames)) {
+                    const regex = new RegExp(escapeRegExp(name), 'g');
+                    textContent = textContent.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
+                }
+                $(this).html(textContent);
+            });
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+        $(document).ready(function() {
+            if (window.location.pathname.includes("politiqueConfidentialite.php")) {
+                highlightNames();
+            } else {
+                console.log("Pas sur la bonne page, fonction non appelée");
+            }
+        });
+    </script>
+
 </body>
 
 
