@@ -1117,8 +1117,8 @@ figcaption {
 #mentionsLegales h3,
 #mentionsLegales p,
 #politiqueConfidentialite h3,
-#politiqueConfidentialite h4,
-#politiqueConfidentialite h5,
+#politiqueConfidentialite h3,
+#politiqueConfidentialite h3,
 #politiqueConfidentialite p {
     margin-left: 20px;
     text-align: left;

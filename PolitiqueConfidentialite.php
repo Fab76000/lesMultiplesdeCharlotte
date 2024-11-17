@@ -53,39 +53,39 @@
                     Cela inclut l’utilisation de technologies de sécurité modernes et des pratiques de gestion rigoureuses.</p>
                 <p>Les informations que nous collectons sont protégées par des moyens électroniques de confidentiellité.</p>
                 <h3>Clause de non-responsabilité et limitations de responsabilité</h3>
-                <h4>1. Responsabilités du Développeur</h4>
+                <h3>1. Responsabilités du Développeur</h3>
                 <p>Fabienne Bergès, ci-après dénommée 'le Développeur', a créé et livré le site web initial à Charlotte Goupil, ci-après dénommée 'l'Éditeur'. Il est expressément stipulé que :</p>
-                <h5>Responsabilité post-livraison :</h5>
+                <h3>Responsabilité post-livraison :</h3>
                 <p>Le Développeur décline toute responsabilité quant au contenu, aux mises à jour, et à la gestion du site web après sa livraison initiale à l'Éditeur. Cela inclut, sans s'y limiter, les textes, images, vidéos, liens et tout autre contenu ajouté ou modifié après la livraison.</p>
-                <h5>Traitement des données personnelles : </h5>
+                <h3>Traitement des données personnelles : </h3>
                 <p>Le Développeur n'est en aucun cas responsable de la collecte, du traitement, du stockage ou de toute autre opération impliquant des données personnelles effectuée via le site web après sa livraison.</p>
-                <h5>Maintenance et sécurité :</h5>
+                <h3>Maintenance et sécurité :</h3>
                 <p>Sauf accord écrit spécifique, le Développeur n'est pas responsable de la maintenance continue, des mises à jour de sécurité ou de la correction des bugs qui pourraient survenir après la livraison du site.</p>
-                <h5>Limite de la prestation :</h5>
+                <h3>Limite de la prestation :</h3>
                 <p>La responsabilité du Développeur se limite strictement à la livraison d'un site web fonctionnel conformément aux spécifications convenues initialement. Toute prestation supplémentaire devra faire l'objet d'un nouvel accord entre les parties.</p>
-                <h5>Limitations spécifiques :</h5>
+                <h3>Limitations spécifiques :</h3>
                 <p> Le Développeur s'engage à mettre en œuvre tous les moyens raisonnables pour assurer la sécurité du logiciel développé, conformément aux bonnes pratiques et standards de l'industrie. Cependant, aucun système informatique n'est totalement exempt de failles de sécurité. La responsabilité du Développeur ne pourra être engagée en cas de dommages résultant de failles de sécurité, d'intrusions ou d'attaques informatiques, sauf en cas de faute lourde ou intentionnelle de sa part. La responsabilité du Développeur, toutes causes confondues, est limitée au montant total des sommes effectivement perçues au titre du présent contrat.
                 </p>
-                <h4>2. Responsabilités de l'Éditeur</h4>
-                <h5>Conformité légale :</h5>
+                <h3>2. Responsabilités de l'Éditeur</h3>
+                <h3>Conformité légale :</h3>
                 <p>L'Éditeur est seul responsable de s'assurer que le contenu et l'utilisation du site web sont conformes à toutes les lois et réglementations applicables, notamment le Règlement Général sur la Protection des Données (RGPD).</p>
-                <h5>Modifications ultérieures :</h5>
+                <h3>Modifications ultérieures :</h3>
                 <p>Toute modification, ajout ou suppression effectués sur le site web après sa livraison relèvent de la seule responsabilité de l'Éditeur ou de tout tiers mandaté par celui-ci.</p>
-                <h5>Gestion des données : </h5>
+                <h3>Gestion des données : </h3>
                 <p> L'Éditeur reste seul responsable des mesures nécessaires à la sauvegarde et à la protection des données. Il lui appartient de mettre en œuvre une politique de sécurité adaptée, de procéder à des audits réguliers, et de former ses utilisateurs aux bonnes pratiques.
                     L'Éditeur reconnaît avoir lu, compris et accepté cette clause de non-responsabilité, et s'engage à assumer l'entière responsabilité du site web, de son contenu et de son utilisation après la livraison initiale par le Développeur.</p>
-                <h4>3. Limitations de responsabilité envers les Utilisateurs</h4>
-                <h5>Contenu du site :</h5>
+                <h3>3. Limitations de responsabilité envers les Utilisateurs</h3>
+                <h3>Contenu du site :</h3>
                 <p>L'utilisateur utilise le site à ses propres risques. Le site est fourni "tel quel" sans garantie d'aucune sorte, expresse ou implicite.</p>
-                <h5>Sécurité :</h5>
+                <h3>Sécurité :</h3>
                 <p> Bien que nous mettions en œuvre des mesures de sécurité raisonnables, nous ne pouvons garantir que le site sera exempt de virus, de logiciels malveillants ou d'autres failles de sécurité. L'utilisateur est responsable de la mise en place de protections adéquates (antivirus, pare-feu) sur son propre équipement.</p>
-                <h5>Conformité : </h5>
+                <h3>Conformité : </h3>
                 <p> Nous ne garantissons pas l'exactitude, l'exhaustivité ou la pertinence des informations et contenus disponibles sur le site. L'utilisation de ces informations se fait sous la seule responsabilité de l'utilisateur.</p>
-                <h5>Liens externes :</h5>
+                <h3>Liens externes :</h3>
                 <p> Le site peut contenir des liens vers des sites tiers. Nous n'avons aucun contrôle sur le contenu de ces sites et déclinons toute responsabilité quant à leur contenu ou leur utilisation.</p>
-                <h5>Dommages :</h5>
+                <h3>Dommages :</h3>
                 <p> En aucun cas, nous ne serons responsables des dommages directs, indirects, accessoires, spéciaux ou consécutifs résultant de l'utilisation ou de l'impossibilité d'utiliser le site. </p>
-                <h5>Modifications :</h5>
+                <h3>Modifications :</h3>
                 <p> Nous nous réservons le droit de modifier, suspendre ou interrompre tout ou partie du site à tout moment, sans préavis et sans engager notre responsabilité.
                     En utilisant ce site, vous acceptez expressément ces conditions et limitations de responsabilité.
                 </p>
@@ -143,7 +143,6 @@
                 $(this).html(textContent);
             });
         }
-
         function escapeRegExp(string) {
             return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
