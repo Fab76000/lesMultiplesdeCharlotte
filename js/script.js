@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('DOMContentLoaded', function () {
     // Vérifier si l'utilisateur a déjà fait un choix de cookies
     if (localStorage.getItem('cookiesChoice') === null) {
         $('#cookie-consent-banner').show();  // Affiche la bannière si aucun choix n'a été fait
@@ -35,11 +35,13 @@ $(document).ready(function () {
         }
     }
     // Gestion du clic sur "Accepter"
-    $('#accept-cookies').click(function () {
+
+
+    $('#accept-cookies').on('click', function () {
         handleCookieChoice(true);
     });
-    // Gestion du clic sur "Refuser"
-    $('#decline-cookies').click(function () {
+
+    $('#decline-cookies').on('click', function () {
         handleCookieChoice(false);
     });
     // Fonction pour définir les cookies (à adapter côté serveur pour HttpOnly)
@@ -100,7 +102,8 @@ $(document).ready(function () {
     });
 
     // Gérer la soumission du formulaire
-    $("#contact-form").submit(function (event) {
+
+    $("#contact-form").on('submit', function (event) {
         event.preventDefault(); // Empêche l'envoi par défaut du formulaire
 
         $(".comments").empty(); // Vide les messages d'erreur précédents
@@ -221,6 +224,8 @@ $(document).ready(function () {
         document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
     }
 });
+
+/*** Fonction de mise en surbrillance des noms : ne fonctionne plus depuis restructuration html */
 /*function highlightNames() {
     const colorsOfNames = {
         "Charlotte Goupil": "#741D34",
@@ -262,18 +267,21 @@ $(document).ready(function () {
 // Vérifiez si l'URL correspond à la page spécifique
 if (window.location.pathname === "/mentionsLegales.php" || window.location.pathname === "/politiqueConfidentialite.php") {
     highlightNames();
-}*/
+}
+
+});*/
+
+
 
 $(".not-authorized-overlay").hide();
 
-$("#Bulles .photo").hover(
-    function () {
-        $(this).find(".not-authorized-overlay").stop(true, true).fadeIn(300);
-    },
-    function () {
-        $(this).find(".not-authorized-overlay").stop(true, true).fadeOut(100);
-    }
-);
+$("#Bulles .photo").on("mouseover", function () {
+    $(this).find(".not-authorized-overlay").stop(true, true).fadeIn(300);
+});
+
+$("#Bulles .photo").on("mouseout", function () {
+    $(this).find(".not-authorized-overlay").stop(true, true).fadeOut(100);
+});
 
 $(function () {
     $(".navbar a").on("click", function (t) {

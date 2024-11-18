@@ -63,19 +63,12 @@
             if (mainContent.length === 0) {
                 return;
             }
-
-            console.log("Section trouvée, traitement des <p> et <strong>");
-
             mainContent.find('p, strong').each(function() {
                 let textContent = $(this).html();
-
-                console.log("Contenu avant remplacement : ", textContent);
-
                 for (const [name, color] of Object.entries(colorsOfNames)) {
                     const regex = new RegExp(escapeRegExp(name), 'g');
                     textContent = textContent.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
                 }
-                console.log("Contenu après remplacement : ", textContent);
                 $(this).html(textContent);
             });
         }
@@ -83,7 +76,6 @@
         function escapeRegExp(string) {
             return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
-
         $(document).ready(function() {
             if (window.location.pathname.includes("mentionsLegales.php")) {
                 highlightNames();
