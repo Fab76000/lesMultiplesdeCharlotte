@@ -1,0 +1,300 @@
+/*HEADER*/
+.header {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    padding: 15px 0px 0px 0px;
+    font-weight: normal;
+    font-family: Tangerine, "cursive", "Times new roman", sans-serif;
+    text-align: center;
+    font-size: 6rem;
+    display: block;
+    /* margin-top: 20px; */
+    color: initial;
+}
+
+/*MAIN MENU */
+#menuderoulant {
+    margin: 0;
+    /*important*/
+    padding: 0;
+    /*important*/
+    border: 0;
+    list-style: none;
+    /*important*/
+    /*position:relative;*/
+    /*important*/
+    margin-top: 35px;
+    background-color: var(--background-color);
+    /* Keep the menu aligned whatever the size of the screen*/
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#menuderoulant li {
+    /* travail sur le menu deroulant (horizontal)*/
+    position: relative;
+    width: 12.375em;
+    margin-right: 10px;
+    border: 1px solid black;
+    background-color: var(--green-color);
+    text-align: center;
+    border-radius: 2.81em;
+    box-shadow: 5px 5px black;
+}
+
+#menuderoulant .ColoRed {
+    background-color: var(--red-color);
+    width: 12.395em;
+    border-radius: 2.81em;
+}
+
+#menuderoulant .sousmenu .ColoRed2 {
+    background-color: var(--red-color);
+    padding: 15px;
+    width: 12.375em;
+}
+
+#menuderoulant .sousmenu {
+    display: none;
+    /*Pour cacher le sous-menu*/
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 auto;
+    float: none;
+    position: absolute;
+    text-transform: none;
+}
+
+#menuderoulant .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    width: 12.4em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    box-shadow: 0px 0px;
+}
+
+#menuderoulant li a:link,
+#menuderoulant li a:visited {
+    display: inline-block;
+    color: #fff;
+    margin: 0 auto;
+    padding: 4px 8px;
+
+}
+
+#menuderoulant li a:hover {
+    background-color: var(--red-color);
+    border-radius: 2.81em;
+    width: 12.28em;
+    color: white;
+}
+
+#menuderoulant .ColoRed:hover {
+    background-color: var(--green-color);
+}
+
+#menuderoulant .sousmenu li a :link,
+#menuderoulant .sousmenu li a:visited {
+    /*permet de garder le même style que les liens soient visités ou pas*/
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#menuderoulant .sousmenu li a:hover {
+    background-color: var(--red-color);
+    border-radius: 2.81em;
+    width: 12.29em;
+}
+
+#menuderoulant .ColoGreen {
+    background-color: var(--red-color);
+    border-radius: 2.81em;
+    width: 12.28em;
+    text-decoration: none;
+    color: white;
+}
+
+#menuderoulant .sousmenu .ColoGreen:hover {
+    background-color: var(--green-color);
+    width: 12.28em;
+}
+
+#menuderoulant li:hover>.sousmenu {
+    /*permet de maintenir l'affichage du sous-menu lors du survol de la souris*/
+    display: block;
+}
+
+.green {
+    color: var(--green-color);
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.red {
+    color: var(--red-color);
+    font-style: normal;
+}
+
+
+/***media queries***/
+
+@media screen and (max-width: 480px) {
+
+    #menuderoulant,
+    #menuderoulant li,
+    #menuderoulant .ColoRed,
+    #menuderoulant .sousmenu .ColoRed2,
+    #menuderoulant li a:hover,
+    #menuderoulant .sousmenu li,
+    #menuderoulant .sousmenu li a:hover,
+    #menuderoulant li a:link,
+    #menuderoulant li a:visited {
+        width: 100%;
+        max-width: 481px;
+        font-size: 12px;
+    }
+
+    #menuderoulant .sousmenu {
+        width: 110px;
+        z-index: 1;
+    }
+
+    #menuderoulant {
+        width: 550px;
+    }
+
+    #menuderoulant li,
+    #menuderoulant li a:hover,
+    #menuderoulant li .ColoRed {
+        width: 9.375em;
+    }
+
+    .main-title {
+        font-size: 4rem;
+    }
+
+    #burger {
+        margin-left: calc(50% - 15px);
+    }
+
+    #burger {
+        margin-left: auto 0;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 674px) {
+    #menuderoulant {
+        width: 550px;
+        /* Largeur fixe pour le menu sur petits écrans larges */
+    }
+
+    #menuderoulant li,
+    #menuderoulant li .ColoRed {
+        width: 9.375em;
+        /* Largeur uniforme pour les éléments du menu */
+    }
+
+    #menuderoulant li a:hover {
+        width: 9.375em;
+        /* Largeur uniforme au survol */
+    }
+
+    #burger {
+        margin-left: calc(50% - 15px);
+    }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+
+    .menu {
+        display: none;
+    }
+
+    .menu li {
+        display: none;
+    }
+
+    .menu li a {
+        text-decoration: none;
+    }
+
+    .burger {
+        display: none;
+        width: 30px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 70px;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #menuderoulant.collapsed li {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.cross .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 0px);
+    }
+
+    .burger.cross .burger-line:nth-child(2) {
+        transform: rotate(-45deg) translate(7px, 0px);
+    }
+
+    .burger.cross .burger-line:nth-child(3) {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .main-title {
+        font-size: 5.5rem;
+        /* Ajustement de la taille du titre principal pour cette plage */
+    }
+
+    #menuderoulant li {
+        width: 12.375em;
+        /* Largeur des éléments du menu pour cette plage */
+    }
+}

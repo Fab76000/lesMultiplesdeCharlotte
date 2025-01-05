@@ -175,12 +175,8 @@ hr {
     /*important*/
     border: 0;
     list-style: none;
-    /*important*/
-    /*position:relative;*/
-    /*important*/
     margin-top: 35px;
     background-color: #FBFBD0;
-    /* Keep the menu aligned whatever the size of the screen*/
     display: flex;
     justify-content: center;
     text-transform: uppercase;
@@ -254,8 +250,7 @@ hr {
 }
 
 #menuderoulant .sousmenu li a :link,
-#menuderoulant .sousmenu li a:visited visited {
-    /*permet de garder le même style que les liens soient visités ou pas*/
+#menuderoulant .sousmenu li a:visited {
     color: #fff;
     margin: 0;
     padding: 0;
@@ -289,7 +284,7 @@ hr {
 
 
 /*BIO*/
-#Hero {
+.Hero {
     width: 900px;
     margin: 0 auto;
     background: #FBFBD0;
@@ -327,7 +322,7 @@ hr {
     text-align: left;
 }
 
-#presentation {
+.presentation {
     font-size: 2em;
     line-height: 1.4em;
     text-align: justify;
@@ -336,7 +331,7 @@ hr {
     font-weight: inherit;
 }
 
-.presentation {
+.presentation-bio {
     background: var(--header-background-color);
 }
 
@@ -353,7 +348,7 @@ img[alt] {
     width: auto;
 }
 
-#MessageEssentiel {
+.MessageEssentiel {
     max-width: 90vw;
     text-align: center;
     color: var(--messageEssentiel-color);
@@ -382,11 +377,11 @@ img[alt] {
     color: #fff;
 }
 
-#Logo {
+.Logo {
     display: inline-flex;
 }
 
-#Logo img {
+.Logo img {
     width: 50px;
     height: 50px;
     margin-top: 25px;
@@ -413,7 +408,7 @@ img[alt] {
 
 /*FOOTER*/
 
-#footer {
+.footer {
     width: 100%;
     background-color: black;
     color: white;
@@ -435,18 +430,18 @@ img[alt] {
     box-sizing: border-box;
 }
 
-#footer a {
+.footer a {
     color: white;
     text-decoration: none;
 }
 
-#footer a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
 
-/*MOSAIQUE IMAGES*/
+/*mosaïque IMAGES*/
 
-#Mosaique {
+.mosaïque {
     margin-top: 170px;
     display: flex;
     justify-content: center;
@@ -455,28 +450,19 @@ img[alt] {
     gap: 5px;
 }
 
-#Mosaique img {
+.mosaïque img {
     display: block;
     width: 290px;
     height: 300px;
     transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-#Mosaique div:hover img {
+.mosaïque div:hover img {
     width: 300px;
     height: 350px;
 }
 
-.text-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: .5s ease;
-}
-
-.not-authorized-overlay {
+/* .not-authorized-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -488,6 +474,24 @@ img[alt] {
     margin-right: 20px;
     border-radius: 50%;
     display: flex;
+} */
+
+.not-authorized-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    transition: .5s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 0;
 }
 
 .text {
@@ -502,9 +506,15 @@ img[alt] {
     text-align: center;
 }
 
-#Charlotte .text {
-    color: #1D7461;
-}
+
+/* .text {
+    color: var(--red-color);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+} */
+
+
 
 /* Styles pour la section Bulles */
 #Bulles {
@@ -542,30 +552,6 @@ img[alt] {
     display: none;
 }
 
-.not-authorized-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    transition: .5s ease;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-right: 0;
-}
-
-.text {
-    color: var(--red-color);
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-}
 
 #Charlotte .text {
     color: var(--green-color);
@@ -701,37 +687,34 @@ img[alt] {
 #Allain p,
 #Viventre p,
 #Argent p,
-#Musique p,
-#Ecriture p,
-.presentation p,
+.musique p,
+.ecriture p,
+.presentation-bio p,
 #Mediation p {
     line-height: 2;
 }
 
-#Ecriture p {
-    font-style: italic;
-}
 
-#ArtsH2 {
+.Arts-h2 {
     margin-top: 200px;
     text-align: center;
 }
 
-#spectaclesH2 {
+.spectacles-h2 {
     margin-top: 50px;
     text-align: center;
 }
 
-#container-links-p p {
+#container-links {
     margin-top: -3780px;
 }
 
-#container-links-ul ul {
+.container-links-ul ul {
     line-height: 3;
     margin-top: -40px;
 }
 
-#Mosaique1 {
+/* #mosaïque1 {
     margin-top: 170px;
     display: flex;
     justify-content: center;
@@ -740,17 +723,17 @@ img[alt] {
     gap: 5px;
 }
 
-#Mosaique1 img {
+#mosaïque1 img {
     display: block;
     width: 290px;
     height: 300px;
     transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-#Mosaique1 div:hover img {
+#mosaïque1 div:hover img {
     width: 300px;
     height: 350px;
-}
+} */
 
 #Arts h1 {
     text-align: left;
@@ -775,11 +758,11 @@ img[alt] {
 
 /* -----------------Musique-------------*/
 
-#Musique {
+.musique {
     margin-top: 400px;
 }
 
-#Musique p {
+.musique p {
     margin: 0 40px 0 40px;
 }
 
@@ -790,7 +773,6 @@ a:hover,
 a:visited {
     text-align: center;
     text-decoration: none;
-    color: #000;
     list-style-type: none;
 }
 
@@ -810,7 +792,7 @@ a:visited {
     color: var(--red-color);
 }
 
-#container-iframes {
+.container-iframes {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -859,27 +841,28 @@ a:visited {
     z-index: 10;
 }
 
-#iframeArgent {
+.iframe-argent {
     margin-left: calc(50% - 140px);
 }
 
 /* ----------------Ecriture------------------*/
 
-#Ecriture {
+.ecriture {
     margin-top: 550px;
     margin-bottom: 2800px;
 }
 
-#EcritureH2 {
+.ecriture-h2 {
     margin-bottom: 50px;
 }
 
-#mesEcritsH3 {
+.ecrits-h3 {
     margin-top: 50px;
     margin-left: 45px;
 }
 
-#Ecriture p {
+.ecriture p {
+    font-style: italic;
     margin-top: -25px;
     padding: 40px;
     display: flex;
@@ -894,13 +877,13 @@ div p.mesEcritures {
     margin-top: -30px;
 }
 
-#Ecriture a {
+.ecriture a {
     color: var(--red-color);
     display: block;
     margin-bottom: 25px;
 }
 
-#Ecriture a:hover {
+.ecriture a:hover {
     color: var(--green-color);
 }
 
@@ -1069,12 +1052,6 @@ figcaption {
     object-fit: cover;
 }
 
-#Links figcaption {
-    position: absolute;
-    font-size: 0.8em;
-    color: #000;
-}
-
 .corner-top-left-image {
     top: -50px;
     left: -5px;
@@ -1160,17 +1137,17 @@ figcaption {
         min-width: auto;
     }
 
-    #Logo {
+    .Logo {
         display: inline-flex;
         margin-right: 80em;
     }
 
-    #presentation {
+    .presentation {
         max-width: 97vw;
         margin-left: 3px;
     }
 
-    .presentation {
+    .presentation-bio {
         max-width: 97vw;
         margin-left: 3px;
     }
@@ -1239,7 +1216,7 @@ figcaption {
         gap: 20px;
     }
 
-    #Musique p {
+    .musique p {
         margin-left: calc(50% - 100px);
     }
 
@@ -1249,28 +1226,28 @@ figcaption {
         width: 70%;
     }
 
-    #iframeArgent {
+    .iframe-argent {
         width: 80%;
         margin-left: calc(50% - 80px) !important;
     }
 
-    #Mosaique,
-    #Mosaique1 {
+    .mosaïque {
+        display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
-    #container-links-p p {
+    .container-links-p p {
         margin-left: 100px;
         margin-top: -4300px;
         margin-left: 10px;
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 30px;
     }
 
-    #ArtsH2 {
+    .Arts-h2 {
         margin-top: 200px;
     }
 
@@ -1337,7 +1314,7 @@ figcaption {
         /* Casse les mots longs */
     }
 
-    #MessageEssentiel {
+    .MessageEssentiel {
         max-width: 70vw;
     }
 
@@ -1384,16 +1361,16 @@ figcaption {
         max-width: 70%;
     }
 
-    #presentation {
+    .presentation {
         margin-top: 10px;
         margin-right: 670px;
     }
 
-    .presentation {
+    .presentation-bio {
         width: 100%;
     }
 
-    .presentation p {
+    .presentation-bio p {
         margin-left: 3px;
         text-align: left;
         margin-right: 400px;
@@ -1405,28 +1382,29 @@ figcaption {
         display: flex;
     }
 
-    #Mosaique,
-    #Mosaique1 {
+
+    .mosaïque {
+        display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
-    #Mosaique img {
+    .mosaïque img {
         display: block;
         width: 250px;
         height: 260px;
     }
 
-    #Mosaique div:hover img {
+    .mosaïque div:hover img {
         width: 260px;
         height: 280px;
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 50px;
     }
 
-    #ArtsH2 {
+    .Arts-h2 {
         margin-top: 200px;
     }
 
@@ -1453,7 +1431,7 @@ figcaption {
         margin-left: calc(50% - 15px);
     }
 
-    #iframeArgent {
+    .iframe-argent {
         width: 80vw;
         max-width: 350px;
         display: block;
@@ -1534,7 +1512,7 @@ figcaption {
         right: -5px;
     }
 
-    #MessageEssentiel {
+    .MessageEssentiel {
         max-width: 70vw;
     }
 
@@ -1618,13 +1596,13 @@ figcaption {
         width: 9.375em;
     }
 
-    #Mosaique,
-    #Mosaique1 {
+    .mosaïque {
+        display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 50px;
     }
 
@@ -1715,7 +1693,7 @@ figcaption {
         /* Casse les mots longs */
     }
 
-    #MessageEssentiel {
+    .MessageEssentiel {
         max-width: 70vw;
     }
 
@@ -1753,18 +1731,18 @@ figcaption {
         display: flex;
     }
 
-    #presentation {
-        max-width: 97vw;
-        margin-left: 3px;
-    }
-
     .presentation {
         max-width: 97vw;
         margin-left: 3px;
     }
 
-    #Mosaique,
-    #Mosaique1 {
+    .presentation-bio {
+        max-width: 97vw;
+        margin-left: 3px;
+    }
+
+    .mosaïque {
+        display: flex;
         justify-content: center;
         flex-direction: column;
     }
@@ -1773,7 +1751,7 @@ figcaption {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 50px;
     }
 
@@ -1852,7 +1830,7 @@ figcaption {
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
 
-    #ArtsH2 {
+    .Arts-h2 {
         margin-top: 200px;
     }
 
@@ -1867,24 +1845,22 @@ figcaption {
         display: flex;
     }
 
-    #presentation {
-        max-width: 97vw;
-        margin-left: 3px;
-    }
-
     .presentation {
         max-width: 97vw;
         margin-left: 3px;
     }
 
-    #Mosaique img,
-    #Mosaique1 img {
+    .presentation-bio {
+        max-width: 97vw;
+        margin-left: 3px;
+    }
+
+    .mosaïque img {
         width: 150px;
         height: 200px;
     }
 
-    #Mosaique div:hover img,
-    #Mosaique1 div:hover img {
+    .mosaïque div:hover img {
         width: 170px;
         height: 250px;
     }
@@ -1893,7 +1869,7 @@ figcaption {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 50px;
     }
 
@@ -1973,14 +1949,12 @@ figcaption {
         margin: auto;
     }
 
-    #Mosaique img,
-    #Mosaique1 img {
+    .mosaïque img {
         width: 150px;
         height: 200px;
     }
 
-    #Mosaique div:hover img,
-    #Mosaique1 div:hover img {
+    .mosaïque div:hover img {
         width: 170px;
         height: 250px;
     }
@@ -1989,7 +1963,7 @@ figcaption {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #container-links-ul ul {
+    .container-links-ul ul {
         margin-top: 50px;
     }
 
@@ -2049,13 +2023,13 @@ figcaption {
 }
 
 /* @media only screen and (min-width: 1191px) {
-    #Mosaique img,
-    #Mosaique1 img {
+    #mosaïque img,
+    #mosaïque1 img {
         width: 250px;
         height: 300px;
     }
-    #Mosaique div:hover img,
-    #Mosaique1 div:hover img {
+    #mosaïque div:hover img,
+    #mosaïque1 div:hover img {
         width: 270px;
         height: 350px;
     }

@@ -8,25 +8,30 @@
     <meta name="description" content="Découvrez les ateliers de médiation artistique et culturelle de Charlotte Goupil. Écriture, théâtre, arts plastiques pour tous publics. Accompagnement bienveillant et créatif en Normandie et région parisienne.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"   rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="mediation.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload" as="style" defer>';
     ?>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' defer preload>
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php include_once 'header.php'; ?>
     <main>
-        <section id="Mediation">
-            <h2>Médiation</h2>
-            <p class="alinea" style="margin: 80px 50px 0 50px;">Médiatrice Artistique & Culturelle, artiste pluridisciplinaire travaillant principalement sur
+        <section class="mediation">
+            <h2 class="mediation-h2">Médiation</h2>
+            <p class="alinea">Médiatrice Artistique & Culturelle, artiste pluridisciplinaire travaillant principalement sur
                 les régions Nord (Paris compris) et Ouest ; je vous propose des ateliers d’écritures plurielles
                 (textes, théâtres, plastiques) par un accompagnement doux et coloré dans votre création
                 personnelle.
                 Pour une (re)découverte de l’identité créatrice de chacun, j’adapte ma démarche
                 aux différents publics et à leurs demandes : <br><br>
-                o Une ambiance chaleureuse et un dialogue bienveillant, interculturel et intergénérationnel <br>
-                o Un mieux-être et une sensibilisation par l’art à la dynamique de groupe <br><br>
-                Au travers de mes diverses expériences et stages de formation visant à trouver ma voie
+            <ul>
+                <li>Une ambiance chaleureuse et un dialogue bienveillant, interculturel et intergénérationnel</li>
+                <li>Un mieux-être et une sensibilisation par l’art à la dynamique de groupe</li>
+            </ul>
+            <p class="alinea">Au travers de mes diverses expériences et stages de formation visant à trouver ma voie
                 professionnelle via la pratique artistique, j’ai eu la chance de découvrir le.s métier.s de médiatrice
                 culturelle (en galerie d'art, musée, parcs patrimoniaux…) puis de médiatrice artistique en relation
                 d’aide.<br>
@@ -43,7 +48,8 @@
                 pédagogique : comme cette dernière, elle a
                 recours à l’apprentissage informel, puisqu’elle
                 utilise la méthode de l’apprentissage par
-                expérience.<br>
+                expérience.<br></p>
+            <p class="alinea">
                 Depuis novembre 2018, je suis certifiée de la
                 formation professionnelle de l’Inécat (Paris) en
                 tant que médiatrice artistique en relation
@@ -59,7 +65,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/mediation-PierreOlingue-23300.webp" type="image/webp">
-                            <img src="images/mediation-PierreOlingue-23300.jpg" alt="" loading="lazy">
+                            <img src="images/mediation-PierreOlingue-23300.jpg" width="684" height="454" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Pierre Olingue</figcaption>
                     </figure>
@@ -68,7 +74,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/mediation-ThierryDujardin-2510.webp" type="image/webp">
-                            <img src="images/mediation-ThierryDujardin-2510.jpg" alt="" loading="lazy">
+                            <img src="images/mediation-ThierryDujardin-2510.jpg" width="684" height="454" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Thierry Dujardin</figcaption>
                     </figure>
@@ -77,7 +83,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/mediation-ThierryDujardin-2520.webp" type="image/webp">
-                            <img src="images/mediation-ThierryDujardin-2520.jpg" alt="" loading="lazy">
+                            <img src="images/mediation-ThierryDujardin-2520.jpg" width="453" height="302" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Thierry Dujardin</figcaption>
                     </figure>
@@ -86,7 +92,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/mediation-MathieuOlingue-MarionMotte-7294.webp" type="image/webp">
-                            <img src="images/mediation-MathieuOlingue-MarionMotte-7294.jpg" alt="" loading="lazy">
+                            <img src="images/mediation-MathieuOlingue-MarionMotte-7294.jpg" width="453" height="302" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Mathieu Olingue</figcaption>
                     </figure>
@@ -95,7 +101,7 @@
                     <figure>
                         <picture>
                             <source srcset="images/mediation-ThierryDujardin-2525.webp" type="image/webp">
-                            <img src="images/mediation-ThierryDujardin-2525.jpeg" alt="" loading="lazy">
+                            <img src="images/mediation-ThierryDujardin-2525.jpeg" width="453" height="302" alt="" loading="lazy">
                         </picture>
                         <figcaption>© Thierry Dujardin</figcaption>
                     </figure>
@@ -103,7 +109,7 @@
             </div>
         </div>
     </main>
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
 </body>

@@ -8,13 +8,16 @@
     <meta name="description" content="Informations légales sur le site de Charlotte Goupil, artiste et médiatrice culturelle. Éditeur, développeur, hébergement, propriété intellectuelle et protection des données personnelles.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="mentions-legales.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
     ?>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' defer preload>
 </head>
 
-<body id="">
-    <?php include 'header.php'; ?>
+<body>
+    <?php include_once 'header.php'; ?>
     <main>
         <section id="mentionsLegales">
             <h2>Mentions légales</h2>
@@ -45,11 +48,11 @@
             <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter Charlotte Goupil à l'adresse email : charlotte.transcourt@gmail.com</p>
         </section>
     </main>
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
-    <script>
+    <script nonce="<?php echo $nonce; ?>">
         function highlightNames() {
             const colorsOfNames = {
                 "Charlotte Goupil": "#741D34",

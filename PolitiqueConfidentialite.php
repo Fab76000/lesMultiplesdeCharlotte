@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
+    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="politique-confidentialite.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
     ?>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' defer preload>
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php include_once 'header.php'; ?>
     <main>
         <section id="politiqueConfidentialite" class="alinea" style="margin: 80px 50px 0 50px;">
-            <h2>Politique de confidentialité</h2>
+            <h2 class="politiqueConfidentialite-h2">Politique de confidentialité</h2>
             <h3>Qui sommes-nous ?</h3>
             <p>L’adresse de notre site est : <a href="https://multiples-charlotte.fr">https://multiples-charlotte.fr</a></p>
             <h3>Identité et Coordonnées des Responsables des Données</h3>
@@ -121,12 +124,12 @@
         </section>
     </main>
 
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
     <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
-    <script>
+    <script nonce="<?php echo $nonce; ?>">
         function highlightNames() {
             const colorsOfNames = {
                 "Charlotte Goupil": "#741D34",

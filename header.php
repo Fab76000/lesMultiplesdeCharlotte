@@ -1,8 +1,15 @@
-<header id="header">
+<?php
+// Génération d'un nonce aléatoire
+$nonce = base64_encode(random_bytes(16));
+
+// Définition de l'en-tête CSP avec le nonce
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https://ajax.googleapis.com https://stackpath.bootstrapcdn.com https://multiples-charlotte.fabienneberges.com; style-src 'self' https://stackpath.bootstrapcdn.com https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https://i.vimeocdn.com https://i.ytimg.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; object-src 'none'; base-uri 'none';");
+?>
+
+<header class="header">
   <a href="index.php">
-    <h1> Les <span class="green">m</span>ultiples de <span class="red">Charlotte</span></h1>
+    <h1 class="main-title"> Les <span class="green">m</span>ultiples de <span class="red">Charlotte</span></h1>
   </a>
-  <hr>
   <nav>
     <div class="parent-container">
       <div class="burger" id="burger">
@@ -25,8 +32,7 @@
     </ul>
   </nav>
 </header>
-
-<script>
+<script nonce="<?php echo $nonce; ?>">
   document.addEventListener("DOMContentLoaded", function() {
     var burger = document.getElementById("burger");
     var menu = document.getElementById("menuderoulant");

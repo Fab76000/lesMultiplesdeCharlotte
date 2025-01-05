@@ -1,0 +1,398 @@
+.Hero {
+    width: 900px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    margin-top: 200px;
+}
+
+.Bio {
+    position: relative;
+    float: left;
+    margin-top: auto;
+    background-color: var(--background-color);
+}
+
+.Bio figure {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+}
+
+.Bio img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+}
+
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+}
+
+.Bio figcaption {
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+}
+
+.presentation {
+    font-size: 2em;
+    line-height: 1.4em;
+    text-align: justify;
+    color: #000;
+    background-color: var(--background-color);
+    font-weight: inherit;
+}
+
+.presentation-bio {
+    background-color: var(--background-color);
+}
+
+img[alt] {
+    font-style: italic;
+    font-size: 15px;
+    text-shadow: 2px 2px white;
+    display: flex;
+}
+
+#contact-form {
+    background-color: var(--green-color);
+    padding: 50px;
+    width: auto;
+}
+
+.MessageEssentiel {
+    max-width: 90vw;
+    text-align: center;
+    color: var(--messageEssentiel-color);
+}
+
+.essentiel {
+    font-family: "Tangerine", cursive;
+    font-size: 30px;
+}
+
+label {
+
+    color: var(--label-color);
+}
+
+.button-form {
+    background-color: var(--red-color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    transition: all 0.2s ease-in 0s;
+    padding: 8px 20px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.button-form:hover {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+#contact-form .thank-you {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--thank-you-color);
+}
+
+.comments {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--red-color);
+    height: 4px;
+    text-transform: none;
+    position: relative;
+}
+
+.Logo {
+    display: inline-flex;
+}
+
+.Logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.form-h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5em 0;
+}
+
+/***media queries***/
+
+
+
+@media screen and (max-width: 536.99px) {
+
+    #Hero,
+    .Bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: fit-content;
+    }
+
+    .Bio img {
+        min-width: 50%;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .Bio figcaption {
+        color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+    }
+
+    .presentation {
+        margin-top: 10px;
+        margin-right: 670px;
+    }
+
+    .presentation-bio {
+        width: 100%;
+    }
+
+    .presentation-bio p {
+        margin-left: 3px;
+        text-align: left;
+        margin-right: 400px;
+        min-width: 97vw;
+        max-width: 50%;
+    }
+
+    label[for=subject] {
+        margin-top: 35px;
+
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    .MessageEssentiel {
+        max-width: 70vw;
+    }
+
+    .button-form {
+        margin-top: 15px;
+    }
+
+    .comments {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 537px) and (max-width: 674.99px) {
+
+    #Hero,
+    .Bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: fit-content;
+    }
+
+    .Bio img {
+        min-width: 50%;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin-left: calc(50% - 100px);
+    }
+
+    .Bio figcaption {
+        color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        margin-left: calc(50% - 100px);
+    }
+
+    .presentation {
+        margin-top: 10px;
+        margin-right: 670px;
+    }
+
+    .presentation-bio {
+        width: 100%;
+    }
+
+    .presentation-bio p {
+        margin-left: 3px;
+        text-align: left;
+        margin-right: 400px;
+        min-width: 97vw;
+        max-width: 50%;
+    }
+
+    label[for=subject] {
+        margin-top: 35px;
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    .MessageEssentiel {
+        max-width: 70vw;
+    }
+
+    .button-form {
+        margin-top: 15px;
+    }
+
+    .comments {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+
+    #Hero,
+    .Bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: fit-content;
+    }
+
+    .Bio img {
+        min-width: 50%;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .Bio figcaption {
+        color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+    }
+
+    .presentation {
+        margin-top: 10px;
+        margin-right: 670px;
+    }
+
+    .presentation-bio {
+        width: 100%;
+    }
+
+    .presentation-bio p {
+        margin-left: 3px;
+        text-align: left;
+        margin-right: 400px;
+        min-width: 97vw;
+        max-width: 50%;
+    }
+
+    label[for=subject] {
+        margin-top: 35px;
+
+    }
+
+    input[type=submit] {
+        display: flex;
+    }
+
+    .MessageEssentiel {
+        max-width: 70vw;
+    }
+
+    .button-form {
+        margin-top: 15px;
+    }
+
+    .comments {
+        font-size: 12px;
+    }
+}
+
+
+/* Styles spécifiques pour les écrans entre 675px et 768px */
+@media only screen and (min-width: 675px) and (max-width:768px) {
+
+
+    .presentation,
+    .presentation-bio {
+        max-width: 97vw;
+        margin-left: 3px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+        max-width: 100%;
+    }
+}
+
+/* Styles spécifiques pour les écrans entre 769px et 991px */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+    .presentation,
+    .presentation-bio {
+        max-width: 97vw;
+        margin-left: 3px;
+        /* Ajouté ici pour éviter la redondance */
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+        max-width: 100%;
+    }
+}
+
+/* Styles spécifiques pour les écrans entre 992px et 1190px */
+@media only screen and (min-width: 992px) and (max-width: 1190px) {
+
+    .form-9 {
+        margin: auto;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    textarea {
+        max-width: 100%;
+    }
+
+    input[type=submit] {
+        display: flex;
+        margin: auto;
+    }
+}

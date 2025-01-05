@@ -1,3 +1,29 @@
+<?php
+session_start();
+
+// Génération du token CSRF
+if (!isset($_SESSION['csrf_token'])) {
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+?>
+
+<?php
+// Vérification du CSRF lors de la soumission du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	if (!isset($_POST['csrf_token']) || !isset($_SESSION['csrf_token'])) {
+		die('Jeton CSRF manquant');
+	}
+
+	if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+		die('Erreur CSRF');
+	}
+
+	// Régénérer le jeton pour la prochaine requête
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,29 +32,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Charlotte Goupil | Artiste multidisciplinaire - Spectacles et Ateliers</title>
 	<meta name="description" content="Découvrez Charlotte Goupil, artiste aux multiples facettes : comédienne, chanteuse, slameuse. Spectacles vivants, lectures, contes et ateliers de médiation artistique en Normandie.">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="preload" as="style" defer>
 	<?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="stylesmq.min.css?uid=' . $date . '">';
+	echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
+	echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
+	echo '<link rel="stylesheet" type="text/css" href="bio.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
+	echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
 	?>
-	<link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet" rel="preload" as="style" defer font-display="swap">
 </head>
 
 <body>
-	<?php include 'header.php'; ?>
+	<?php include_once 'header.php'; ?>
 	<main>
-		<section id="Hero">
+		<section class="Hero">
 			<div class="Bio">
 				<figure>
 					<picture>
-						<source srcset="images/Charlotte_Narcisse.webp" type="image/webp">
-						<img src="images/Charlotte_Narcisse.jpg" alt="" loading="lazy">
+						<source srcset="images/Charlotte_Narcisse_small_500.webp" type="image/webp" media="(max-width: 674px)">
+						<source srcset="images/Charlotte_Narcisse_small.webp" type="image/webp">
+						<source srcset="images/Charlotte_Narcisse_small.jpg" type="image/jpeg">
+						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil" loading="lazy">
 					</picture>
 					<figcaption>© Steeve Narcisse</figcaption>
 				</figure>
 			</div>
-			<h2 id="presentation">Charlotte Goupil</h2>
-			<div class="presentation">
+			<h2 class="presentation">Charlotte Goupil</h2>
+			<div class="presentation-bio">
 				<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
 					conseils de sa professeure Annie Franscisi et s'inscrit en Licence d'Arts
 					du Spectacle de Caen. En 2ème année de Licence, elle part à Londres
@@ -86,10 +117,11 @@
 		<div class="container mt-4">
 			<div class="row">
 				<div class="form-9 col-xl-8 col-lg-8 col-md-12 col-sm-12 offset-xl-2">
-					<h2>Formulaire de contact</h2>
+					<h2 class="form-h2">Formulaire de contact</h2>
 					<form id="contact-form" method="post" action="php/contact.php" role="form">
+						<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 						<div class="controls">
-							<p id="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span> à
+							<p class="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span> à
 								larchotterenard@protonmail.com</p>
 							<div class="row">
 								<div class="col-md-6">
@@ -138,7 +170,7 @@
 							<p class="comments mb-4"></p>
 							<div class="row">
 								<div class="col-md-12 text-center">
-									<input type="submit" class="button-form" value="Envoyer">
+									<button type="submit" class="button-form" aria-label="Soumettre le formulaire" value="Envoyer un message">Envoyer</button>
 								</div>
 							</div>
 							<div class="row">
@@ -148,30 +180,52 @@
 							</div>
 						</div>
 					</form>
-					<div id="Logo" class="col-auto">
-						<a href="https://www.facebook.com/larchotte.goupil" title="Lien vers ma page Facebook"><img src="images/logo-facebook.png" alt="logo Facebook" class="logo"></a>
-						<a href="https://www.instagram.com/chafoxil/" title="Lien vers ma page Instagram"><img src="images/instagram-Logo-PNG-Transparent-Background-download.png" alt="logo Instagram" class="logo"></a>
+					<div class="Logo" class="col-auto">
+						<a href="https://www.facebook.com/larchotte.goupil" aria-label="Lien vers ma page Facebook" title="Lien vers ma page Facebook">
+							<picture>
+								<source srcset="images/logo-facebook_500.webp" type="image/webp" media="(max-width: 674px)">
+								<source srcset="images/logo-facebook.png" type="image/png">
+								<img class="lazy-image" data-src="images/logo-facebook_500.png" alt="Logo Facebook" class="logo">
+							</picture>
+						</a>
+						<a href="https://www.instagram.com/chafoxil/" aria-label="Lien vers ma page Instagram" title="Lien vers ma page Instagram">
+							<picture>
+								<source srcset="images/instagram-Logo-PNG-Transparent-Background-download_500.webp" type="image/webp" media="(max-width: 674px)">
+								<source srcset="images/instagram-Logo-PNG-Transparent-Background-download.png" type="image/png">
+								<img class="lazy-image" data-src="images/instagram-Logo-PNG-Transparent-Background-download_500.png" alt="Logo Instagram" class="logo">
+							</picture>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
-		<script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
 		<div id="cookie-consent-banner">
-			<img src="images/cookie.webp" alt="Cookie" class="cookie-corner-left">
+
+			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-left" width="70" height="70" alt="Dessin d'un cookie">
 			<h2>Nous utilisons des cookies</h2>
-			<img src="images/cookie.webp" alt="Cookie" class="cookie-corner-right">
+			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-right" width="70" height="70" alt="Dessin d'un cookie">
+
 			<p>Nous utilisons des cookies pour améliorer votre expérience sur notre site.
 				Ces cookies nous permettent de collecter des données techniques, telles que vos données de navigation, afin d'analyser et d'optimiser notre site. Voici comment nous utilisons vos données :</p>
 			<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
-			<button id="accept-cookies">Accepter</button>
-			<button id="decline-cookies">Refuser&nbsp;</button>
+			<button id="accept-cookies" type="submit" value="Accepter les cookies" aria-label="Accepter les cookies">Accepter</button>
+			<button id="decline-cookies" type="submit" value="Refuser les cookies" aria-label="Refuser les cookies">Refuser</button>
 		</div>
 	</main>
-	<?php include 'footer.php'; ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" rel="preload" as="script" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" rel="preload" as="script" defer></script>
+	<script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
 
+	<script nonce="<?php echo $nonce; ?>">
+		window.addEventListener('load', function() {
+			var images = document.querySelectorAll('.lazy-image');
+			images.forEach(function(image) {
+				var src = image.getAttribute('data-src');
+				image.src = src;
+			});
+		});
+	</script>
+	<?php include_once 'footer.php'; ?>
 </body>
 
 </html>

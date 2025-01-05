@@ -7,36 +7,34 @@ $(document).on('DOMContentLoaded', function () {
     }
 
     function handleCookieChoice(accepted) {
-        if (typeof accepted !== 'boolean') {
-            console.error('handleCookieChoice: accepted must be a boolean');
-            return;
-        }
-        // Enregistrer le choix de l'utilisateur dans le localStorage
-        if (localStorage) {
-            localStorage.setItem('cookiesChoice', accepted ? 'true' : 'false');
-        } else {
-            console.error('handleCookieChoice: localStorage is not supported');
-            return;
-        }
+        try {
+            if (typeof accepted !== 'boolean') {
+                throw new Error('accepted must be a boolean');
+            }
 
-        // Cacher la bannière
-        if ($('#cookie-consent-banner')) {
-            $('#cookie-consent-banner').hide();
-        } else {
-            console.error('handleCookieChoice: #cookie-consent-banner is not found');
-            return;
-        }
-        if (accepted) {
-            // Si accepté, définir les cookies
-            setCookies();
-        } else {
-            // Si refusé, supprimer les cookies
-            deleteCookies();
+            if (!window.localStorage) {
+                throw new Error('localStorage is not supported');
+            }
+
+            localStorage.setItem('cookiesChoice', accepted ? 'true' : 'false');
+
+            const banner = $('#cookie-consent-banner');
+            if (!banner.length) {
+                throw new Error('#cookie-consent-banner is not found');
+            }
+
+            banner.hide();
+
+            if (accepted) {
+                setCookies();
+            } else {
+                deleteCookies();
+            }
+        } catch (error) {
+            console.error('handleCookieChoice:', error.message);
         }
     }
     // Gestion du clic sur "Accepter"
-
-
     $('#accept-cookies').on('click', function () {
         handleCookieChoice(true);
     });
@@ -44,6 +42,9 @@ $(document).on('DOMContentLoaded', function () {
     $('#decline-cookies').on('click', function () {
         handleCookieChoice(false);
     });
+
+
+
     // Fonction pour définir les cookies (à adapter côté serveur pour HttpOnly)
     function setCookies() {
         const firstname = $('#firstname').val() || '';
@@ -223,6 +224,7 @@ $(document).on('DOMContentLoaded', function () {
         document.cookie = `user_email=${email}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
         document.cookie = `user_phone=${phone}; expires=${expiration.toUTCString()}; path=/; Secure; SameSite=Strict`;
     }
+
 });
 
 /*** Fonction de mise en surbrillance des noms : ne fonctionne plus depuis restructuration html */
