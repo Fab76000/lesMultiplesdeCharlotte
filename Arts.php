@@ -467,7 +467,7 @@
     <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
-    <script nonce="{random}" src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
+    <script nonce="{random}" src="http://charlottegoupil.fr/js/script.min.js" defer></script>
     <script nonce="<?php echo $nonce; ?>">
         document.addEventListener('DOMContentLoaded', function() {
             const videoWrappers = document.querySelectorAll('.video-wrapper');

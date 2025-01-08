@@ -21,16 +21,16 @@
 <body>
     <?php include_once 'header.php'; ?>
     <main>
-        <section id="politiqueConfidentialite" class="alinea" style="margin: 80px 50px 0 50px;">
+        <section id="politiqueConfidentialite">
             <h2 class="politiqueConfidentialite-h2">Politique de confidentialité</h2>
             <h3>Qui sommes-nous ?</h3>
-            <p>L’adresse de notre site est : <a href="https://multiples-charlotte.fr">https://multiples-charlotte.fr</a></p>
+            <p>L’adresse de notre site est : <a href="https://charlottegoupil.fr">charlottegoupil.fr</a></p>
             <h3>Identité et Coordonnées des Responsables des Données</h3>
             <p><strong>Responsable du Traitement :</strong> Charlotte Goupil, 22 rue de l'ancienne prison
                 76000 Rouen, France, charlotte.transcourt@gmail.com</p>
             <p><strong>Développeur du site :</strong> Fabienne Bergès, 84 rue Méridienne, 76000 Rouen, France</p>
             <p>Nous n’avons pas de Délégué à la Protection des Données (DPO) désigné.</p>
-            <p>Sur le site <a href="https://multiples-charlotte.fr/">https://multiples-charlotte.fr</a>, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+            <p>Sur le site <a href="https://charlottegoupil.fr">charlottegoupil.fr</a>, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
             <h3>Types de Données Collectées</h3>
             <p><strong>Données d’identification :</strong> nom, prénom</p>
             <p><strong>Données de contact :</strong> adresse email, numéro de téléphone</p>
@@ -117,7 +117,7 @@
                 vous avez le droit de déposer une réclamation auprès de la Commission Nationale de l'Informatique
                 et des Libertés (CNIL) à l'adresse suivante : CNIL, 3 Pl. de Fontenoy-Unesco, 75007 Paris.</p>
             <h3>Litiges</h3>
-            <p> Tout litige en relation avec l'utilisation de <a href=" https://multiples-charlotte.fr"> https://multiples-charlotte.fr</a> est soumis au droit Français.
+            <p> Tout litige en relation avec l'utilisation de <a href="https://charlottegoupil.fr">charlottegoupil.fr</a> est soumis au droit Français.
                 À défaut de solution amiable entre les parties pour tout différent survenant entre elles et en dehors des cas où la loi ne le permet pas,
                 il est fait attribution exclusive de juridiction et compétences aux tribunaux de Rouen,
                 nonobstant pluralité de défendeurs ou appels en garantie, et ce même en cas de référé. </p>
@@ -128,7 +128,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
-    <script src="https://multiples-charlotte.fabienneberges.com/js/script.min.js" defer></script>
+    <script src="http://charlottegoupil.fr/js/script.min.js" defer></script>
     <script nonce="<?php echo $nonce; ?>">
         function highlightNames() {
             const colorsOfNames = {
@@ -136,7 +136,6 @@
                 "Fabienne Bergès": "#1D7461",
                 "Éditeur": "#741D34",
                 "Développeur": "#1D7461",
-                "https://multiples-charlotte.fr": "#741D34",
             };
             const mainContent = $("#politiqueConfidentialite");
             if (mainContent.length === 0) {
@@ -146,9 +145,9 @@
                 let textContent = $(this).html();
                 for (const [name, color] of Object.entries(colorsOfNames)) {
                     const regex = new RegExp(escapeRegExp(name), 'g');
-                    textContent = textContent.replace(regex, `<span style="color: ${color}; font-weight: bold">${name}</span>`);
+                    const replacement = `<span style="color: ${color}; font-weight: bold">${name}</span>`;
+                    $(this).html($(this).html().replace(regex, replacement));
                 }
-                $(this).html(textContent);
             });
         }
 
