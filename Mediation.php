@@ -8,12 +8,12 @@
     <meta name="description" content="Découvrez les ateliers de médiation artistique et culturelle de Charlotte Goupil. Écriture, théâtre, arts plastiques pour tous publics. Accompagnement bienveillant et créatif en Normandie et région parisienne.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"   rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="mediation.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload" as="style" defer>';
+    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"   rel="preload"  as="style">';
+    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style">';
+    echo '<link rel="stylesheet" type="text/css" href="mediation.min.css?uid=' . $date . '"  rel="preload"  as="style">';
+    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload" as="style">';
     ?>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' defer preload>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' preload>
 </head>
 
 <body>
