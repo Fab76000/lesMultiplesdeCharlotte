@@ -1,5 +1,6 @@
 <?php
 // Démarrer la session
+
 session_start();
 
 // Vérifier si le consentement aux cookies a été donné

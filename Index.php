@@ -1,4 +1,7 @@
 <?php
+ini_set('session.cookie_samesite', 'Lax');
+ini_set('session.cookie_secure', 1);
+ini_set('session.cookie_httponly', 1);
 session_start();
 
 // Génération du token CSRF
@@ -31,16 +34,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Charlotte Goupil | Artiste multidisciplinaire - Spectacles et Ateliers</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
 	<meta name="description" content="Découvrez Charlotte Goupil, artiste aux multiples facettes : comédienne, chanteuse, slameuse. Spectacles vivants, lectures, contes et ateliers de médiation artistique en Normandie.">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="preload" as="style" defer>
+	<!-- Chargement de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 	<?php
 	$date = date("Y-m-d-h-i-s");
-	echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
-	echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
-	echo '<link rel="stylesheet" type="text/css" href="bio.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
-	echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '" rel="preload" as="style" defer>';
+	$css_files = ['style', 'header', 'bio', 'footer'];
+	foreach ($css_files as $file) {
+		echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+	}
 	?>
-	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet" rel="preload" as="style" defer font-display="swap">
+
+	<!-- Chargement de Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 </head>
 
 <body>

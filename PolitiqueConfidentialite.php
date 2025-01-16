@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="politique-confidentialite.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
-    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload"  as="style" defer>';
+    $cssFiles = [
+        'style',
+        'header',
+        'politique-confidentialite',
+        'footer'
+    ];
+    foreach ($cssFiles as $file) {
+        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+    }
     ?>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' defer preload>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
 </head>
 
 <body>

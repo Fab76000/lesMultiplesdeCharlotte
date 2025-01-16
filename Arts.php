@@ -487,12 +487,13 @@
                         return;
                     }
                     const iframe = document.createElement('iframe');
-                    iframe.setAttribute('width', '560');
-                    iframe.setAttribute('height', '315');
+                    iframe.setAttribute('width', '100%');
+                    iframe.setAttribute('height', '100%');
                     iframe.setAttribute('src', iframeSrc);
                     iframe.setAttribute('title', 'Video player');
                     iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
                     iframe.setAttribute('allowfullscreen', true);
+                    iframe.style.position = 'absolute';
                     iframe.setAttribute('loading', 'lazy');
                     this.innerHTML = '';
                     this.appendChild(iframe);

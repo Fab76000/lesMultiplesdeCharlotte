@@ -10,6 +10,8 @@ header(
     "font-src https://fonts.gstatic.com; " .
     "img-src 'self' https://i.vimeocdn.com https://i.ytimg.com https:; " .
     "frame-src 'self' https://www.youtube.com https://player.vimeo.com; " .
+    "frame-src 'self' https://player.vimeo.com https://*.vimeo.com;" .
+    "connect-src 'self' https://*.vimeo.com https://*.vimeocdn.com;" .
     "object-src 'none'; " .
     "base-uri 'none';"
 );
