@@ -8,10 +8,12 @@
     <meta name="description" content="Informations légales sur le site de Charlotte Goupil, artiste et médiatrice culturelle. Éditeur, développeur, hébergement, propriété intellectuelle et protection des données personnelles.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '"  rel="preload"  as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="mentions-legales.min.css?uid=' . $date . '"  rel="preload"  as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload"  as="style">';
+    $css_files = ['style', 'header', 'mentions-legales', 'footer'];
+
+    // Chargement direct des feuilles de style
+    foreach ($css_files as $file) {
+        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+    }
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' preload>
 </head>

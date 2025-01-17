@@ -27,7 +27,7 @@
     <?php include_once 'header.php'; ?>
     <main>
         <section id="politiqueConfidentialite">
-            <h2 class="politiqueConfidentialite-h2">Politique de confidentialité</h2>
+            <h2>Politique de confidentialité</h2>
             <h3>Qui sommes-nous ?</h3>
             <p>L’adresse de notre site est : <a href="https://charlottegoupil.fr">charlottegoupil.fr</a></p>
             <h3>Identité et Coordonnées des Responsables des Données</h3>
@@ -97,7 +97,7 @@
                 En utilisant ce site, vous acceptez expressément ces conditions et limitations de responsabilité.
             </p>
             <h3>Droits d'accès, de rectification, de suppression et d'opposition</h3>
-            <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant vos données personnelles :
+            <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant vos données personnelles : </p>
             <ol>
                 <li><strong>Droit d'accès (article 15 RGPD) :</strong> vous pouvez obtenir des informations sur le traitement de vos données et une copie de celles-ci.</li>
                 <li><strong>Droit de rectification (article 16 RGPD) :</strong> vous pouvez demander la correction des données inexactes vous concernant ou les compléter si elles sont incomplètes.</li>
@@ -110,7 +110,6 @@
                 <li><strong>Droit d'opposition (article 21 RGPD) :</strong> vous pouvez vous opposer au traitement de vos données dans certaines situations.
                 </li>
             </ol>
-            </p>
             <p>Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter Charlotte Goupil, à l'adresse suivante: 22 rue de l'ancienne prison, 76000 Rouen</p>
             <h3>Cookies</h3>
             <p>Notre site utilise des cookies pour faciliter la gestion des demandes de contact et améliorer l'expérience utilisateur.</p>

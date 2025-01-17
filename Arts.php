@@ -8,11 +8,14 @@
     <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d&#39;Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L&#39;Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
     <?php
     $date = date("Y-m-d-h-i-s");
-    echo '<link rel="stylesheet" type="text/css" href="style.min.css?uid=' . $date . '" rel="preload" as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="header.min.css?uid=' . $date . '"  rel="preload"  as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="footer.min.css?uid=' . $date . '"  rel="preload"  as="style">';
-    echo '<link rel="stylesheet" type="text/css" href="arts.min.css?uid=' . $date . '"  rel="preload" as="style">';
+    $css_files = ['style', 'header', 'arts', 'footer'];
+
+    // Chargement direct des feuilles de style
+    foreach ($css_files as $file) {
+        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+    }
     ?>
+
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet" preload>
 </head>
 

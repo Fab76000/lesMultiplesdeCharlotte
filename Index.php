@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						<source srcset="images/Charlotte_Narcisse_small_500.webp" type="image/webp" media="(max-width: 674px)">
 						<source srcset="images/Charlotte_Narcisse_small.webp" type="image/webp">
 						<source srcset="images/Charlotte_Narcisse_small.jpg" type="image/jpeg">
-						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil" loading="lazy">
+						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil">
 					</picture>
 					<figcaption>© Steeve Narcisse</figcaption>
 				</figure>
