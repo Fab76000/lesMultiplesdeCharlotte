@@ -216,8 +216,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<p>Nous utilisons des cookies pour améliorer votre expérience sur notre site.
 				Ces cookies nous permettent de collecter des données techniques, telles que vos données de navigation, afin d'analyser et d'optimiser notre site. Voici comment nous utilisons vos données :</p>
 			<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
-			<button id="accept-cookies" type="submit" value="Accepter les cookies" aria-label="Accepter les cookies">Accepter</button>
-			<button id="decline-cookies" type="submit" value="Refuser les cookies" aria-label="Refuser les cookies">Refuser</button>
+			<button id="accept-cookies" type="submit" value="Accepter les cookies" aria-label="Accepter les cookies">Accepter les cookies</button>
+			<button id="decline-cookies" type="submit" value="Refuser les cookies" aria-label="Refuser les cookies">Refuser les cookies</button>
 		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" rel="preload" as="script" defer></script>
