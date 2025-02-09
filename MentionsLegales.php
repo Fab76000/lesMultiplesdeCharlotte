@@ -36,12 +36,14 @@
                 Email : fabienne_berges@yahoo.fr
             </p>
             <h3>Hébergeur</h3>
-            <p>SAS OVH
-                2 rue Kellermann - BP 80157
-                59100 Roubaix, France <br>
-                www.ovh.com <br>
-                Fax : 03 20 20 09 58 <br>
-                Email : support@ovh.com</p>
+            <p> SAS o2switch <br>
+                Chemin des Pardiaux <br>
+                63000 CLERMONT-FERRAND, France <br>
+                https://www.o2switch.fr <br>
+                SIRET : 510 909 807 00032 <br>
+                Tél : 04 44 44 60 40 <br>
+                Fax : 04 44 44 60 41 <br>
+                Email : support@o2switch.fr</p>
             <h3>Responsabilités</h3>
             <p>Le présent site a été développé par Fabienne Bergès, agissant en qualité de développeur et prestataire technique. L'édition et la direction de la publication du site sont assurées par Charlotte Goupil (charlotte.transcourt@gmail.com), qui est responsable du traitement des données personnelles collectées sur ce site.</p>
             <h3>Propriété intellectuelle</h3>

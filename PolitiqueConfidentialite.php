@@ -53,7 +53,7 @@
             <p>Le contenu intégré depuis d’autres sites se comporte de la même manière que si le visiteur se rendait sur cet autre site. Ces sites web pourraient collecter des données sur vous, utiliser des cookies, embarquer des outils de suivis tiers, suivre vos interactions avec ces contenus embarqués si vous disposez d’un compte connecté sur leur site web.</p>
             <h3>Durée de Conservation des Données</h3>
             <p>Nous conservons vos données personnelles aussi longtemps que nécessaire pour répondre à vos demandes et pour les analyses nécessaires à l'amélioration de notre site.
-                Les données de contact seront conservées pendant 7 jours à partir de la date de la dernière interaction avec vous.
+                Les données de contact seront conservées pendant 30 jours à partir de la date de la dernière interaction avec vous.
             </p>
             <h3>Sécurité des Données</h3>
             <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre les accès non autorisés, la divulgation, la modification ou la destruction.
