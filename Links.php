@@ -39,13 +39,13 @@
                 Ces sites vous enverront vers des sites de partenaires, collaborateur·rice·s, ami·e·s inspiré·e·s et inspirant·e·s.
             </p>
             <br><br>
-            <p><strong>Chants d'Elles</strong>, festival des voix de femmes, pour qui j'ai été spectatrice, collaboratrice, artiste et même Présidente de l’association.
+            <p><strong>Chants d'Elles</strong>, festival des voix de femmes, pour qui Charlotte a été spectatrice, collaboratrice, artiste et même Présidente de l’association.
                 <br><br>
                 <em><a href="https://www.festivalchantsdelles.org">https://www.festivalchantsdelles.org</a></em>
             </p>
             <br>
             <p><strong>Alexandre Rasse</strong>, artiste et musicien de talent.
-                Il m'accompagne au piano à travers les années depuis 2016.
+                Il accompagne Charlotte Goupil au piano à travers les années depuis 2016.
                 <br><br>
                 <em><a href="https://alexandrerasse.fr">https://alexandrerasse.fr</a></em>
             </p>
