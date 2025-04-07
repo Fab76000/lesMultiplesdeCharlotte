@@ -415,7 +415,8 @@ a:visited {
 
 .ecrits-h3 {
     margin-top: 50px;
-    margin-left: 45px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .ecriture p {
