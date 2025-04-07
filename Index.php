@@ -100,8 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					<form id="contact-form" method="post" action="php/contact.php" role="form">
 						<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 						<div class="controls">
-							<p class="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span> à
-								larchotterenard@protonmail.com</p>
+							<p class="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span></p>
 							<div class="row">
 								<div class="col-md-6">
 									<label for="firstname"><span class="red">*</span>Prénom</label>
