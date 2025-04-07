@@ -66,59 +66,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					<figcaption>© Steeve Narcisse</figcaption>
 				</figure>
 			</div>
-			<h2 class="presentation">Charlotte Goupil</h2>
+			<h2 class="presentation">Charlotte Goupil, artiste normande et sans frontières</h2>
 			<div class="presentation-bio">
-				<p>Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen, elle suit les
-					conseils de sa professeure Annie Franscisi et s'inscrit en Licence d'Arts
-					du Spectacle de Caen. En 2ème année de Licence, elle part à Londres
-					pour suivre une année Erasmus en "English and Drama School". <br><br> De
-					retour en Normandie, elle poursuit sa formation sur le jeu de l'acteur
-					au sein des classes du comédien de l' Actéa, "compagnie dans la Cité
-					". Elle reprend par la suite un Master de recherche théâtrale qu'elle
-					finance en posant en tant que modèle à l'école régionale des Beaux-
-					Arts de Caen, ce qui lui redonne le goût aux arts plastiques et lui fait
-					quitter la fac.
-					Via une équivalence de Licence, elle entre à l'ésam (école supèrieure
-					des arts et médias de Caen-Cherbourg) en 2ème année, ce qui lui
-					permet d'établir un échange bilatéral entre cette école et une école
-					d'art contemporain à Bruxelles. <br><br>Au sein de cette autre école, l'ERG
-					(Ecole de Recherche Graphique), elle se forme à l'installation performance,
-					option principale de son échange.
-					Peu après, elle se forme au jeu face caméra et radiophonique via
-					diverses expériences audiovisuelles pour des associations (Mutation
-					Production), des écoles (IAD, INRACI), ou des maisons de productions
-					(AJCV, production du Trésor...). Stagiaire scénario grâce au festival
-					Offshort (ex festival OFF du festival du film Grolandais de Quend), elle
-					réalise avec l'aide du réalisateur scénariste Christophe Hermans et du
-					chef opérateur Frederic Noirhomme le court- métrage intitulé « La
-					théorie de l'autruche » adaptant le scénario de ce stage. <br><br>
-					De retour en France en 2013, elle voyage entre la Normandie et Paris
-					pour suivre une formation de médiation artistique en relation d'aide au
-					sein de l'Inécat, école d'art-thérapie.<br><br>
-					En 2015, elle rencontre deux femmes passionnées de musique et de scène,
-					avec qui elle décide de monter une structure associative de spectacles
-					vivants et d'ateliers de médiations (artistiques et culturelles) :
-					Corrél'Arts. Au cours de cette même année, elle décide de se lancer
-					dans la création de spectacles de lecture à voix haute, contes et clown
-					(Stage avec la Youle Cie; Rencontre avec Charlie Clé, auteure et
-					conteuse; scène ouverte du Théâtre du Présent...). En 2016, dans le
-					cadre de son tour de chant intitulé "Autour des Elles d'Allain" sur les
-					thèmes et personnages féminins du répertoire du chanteur-poète
-					d'Allain Leprest, Charlotte rencontre son pianiste actuel Alexandre
-					Rasse, de son nom de scène Alex Rasse, avec qui elle tournera
-					plusieurs années et sur plusieurs scènes.<br><br>
-					Présidente du festival Chants d'Elles, le festival des voix de
-					femmes, des éditions 2020, 2021 et 2022, elle continue son travail de transmission des oeuvres d'autrui :
-					en particulier de la création artistique portée par des femmes et en
-					direction de publics tout à fait divers.
-					Enfin, suite à son travail sur le répertoire d'Allain Leprest où elle était
-					déjà accompagnée par Alex Rasse, Charlotte devient ChaNoé pour revenir
-					aujourd'hui avec une forme slamée musicale.<br><br> À partir de textes
-					personnels évoquant l'art, les rencontres et les luttes, ChaNoé,
-					toujours accompagnée de son acolyte de création, Alex Rasse, fait
-					naître à nos yeux et nos oreilles, un travail de recherche brute et vive
-					de mots passionnés.
+				<p>Charlotte est une artiste normande, de naissance, de par sa formation mais aussi via son parcours professionnel. Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen,
+					elle suit les conseils de sa professeure Annie Franscisi et s'inscrit en 'Arts du Spectacle’, à la faculté de Caen.
+					En 2ème année de Licence, elle part à Londres pour suivre une année Erasmus en English and Drama school.
+					Touchée par la culture cosmopolite, elle est prise du virus du voyage.
+					De retour en Normandie, elle poursuit sa formation sur le jeu de l'acteur au sein des classes du comédien de l'Actéa, compagnie dans la Cité.
+					Elle suit ensuite un Master recherche en théâtre qu'elle finance en posant en tant que modèle à l'école régionale des Beaux-Arts de Caen.
 				</p>
+				<h3>Une formation multiple</h3>
+				<p>Son travail de modèle académique lui redonne goût aux arts plastiques et lui fait quitter la fac de lettres et
+					le théâtre. Via une équivalence de crédits universitaires, elle entre alors à l'ésam
+					(école supérieure des arts et médias de Caen-Cherbourg) en 2ème année du cursus Arts. </p>
+				<h3>Capitale(s)</h3>
+				<p>Ce pont du champ universitaire littéraire à celui des arts plastiques, lui permet aussi de voyager à nouveau en établissant un échange entre les beaux-arts de Caen et une école d'art contemporain, l'E.R.G (Ecole de Recherche Graphique), à...Bruxelles</p>
+				<p>Au sein de cette nouvelle école, elle se forme à l'installation performance, option principale de son échange, mais aussi au jeu face caméra et radiophonique via diverses expériences audiovisuelles pour des associations (Mutation Production), écoles (IAD, INRACI), ou maisons de productions (AJCV, production du Trésor...) : la Belgique étant l’un des hauts-lieux de tournages cinématographiques européens.</p>
+				<p>De retour en France plus tard, elle voyage entre la Normandie et Paris pour suivre une formation de « médiation artistique en relation d'aide » au sein de l'Inécat, école d'art-
+					thérapie. Persuadée que la pratique artistique et/ou la réception d’une œuvre, quelle qu’elle soit, peut transcender les problématiques d’une personne en difficulté et améliorer sa relation au monde</p>
+				<h3>Premières et nouvelles écritures</h3>
+				<p>Stagiaire scénario grâce au festival Offshort (ex-festival off du festival du film Grolandais de Quend), elle réalise avec l'aide du réalisateur-scénariste Christophe Hermans et du chef opérateur Frederic Noirhomme, le court-métrage intitulé « La théorie de l'autruche » adaptation cinématographique du scénario de ce stage, dont le thème était... frontières !</p>
+				<p>Par la suite, apres son travail de reprises du répertoire d'Allain Leprest où elle était déjà accompagnée par Alex Rasse, Charlotte devient ChaNoé sur une forme slamée musicale et visuelle très personnelle. À partir de textes intimes évoquant l'art, les rencontres et les luttes, ChaNoé, fait naître à nos yeux et nos oreilles, un travail de recherche brute et vive de mots passionnés : le projet « Viventre ».</p>
+				<h3>Back to the... Rouen !</h3>
+				<p>En 2015, elle rencontre deux femmes passionnées de musique et de scène, avec qui elle décide de monter une structure associative de spectacles vivants et d'ateliers de médiations (artistiques et culturelles) : Corrél'Arts. Au cours de cette même année, elle décide de se lancer dans la création de spectacles de lecture à voix haute, contes et clown (Stage avec la Youle Cie; Rencontre avec Charlie Clé, auteure et conteuse; scène ouverte du Théâtre du Présent...). En 2016, dans le cadre de son tour de chant intitulé "Autour des Elles d'Allain" sur les thèmes et personnages féminins du répertoire du chanteur-poète d'Allain Leprest, Charlotte rencontre son pianiste actuel Alexandre Rasse, avec qui elle tournera plusieurs années et sur plusieurs scènes.</p>
+				<p>Présidente du festival Chants d'Elles, le festival des voix de femmes, des éditions 2020, 2021 et 2022, elle continue son travail de transmission des œuvres d'autrui : en particulier de la création artistique portée par des femmes et en direction de publics tout à fait divers.</p>
 			</div>
 
 		</section>

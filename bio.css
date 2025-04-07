@@ -66,7 +66,9 @@ figcaption {
     background-color: var(--background-color);
     min-height: 100px;
     width: 100%;
+
 }
+
 
 img[alt] {
     font-style: italic;
@@ -182,13 +184,14 @@ label {
         width: 100%;
     }
 
-    .presentation-bio p {
-        margin-right: 6px;
+    .presentation-bio p,
+    .presentation-bio h3 {
         text-align: center;
         width: 100%;
         max-width: 100%;
-        padding: 0 15px 0 15px;
+
     }
+
 
     label[for=subject] {
         margin-top: 35px;
@@ -284,6 +287,7 @@ label {
         max-width: 97vw;
         margin-left: 3px;
     }
+
 
     input[type=text],
     input[type=email],
