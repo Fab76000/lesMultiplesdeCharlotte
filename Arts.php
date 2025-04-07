@@ -136,7 +136,7 @@
                     Retours de spectateur.ice.s : <br>
                     <span style="font-style: italic;"> "Merci pour cette création, ma curiosité a été comblée. J'ai apprécié la subtilité de votre poésie, sa
                         musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
-                        projets 2022" </span> <br>
+                        projets" </span> <br>
                     <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong>
                 </p>
                 <a href="#Bulles" style="display:flex; justify-content: end; margin-top:200px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
@@ -260,7 +260,7 @@
                                 <source srcset="images/Argent_4165_petite.webp" type="image/webp">
                                 <img src="images/Argent_4165_petite.jpg" width="250" height="260" alt="" loading="lazy">
                             </picture>
-                            <figcaption>© Collectif 'Et maintenant (?)'</figcaption>
+                            <figcaption>© Paris-Normandie</figcaption>
                         </figure>
                     </a>
                 </div>

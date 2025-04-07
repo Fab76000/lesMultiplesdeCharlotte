@@ -254,7 +254,7 @@
     line-height: 2;
 }
 
-.Arts-h2,
+
 .spectacles-h2,
 .musique-h2,
 .ecriture-h2 {
@@ -281,7 +281,7 @@
 }
 
 .spectacles-h2 {
-    margin-top: 50px;
+    margin-top: 200px;
     text-align: center;
 }
 
