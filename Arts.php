@@ -24,7 +24,6 @@
 
     <?php include_once 'header.php'; ?>
     <main>
-        <h2 class="Arts-h2">Arts</h2>
         <h2 class="spectacles-h2">Spectacles</h2>
         <span id="Spectacles"></span>
         <section id="Bulles">
