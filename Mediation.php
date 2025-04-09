@@ -24,7 +24,7 @@
         <section class="mediation">
             <h2 class="mediation-h2">Médiation</h2>
             <p class="alinea">Médiatrice Artistique & Culturelle, artiste pluridisciplinaire travaillant principalement sur
-                les régions Nord (Paris compris) et Ouest ; je vous propose des ateliers d’écritures plurielles
+                les régions Nord (Paris et Bruxelles compris) et Ouest (Normandie et Bretagne) ; je vous propose des ateliers d’écritures plurielles
                 (textes, théâtres, plastiques) par un accompagnement doux et coloré dans votre création
                 personnelle.
                 Pour une (re)découverte de l’identité créatrice de chacun, j’adapte ma démarche
@@ -60,6 +60,20 @@
                 propose aux publics de tous genres, capacités,
                 âges et horizons : écriture, théâtre, chant,
                 conte…</p>
+            <div class="grid-wrap">
+                <div class="grid-items">
+                    <div class="grid-item">
+                        <figure>
+                            <picture>
+                                <source srcset="images/moqueurs-faiseurs.webp" type="image/webp">
+                                <img class="img-moqueurs-faiseurs" src="images/moqueurs-faiseurs.jpg" alt="Illustration de moqueurs-faiseurs" loading="lazy">
+                            </picture>
+                            <figcaption class="figcaption-moqueurs-faiseurs">© LN Devique/Charlotte Goupil</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <div class="grid-wrap">
             <div class="grid-items">
