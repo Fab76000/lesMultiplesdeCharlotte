@@ -222,11 +222,11 @@
     align-content: center;
     align-items: center;
     background-color: var(--background-color);
-    min-height: 1800px;
+
 }
 
 .spectacles {
-    margin-top: 550px;
+    margin-top: 400px;
     min-height: 450px;
     width: 80%;
     padding: 10px;
@@ -240,8 +240,17 @@
     box-shadow: 10px 10px 10px var(--green-color);
 }
 
+#Allain {
+    margin-top: 0;
+}
+
+#Argent {
+    margin-top: 100px;
+}
+
 #Viventre {
     box-shadow: 10px 10px 10px var(--red-color);
+    margin-top: 500px;
 }
 
 #Allain p,
@@ -258,7 +267,7 @@
 .spectacles-h2,
 .musique-h2,
 .ecriture-h2 {
-    margin-top: 200px;
+    margin-top: 130px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -280,10 +289,6 @@
     margin-top: 15px;
 }
 
-.spectacles-h2 {
-    margin-top: 200px;
-    text-align: center;
-}
 
 .Elles {
     font-style: italic;
@@ -292,7 +297,7 @@
 /***musique***/
 
 .musique {
-    margin-top: 400px
+    margin-top: 200px
 }
 
 .musique p {
@@ -406,10 +411,11 @@ a:visited {
 
 .ecriture {
     margin-top: 550px;
-    margin-bottom: 2800px;
+    margin-bottom: 100px;
 }
 
 .ecriture-h2 {
+    margin-top: -400px;
     margin-bottom: 50px;
 }
 
