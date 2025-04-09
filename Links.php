@@ -22,7 +22,7 @@
     <?php include_once 'header.php'; ?>
     <main>
         <h2 class="links-h2">Liens amis</h2>
-        <section class="links gradient-border">
+        <section id="links" class="links gradient-border">
             <div>
                 <a href="images/Charlotte_statue.jpg">
                     <figure class="corner-top-left-image">

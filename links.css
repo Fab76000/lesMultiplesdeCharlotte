@@ -1,6 +1,11 @@
+#links {
+
+    margin-bottom: 100px;
+
+}
+
 .links {
     margin-top: 50px;
-    margin-bottom: 2800px;
     text-align: center;
     align-items: flex-start;
 }
