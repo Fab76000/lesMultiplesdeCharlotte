@@ -157,11 +157,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						</div>
 					</form>
 					<div class="Logo" class="col-auto">
-						<a href="https://www.facebook.com/larchotte.goupil" aria-label="Lien vers ma page Facebook" title="Lien vers ma page Facebook">
+						<a href="https://piaille.fr/@LesMultiples2Charlotte" aria-label="Lien vers ma page Mastodon" title="Lien vers ma page Mastodon">
 							<picture>
-								<source srcset="images/logo-facebook_500.webp" type="image/webp" media="(max-width: 674px)">
-								<source srcset="images/logo-facebook.png" type="image/png">
-								<img class="lazy-image" data-src="images/logo-facebook_500.png" alt="Logo Facebook" class="logo">
+								<source srcset="images/Mastodon-logo.webp" type="image/webp" media="(max-width: 674px)">
+								<source srcset="images/Mastodon-logo.png" type="image/png">
+								<img class="lazy-image logo" src="images/Mastodon-logo.png" alt="Logo Mastodon" width="162" height="174" loading="lazy">
 							</picture>
 						</a>
 						<a href="https://www.instagram.com/chafoxil/" aria-label="Lien vers ma page Instagram" title="Lien vers ma page Instagram">
