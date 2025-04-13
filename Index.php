@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<meta name="description" content="Découvrez Charlotte Goupil, artiste aux multiples facettes : comédienne, chanteuse, slameuse. Spectacles vivants, lectures, contes et ateliers de médiation artistique en Normandie.">
 	<!-- Chargement de Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
 	<?php
 	$date = date("Y-m-d-h-i-s");
 	$css_files = ['style', 'header', 'bio', 'footer'];
@@ -91,7 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				<p>En 2015, elle rencontre deux femmes passionnées de musique et de scène, avec qui elle décide de monter une structure associative de spectacles vivants et d'ateliers de médiations (artistiques et culturelles) : Corrél'Arts. Au cours de cette même année, elle décide de se lancer dans la création de spectacles de lecture à voix haute, contes et clown (Stage avec la Youle Cie; Rencontre avec Charlie Clé, auteure et conteuse; scène ouverte du Théâtre du Présent...). En 2016, dans le cadre de son tour de chant intitulé "Autour des Elles d'Allain" sur les thèmes et personnages féminins du répertoire du chanteur-poète d'Allain Leprest, Charlotte rencontre son pianiste actuel Alexandre Rasse, avec qui elle tournera plusieurs années et sur plusieurs scènes.</p>
 				<p>Présidente du festival Chants d'Elles, le festival des voix de femmes, des éditions 2020, 2021 et 2022, elle continue son travail de transmission des œuvres d'autrui : en particulier de la création artistique portée par des femmes et en direction de publics tout à fait divers.</p>
 			</div>
-
 		</section>
 		<div class="container mt-4">
 			<div class="row">

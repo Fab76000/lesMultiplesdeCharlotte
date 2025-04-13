@@ -226,7 +226,7 @@
 }
 
 .spectacles {
-    margin-top: 400px;
+    margin-top: 300px;
     min-height: 450px;
     width: 80%;
     padding: 10px;
@@ -263,11 +263,17 @@
     line-height: 2;
 }
 
-
-.spectacles-h2,
-.musique-h2,
-.ecriture-h2 {
+.Arts-h2 {
     margin-top: 130px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+
+.spectacles-h3,
+.musique-h3,
+.ecriture-h3 {
+    margin-top: -60px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -410,7 +416,7 @@ a:visited {
 /***ecriture***/
 
 .ecriture {
-    margin-top: 550px;
+    margin-top: 150px;
     margin-bottom: 100px;
 }
 
