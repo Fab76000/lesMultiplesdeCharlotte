@@ -57,6 +57,17 @@
     z-index: 2;
 }
 
+.figure-links {
+    margin-top: 10px
+}
+
+.figure-links img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+
 .links figcaption {
     position: absolute;
     font-size: 0.5rem;

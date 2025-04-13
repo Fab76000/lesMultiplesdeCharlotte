@@ -43,23 +43,47 @@
                 <br><br>
                 <em><a href="https://www.festivalchantsdelles.org">https://www.festivalchantsdelles.org</a></em>
             </p>
+            <figure class="figure-links">
+                <picture>
+                    <source srcset="images/chantsdelles.webp" type="image/webp">
+                    <img src="images/chantsdelles.jpg" width="100" height="133" alt="Logo de l'association Chants d'Elles" loading="lazy">
+                </picture>
+            </figure>
             <br>
             <p><strong>Alexandre Rasse</strong>, artiste et musicien de talent.
                 Il accompagne Charlotte Goupil au piano à travers les années depuis 2016.
                 <br><br>
                 <em><a href="https://alexandrerasse.fr">https://alexandrerasse.fr</a></em>
             </p>
+            <figure class="figure-links">
+                <picture>
+                    <source srcset="images/ART-Cd-couverture-Alex-Rasse.webp" type="image/webp">
+                    <img src="images/ART-Cd-couverture-Alex-Rasse.jpg" width="100" height="133" alt="Couverture album de Alexandre Rasse" loading="lazy">
+                </picture>
+            </figure>
             <br><br>
             <p><strong>Correl'Arts</strong> est une association créée en 2015,
                 née d’amitiés et de passions communes pour la musique, le partage et la transmission.
                 <br><br>
                 <em><a href="https://correlarts.wixsite.com/Index">https://correlarts.wixsite.com/Index</a></em>
             </p>
+            <figure class="figure-links">
+                <picture>
+                    <source srcset="images/Corelarts.webp" type="image/webp">
+                    <img src="images/Corelarts.jpg" width="100" height="133" alt="Logo de l'association Correl'Arts" loading="lazy">
+                </picture>
+            </figure>
             <br><br>
             <p><strong>Le blog de Léna h. Coms</strong> qui contient un article sur l’atelier d’écriture du 12 août 2018 au Dansoir – Karine Saporta (Ouistreham) sous la direction de Charlotte Goupil, médiatrice culturelle, actrice et chanteuse, lors du vernissage final de l’exposition "Déambule" de Jill Guillais, artiste plasticienne.
                 <br><br>
                 <em><a href="http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html">http://leternelleheureduthe.over-blog.com/2018/08/l-enfance-est-violente-restitution-d-atelier-d-ecriture.html</a></em>
             </p>
+            <figure class="figure-links">
+                <picture>
+                    <source srcset="images/Lenahcoms.webp" type="image/webp">
+                    <img src="images/Lenahcoms.jpg" width="100" height="133" alt="Oeuvre de Léna h. Coms" loading="lazy">
+                </picture>
+            </figure>
             <br><br>
             <p>Enfin, vous pouvez retrouver le chemin vers mes mots, là aussi &#128521 :
                 <br><br>
