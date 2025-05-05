@@ -80,8 +80,8 @@
             </p>
             <figure class="figure-links">
                 <picture>
-                    <source srcset="images/Lenahcoms.webp" type="image/webp">
-                    <img src="images/Lenahcoms.jpg" width="100" height="133" alt="Oeuvre de Léna h. Coms" loading="lazy">
+                    <source srcset="images/lenahcoms-service-a-the.webp" type="image/webp">
+                    <img src="images/lenahcoms-service-a-the.jpg" width="100" height="133" alt="Logo du blog de Léna h. Coms" loading="lazy">
                 </picture>
             </figure>
             <br><br>
