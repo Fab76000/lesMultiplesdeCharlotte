@@ -424,7 +424,7 @@ a:visited {
     width: 200px;
 }
 
-.button-EP:hover>a {
+.button-EP>a:hover {
     background-color: #06CC81;
 }
 
