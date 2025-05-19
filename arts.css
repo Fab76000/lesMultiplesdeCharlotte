@@ -412,6 +412,21 @@ a:visited {
     margin-right: auto
 }
 
+.button-EP>a {
+    background-color: var(--green-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 100px auto 0 auto;
+    width: 200px;
+}
+
+.button-EP:hover>a {
+    background-color: #06CC81;
+}
 
 /***ecriture***/
 

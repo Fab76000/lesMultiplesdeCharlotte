@@ -132,14 +132,16 @@
                         rôle d'évocation flâneuse,
                         tout autant que les mots.
                     </p>
-                    <p> Dispositif de vidéo pour projection d'oeuvres contemporaines pendant le récital slamé.
-                        Revue de presse et médias :
+                    <p> Dispositif de vidéo pour projection d'oeuvres contemporaines pendant le récital slamé.<br>
+                        Revue de presse et médias :<br>
                         Retours de spectateur.ice.s : <br>
                         <span style="font-style: italic;"> "Merci pour cette création, ma curiosité a été comblée. J'ai apprécié la subtilité de votre poésie, sa
                             musicalité : les mots, jeux de mots et tout l'ensemble. Bravo. Bonne continuation pour vos futurs
                             projets" </span> <br>
-                        <strong>Pour commander votre EP, c'est via larchotterenard@protonmail.com !</strong>
                     </p>
+                    <div class="button-EP">
+                        <a href="mailto:larchotterenard@protonmail.com?subject=Commande%20EP">Commandez votre EP</a>
+                    </div>
                     <a href="#Bulles" style="display:flex; justify-content: end; margin-top:200px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
                             <path fill-rule=" evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
                         </svg></a>
