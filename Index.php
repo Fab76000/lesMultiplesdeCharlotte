@@ -37,7 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<meta name="description" content="Découvrez Charlotte Goupil, artiste aux multiples facettes : comédienne, chanteuse, slameuse. Spectacles vivants, lectures, contes et ateliers de médiation artistique en Normandie.">
 	<!-- Chargement de Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- Chargement de Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 	<?php
 	$date = date("Y-m-d-h-i-s");
 	$css_files = ['style', 'header', 'bio', 'footer'];
@@ -54,19 +56,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<?php include_once 'header.php'; ?>
 	<main>
 		<section class="Hero">
-			<div class="Bio">
-				<figure>
+			<article class="Bio">
+				<figure class="bio-figure" style="width:500px; height:480px; margin:0 auto; position:relative;">
 					<picture>
 						<source srcset="images/Charlotte_Narcisse_small_500.webp" type="image/webp" media="(max-width: 674px)">
 						<source srcset="images/Charlotte_Narcisse_small.webp" type="image/webp">
 						<source srcset="images/Charlotte_Narcisse_small.jpg" type="image/jpeg">
-						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil">
+						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil" style="display:block;">
 					</picture>
-					<figcaption>© Steeve Narcisse</figcaption>
+					<figcaption class="bio-figcaption" style="position:absolute;bottom:0;right:0;width:100%;color:rgba(255,255,255,0.9);padding:10px;min-height:32px;box-sizing:border-box;">© Steeve Narcisse</figcaption>
 				</figure>
-			</div>
-			<h2 class="presentation">Charlotte Goupil, artiste normande et sans frontières</h2>
-			<div class="presentation-bio">
+			</article>
+			<h2 class="presentation stable-title" style="min-height:2.8em;">Charlotte Goupil, artiste normande et sans frontières</h2>
+			<div class="presentation-bio stable-bio" style="min-height:320px;">
 				<p>Charlotte est une artiste normande, de naissance, de par sa formation mais aussi via son parcours professionnel. Après un bac Littéraire option théâtre au Lycée Jeanne d'arc de Rouen,
 					elle suit les conseils de sa professeure Annie Franscisi et s'inscrit en 'Arts du Spectacle’, à la faculté de Caen.
 					En 2ème année de Licence, elle part à Londres pour suivre une année Erasmus en English and Drama school.
@@ -95,55 +97,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<div class="row">
 				<div class="form-9 col-xl-8 col-lg-8 col-md-12 col-sm-12 offset-xl-2">
 					<h2 class="form-h2">Formulaire de contact</h2>
-					<form id="contact-form" method="post" action="php/contact.php" role="form">
+					<form id="contact-form" method="post" action="php/contact.php" role="form" aria-label="Formulaire de contact">
 						<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 						<div class="controls">
 							<p class="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span></p>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="firstname"><span class="red">*</span>Prénom</label>
-									<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Prénom" autocomplete="on" maxlength="20">
-									<p class="comments"></p>
+									<label for="firstname"><span class="red" aria-hidden="true">*</span>Prénom</label>
+									<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Prénom" autocomplete="on" maxlength="20" required aria-required="true" aria-label="Prénom (requis)">
+									<p class="comments" aria-live="polite"></p>
 								</div>
 								<div class="col-md-6">
-									<label for="name"><span class="red">*</span>Nom</label>
-									<input id="name" type="text" name="name" class="form-control" placeholder="Nom" autocomplete="on" maxlength="20">
-									<p class="comments"></p>
+									<label for="name"><span class="red" aria-hidden="true">*</span>Nom</label>
+									<input id="name" type="text" name="name" class="form-control" placeholder="Nom" autocomplete="on" maxlength="20" required aria-required="true" aria-label="Nom (requis)">
+									<p class="comments" aria-live="polite"></p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="email"><span class="red">*</span>Email</label>
-									<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="50">
-									<p class="comments"></p>
+									<label for="email"><span class="red" aria-hidden="true">*</span>Email</label>
+									<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="50" required aria-required="true" aria-label="Email (requis)">
+									<p class="comments" aria-live="polite"></p>
 								</div>
 								<div class="col-md-6">
-									<label for="phone"><span class="red">*</span>Tél</label>
-									<input id="phone" type="phone" name="phone" class="form-control" placeholder="Numéro de téléphone" autocomplete="on" maxlength="10">
-									<p class="comments"></p>
+									<label for="phone"><span class="red" aria-hidden="true">*</span>Tél</label>
+									<input id="phone" type="tel" name="phone" class="form-control" placeholder="Numéro de téléphone" autocomplete="on" maxlength="10" required aria-required="true" aria-label="Téléphone (requis)">
+									<p class="comments" aria-live="polite"></p>
 								</div>
 								<div class="col-md-12 col-sm-12">
-									<label for="subject"><span class="red">*</span>Sujet</label>
-									<select id="subject" name="subject" class="form-control">
+									<label for="subject"><span class="red" aria-hidden="true">*</span>Sujet</label>
+									<select id="subject" name="subject" class="form-control" required aria-required="true" aria-label="Sujet (requis)">
 										<option value="">Choisir une option</option>
 										<option value="Demande d'infos">Demande d'infos</option>
 										<option value="Demande de devis">Demande de devis</option>
 										<option value="Autre">Autre</option>
 									</select>
-									<p class="comments"></p>
+									<p class="comments" aria-live="polite"></p>
 								</div>
 							</div>
 							<div class="row mt-4">
 								<div class="col-md-12">
-									<label for="message"><span class="red">*</span>Message</label>
-									<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000"></textarea>
-									<p class="comments mb-4"></p>
+									<label for="message"><span class="red" aria-hidden="true">*</span>Message</label>
+									<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000" required aria-required="true" aria-label="Message (requis)"></textarea>
+									<p class="comments mb-4" aria-live="polite"></p>
 								</div>
 							</div>
-							<label for="data-consent"></label>
-							<input type="checkbox" id="data-consent" name="data-consent">
-							En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.
-							<p class="comments mb-4"></p>
+							<label for="data-consent" id="data-consent-label" style="font-weight:bold;">Consentement sur l'utilisation des données <span class="red" aria-hidden="true">*</span></label><br>
+							<input type="checkbox" id="data-consent" name="data-consent" required aria-required="true" aria-describedby="data-consent-desc" aria-label="Consentement sur l'utilisation des données (requis)">
+							<span id="data-consent-desc">En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.</span>
+							<p class="comments mb-4" aria-live="polite"></p>
 							<div class="row">
 								<div class="col-md-12 text-center">
 									<button type="submit" class="button-form" aria-label="Soumettre le formulaire" value="Envoyer un message">Envoyer</button>
@@ -156,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							</div>
 						</div>
 					</form>
-					<div class="Logo" class="col-auto">
+					<div class="Logo col-auto">
 						<a href="https://piaille.fr/@LesMultiples2Charlotte" aria-label="Lien vers ma page Mastodon" title="Lien vers ma page Mastodon">
 							<picture>
 								<source srcset="images/Mastodon-logo.webp" type="image/webp" media="(max-width: 674px)">
@@ -168,28 +170,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							<picture>
 								<source srcset="images/instagram-Logo-PNG-Transparent-Background-download_500.webp" type="image/webp" media="(max-width: 674px)">
 								<source srcset="images/instagram-Logo-PNG-Transparent-Background-download.png" type="image/png">
-								<img class="lazy-image" data-src="images/instagram-Logo-PNG-Transparent-Background-download_500.png" alt="Logo Instagram" class="logo">
+								<img class="lazy-image logo" data-src="images/instagram-Logo-PNG-Transparent-Background-download_500.png" alt="Logo Instagram" width="162" height="174" loading="lazy">
 							</picture>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="cookie-consent-banner">
-
-			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-left" width="70" height="70" alt="Dessin d'un cookie">
-			<h2>Nous utilisons des cookies</h2>
-			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-right" width="70" height="70" alt="Dessin d'un cookie">
-
-			<p>Nous utilisons des cookies pour améliorer votre expérience sur notre site.
+		<div id="cookie-consent-banner" role="dialog" aria-modal="true" tabindex="0" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc">
+			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-left" width="70" height="70" alt="Dessin d'un cookie" loading="lazy">
+			<h2 id="cookie-banner-title">Nous utilisons des cookies</h2>
+			<img src="images/cookie_small.webp" data-src="images/cookie_small.webp" class="lazy-image cookie-corner-right" width="70" height="70" alt="Dessin d'un cookie" loading="lazy">
+			<p id="cookie-banner-desc">Nous utilisons des cookies pour améliorer votre expérience sur notre site.
 				Ces cookies nous permettent de collecter des données techniques, telles que vos données de navigation, afin d'analyser et d'optimiser notre site. Voici comment nous utilisons vos données :</p>
-			<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php" style="color: #007BFF;">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
-			<button id="accept-cookies" type="submit" value="Accepter les cookies" aria-label="Accepter les cookies">Accepter les cookies</button>
-			<button id="decline-cookies" type="submit" value="Refuser les cookies" aria-label="Refuser les cookies">Refuser les cookies</button>
+			<p>Vous pouvez également consulter notre <a href="politiqueConfidentialite.php">politique de confidentialité</a> pour plus d'informations sur la gestion de vos données.</p>
+			<button id="accept-cookies" type="button" value="Accepter les cookies" aria-label="Accepter les cookies">Accepter les cookies</button>
+			<button id="decline-cookies" type="button" value="Refuser les cookies" aria-label="Refuser les cookies">Refuser les cookies</button>
 		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" rel="preload" as="script" defer></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" rel="preload" as="script" defer></script>
+	<script src="js/bootstrap.bundle.min.js" defer></script>
 	<script src="https://charlottegoupil.fr/js/script.min.js" defer></script>
 
 	<script nonce="<?php echo $nonce; ?>">
@@ -197,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			var images = document.querySelectorAll('.lazy-image');
 			images.forEach(function(image) {
 				var src = image.getAttribute('data-src');
-				image.src = src;
+				if (src) image.src = src;
 			});
 		});
 	</script>
