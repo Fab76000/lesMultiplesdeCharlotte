@@ -61,14 +61,17 @@
 }
 
 #menuderoulant .sousmenu {
-    display: block;
-    /*Pour cacher le sous-menu*/
+    display: none;
     list-style: none;
     margin: 0 auto;
     padding: 0 auto;
     float: none;
     position: absolute;
     text-transform: none;
+}
+
+#menuderoulant li:hover>.sousmenu {
+    display: block;
 }
 
 #menuderoulant .sousmenu li {
@@ -134,10 +137,6 @@
     width: 12.28em;
 }
 
-#menuderoulant li:hover>.sousmenu {
-    /*permet de maintenir l'affichage du sous-menu lors du survol de la souris*/
-    display: block;
-}
 
 .green {
     color: var(--green-color);
