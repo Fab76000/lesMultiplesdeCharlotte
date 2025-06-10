@@ -1,56 +1,51 @@
-/*GENERAL*/
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 :root {
     --messageEssentiel-color: #000;
     --label-color: #000;
-    --background-color: #FBFBD0;
-    --green-color: #1D7461;
-    --red-color: #741D34;
+    --background-color: #fbfbd0;
+    --green-color: #1d7461;
+    --red-color: #741d34;
     --thank-you-color: #76e706;
-    --links-color: rgb(20, 90, 203);
-    --editor-color: #741D34;
-    --developer-color: #1D7461;
+    --links-color: #145acb;
+    --editor-color: #741d34;
+    --developer-color: #1d7461;
     --user-color: #06cbf3;
-    --cookies-color: #37699e;
+    --cookies-color: #37699e
 }
 
 @font-face {
     font-family: 'Tangerine';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/tangerine/v17/IurY6Y5j_oScZZow4VOxCZZK.woff) format('woff');
+    src: url(https://fonts.gstatic.com/s/tangerine/v17/IurY6Y5j_oScZZow4VOxCZZK.woff) format('woff')
 }
-
 
 body,
 html {
     font-family: 'Times new roman', sans-serif;
     background-color: var(--background-color);
-    margin: 0px;
+    margin: 0;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
-
+    overflow-y: auto
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none
 }
 
 a:hover {
     text-decoration: none;
-    background: none;
+    background: 0
 }
 
-
 figure {
-    position: relative;
+    position: relative
 }
 
 figcaption {
@@ -59,11 +54,10 @@ figcaption {
     left: 0;
     width: 100%;
     color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    padding: 10px
 }
 
 #cookie-consent-banner {
-
     background-color: #f1f1f1;
     padding: 20px;
     border: 2px solid black;
@@ -77,62 +71,65 @@ figcaption {
     left: 0;
     right: 0;
     z-index: 5;
+    min-height: 200px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: min-height 0.2s */
 }
 
 #cookie-consent-banner p {
     margin-top: 25px;
-    text-align: left;
+    text-align: left
 }
 
 #cookie-consent-banner button {
     margin: 10px;
     padding: 10px 20px;
-    border: none;
+    border: 0;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 #cookie-consent-banner img {
     width: 70px;
-    height: auto;
+    height: 70px;
     padding: 5px;
+    flex-shrink: 0
 }
 
 .cookie-corner-left {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0
 }
 
 .cookie-corner-right {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0
 }
 
 #accept-cookies,
 #decline-cookies {
     background-color: var(--cookies-color);
-    color: white;
+    color: white
 }
 
-
-/***media queries***/
-
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width:480px) {
     label[for=subject] {
-        margin-top: 35px;
+        margin-top: 35px
     }
 
     .corner-top-left-image {
         top: -50px;
-        left: -5px;
+        left: -5px
     }
 
     .corner-bottom-right-image {
         bottom: -50px;
-        right: -5px;
+        right: -5px
     }
 
     #cookie-consent-banner h2 {
@@ -140,67 +137,67 @@ figcaption {
     }
 }
 
-@media (max-width: 667px) and (orientation: landscape) {
+@media(max-width:667px) and (orientation:landscape) {
     #cookie-consent-banner {
         position: absolute !important;
         top: 100px !important;
-        height: fit-content !important;
+        height: fit-content !important
     }
 }
 
-@media (max-width: 768px) and (orientation: portrait),
-(-webkit-max-pixel-ratio: 2) and (max-width: 768px) and (orientation: portrait) {
+@media(max-width:768px) and (orientation:portrait), (-webkit-max-pixel-ratio:2) and (max-width:768px) and (orientation:portrait) {
     #cookie-consent-banner h2 {
-        font-size: 20px !important;
+        font-size: 20px !important
+    }
+
+    #cookie-consent-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: min-height 0.2s
     }
 }
 
-@media (max-width: 768px) {
-
+@media(max-width:768px) {
     #cookie-consent-banner {
         width: 90%;
         padding: 15px;
-        font-size: 16px;
+        font-size: 16px
     }
 
     #cookie-consent-banner h2 {
-        font-size: 25px;
+        font-size: 25px
     }
 
     #cookie-consent-banner img {
         width: 60px;
-        height: 60px;
-
+        height: 60px
     }
 }
 
-
-
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-
+@media only screen and (min-width:769px) and (max-width:991px) {
     #cookie-consent-banner {
         width: 85%;
         padding: 15px;
-        font-size: 16px;
+        font-size: 16px
     }
 
     #cookie-consent-banner h2 {
-        font-size: 30px;
+        font-size: 30px
     }
 
     #accept-cookies {
-        margin-bottom: 2px;
+        margin-bottom: 2px
     }
-
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1190px) {
+@media only screen and (min-width:992px) and (max-width:1190px) {
     #cookie-consent-banner h2 {
-        font-size: 30px;
+        font-size: 30px
     }
 
     #accept-cookies {
-        margin-bottom: 2px;
+        margin-bottom: 2px
     }
-
 }
