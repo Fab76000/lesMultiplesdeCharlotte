@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectacles de Charlotte Goupil | Chanson, Slam et Lecture théâtralisée</title>
     <meta name="description" content="Découvrez les spectacles de Charlotte Goupil : 'Autour des Elles d&#39;Allain', hommage à Leprest, 'VIVENTRE', création slam, et 'L&#39;Argent', lecture théâtralisée. Art pluridisciplinaire en Normandie.">
+    <!-- Chargement de Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");
     $css_files = ['style', 'header', 'arts', 'footer'];
@@ -471,7 +473,7 @@
     </main>
     <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
     <script nonce="{random}" src="https://charlottegoupil.fr/js/script.min.js" defer></script>
     <script nonce="<?php echo $nonce; ?>">
         document.addEventListener('DOMContentLoaded', function() {

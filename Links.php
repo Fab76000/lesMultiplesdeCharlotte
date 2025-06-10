@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liens amis | Charlotte Goupil - Artiste et Médiatrice Culturelle</title>
     <meta name="description" content="Découvrez les partenaires et collaborateurs de Charlotte Goupil : Chants d&#39;Elles, Alexandre Rasse, Correl&#39;Arts. Explorez des liens vers des artistes inspirants et des projets culturels en Normandie.">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");
     $css_files = ['style', 'header', 'links', 'footer'];
@@ -104,7 +105,7 @@
     </main>
     <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
 </body>
 
 </html>

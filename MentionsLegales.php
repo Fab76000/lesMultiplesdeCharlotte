@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions Légales | Charlotte Goupil - Artiste et Médiatrice Culturelle</title>
     <meta name="description" content="Informations légales sur le site de Charlotte Goupil, artiste et médiatrice culturelle. Éditeur, développeur, hébergement, propriété intellectuelle et protection des données personnelles.">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <?php
     $date = date("Y-m-d-h-i-s");
     $css_files = ['style', 'header', 'mentions-legales', 'footer'];
@@ -54,8 +55,8 @@
     </main>
     <?php include_once 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
-    <script src="https://charlottegoupil.fr/js/script.min.jsss" defer></script>
+    <script src="https://charlottegoupil.fr/js/script.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
     <script nonce="<?php echo $nonce; ?>">
         function highlightNames() {
             const colorsOfNames = {

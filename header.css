@@ -79,8 +79,10 @@
     width: 12.4em;
     margin-top: 15px;
     margin-bottom: 5px;
-    margin-left: -1.75rem;
+    margin-left: calc(100% - 115px);
     position: relative;
+    left: auto;
+    right: auto;
     box-shadow: 0px 0px;
 }
 
