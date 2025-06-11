@@ -5,14 +5,16 @@ header(
   "Content-Security-Policy: " .
     "upgrade-insecure-requests; " .
     "default-src 'self'; " .
-    "script-src 'self' 'nonce-{$nonce}' https://ajax.googleapis.com https://stackpath.bootstrapcdn.com; " .
-    "style-src 'self' https://stackpath.bootstrapcdn.com https://fonts.googleapis.com 'unsafe-inline'; " .
-    "font-src https://fonts.gstatic.com; " .
+    "script-src 'self' 'nonce-{$nonce}' https://ajax.googleapis.com https://stackpath.bootstrapcdn.com https://charlottegoupil.fr/js/script.min.js js/script.min.js; " .
+    "style-src 'self' https://stackpath.bootstrapcdn.com https://fonts.googleapis.com https://cdn.jsdelivr.net 'unsafe-inline'; " .
+    "font-src https://fonts.gstatic.com https://cdn.jsdelivr.net; " .
     "img-src 'self' https://i.vimeocdn.com https://i.ytimg.com https:; " .
     "frame-src 'self' https://www.youtube.com https://player.vimeo.com; " .
     "frame-src 'self' https://player.vimeo.com https://*.vimeo.com;" .
     "connect-src 'self' https://*.vimeo.com https://*.vimeocdn.com;" .
     "object-src 'none'; " .
+    "script-src 'self' 'nonce-{$nonce}' https://charlottegoupil.fr/js/script.min.js; " .
+    "script-src 'self' 'nonce-{$nonce}' js/script.min.js;  " .
     "base-uri 'none';"
 );
 ?>

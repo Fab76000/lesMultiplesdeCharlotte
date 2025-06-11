@@ -1,10 +1,10 @@
 /*HEADER*/
-.header {
+/* .header {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .main-title {
     padding: 15px 0px 0px 0px;
@@ -149,6 +149,37 @@
     font-style: normal;
 }
 
+
+/* Style personnalisé pour l'accordéon Bootstrap */
+.accordion-item,
+.accordion-header,
+.accordion-button,
+.accordion-body {
+    background-color: var(--background-color) !important;
+    color: #000 !important;
+
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--background-color) !important;
+}
+
+.accordion-button {
+    font-size: 1.2em;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 2.81em !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Optionnel : pour éviter la double bordure entre header et body */
+.accordion-item {
+    border: none !important;
+}
 
 /***media queries***/
 

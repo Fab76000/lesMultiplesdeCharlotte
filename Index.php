@@ -97,55 +97,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<div class="row">
 				<div class="form-9 col-xl-8 col-lg-8 col-md-12 col-sm-12 offset-xl-2">
 					<h2 class="form-h2">Formulaire de contact</h2>
-					<form id="contact-form" method="post" action="php/contact.php" role="form" aria-label="Formulaire de contact">
-						<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+					<form id="contact-form" method="post" action="php/contact.php" role="form">
+						<input type="hidden" name="csrf_token" value="e10b05cf776731f6e94a7261925338dbf4d1e2e12b3cb2b453cb53964cb6ed16">
 						<div class="controls">
 							<p class="MessageEssentiel">Laissez-moi un message <span class="essentiel">"essentiel et sans nuages"</span></p>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="firstname"><span class="red" aria-hidden="true">*</span>Prénom</label>
-									<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Prénom" autocomplete="on" maxlength="20" required aria-required="true" aria-label="Prénom (requis)">
-									<p class="comments" aria-live="polite"></p>
+									<label for="firstname"><span class="red">*</span>Prénom</label>
+									<input id="firstname" type="text" name="firstname" class="form-control" placeholder="Prénom" autocomplete="on" maxlength="20">
+									<p class="comments"></p>
 								</div>
 								<div class="col-md-6">
-									<label for="name"><span class="red" aria-hidden="true">*</span>Nom</label>
-									<input id="name" type="text" name="name" class="form-control" placeholder="Nom" autocomplete="on" maxlength="20" required aria-required="true" aria-label="Nom (requis)">
-									<p class="comments" aria-live="polite"></p>
+									<label for="name"><span class="red">*</span>Nom</label>
+									<input id="name" type="text" name="name" class="form-control" placeholder="Nom" autocomplete="on" maxlength="20">
+									<p class="comments"></p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="email"><span class="red" aria-hidden="true">*</span>Email</label>
-									<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="50" required aria-required="true" aria-label="Email (requis)">
-									<p class="comments" aria-live="polite"></p>
+									<label for="email"><span class="red">*</span>Email</label>
+									<input id="email" type="email" name="email" class="form-control" placeholder="E-mail" autocomplete="on" maxlength="50">
+									<p class="comments"></p>
 								</div>
 								<div class="col-md-6">
-									<label for="phone"><span class="red" aria-hidden="true">*</span>Tél</label>
-									<input id="phone" type="tel" name="phone" class="form-control" placeholder="Numéro de téléphone" autocomplete="on" maxlength="10" required aria-required="true" aria-label="Téléphone (requis)">
-									<p class="comments" aria-live="polite"></p>
+									<label for="phone"><span class="red">*</span>Tél</label>
+									<input id="phone" type="phone" name="phone" class="form-control" placeholder="Numéro de téléphone" autocomplete="on" maxlength="10">
+									<p class="comments"></p>
 								</div>
 								<div class="col-md-12 col-sm-12">
-									<label for="subject"><span class="red" aria-hidden="true">*</span>Sujet</label>
-									<select id="subject" name="subject" class="form-control" required aria-required="true" aria-label="Sujet (requis)">
+									<label for="subject"><span class="red">*</span>Sujet</label>
+									<select id="subject" name="subject" class="form-control">
 										<option value="">Choisir une option</option>
 										<option value="Demande d'infos">Demande d'infos</option>
 										<option value="Demande de devis">Demande de devis</option>
 										<option value="Autre">Autre</option>
 									</select>
-									<p class="comments" aria-live="polite"></p>
+									<p class="comments"></p>
 								</div>
 							</div>
 							<div class="row mt-4">
 								<div class="col-md-12">
-									<label for="message"><span class="red" aria-hidden="true">*</span>Message</label>
-									<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000" required aria-required="true" aria-label="Message (requis)"></textarea>
-									<p class="comments mb-4" aria-live="polite"></p>
+									<label for="message"><span class="red">*</span>Message</label>
+									<textarea id="message" name="message" class="form-control" placeholder="Votre Message" rows="8" maxlength="1000"></textarea>
+									<p class="comments mb-4"></p>
 								</div>
 							</div>
-							<label for="data-consent" id="data-consent-label" style="font-weight:bold;">Consentement sur l'utilisation des données <span class="red" aria-hidden="true">*</span></label><br>
-							<input type="checkbox" id="data-consent" name="data-consent" required aria-required="true" aria-describedby="data-consent-desc" aria-label="Consentement sur l'utilisation des données (requis)">
-							<span id="data-consent-desc">En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.</span>
-							<p class="comments mb-4" aria-live="polite"></p>
+							<label for="data-consent"></label>
+							<input type="checkbox" id="data-consent" name="data-consent">
+							En cochant cette case et en soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter dans le cadre de votre demande indiquée. Aucun autre traitement ne sera effectué avec vos informations.
+							<p class="comments mb-4"></p>
 							<div class="row">
 								<div class="col-md-12 text-center">
 									<button type="submit" class="button-form" aria-label="Soumettre le formulaire" value="Envoyer un message">Envoyer</button>
@@ -158,6 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							</div>
 						</div>
 					</form>
+
 					<div class="Logo col-auto">
 						<a href="https://piaille.fr/@LesMultiples2Charlotte" aria-label="Lien vers ma page Mastodon" title="Lien vers ma page Mastodon">
 							<picture>

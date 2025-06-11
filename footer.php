@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer container-fluid">
     <div class="footer-content">
         <p>Copyright © <?php echo date('Y'); ?> - Tous droits réservés&nbsp;&nbsp;|</p>
         <p><a href="politiqueConfidentialite.php">Politique de confidentialité&nbsp;&nbsp;|</a></p>
