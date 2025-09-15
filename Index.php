@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<!-- Chargement de Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 	<?php
-	$date = date("Y-m-d-h-i-s");
+	$timestamp = time(); // Plus fiable que date pour éviter le cache
 	$css_files = ['style', 'header', 'bio', 'footer'];
 	foreach ($css_files as $file) {
-		echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+		echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?v=' . $timestamp . '">';
 	}
 	?>
 	<!-- Chargement de Bootstrap Icons -->
