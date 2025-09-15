@@ -78,7 +78,7 @@ img[alt] {
 }
 
 #contact-form {
-    background-color: #06CC81;
+    background-color: var(--background-color);
     padding: 50px;
     width: auto;
 }
