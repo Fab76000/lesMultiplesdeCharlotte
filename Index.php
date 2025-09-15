@@ -39,21 +39,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<title>Charlotte Goupil | Artiste multidisciplinaire - Spectacles et Ateliers</title>
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<meta name="description" content="Découvrez Charlotte Goupil, artiste aux multiples facettes : comédienne, chanteuse, slameuse. Spectacles vivants, lectures, contes et ateliers de médiation artistique en Normandie.">
-	<!-- Chargement de Bootstrap -->
-	<link rel="stylesheet" href="bootstrap.min.css">
 	<!-- Chargement de Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+	<!-- Chargement de Bootstrap depuis CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<?php
 	$timestamp = time(); // Plus fiable que date pour éviter le cache
 	$css_files = ['style', 'header', 'bio', 'footer'];
 	foreach ($css_files as $file) {
-		echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?v=' . $timestamp . '">';
+		echo '<link rel="stylesheet" type="text/css" href="/' . $file . '.min.css?v=' . $timestamp . '">';
 	}
 	?>
 	<!-- Chargement de Bootstrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-	<!-- Chargement de Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -222,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" rel="preload" as="script" defer></script>
-	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 	<script src="js/script.min.js" defer></script>
 
 	<script nonce="<?php echo $nonce; ?>">
