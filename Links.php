@@ -8,12 +8,15 @@
     <meta name="description" content="Découvrez les partenaires et collaborateurs de Charlotte Goupil : Chants d&#39;Elles, Alexandre Rasse, Correl&#39;Arts. Explorez des liens vers des artistes inspirants et des projets culturels en Normandie.">
     <link rel="stylesheet" href="bootstrap.min.css">
     <?php
-    $date = date("Y-m-d-h-i-s");
+    $timestamp = time(); // Plus fiable que date pour éviter le cache
     $css_files = ['style', 'header', 'links', 'footer'];
+    // Détection automatique de l'environnement
+    $isLocal = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false);
+    $basePath = $isLocal ? '' : '/';
 
     // Chargement direct des feuilles de style
     foreach ($css_files as $file) {
-        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+        echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
     }
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' preload>

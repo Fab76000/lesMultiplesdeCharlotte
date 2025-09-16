@@ -8,15 +8,14 @@
     <meta name="description" content="Découvrez notre politique de confidentialité.">
     <link rel="stylesheet" href="bootstrap.min.css">
     <?php
-    $date = date("Y-m-d-h-i-s");
-    $cssFiles = [
-        'style',
-        'header',
-        'politique-confidentialite',
-        'footer'
-    ];
-    foreach ($cssFiles as $file) {
-        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+    $timestamp = time(); // Plus fiable que date pour éviter le cache
+    $css_files = ['style', 'header', 'politique-confidentialite', 'footer'];
+    // Détection automatique de l'environnement
+    $isLocal = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false);
+    $basePath = $isLocal ? '' : '/';
+
+    foreach ($css_files as $file) {
+        echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
     }
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>

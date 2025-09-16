@@ -8,12 +8,15 @@
     <meta name="description" content="Informations légales sur le site de Charlotte Goupil, artiste et médiatrice culturelle. Éditeur, développeur, hébergement, propriété intellectuelle et protection des données personnelles.">
     <link rel="stylesheet" href="bootstrap.min.css">
     <?php
-    $date = date("Y-m-d-h-i-s");
+    $timestamp = time(); // Plus fiable que date pour éviter le cache
     $css_files = ['style', 'header', 'mentions-legales', 'footer'];
+    // Détection automatique de l'environnement
+    $isLocal = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false);
+    $basePath = $isLocal ? '' : '/';
 
     // Chargement direct des feuilles de style
     foreach ($css_files as $file) {
-        echo '<link rel="stylesheet" type="text/css" href="' . $file . '.min.css?uid=' . $date . '">';
+        echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
     }
     ?>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' preload>
