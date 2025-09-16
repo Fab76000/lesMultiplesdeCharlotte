@@ -46,8 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<?php
 	$timestamp = time(); // Plus fiable que date pour éviter le cache
 	$css_files = ['style', 'header', 'bio', 'footer'];
+	// Détection automatique de l'environnement
+	$isLocal = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false);
+	$basePath = $isLocal ? '' : '/';
+
 	foreach ($css_files as $file) {
-		echo '<link rel="stylesheet" type="text/css" href="/' . $file . '.min.css?v=' . $timestamp . '">';
+		echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
 	}
 	?>
 	<!-- Chargement de Bootstrap Icons -->

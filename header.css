@@ -63,11 +63,17 @@
 #menuderoulant .sousmenu {
     display: none;
     list-style: none;
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     float: none;
     position: absolute;
     text-transform: none;
+    top: 100%;
+    /* Position sous le menu parent */
+    left: 0;
+    /* Aligné à gauche du menu parent */
+    z-index: 1000;
+    /* Au-dessus des autres éléments */
 }
 
 #menuderoulant li:hover>.sousmenu {
@@ -82,9 +88,11 @@
     width: 12.4em;
     margin-top: 15px;
     margin-bottom: 5px;
-    margin-left: calc(100% - 115px);
+    margin-left: 0;
+    /* Pas de décalage */
     position: relative;
-    left: auto;
+    left: 0;
+    /* Aligné à gauche */
     right: auto;
     box-shadow: 0px 0px;
 }
