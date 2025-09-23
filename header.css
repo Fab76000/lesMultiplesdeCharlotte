@@ -189,9 +189,24 @@
     border: none !important;
 }
 
+/* STYLES PAR DÉFAUT BURGER MENU - MASQUÉ PAR DÉFAUT */
+.parent-container {
+    display: none !important;
+}
+
+.burger {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.burger-line {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 /***media queries***/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
 
     #menuderoulant,
     #menuderoulant li,
@@ -226,27 +241,94 @@
         font-size: 4rem;
     }
 
-    #burger {
-        margin-left: calc(50% - 15px);
-    }
-
-    #burger {
-        margin-left: auto 0;
+    /* Afficher le burger menu sur les petits écrans */
+    .parent-container {
+        display: block !important;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .burger {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         align-items: center;
-        width: 50px;
-        height: 30px;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        margin: 15px auto 0 auto;
         cursor: pointer;
+        visibility: visible !important;
     }
 
     .burger-line {
+        display: block !important;
+        visibility: visible !important;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background-color: #000;
+        margin-bottom: 3px;
+    }
+
+    /* Masquer le menu normal sur petits écrans */
+    #menuderoulant {
+        display: none;
+    }
+
+    /* Afficher le menu quand burger activé */
+    #menuderoulant.collapsed {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #menuderoulant.collapsed li {
+        display: block;
+        margin-right: 10px;
+    }
+
+    /* Sous-menus restent fonctionnels */
+    #menuderoulant.collapsed .sousmenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #menuderoulant.collapsed li:hover>.sousmenu {
+        display: block;
+    }
+
+    /* Animation du burger en croix quand menu ouvert */
+    .burger.cross .burger-line:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+    }
+
+    .burger.cross .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.cross .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-12px) translateX(7px);
+    }
+}
+
+@media only screen and (min-width: 480px) {
+
+    /* Masquer explicitement le burger menu sur les écrans plus larges */
+    .burger {
+        display: none !important;
+    }
+
+    .burger-line {
+        display: none !important;
+    }
+
+    /* S'assurer que le menu normal est affiché */
+    #menuderoulant {
+        display: flex !important;
     }
 }
 
@@ -272,14 +354,14 @@
     }
 }
 
-@media only screen and (max-width: 600px) and (orientation: portrait) {
+@media only screen and (max-width: 479px) and (orientation: portrait) {
 
     .menu {
-        display: none;
+        display: block;
     }
 
     .menu li {
-        display: none;
+        display: block;
     }
 
     .menu li a {
@@ -287,43 +369,64 @@
     }
 
     .burger {
-        display: none;
+        display: block !important;
         width: 30px;
         height: 20px;
         margin-top: 15px;
-        margin-left: 70px;
+        margin-left: 50%;
+        transform: translateX(-50%);
         cursor: pointer;
     }
 
     .burger-line {
+        display: block !important;
         width: 100%;
         height: 4px;
         background-color: #000;
         margin-bottom: 5px;
     }
 
-    .menu {
-        display: block;
+    #menuderoulant {
+        display: none;
+    }
+
+    #menuderoulant.collapsed {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 15px auto;
     }
 
     #menuderoulant.collapsed li {
         display: block;
+        margin-right: 8px;
     }
 
-    .burger {
+    /* Sous-menus restent fonctionnels en portrait */
+    #menuderoulant.collapsed .sousmenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #menuderoulant.collapsed li:hover>.sousmenu {
         display: block;
     }
 
+    /* Animation du burger en croix */
     .burger.cross .burger-line:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 0px);
+        transform: rotate(45deg) translateY(6px);
     }
 
     .burger.cross .burger-line:nth-child(2) {
-        transform: rotate(-45deg) translate(7px, 0px);
+        opacity: 0;
     }
 
     .burger.cross .burger-line:nth-child(3) {
-        display: none;
+        transform: rotate(-45deg) translateY(-12px) translateX(7px);
     }
 
 }
