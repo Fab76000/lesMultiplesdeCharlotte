@@ -286,6 +286,20 @@
                 <div class="container-iframes">
                     <div class="grid-container">
                         <div class="grid-item">
+                            <div class="grid-item">
+                                <div class="video-wrapper" data-video-id="753899801" data-provider="vimeo">
+                                    <img src="https://vumbnail.com/753899801.jpg" width="560" height="315" alt="Sur la moustache de Georges" class="thumbnail" loading="lazy" onclick="this.outerHTML='<iframe src=&quot;https://player.vimeo.com/video/753899801?autoplay=1&byline=0&title=0&portrait=0&quot; width=&quot;560&quot; height=&quot;315&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen style=&quot;width: 100%; height: 100%;&quot;></iframe>'">
+                                    <button aria-label="Lancer la vidéo Sur la moustache de Georges" title="Lancer la vidéo Sur la moustache de Georges" class="play-button" onclick="this.previousElementSibling.click(); event.stopPropagation();">
+                                        <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+                                            <path class="st0" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                                fill="#f00"></path>
+                                            <path d="M 45,24 27,14 27,34 Z" fill="#fff"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
                             <div class="video-wrapper" data-video-id="293555303" data-provider="vimeo">
                                 <picture>
                                     <source srcset="https://i.vimeocdn.com/video/730231567-52dac924fec8210c3f2813075b619487eef954615ed505460005fe4dc2608ac4-d_640.webp" type="image/webp">
@@ -399,7 +413,6 @@
                     </div>
                     <div class="container-links-ul">
                         <ul class="music-links">
-                            <li><a href="https://vimeo.com/753899801" aria-label="Video Sur La Moustache de Georges">"Sur La Moustache de Georges"</a></li>
                             <li><a href="https://www.flickr.com/photos/festivalchantsdelles/albums/72157720181824030/" aria-label=" Video Festival chants d'Elles">Festival chants d'Elles</a></li>
                             <li><a href="https://www.youtube.com/watch?v=ctshwwMDoiA" aria-label="Video Il neige">Il neige</a></li>
                             <li><a href="https://www.youtube.com/watch?v=al5KVGetoXg" aria-label="Video Concert hommage à Allain Leprest - Bruxelles">Concert hommage à Allain Leprest - Bruxelles</a></li>
