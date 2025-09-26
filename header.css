@@ -334,19 +334,50 @@
 
 @media only screen and (min-width: 481px) and (max-width: 674px) {
     #menuderoulant {
-        width: 550px;
-        /* Largeur fixe pour le menu sur petits écrans larges */
+        width: 100%;
+        max-width: 600px;
+        /* Largeur adaptative avec maximum */
+        margin: 0 auto;
+        /* Centrer le menu */
+        padding: 0 10px;
+        /* Petit padding sur les côtés */
     }
 
     #menuderoulant li,
     #menuderoulant li .ColoRed {
-        width: 9.375em;
-        /* Largeur uniforme pour les éléments du menu */
+        width: auto;
+        min-width: 8em;
+        max-width: 11em;
+        /* Largeur flexible pour les éléments du menu */
+        flex: 1;
+        /* Les éléments se partagent l'espace équitablement */
+    }
+
+    /* S'assurer que l'élément a.ColoRed prend toute la largeur */
+    #menuderoulant li a.ColoRed {
+        width: 100%;
+        max-width: 11em;
+        box-sizing: border-box;
+        display: block;
+        /* Pour qu'il prenne toute la largeur du conteneur */
     }
 
     #menuderoulant li a:hover {
-        width: 9.375em;
-        /* Largeur uniforme au survol */
+        width: 100%;
+        /* Prend toute la largeur de l'élément parent */
+        max-width: 11em;
+        /* Même taille maximum que les éléments normaux */
+        box-sizing: border-box;
+        /* Include padding et border dans la largeur */
+    }
+
+    /* Style spécifique pour l'élément Médiation (.ColoRed) au hover */
+    #menuderoulant li a.ColoRed:hover {
+        width: 100%;
+        max-width: 11em;
+        box-sizing: border-box;
+        background-color: var(--green-color);
+        /* Fond vert au hover */
     }
 
     #burger {
