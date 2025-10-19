@@ -3,6 +3,48 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# En-têtes de sécurité
+<IfModule mod_headers.c>
+    # Protection XSS
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Empêcher le MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Protection contre le clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Politique de référent
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # HSTS - Force HTTPS pendant 1 an
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'nonce-A/jWM1u1Mx2+ehdyy+rFgA==' https://cdn.jsdelivr.net https://ajax.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    
+    # Contrôle du cache pour les fichiers statiques
+    <FilesMatch "\.(jpg|jpeg|gif|png|webp|css|js)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+# Bloquer l'accès aux fichiers sensibles
+<FilesMatch "\.(ps1|sh|bat|cmd|sql|log|bak|env|config)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers de documentation technique
+<FilesMatch "^(SECURITY|README|CHANGELOG|LICENSE)\.md$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers de test
+<FilesMatch "^(security-|test-|debug-)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
@@ -13,10 +55,4 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-
-<IfModule mod_headers.c>
-    <FilesMatch "\.(jpg|jpeg|gif|png|webp|css|js)$">
-        Header set Cache-Control "public, max-age=31536000"
-    </FilesMatch>
 </IfModule>

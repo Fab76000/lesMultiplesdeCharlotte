@@ -7,6 +7,12 @@ composer.lock
 # Ignorer les fichiers de log
 *.log
 
+# Ignorer les fichiers de sécurité et tests
+security-test.html
+security-check.ps1
+deploy-secure.ps1
+*.ps1
+
 # Ignorer les fichiers temporaires
 *.tmp
 *.swp
