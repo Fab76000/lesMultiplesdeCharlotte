@@ -9,16 +9,20 @@
             <picture>
                 <source srcset="images/Mastodon-logo.webp" type="image/webp" media="(max-width: 674px)">
                 <source srcset="images/Mastodon-logo.png" type="image/png">
-                <img class="lazy-image logo" src="images/Mastodon-logo.png" alt="Logo Mastodon" width="162" height="174" loading="lazy">
+                <img class="lazy-image logo" src="images/Mastodon-logo.png" alt="Logo Mastodon" loading="lazy">
             </picture>
         </a>
         <a href="https://www.instagram.com/chafoxil/" aria-label="Lien vers ma page Instagram" title="Lien vers ma page Instagram">
             <picture>
                 <source srcset="images/instagram-Logo-PNG-Transparent-Background-download_500.webp" type="image/webp" media="(max-width: 674px)">
                 <source srcset="images/instagram-Logo-PNG-Transparent-Background-download.png" type="image/png">
-                <img class="lazy-image logo" data-src="images/instagram-Logo-PNG-Transparent-Background-download_500.png" alt="Logo Instagram" width="162" height="174" loading="lazy">
+                <img class="lazy-image logo" data-src="images/instagram-Logo-PNG-Transparent-Background-download_500.png" alt="Logo Instagram" loading="lazy">
             </picture>
         </a>
     </div>
-    <p style="margin-bottom:-10px">Site web développé par Fabienne Bergès</p>
+    <p style="margin-bottom:-10px">Site web développé par Fabienne Bergès
+        <span style="margin-left: 10px; font-size: 0.8em;">
+            <a href="admin/login.php" style="color: #666; text-decoration: none; opacity: 0.7;">⚙</a>
+        </span>
+    </p>
 </footer>

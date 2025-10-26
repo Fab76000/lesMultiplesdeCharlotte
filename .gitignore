@@ -13,6 +13,9 @@ security-check.ps1
 deploy-secure.ps1
 *.ps1
 
+# CRITIQUE : Ignorer les fichiers de configuration avec identifiants
+php/db-config.php
+
 # Ignorer les fichiers temporaires
 *.tmp
 *.swp
@@ -23,6 +26,11 @@ deploy-secure.ps1
 
 # Ignorer les fichiers de configuration locaux
 .env
+config-local.php
+*-config-local.php
+
+# Ignorer les fichiers de base de données (mots de passe)
+db-config-prod.php
 
 # Ignorer les fichiers générés
 /build/

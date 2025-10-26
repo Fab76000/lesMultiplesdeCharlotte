@@ -1,7 +1,7 @@
 # Configuration pour la production
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#ewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # En-têtes de sécurité
 <IfModule mod_headers.c>
@@ -19,11 +19,18 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # HSTS - Force HTTPS pendant 1 an
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'nonce-A/jWM1u1Mx2+ehdyy+rFgA==' https://cdn.jsdelivr.net https://ajax.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    
+    # Content Security Policy - Protection serveur (défense en profondeur)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://ajax.googleapis.com https://code.jquery.com https://stackpath.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https: http:; media-src 'self' data: https: http:; frame-src 'self' https://www.youtube.com https://player.vimeo.com https://*.vimeo.com; connect-src 'self' https://*.vimeo.com https://*.vimeocdn.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
     
     # Contrôle du cache pour les fichiers statiques
-    <FilesMatch "\.(jpg|jpeg|gif|png|webp|css|js)$">
+    <FilesMatch "\.(jpg|jpeg|gif|png|webp|svg|css|js)$">
         Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    
+    # Cache pour les médias (vidéos, audio)
+    <FilesMatch "\.(mp4|webm|ogg|mp3|wav|avi|mov)$">
+        Header set Cache-Control "public, max-age=2592000"
     </FilesMatch>
 </IfModule>
 
@@ -39,8 +46,8 @@ Header always set Content-Security-Policy "default-src 'self'; script-src 'self'
     Deny from all
 </FilesMatch>
 
-# Bloquer l'accès aux fichiers de test
-<FilesMatch "^(security-|test-|debug-)">
+# Bloquer l'accès aux fichiers de test (sauf test-database.php temporairement)
+<FilesMatch "^(security-|test-blog|debug-)">
     Order Allow,Deny
     Deny from all
 </FilesMatch>
@@ -53,6 +60,11 @@ Header always set Content-Security-Policy "default-src 'self'; script-src 'self'
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
+    ExpiresByType audio/mp3 "access plus 1 month"
+    ExpiresByType audio/wav "access plus 1 month"
 </IfModule>

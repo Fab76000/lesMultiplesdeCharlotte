@@ -137,13 +137,6 @@ label {
     display: inline-flex;
 }
 
-.Logo img {
-    width: 35px;
-    height: 35px;
-    margin-top: -5px;
-    margin-right: 10px;
-}
-
 .form-h2 {
     text-align: center;
     font-size: 2rem;
