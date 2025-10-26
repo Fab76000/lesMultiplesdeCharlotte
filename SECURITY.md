@@ -48,7 +48,7 @@ function validatePassword($password) {
 
 **Fichiers utilisant cette validation :**
 - `admin/create-admin.php` - création d'administrateurs
-- `admin/reset-password.php` - réinitialisation de mot de passe
+- `admin/reset-user-password.php` - réinitialisation de mot de passe (nouveau système)
 - Placeholders informatifs dans `admin/login.php`
 
 ---

@@ -66,13 +66,18 @@ if ($_POST) {
     }
 }
 
-// Vérifier combien d'admin existent déjà
+// Vérifier combien d'admin existent déjà et récupérer la liste
 try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
     $stmt = $pdo->query("SELECT COUNT(*) FROM admin_users");
     $admin_count = $stmt->fetchColumn();
+
+    // Récupérer tous les utilisateurs pour affichage
+    $stmt = $pdo->query("SELECT id, username, email, role, created_at FROM admin_users ORDER BY created_at DESC");
+    $existing_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     $admin_count = 0;
+    $existing_users = [];
 }
 ?>
 <!DOCTYPE html>
@@ -206,6 +211,144 @@ try {
         .links a:hover {
             text-decoration: underline;
         }
+
+        /* Styles responsive pour la gestion des utilisateurs */
+        .existing-users {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+
+        .existing-users h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .user-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            transition: box-shadow 0.2s;
+        }
+
+        .user-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info {
+            margin-bottom: 0.8rem;
+        }
+
+        .user-info strong {
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .user-email {
+            color: #666;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .role-badge {
+            background: #007bff;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 0.4rem;
+        }
+
+        .user-actions {
+            text-align: center;
+        }
+
+        .btn-reset-password {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .btn-reset-password:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Media queries pour le responsive */
+        @media (max-width: 768px) {
+            .create-container {
+                max-width: 95%;
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .user-card {
+                padding: 0.8rem;
+            }
+
+            .user-info strong {
+                font-size: 1rem;
+            }
+
+            .user-email {
+                font-size: 0.85rem;
+            }
+
+            .btn-reset-password {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .create-container {
+                padding: 1rem;
+            }
+
+            .existing-users h2 {
+                font-size: 1.2rem;
+            }
+
+            .user-card {
+                padding: 0.7rem;
+            }
+
+            .btn-reset-password {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.8rem;
+                min-width: 160px;
+                word-wrap: break-word;
+            }
+
+            .user-info strong {
+                font-size: 0.95rem;
+            }
+
+            .user-email {
+                font-size: 0.8rem;
+            }
+
+            .role-badge {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
     </style>
 </head>
 
@@ -272,6 +415,33 @@ try {
                 <a href="../index.php">← Retour au site</a>
             <?php endif; ?>
         </div>
+
+        <!-- Section : Utilisateurs existants -->
+        <?php if (count($existing_users) > 0): ?>
+            <div class="existing-users">
+                <h2>👥 Utilisateurs existants</h2>
+
+                <div class="users-list">
+                    <?php foreach ($existing_users as $user): ?>
+                        <div class="user-card">
+                            <div class="user-info">
+                                <strong><?= htmlspecialchars($user['username']) ?></strong>
+                                <span class="user-email"><?= htmlspecialchars($user['email']) ?></span>
+                                <span class="role-badge">
+                                    <?= htmlspecialchars($user['role']) ?>
+                                </span>
+                            </div>
+                            <div class="user-actions">
+                                <a href="reset-user-password.php?user_id=<?= $user['id'] ?>"
+                                    class="btn-reset-password">
+                                    🔐 Réinitialiser mot de passe
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 
 
