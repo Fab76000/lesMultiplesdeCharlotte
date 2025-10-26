@@ -21,8 +21,12 @@
         </a>
     </div>
     <p style="margin-bottom:-10px">Site web développé par Fabienne Bergès
-        <span style="margin-left: 10px; font-size: 0.8em;">
-            <a href="admin/login.php" style="color: #666; text-decoration: none; opacity: 0.7;">⚙</a>
-        </span>
+        <?php
+        // Lien administration visible SEULEMENT aux administrateurs connectés
+        if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']): ?>
+            <span style="margin-left: 10px; font-size: 0.8em;">
+                <a href="admin/dashboard.php" style="color: #666; text-decoration: none; opacity: 0.7;" title="Administration">⚙</a>
+            </span>
+        <?php endif; ?>
     </p>
 </footer>

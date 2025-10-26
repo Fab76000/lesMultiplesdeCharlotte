@@ -217,6 +217,7 @@ try {
             <a href="dashboard.php">Dashboard</a>
             <a href="manage-articles.php">Articles</a>
             <a href="categories.php">Catégories</a>
+            <a href="create-admin.php">👥 Utilisateurs</a>
             <a href="../index.php" target="_blank">🏠 Site principal</a>
             <a href="../blog.php" target="_blank">📖 Voir le blog</a>
             <a href="logout.php">Déconnexion</a>

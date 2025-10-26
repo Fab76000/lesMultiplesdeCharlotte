@@ -1,4 +1,9 @@
 <?php
+// Démarrer la session pour vérifier les droits admin
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
 $nonce = base64_encode(random_bytes(16));
 
 // Détecter si on est en localhost pour adapter les headers de sécurité

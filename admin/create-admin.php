@@ -1,8 +1,16 @@
 <?php
+session_start();
 
 /**
  * Script pour créer un utilisateur admin
+ * SÉCURISÉ : accessible uniquement aux administrateurs connectés
  */
+
+// Vérification sécurité : seuls les admins connectés peuvent accéder
+if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
+    header('Location: login.php?error=access_denied');
+    exit;
+}
 
 require_once '../php/db-config.php';
 
@@ -70,7 +78,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer Admin - Charlotte Goupil</title>
+    <title>Gestion Utilisateurs - Administration</title>
     <style>
         * {
             margin: 0;
@@ -201,13 +209,18 @@ try {
 <body>
     <div class="create-container">
         <div class="create-header">
-            <h1>👤 Créer Administrateur</h1>
-            <p>Première configuration du système d'administration</p>
+            <h1>� Gestion des Utilisateurs</h1>
+            <p style="color: #666; margin-bottom: 2rem;">
+                <strong>Connecté en tant que :</strong> <?= htmlspecialchars($_SESSION['admin_username']) ?>
+                | <a href="dashboard.php" style="color: #007bff;">← Retour au Dashboard</a>
+            </p>
+            <p>Ajouter un nouvel administrateur au système</p>
         </div>
 
         <?php if ($admin_count > 0): ?>
             <div class="info">
-                Il y a déjà <?= $admin_count ?> administrateur(s) dans le système.
+                📊 <strong>Statistiques :</strong> <?= $admin_count ?> administrateur(s) dans le système.
+                <br>💡 <strong>Conseil :</strong> Limitez le nombre d'administrateurs pour la sécurité.
             </div>
         <?php endif; ?>
 
