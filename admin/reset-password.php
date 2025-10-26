@@ -7,7 +7,13 @@ $error = '';
 if ($_POST && isset($_POST['reset_password'])) {
     $new_password = $_POST['new_password'] ?? '';
 
-    if (strlen($new_password) >= 12) {
+    // Validation mot de passe (CNIL : 12 caractères, 1 majuscule, 1 caractère spécial)
+    require_once '../php/admin-functions.php';
+    $passwordValidation = validatePassword($new_password);
+
+    if (!$passwordValidation['valid']) {
+        $error = $passwordValidation['error'];
+    } else {
         try {
             $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -25,8 +31,6 @@ if ($_POST && isset($_POST['reset_password'])) {
         } catch (PDOException $e) {
             $error = 'Erreur : ' . $e->getMessage();
         }
-    } else {
-        $error = 'Le mot de passe doit faire au moins 12 caractères (recommandation CNIL).';
     }
 }
 ?>
@@ -138,11 +142,11 @@ if ($_POST && isset($_POST['reset_password'])) {
                 <div class="form-group">
                     <label for="new_password">Nouveau mot de passe :</label>
                     <input type="password" id="new_password" name="new_password"
-                        placeholder="Minimum 12 caractères (CNIL)"
+                        placeholder="12 caractères min., 1 maj,1 spécial"
                         required minlength="12"
                         style="font-family: monospace; background: #f8f9fa;">
                     <small style="color: #666; font-size: 0.8em;">
-                        � Mot de passe masqué pour la sécurité
+                        🔐 Mot de passe masqué pour la sécurité
                     </small>
                 </div>
 

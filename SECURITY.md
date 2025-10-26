@@ -9,16 +9,47 @@ Validation par : Trivy Security Scanner + Tests manuels + Audit complet mots de 
 
 ### ✅ **Conformité CNIL - Mots de passe renforcés**
 - **12 caractères minimum** (recommandation CNIL 2025)
+- **Au moins 1 majuscule** (A-Z) - validation regex
+- **Au moins 1 caractère spécial** (!@#$%^&*()_+-=[]{}|;:,.<>?) - validation regex
 - **Hachage sécurisé** : `password_hash()` + `password_verify()`  
-- **Validation double** : côté client (HTML5) + côté serveur (PHP)
+- **Validation triple** : côté client (HTML5) + côté serveur (PHP) + fonction centralisée
 - **Champs masqués** : `type="password"` sur tous les formulaires
-- **Messages explicites** : références CNIL dans l'interface
+- **Messages explicites** : références CNIL et critères détaillés dans l'interface
+- **Fonction centralisée** : `validatePassword()` dans `admin-functions.php`
 
 ### ✅ **Protection des données sensibles**
 - **db-config.php** ajouté au `.gitignore` 
 - **Identifiants base de données** jamais exposés sur GitHub
 - **Détection automatique environnement** : localhost vs production
 - **Headers CSP adaptés** selon l'environnement
+
+### ✅ **Implémentation technique des mots de passe sécurisés**
+```php
+// Fonction centralisée dans admin-functions.php
+function validatePassword($password) {
+    // 12 caractères minimum
+    if (strlen($password) < 12) {
+        return ['valid' => false, 'error' => 'Le mot de passe doit faire au moins 12 caractères (exigence CNIL).'];
+    }
+    
+    // Au moins 1 majuscule
+    if (!preg_match('/[A-Z]/', $password)) {
+        return ['valid' => false, 'error' => 'Le mot de passe doit contenir au moins 1 majuscule.'];
+    }
+    
+    // Au moins 1 caractère spécial
+    if (!preg_match('/[!@#$%^&*()_+\-=\[\]{};\':"\\|,.<>\/?]/', $password)) {
+        return ['valid' => false, 'error' => 'Le mot de passe doit contenir au moins 1 caractère spécial (!@#$%^&*()_+-=[]{}|;:,.<>?).'];
+    }
+    
+    return ['valid' => true, 'error' => null];
+}
+```
+
+**Fichiers utilisant cette validation :**
+- `admin/create-admin.php` - création d'administrateurs
+- `admin/reset-password.php` - réinitialisation de mot de passe
+- Placeholders informatifs dans `admin/login.php`
 
 ---
 
@@ -95,20 +126,27 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 ## 🛡️ **Checklist Sécurité Mots de Passe**
 
-### ✅ **Implémenté**
-- [x] 12 caractères minimum (CNIL)
-- [x] Hachage PHP sécurisé (`PASSWORD_DEFAULT`)
-- [x] Validation côté client (`minlength="12"`)  
-- [x] Validation côté serveur (`strlen >= 12`)
-- [x] Champs masqués (`type="password"`)
-- [x] Messages d'erreur explicites avec référence CNIL
-- [x] Pas de mots de passe en clair dans le code
-- [x] Stockage sécurisé en base (hachés uniquement)
+### ✅ **Implémenté - Critères CNIL complets**
+- [x] **12 caractères minimum** (CNIL) - validation `strlen >= 12`
+- [x] **Au moins 1 majuscule** - validation regex `/[A-Z]/`
+- [x] **Au moins 1 caractère spécial** - validation regex `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/`
+- [x] **Hachage PHP sécurisé** (`PASSWORD_DEFAULT`)
+- [x] **Validation côté client** (`minlength="12"`)  
+- [x] **Validation côté serveur** (fonction `validatePassword()`)
+- [x] **Champs masqués** (`type="password"`)
+- [x] **Messages d'erreur spécifiques** selon le critère manquant
+- [x] **Placeholders informatifs** avec exemples de caractères spéciaux
+- [x] **Fonction centralisée** dans `admin-functions.php` pour éviter la duplication
+- [x] **Pas de mots de passe en clair** dans le code
+- [x] **Stockage sécurisé** en base (hachés uniquement)
 
 ### 🔄 **À vérifier en production**
-- [ ] Test création compte avec mot de passe < 12 caractères
-- [ ] Test connexion avec mots de passe existants  
-- [ ] Vérification fonctionnement reset password
+- [ ] Test création compte avec mot de passe < 12 caractères (doit échouer)
+- [ ] Test création compte sans majuscule (doit échouer avec message spécifique)
+- [ ] Test création compte sans caractère spécial (doit échouer avec message spécifique)
+- [ ] Test connexion avec mots de passe existants (compatibilité ascendante)
+- [ ] Vérification fonctionnement reset password avec nouveaux critères
+- [ ] Test placeholders informatifs dans tous les formulaires
 
 ## Checklist déploiement production
 

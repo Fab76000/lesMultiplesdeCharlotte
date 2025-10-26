@@ -54,3 +54,36 @@ function isRecognizedAdmin() {
 
     return false;
 }
+
+/**
+ * Valider la force d'un mot de passe selon les critères CNIL
+ * @param string $password Le mot de passe à valider
+ * @return array ['valid' => bool, 'error' => string|null]
+ */
+function validatePassword($password) {
+    // Minimum 12 caractères
+    if (strlen($password) < 12) {
+        return [
+            'valid' => false,
+            'error' => 'Le mot de passe doit faire au moins 12 caractères (exigence CNIL).'
+        ];
+    }
+
+    // Au moins 1 majuscule
+    if (!preg_match('/[A-Z]/', $password)) {
+        return [
+            'valid' => false,
+            'error' => 'Le mot de passe doit contenir au moins 1 majuscule.'
+        ];
+    }
+
+    // Au moins 1 caractère spécial
+    if (!preg_match('/[!@#$%^&*()_+\-=\[\]{};\':"\\|,.<>\/?]/', $password)) {
+        return [
+            'valid' => false,
+            'error' => 'Le mot de passe doit contenir au moins 1 caractère spécial (!@#$%^&*()_+-=[]{}|;:,.<>?).'
+        ];
+    }
+
+    return ['valid' => true, 'error' => null];
+}

@@ -23,9 +23,12 @@ if ($_POST) {
     $password = $_POST['password'] ?? '';
 
     if ($username && $email && $password) {
-        // Validation mot de passe (CNIL : 12 caractères minimum)
-        if (strlen($password) < 12) {
-            $error = 'Le mot de passe doit faire au moins 12 caractères (recommandation CNIL).';
+        // Validation mot de passe (CNIL : 12 caractères, 1 majuscule, 1 caractère spécial)
+        require_once '../php/admin-functions.php';
+        $passwordValidation = validatePassword($password);
+
+        if (!$passwordValidation['valid']) {
+            $error = $passwordValidation['error'];
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error = 'Adresse email invalide.';
         } else {
@@ -209,7 +212,7 @@ try {
 <body>
     <div class="create-container">
         <div class="create-header">
-            <h1>� Gestion des Utilisateurs</h1>
+            <h1>👥 Gestion des Utilisateurs</h1>
             <p style="color: #666; margin-bottom: 2rem;">
                 <strong>Connecté en tant que :</strong> <?= htmlspecialchars($_SESSION['admin_username']) ?>
                 | <a href="dashboard.php" style="color: #007bff;">← Retour au Dashboard</a>
@@ -255,7 +258,7 @@ try {
                     <label for="password">Mot de passe :</label>
                     <input type="password" id="password" name="password"
                         required autocomplete="new-password"
-                        placeholder="Minimum 12 caractères"
+                        placeholder="12 caractères min., 1 maj,1 spécial"
                         minlength="12">
                 </div>
                 <button type="submit" class="btn-create">

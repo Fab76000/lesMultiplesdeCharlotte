@@ -205,10 +205,8 @@ if ($_POST) {
                 <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password"
                     required autocomplete="current-password"
+                    placeholder="12 caractères min., 1 maj,1 spécial"
                     style="font-family: monospace; background: #f8f9fa;">
-                <small style="color: #666; font-size: 0.8em;">
-                    � Mot de passe masqué pour la sécurité
-                </small>
             </div>
 
             <button type="submit" class="btn-login">
