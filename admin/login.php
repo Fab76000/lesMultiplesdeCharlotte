@@ -10,7 +10,6 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
 require_once '../php/db-config.php';
 
 $error = '';
-
 if ($_POST) {
     $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
@@ -42,6 +41,16 @@ if ($_POST) {
                 $_SESSION['admin_username'] = $user['username'];
                 $_SESSION['admin_email'] = $user['email'];
                 $_SESSION['admin_role'] = $user['role'];
+
+                // Cookie sécurisé pour reconnaître les administrateurs (persiste après déconnexion)
+                $cookie_value = hash('sha256', $user['username'] . $user['id'] . 'admin_recognition_salt');
+                setcookie('admin_recognized', $cookie_value, [
+                    'expires' => time() + (86400 * 365), // 1 an
+                    'path' => '/',
+                    'secure' => !isset($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'] !== 'localhost:8090', // HTTPS en production
+                    'httponly' => true, // Pas accessible via JavaScript
+                    'samesite' => 'Lax' // Protection CSRF
+                ]);
 
                 // Mettre à jour la dernière connexion
                 $stmt = $pdo->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");

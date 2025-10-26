@@ -18,6 +18,9 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
+// NOTE: On ne supprime PAS le cookie 'admin_recognized' 
+// pour que l'administrateur puisse toujours voir l'icône après déconnexion
+
 // Détruire la session
 session_destroy();
 

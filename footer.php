@@ -22,10 +22,13 @@
     </div>
     <p style="margin-bottom:-10px">Site web développé par Fabienne Bergès
         <?php
-        // Lien administration visible SEULEMENT aux administrateurs connectés
-        if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']): ?>
+        // Charger les fonctions admin
+        require_once __DIR__ . '/php/admin-functions.php';
+
+        // Icône visible SEULEMENT aux administrateurs reconnus (connectés ou avec cookie valide)
+        if (isRecognizedAdmin()): ?>
             <span style="margin-left: 10px; font-size: 0.8em;">
-                <a href="admin/dashboard.php" style="color: #666; text-decoration: none; opacity: 0.7;" title="Administration">⚙</a>
+                <a href="admin/login.php" style="color: #666; text-decoration: none; opacity: 0.7;" title="Administration">⚙</a>
             </span>
         <?php endif; ?>
     </p>
