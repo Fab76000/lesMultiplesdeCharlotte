@@ -15,7 +15,9 @@ try {
     $total_articles = $stmt->fetchColumn();
     $total_pages = ceil($total_articles / $per_page);
 
-    // Récupérer les articles publiés
+    // Récupérer les articles publiés (avec LIMIT et OFFSET sécurisés)
+    $per_page = intval($per_page);
+    $offset = intval($offset);
     $stmt = $pdo->query("
         SELECT id, title, content, excerpt, featured_image, created_at 
         FROM articles 
@@ -24,7 +26,6 @@ try {
         LIMIT $per_page OFFSET $offset
     ");
     $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 } catch (PDOException $e) {
     $articles = [];
     $error = 'Erreur de connexion à la base de données.';
@@ -36,30 +37,30 @@ function simpleMarkdownToHtml($text) {
     $text = preg_replace('/^### (.+)$/m', '<h3>$1</h3>', $text);
     $text = preg_replace('/^## (.+)$/m', '<h2>$1</h2>', $text);
     $text = preg_replace('/^# (.+)$/m', '<h1>$1</h1>', $text);
-    
+
     // Gras et italique
     $text = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $text);
     $text = preg_replace('/\*(.+?)\*/', '<em>$1</em>', $text);
-    
+
     // Liens
     $text = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2" target="_blank">$1</a>', $text);
-    
+
     // Images
     $text = preg_replace('/!\[(.+?)\]\((.+?)\)/', '<img src="$2" alt="$1" class="article-image">', $text);
-    
+
     // Listes
     $text = preg_replace('/^- (.+)$/m', '<li>$1</li>', $text);
     $text = preg_replace('/(<li>.*<\/li>)/s', '<ul>$1</ul>', $text);
-    
+
     // Paragraphes
     $text = preg_replace('/\n\n/', '</p><p>', $text);
     $text = '<p>' . $text . '</p>';
-    
+
     // Nettoyer les paragraphes vides et mal formés
     $text = preg_replace('/<p><\/p>/', '', $text);
     $text = preg_replace('/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/', '$1', $text);
     $text = preg_replace('/<p>(<ul>.*<\/ul>)<\/p>/s', '$1', $text);
-    
+
     return $text;
 }
 
@@ -71,17 +72,18 @@ function getExcerpt($content, $length = 150) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Charlotte Goupil</title>
     <meta name="description" content="Découvrez les réflexions et actualités de Charlotte Goupil, chanteuse, comédienne et médiatrice culturelle.">
-    
+
     <!-- Styles existants du site -->
     <link rel="stylesheet" href="header.min.css">
     <link rel="stylesheet" href="footer.min.css">
     <link rel="stylesheet" href="style.min.css">
-    
+
     <!-- Styles spécifiques au blog -->
     <style>
         .blog-container {
@@ -119,14 +121,14 @@ function getExcerpt($content, $length = 150) {
         .article-card {
             background: white;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .article-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .article-image {
@@ -273,10 +275,12 @@ function getExcerpt($content, $length = 150) {
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .full-article h1, .full-article h2, .full-article h3 {
+        .full-article h1,
+        .full-article h2,
+        .full-article h3 {
             color: #2c3e50;
             margin: 1.5rem 0 1rem 0;
         }
@@ -343,22 +347,22 @@ function getExcerpt($content, $length = 150) {
             $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = ? AND status = 'published'");
             $stmt->execute([$article_id]);
             $article = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+
             if ($article):
             ?>
                 <a href="blog.php" class="back-to-blog">← Retour au blog</a>
-                
+
                 <article class="full-article">
                     <?php if ($article['featured_image']): ?>
-                        <img src="<?= htmlspecialchars($article['featured_image']) ?>" 
-                             alt="<?= htmlspecialchars($article['title']) ?>" 
-                             class="article-image">
+                        <img src="<?= htmlspecialchars($article['featured_image']) ?>"
+                            alt="<?= htmlspecialchars($article['title']) ?>"
+                            class="article-image">
                     <?php endif; ?>
-                    
+
                     <div class="article-date">
                         Publié le <?= date('j F Y', strtotime($article['created_at'])) ?>
                     </div>
-                    
+
                     <div class="article-body">
                         <?= simpleMarkdownToHtml($article['content']) ?>
                     </div>
@@ -371,7 +375,7 @@ function getExcerpt($content, $length = 150) {
                     <a href="blog.php" class="back-to-blog">← Retour au blog</a>
                 </div>
             <?php endif; ?>
-        
+
         <?php else: ?>
             <!-- Liste des articles -->
             <header class="blog-header">
@@ -393,30 +397,30 @@ function getExcerpt($content, $length = 150) {
                     <?php foreach ($articles as $article): ?>
                         <article class="article-card">
                             <?php if ($article['featured_image']): ?>
-                                <img src="<?= htmlspecialchars($article['featured_image']) ?>" 
-                                     alt="<?= htmlspecialchars($article['title']) ?>" 
-                                     class="article-image">
+                                <img src="<?= htmlspecialchars($article['featured_image']) ?>"
+                                    alt="<?= htmlspecialchars($article['title']) ?>"
+                                    class="article-image">
                             <?php else: ?>
                                 <div class="article-image">
                                     📝
                                 </div>
                             <?php endif; ?>
-                            
+
                             <div class="article-content">
                                 <div class="article-date">
                                     <?= date('j F Y', strtotime($article['created_at'])) ?>
                                 </div>
-                                
+
                                 <h2 class="article-title">
                                     <a href="blog.php?article=<?= $article['id'] ?>">
                                         <?= htmlspecialchars($article['title']) ?>
                                     </a>
                                 </h2>
-                                
+
                                 <div class="article-excerpt">
                                     <?= htmlspecialchars($article['excerpt'] ?: getExcerpt($article['content'])) ?>
                                 </div>
-                                
+
                                 <a href="blog.php?article=<?= $article['id'] ?>" class="read-more">
                                     Lire la suite →
                                 </a>
@@ -450,4 +454,5 @@ function getExcerpt($content, $length = 150) {
 
     <?php include 'footer.php'; ?>
 </body>
+
 </html>

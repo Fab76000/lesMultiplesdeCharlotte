@@ -15,7 +15,9 @@ try {
     $total_articles = $stmt->fetchColumn();
     $total_pages = ceil($total_articles / $per_page);
 
-    // Récupérer les articles publiés
+    // Récupérer les articles publiés (avec LIMIT et OFFSET sécurisés)
+    $per_page = intval($per_page);
+    $offset = intval($offset);
     $stmt = $pdo->query("
         SELECT id, title, content, excerpt, featured_image, created_at 
         FROM articles 
