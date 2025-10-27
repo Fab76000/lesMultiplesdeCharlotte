@@ -32,6 +32,8 @@ try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+
     $stmt = $pdo->prepare("SELECT id, username, email, role FROM admin_users WHERE id = ?");
     $stmt->execute([$user_id]);
     $user_to_reset = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -48,6 +50,9 @@ try {
 if ($_POST && isset($_POST['reset_password'])) {
     $new_password = $_POST['new_password'] ?? '';
 
+    // Debug temporaire
+    $error .= "DEBUG: Formulaire soumis. User ID: $user_id. Mot de passe reçu: " . (strlen($new_password) > 0 ? "Oui (" . strlen($new_password) . " caractères)" : "Non") . ". ";
+
     // Validation mot de passe (CNIL : 12 caractères, 1 majuscule, 1 caractère spécial)
     $passwordValidation = validatePassword($new_password);
 
@@ -59,11 +64,12 @@ if ($_POST && isset($_POST['reset_password'])) {
             $new_hash = password_hash($new_password, PASSWORD_DEFAULT);
 
             $stmt = $pdo->prepare("UPDATE admin_users SET password_hash = ? WHERE id = ?");
+            $result = $stmt->execute([$new_hash, $user_id]);
 
-            if ($stmt->execute([$new_hash, $user_id])) {
+            if ($result && $stmt->rowCount() > 0) {
                 $success = "Mot de passe mis à jour avec succès pour l'utilisateur '{$user_to_reset['username']}' !";
             } else {
-                $error = "Erreur lors de la mise à jour.";
+                $error = "Erreur : Aucune ligne mise à jour - l'utilisateur n'existe pas.";
             }
         } catch (PDOException $e) {
             $error = 'Erreur : ' . $e->getMessage();
