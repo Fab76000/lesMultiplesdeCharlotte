@@ -19,6 +19,10 @@ try {
     $message = '';
     $message_type = '';
 
+    // Récupérer toutes les catégories pour le formulaire
+    $stmt = $pdo->query("SELECT id, name FROM categories ORDER BY name");
+    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     // Récupérer l'article pour édition
     if ($action === 'edit' && $article_id) {
         $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = ?");
@@ -38,6 +42,7 @@ try {
         $excerpt = trim($_POST['excerpt'] ?? '');
         $status = $_POST['status'] ?? 'draft';
         $featured_image = trim($_POST['featured_image'] ?? '');
+        $category_id = !empty($_POST['category_id']) ? (int)$_POST['category_id'] : null;
 
         $errors = [];
 
@@ -101,20 +106,20 @@ try {
                     // Mise à jour
                     $stmt = $pdo->prepare("
                         UPDATE articles 
-                        SET title = ?, slug = ?, content = ?, excerpt = ?, status = ?, featured_image = ?, updated_at = NOW()
+                        SET title = ?, slug = ?, content = ?, excerpt = ?, status = ?, featured_image = ?, category_id = ?, updated_at = NOW()
                         WHERE id = ?
                     ");
-                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $article_id]);
+                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $category_id, $article_id]);
 
                     $message = "Article mis à jour avec succès.";
                     $message_type = "success";
                 } else {
                     // Création
                     $stmt = $pdo->prepare("
-                        INSERT INTO articles (title, slug, content, excerpt, status, featured_image, created_at) 
-                        VALUES (?, ?, ?, ?, ?, ?, NOW())
+                        INSERT INTO articles (title, slug, content, excerpt, status, featured_image, category_id, created_at) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
                     ");
-                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image]);
+                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $category_id]);
 
                     $article_id = $pdo->lastInsertId();
                     $message = "Article créé avec succès.";
@@ -158,6 +163,7 @@ $form_data = [
     'excerpt' => $article['excerpt'] ?? ($_POST['excerpt'] ?? ''),
     'status' => $article['status'] ?? ($_POST['status'] ?? 'draft'),
     'featured_image' => $article['featured_image'] ?? ($_POST['featured_image'] ?? ''),
+    'category_id' => $article['category_id'] ?? ($_POST['category_id'] ?? ''),
 ];
 
 $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
@@ -481,6 +487,24 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
                             </select>
                             <div class="form-help">
                                 Les brouillons ne sont pas visibles sur le site public
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category_id">Catégorie</label>
+                            <select id="category_id" name="category_id" class="form-control">
+                                <option value="">Aucune catégorie</option>
+                                <?php foreach ($categories as $category): ?>
+                                    <option value="<?= $category['id'] ?>"
+                                        <?= ($form_data['category_id'] ?? '') == $category['id'] ? 'selected' : '' ?>>
+                                        <?= htmlspecialchars($category['name']) ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <div class="form-help">
+                                Associez cet article à une catégorie pour mieux l'organiser
                             </div>
                         </div>
                     </div>

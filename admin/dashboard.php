@@ -32,9 +32,10 @@ try {
 
     // Derniers articles
     $stmt = $pdo->query("
-        SELECT id, title, status, created_at, author
-        FROM articles 
-        ORDER BY created_at DESC 
+        SELECT a.id, a.title, a.status, a.created_at, a.author, c.name as category_name
+        FROM articles a 
+        LEFT JOIN categories c ON a.category_id = c.id 
+        ORDER BY a.created_at DESC 
         LIMIT 5
     ");
     $recent_articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -263,7 +264,7 @@ try {
                             <div class="article-info">
                                 <h3><?= htmlspecialchars($article['title']) ?></h3>
                                 <div class="article-meta">
-                                    Par <?= htmlspecialchars($article['author']) ?> •
+                                    <?= $article['category_name'] ?? 'Sans catégorie' ?> • Par <?= htmlspecialchars($article['author']) ?> •
                                     <?= date('d/m/Y H:i', strtotime($article['created_at'])) ?>
                                 </div>
                             </div>
