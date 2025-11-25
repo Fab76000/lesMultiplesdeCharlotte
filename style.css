@@ -18,6 +18,23 @@
     --cookies-color: #37699e
 }
 
+/* Structure pour sticky footer sur toutes les pages */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+.blog-container,
+.container {
+    flex: 1;
+}
+
 @font-face {
     font-family: 'Tangerine';
     font-style: normal;

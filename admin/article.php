@@ -69,6 +69,24 @@ function simpleMarkdown($text) {
     <link rel="stylesheet" href="footer.min.css">
 
     <style>
+        /* Structure pour sticky footer */
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
         .article-container {
             max-width: 800px;
             margin: 2rem auto;

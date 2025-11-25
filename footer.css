@@ -1,11 +1,10 @@
 .footer {
-
     background-color: hsl(0, 0%, 0%);
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: relative
-        /* Le footer est dans le flux du document*/
+    margin-top: auto;
+    /* Le footer est poussé vers le bas avec flex */
 }
 
 .footer-content {
