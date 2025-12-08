@@ -44,7 +44,6 @@ figcaption {
 /* Ajout d'une classe pour forcer la figure à s'adapter à l'image */
 .responsive-figure {
     display: inline-block;
-    /* La largeur s'adapte à l'image */
 }
 
 /* Par défaut, l'image occupe toute la largeur du container */
@@ -68,9 +67,7 @@ figure img {
 /* Image spécifique "moqueurs-faiseurs" */
 .img-moqueurs-faiseurs {
     max-width: 400px;
-    /* limite la largeur maximale */
     width: 100%;
-    /* image responsive */
     height: auto;
     margin: -100px auto 0;
     display: block;
@@ -111,18 +108,6 @@ figure img {
     height: 100%;
     display: block;
 }
-
-
-
-/*.grid-wrap .grid-items figcaption {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    color: white;
-    padding: 3px 5px;
-    font-size: 0.8em;
-    pointer-events: none;
-}*/
 
 
 .grid-wrap .grid-items .grid-item:nth-child(1) {

@@ -146,7 +146,6 @@ label {
 /* Ajout pour éviter le layout shift sur le titre principal */
 .main-title {
     min-height: 1.5em;
-    /* Ajuste selon la taille attendue de ton h1 */
     display: block;
 }
 
@@ -214,71 +213,6 @@ label {
     }
 }
 
-/* @media only screen and (max-width: 600px) and (orientation: portrait) {
-
-    #Hero,
-    .Bio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: fit-content;
-    }
-
-    .Bio img {
-        min-width: 50%;
-        max-width: 100%;
-        height: auto;
-        width: 100%;
-    }
-
-    .Bio figcaption {
-        color: rgba(255, 255, 255, 0.9);
-        position: absolute;
-        bottom: 20px;
-        right: 0;
-    }
-
-    .presentation {
-        margin-top: 10px;
-        margin-right: 670px;
-    }
-
-    .presentation-bio {
-        width: 100%;
-    }
-
-    .presentation-bio p {
-        margin-left: 3px;
-        text-align: left;
-        margin-right: 400px;
-        min-width: 97vw;
-        max-width: 50%;
-        width: min-content;
-    }
-
-    label[for=subject] {
-        margin-top: 35px;
-
-    }
-
-    input[type=submit] {
-        display: flex;
-    }
-
-    .MessageEssentiel {
-        max-width: 70vw;
-    }
-
-    .button-form {
-        margin-top: 15px;
-    }
-
-    .comments {
-        font-size: 12px;
-    }
-
-} */
 
 @media only screen and (min-width: 675px) and (max-width:768px) {
 

@@ -41,6 +41,7 @@
     position: relative;
     padding: 50px 20px;
     margin: 150px;
+    background-color: var(--background-color);
 }
 
 .gradient-border::before {

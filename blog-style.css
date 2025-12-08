@@ -242,7 +242,7 @@
     text-decoration: underline;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .blog-container {
         padding: 0 1rem;

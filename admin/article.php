@@ -262,7 +262,7 @@ function simpleMarkdown($text) {
             color: #c53030;
         }
 
-        /* Responsive */
+
         @media (max-width: 768px) {
             .article-container {
                 padding: 0 1rem;

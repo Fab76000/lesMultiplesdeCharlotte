@@ -13,7 +13,6 @@
     text-align: center;
     font-size: 6rem;
     display: block;
-    /* margin-top: 20px; */
     color: initial;
 }
 
@@ -377,7 +376,7 @@
         max-width: 11em;
         box-sizing: border-box;
         background-color: var(--green-color);
-        /* Fond vert au hover */
+
     }
 
     #burger {
@@ -465,11 +464,11 @@
 @media only screen and (min-width: 769px) and (max-width: 991px) {
     .main-title {
         font-size: 5.5rem;
-        /* Ajustement de la taille du titre principal pour cette plage */
+
     }
 
     #menuderoulant li {
         width: 12.375em;
-        /* Largeur des éléments du menu pour cette plage */
+
     }
 }

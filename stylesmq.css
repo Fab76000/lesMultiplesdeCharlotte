@@ -111,10 +111,6 @@ h1 {
 
 /*HEADER*/
 header {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
     background-color: var(--header-background-color);
     z-index: 100;
     display: flex;
@@ -415,7 +411,6 @@ img[alt] {
     padding: 20px 0;
     text-align: center;
     position: relative
-        /* Le footer est dans le flux du document */
 }
 
 .footer-content {
@@ -462,19 +457,6 @@ img[alt] {
     height: 350px;
 }
 
-/* .not-authorized-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    transition: .5s ease;
-    background-color: #fff;
-    margin-right: 20px;
-    border-radius: 50%;
-    display: flex;
-} */
 
 .not-authorized-overlay {
     position: absolute;
@@ -505,14 +487,6 @@ img[alt] {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
-
-/* .text {
-    color: var(--red-color);
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-} */
 
 
 

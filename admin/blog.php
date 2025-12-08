@@ -79,7 +79,6 @@ function getExcerpt($content, $length = 150) {
     <title>Blog - Charlotte Goupil</title>
     <meta name="description" content="Découvrez les réflexions et actualités de Charlotte Goupil, chanteuse, comédienne et médiatrice culturelle.">
 
-    <!-- Styles existants du site -->
     <link rel="stylesheet" href="header.min.css">
     <link rel="stylesheet" href="footer.min.css">
     <link rel="stylesheet" href="style.min.css">
@@ -236,7 +235,6 @@ function getExcerpt($content, $length = 150) {
             text-align: center;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .blog-container {
                 padding: 0 1rem;

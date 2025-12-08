@@ -212,7 +212,7 @@ try {
             text-decoration: underline;
         }
 
-        /* Styles responsive pour la gestion des utilisateurs */
+
         .existing-users {
             margin-top: 2rem;
             padding-top: 2rem;
