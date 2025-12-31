@@ -30,7 +30,6 @@ try {
             } elseif (empty($slug)) {
                 $error = 'Le slug est requis.';
             } else {
-                // Vérifier si le slug existe déjà
                 $stmt = $pdo->prepare("SELECT COUNT(*) FROM categories WHERE slug = ?");
                 $stmt->execute([$slug]);
                 if ($stmt->fetchColumn() > 0) {
@@ -42,15 +41,16 @@ try {
                 }
             }
         } elseif ($action === 'edit') {
-            $id = $_POST['id'] ?? 0;
+            $id = intval($_POST['id'] ?? 0);
             $name = trim($_POST['name'] ?? '');
             $slug = trim($_POST['slug'] ?? '');
             $description = trim($_POST['description'] ?? '');
 
-            if (empty($name) || empty($slug)) {
+            if ($id <= 0) {
+                $error = 'ID de catégorie invalide.';
+            } elseif (empty($name) || empty($slug)) {
                 $error = 'Le nom et le slug sont requis.';
             } else {
-                // Vérifier si le slug existe déjà (pour une autre catégorie)
                 $stmt = $pdo->prepare("SELECT COUNT(*) FROM categories WHERE slug = ? AND id != ?");
                 $stmt->execute([$slug, $id]);
                 if ($stmt->fetchColumn() > 0) {
@@ -62,43 +62,31 @@ try {
                 }
             }
         } elseif ($action === 'delete') {
-            $id = $_POST['id'] ?? 0;
-
-            // Vérifier s'il y a des articles dans cette catégorie
-            $stmt = $pdo->prepare("SELECT COUNT(*) FROM articles WHERE category_id = ?");
-            $stmt->execute([$id]);
-            $article_count = $stmt->fetchColumn();
-
-            if ($article_count > 0) {
-                $error = "Impossible de supprimer cette catégorie : {$article_count} article(s) y sont associés.";
-            } else {
+            $id = intval($_POST['id'] ?? 0);
+            if ($id > 0) {
                 $stmt = $pdo->prepare("DELETE FROM categories WHERE id = ?");
-                $stmt->execute([$id]);
-                $success = 'Catégorie supprimée avec succès !';
+                if ($stmt->execute([$id])) {
+                    header('Location: categories.php?deleted=1');
+                    exit;
+                }
             }
         }
     }
 
-    // Récupérer toutes les catégories
-    $stmt = $pdo->query("
-        SELECT c.*, COUNT(a.id) as article_count 
-        FROM categories c 
-        LEFT JOIN articles a ON c.id = a.category_id 
-        GROUP BY c.id 
-        ORDER BY c.name
-    ");
+    $stmt = $pdo->query("SELECT c.*, COUNT(a.id) as article_count FROM categories c LEFT JOIN articles a ON c.id = a.category_id GROUP BY c.id ORDER BY c.name");
     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Si on édite une catégorie
     $editing_category = null;
     if (isset($_GET['edit'])) {
-        $edit_id = $_GET['edit'];
-        $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
-        $stmt->execute([$edit_id]);
-        $editing_category = $stmt->fetch(PDO::FETCH_ASSOC);
+        $edit_id = intval($_GET['edit']);
+        if ($edit_id > 0) {
+            $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
+            $stmt->execute([$edit_id]);
+            $editing_category = $stmt->fetch(PDO::FETCH_ASSOC);
+        }
     }
 } catch (PDOException $e) {
-    $error = 'Erreur de base de données : ' . $e->getMessage();
+    $error = 'Erreur : ' . $e->getMessage();
 }
 ?>
 <!DOCTYPE html>
@@ -108,6 +96,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Catégories - Administration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -199,16 +188,6 @@ try {
             font-size: 1rem;
         }
 
-        .form-group textarea {
-            height: 80px;
-            resize: vertical;
-        }
-
-        .form-group small {
-            color: #666;
-            font-size: 0.85rem;
-        }
-
         .btn {
             padding: 0.75rem 1.5rem;
             border: none;
@@ -240,10 +219,9 @@ try {
             color: white;
             padding: 0.3rem 0.8rem;
             font-size: 0.8rem;
-            display: flex;
-            flex-direction: column;
+            display: inline-flex;
             align-items: center;
-            gap: 0.2rem;
+            gap: 0.3rem;
         }
 
         .alert {
@@ -282,10 +260,6 @@ try {
             color: #333;
         }
 
-        .categories-table tr:hover {
-            background: #f8f9fa;
-        }
-
         .badge {
             background: #007bff;
             color: white;
@@ -315,140 +289,103 @@ try {
     </header>
 
     <div class="container">
-        <!-- Formulaire d'ajout/édition -->
         <div class="content-section">
             <div class="section-header">
                 <h2><?= $editing_category ? '✏️ Modifier une catégorie' : '➕ Ajouter une catégorie' ?></h2>
             </div>
             <div class="form-container">
-                <?php if ($success): ?>
-                    <div class="alert alert-success"><?= htmlspecialchars($success) ?></div>
-                <?php endif; ?>
-
-                <?php if ($error): ?>
-                    <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
-                <?php endif; ?>
+                <?php if ($success): ?><div class="alert alert-success"><?= htmlspecialchars($success) ?></div><?php endif; ?>
+                <?php if ($error): ?><div class="alert alert-error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
                 <form method="POST">
                     <input type="hidden" name="action" value="<?= $editing_category ? 'edit' : 'add' ?>">
-                    <?php if ($editing_category): ?>
-                        <input type="hidden" name="id" value="<?= $editing_category['id'] ?>">
-                    <?php endif; ?>
-
+                    <?php if ($editing_category): ?><input type="hidden" name="id" value="<?= $editing_category['id'] ?>"><?php endif; ?>
                     <div class="form-group">
                         <label for="name">Nom de la catégorie *</label>
-                        <input type="text" id="name" name="name" required
-                            value="<?= htmlspecialchars($editing_category['name'] ?? '') ?>"
-                            placeholder="Ex: Médiation">
+                        <input type="text" id="name" name="name" required value="<?= htmlspecialchars($editing_category['name'] ?? '') ?>" placeholder="Ex: Médiation">
                     </div>
-
                     <div class="form-group">
                         <label for="slug">Slug (URL) *</label>
-                        <input type="text" id="slug" name="slug" required
-                            value="<?= htmlspecialchars($editing_category['slug'] ?? '') ?>"
-                            placeholder="Ex: mediation">
-                        <small>Utilisé dans l'URL, uniquement des lettres minuscules, chiffres et tirets</small>
+                        <input type="text" id="slug" name="slug" required value="<?= htmlspecialchars($editing_category['slug'] ?? '') ?>" placeholder="Ex: mediation">
                     </div>
-
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea id="description" name="description"
-                            placeholder="Description de la catégorie..."><?= htmlspecialchars($editing_category['description'] ?? '') ?></textarea>
+                        <textarea id="description" name="description" placeholder="Description..."><?= htmlspecialchars($editing_category['description'] ?? '') ?></textarea>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        <?= $editing_category ? '💾 Modifier' : '➕ Ajouter' ?>
-                    </button>
-
-                    <?php if ($editing_category): ?>
-                        <a href="categories.php" class="btn btn-secondary">Annuler</a>
-                    <?php endif; ?>
+                    <button type="submit" class="btn btn-primary"><?= $editing_category ? '💾 Modifier' : '➕ Ajouter' ?></button>
+                    <?php if ($editing_category): ?><a href="categories.php" class="btn btn-secondary">Annuler</a><?php endif; ?>
                 </form>
             </div>
         </div>
 
-        <!-- Liste des catégories -->
         <div class="content-section">
             <div class="section-header">
                 <h2>📋 Catégories existantes</h2>
             </div>
-            <div style="overflow-x: auto;">
-                <table class="categories-table">
-                    <thead>
+            <table class="categories-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Slug</th>
+                        <th>Articles</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($categories as $category): ?>
                         <tr>
-                            <th>ID</th>
-                            <th>Nom</th>
-                            <th>Slug</th>
-                            <th>Description</th>
-                            <th>Articles</th>
-                            <th>Date de création</th>
-                            <th>Actions</th>
+                            <td><?= $category['id'] ?></td>
+                            <td><strong><?= htmlspecialchars($category['name']) ?></strong></td>
+                            <td><code><?= htmlspecialchars($category['slug']) ?></code></td>
+                            <td><span class="badge"><?= $category['article_count'] ?></span></td>
+                            <td>
+                                <div class="actions">
+                                    <a href="?edit=<?= $category['id'] ?>" class="btn btn-edit">✏️ Modifier</a>
+                                    <?php if ($category['article_count'] == 0): ?>
+                                        <button type="button"
+                                            class="btn btn-danger btn-trigger-delete"
+                                            data-id="<?= $category['id'] ?>"
+                                            data-name="<?= htmlspecialchars($category['name'], ENT_QUOTES) ?>">
+                                            🗑️ Supprimer
+                                        </button>
+                                    <?php endif; ?>
+                                </div>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php if (empty($categories)): ?>
-                            <tr>
-                                <td colspan="7" style="text-align: center; padding: 2rem; color: #666;">
-                                    Aucune catégorie pour le moment.
-                                </td>
-                            </tr>
-                        <?php else: ?>
-                            <?php foreach ($categories as $category): ?>
-                                <tr>
-                                    <td><?= $category['id'] ?></td>
-                                    <td><strong><?= htmlspecialchars($category['name']) ?></strong></td>
-                                    <td><code><?= htmlspecialchars($category['slug']) ?></code></td>
-                                    <td><?= htmlspecialchars($category['description']) ?></td>
-                                    <td>
-                                        <?php if ($category['article_count'] > 0): ?>
-                                            <span class="badge"><?= $category['article_count'] ?> article(s)</span>
-                                        <?php else: ?>
-                                            <span style="color: #666;">Aucun article</span>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td><?= date('d/m/Y', strtotime($category['created_at'])) ?></td>
-                                    <td>
-                                        <div class="actions">
-                                            <a href="?edit=<?= $category['id'] ?>" class="btn btn-edit">
-                                                <span>✏️</span>
-                                                <span>Modifier</span>
-                                            </a>
-                                            <?php if ($category['article_count'] == 0): ?>
-                                                <form method="POST" style="display: inline;"
-                                                    onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie ?')">
-                                                    <input type="hidden" name="action" value="delete">
-                                                    <input type="hidden" name="id" value="<?= $category['id'] ?>">
-                                                    <button type="submit" class="btn btn-danger">🗑️ Supprimer</button>
-                                                </form>
-                                            <?php endif; ?>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">⚠️ Confirmer la suppression</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form method="POST" action="categories.php">
+                    <div class="modal-body">
+                        <p>Êtes-vous sûr de vouloir supprimer la catégorie :</p>
+                        <p class="text-center"><strong class="fs-5 text-primary" id="modal-category-name"></strong></p>
+
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="id" id="modal-category-id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-danger">🗑️ Supprimer définitivement</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <script>
-        // Auto-générer le slug à partir du nom
-        document.getElementById('name').addEventListener('input', function() {
-            const name = this.value;
-            const slug = name.toLowerCase()
-                .replace(/[àáâãäå]/g, 'a')
-                .replace(/[èéêë]/g, 'e')
-                .replace(/[ìíîï]/g, 'i')
-                .replace(/[òóôõö]/g, 'o')
-                .replace(/[ùúûü]/g, 'u')
-                .replace(/[ç]/g, 'c')
-                .replace(/[^a-z0-9]/g, '-')
-                .replace(/-+/g, '-')
-                .replace(/^-|-$/g, '');
-            document.getElementById('slug').value = slug;
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/admin-categories.js"></script>
 </body>
 
 </html>
