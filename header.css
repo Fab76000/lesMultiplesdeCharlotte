@@ -1,11 +1,4 @@
-/*HEADER*/
-/* .header {
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
+/* HEADER */
 .main-title {
     padding: 15px 0px 0px 0px;
     font-weight: normal;
@@ -16,27 +9,20 @@
     color: initial;
 }
 
-/*MAIN MENU */
+/* MAIN MENU */
 #menuderoulant {
     margin: 0;
-    /*important*/
     padding: 0;
-    /*important*/
     border: 0;
     list-style: none;
-    /*important*/
-    /*position:relative;*/
-    /*important*/
     margin-top: 35px;
     background-color: var(--background-color);
-    /* Keep the menu aligned whatever the size of the screen*/
     display: flex;
     justify-content: center;
     text-transform: uppercase;
 }
 
 #menuderoulant li {
-    /* travail sur le menu deroulant (horizontal)*/
     position: relative;
     width: 12.375em;
     margin-right: 10px;
@@ -68,11 +54,10 @@
     position: absolute;
     text-transform: none;
     top: 100%;
-    /* Position sous le menu parent */
     left: 0;
-    /* Aligné à gauche du menu parent */
     z-index: 1000;
-    /* Au-dessus des autres éléments */
+    width: 12.375em;
+    /* Rétablir la largeur du sous-menu */
 }
 
 #menuderoulant li:hover>.sousmenu {
@@ -84,14 +69,13 @@
     margin: 0;
     padding: 0;
     border: 1px solid black;
-    width: 12.4em;
+    width: 12.375em;
+    /* Rétablir la largeur du sous-menu */
     margin-top: 15px;
     margin-bottom: 5px;
     margin-left: 0;
-    /* Pas de décalage */
     position: relative;
     left: 0;
-    /* Aligné à gauche */
     right: auto;
     box-shadow: 0px 0px;
 }
@@ -102,7 +86,6 @@
     color: #fff;
     margin: 0 auto;
     padding: 4px 8px;
-
 }
 
 #menuderoulant li a:hover {
@@ -116,9 +99,8 @@
     background-color: var(--green-color);
 }
 
-#menuderoulant .sousmenu li a :link,
+#menuderoulant .sousmenu li a:link,
 #menuderoulant .sousmenu li a:visited {
-    /*permet de garder le même style que les liens soient visités ou pas*/
     color: #fff;
     margin: 0;
     padding: 0;
@@ -144,7 +126,6 @@
     width: 12.28em;
 }
 
-
 .green {
     color: var(--green-color);
     font-style: normal;
@@ -156,7 +137,6 @@
     font-style: normal;
 }
 
-
 /* Style personnalisé pour l'accordéon Bootstrap */
 .accordion-item,
 .accordion-header,
@@ -164,7 +144,6 @@
 .accordion-body {
     background-color: var(--background-color) !important;
     color: #000 !important;
-
 }
 
 .accordion-button:not(.collapsed) {
@@ -183,12 +162,11 @@
     outline: none !important;
 }
 
-/* Optionnel : pour éviter la double bordure entre header et body */
 .accordion-item {
     border: none !important;
 }
 
-/* STYLES PAR DÉFAUT BURGER MENU - MASQUÉ PAR DÉFAUT */
+/* BURGER MENU */
 .parent-container {
     display: none !important;
 }
@@ -203,9 +181,9 @@
     visibility: hidden !important;
 }
 
-/***media queries***/
+/*** media queries ***/
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 575px) {
 
     #menuderoulant,
     #menuderoulant li,
@@ -217,12 +195,12 @@
     #menuderoulant li a:link,
     #menuderoulant li a:visited {
         width: 100%;
-        max-width: 481px;
         font-size: 12px;
     }
 
     #menuderoulant .sousmenu {
-        width: 110px;
+        width: 12.375em;
+        /* Rétablir la largeur du sous-menu */
         z-index: 1;
     }
 
@@ -240,7 +218,7 @@
         font-size: 4rem;
     }
 
-    /* Afficher le burger menu sur les petits écrans */
+    /* Afficher le burger menu pour les écrans < 575px */
     .parent-container {
         display: block !important;
         margin: 0 auto;
@@ -314,7 +292,7 @@
     }
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 576px) {
 
     /* Masquer explicitement le burger menu sur les écrans plus larges */
     .burger {
@@ -335,11 +313,8 @@
     #menuderoulant {
         width: 100%;
         max-width: 600px;
-        /* Largeur adaptative avec maximum */
         margin: 0 auto;
-        /* Centrer le menu */
         padding: 0 10px;
-        /* Petit padding sur les côtés */
     }
 
     #menuderoulant li,
@@ -347,36 +322,20 @@
         width: auto;
         min-width: 8em;
         max-width: 11em;
-        /* Largeur flexible pour les éléments du menu */
         flex: 1;
-        /* Les éléments se partagent l'espace équitablement */
     }
 
-    /* S'assurer que l'élément a.ColoRed prend toute la largeur */
     #menuderoulant li a.ColoRed {
         width: 100%;
         max-width: 11em;
         box-sizing: border-box;
         display: block;
-        /* Pour qu'il prenne toute la largeur du conteneur */
     }
 
     #menuderoulant li a:hover {
         width: 100%;
-        /* Prend toute la largeur de l'élément parent */
-        max-width: 11em;
-        /* Même taille maximum que les éléments normaux */
-        box-sizing: border-box;
-        /* Include padding et border dans la largeur */
-    }
-
-    /* Style spécifique pour l'élément Médiation (.ColoRed) au hover */
-    #menuderoulant li a.ColoRed:hover {
-        width: 100%;
         max-width: 11em;
         box-sizing: border-box;
-        background-color: var(--green-color);
-
     }
 
     #burger {
@@ -384,91 +343,12 @@
     }
 }
 
-@media only screen and (max-width: 479px) and (orientation: portrait) {
-
-    .menu {
-        display: block;
-    }
-
-    .menu li {
-        display: block;
-    }
-
-    .menu li a {
-        text-decoration: none;
-    }
-
-    .burger {
-        display: block !important;
-        width: 30px;
-        height: 20px;
-        margin-top: 15px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-    }
-
-    .burger-line {
-        display: block !important;
-        width: 100%;
-        height: 4px;
-        background-color: #000;
-        margin-bottom: 5px;
-    }
-
-    #menuderoulant {
-        display: none;
-    }
-
-    #menuderoulant.collapsed {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 15px auto;
-    }
-
-    #menuderoulant.collapsed li {
-        display: block;
-        margin-right: 8px;
-    }
-
-    /* Sous-menus restent fonctionnels en portrait */
-    #menuderoulant.collapsed .sousmenu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-    }
-
-    #menuderoulant.collapsed li:hover>.sousmenu {
-        display: block;
-    }
-
-    /* Animation du burger en croix */
-    .burger.cross .burger-line:nth-child(1) {
-        transform: rotate(45deg) translateY(6px);
-    }
-
-    .burger.cross .burger-line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger.cross .burger-line:nth-child(3) {
-        transform: rotate(-45deg) translateY(-12px) translateX(7px);
-    }
-
-}
-
 @media only screen and (min-width: 769px) and (max-width: 991px) {
     .main-title {
         font-size: 5.5rem;
-
     }
 
     #menuderoulant li {
         width: 12.375em;
-
     }
 }
