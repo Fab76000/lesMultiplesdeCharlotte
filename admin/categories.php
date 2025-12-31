@@ -240,6 +240,10 @@ try {
             color: white;
             padding: 0.3rem 0.8rem;
             font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
         }
 
         .alert {
@@ -405,7 +409,10 @@ try {
                                     <td><?= date('d/m/Y', strtotime($category['created_at'])) ?></td>
                                     <td>
                                         <div class="actions">
-                                            <a href="?edit=<?= $category['id'] ?>" class="btn btn-edit">✏️ Modifier</a>
+                                            <a href="?edit=<?= $category['id'] ?>" class="btn btn-edit">
+                                                <span>✏️</span>
+                                                <span>Modifier</span>
+                                            </a>
                                             <?php if ($category['article_count'] == 0): ?>
                                                 <form method="POST" style="display: inline;"
                                                     onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie ?')">
