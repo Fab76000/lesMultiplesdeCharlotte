@@ -357,7 +357,7 @@ try {
         <div class="create-header">
             <h1>👥 Gestion des Utilisateurs</h1>
             <p style="color: #666; margin-bottom: 2rem;">
-                <strong>Connecté en tant que :</strong> <?= htmlspecialchars($_SESSION['admin_username']) ?>
+                <strong>Connecté en tant que :</strong> <?= ucfirst(htmlspecialchars($_SESSION['admin_username'])) ?>
                 | <a href="dashboard.php" style="color: #007bff;">← Retour au Dashboard</a>
             </p>
             <p>Ajouter un nouvel administrateur au système</p>

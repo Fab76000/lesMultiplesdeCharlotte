@@ -223,7 +223,7 @@ try {
             <a href="logout.php">Déconnexion</a>
         </nav>
         <div class="user-info">
-            Connecté en tant que : <strong><?= htmlspecialchars($_SESSION['admin_username']) ?></strong>
+            Connecté en tant que : <strong><?= ucfirst(htmlspecialchars($_SESSION['admin_username'])) ?></strong>
         </div>
     </header>
 
