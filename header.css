@@ -41,7 +41,7 @@
 
 #menuderoulant .sousmenu .ColoRed2 {
     background-color: var(--red-color);
-    padding: 15px;
+    padding: 16px 15px;
     width: 12.375em;
 }
 
@@ -103,7 +103,7 @@
 #menuderoulant .sousmenu li a:visited {
     color: #fff;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
     border: 0;
 }
 
