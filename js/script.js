@@ -1,3 +1,15 @@
+// Menu burger
+document.addEventListener("DOMContentLoaded", function () {
+    var burger = document.getElementById("burger");
+    var menu = document.getElementById("menuderoulant");
+    if (burger && menu) {
+        burger.addEventListener("click", function () {
+            menu.classList.toggle("collapsed");
+            burger.classList.toggle("cross");
+        });
+    }
+});
+
 $(document).on('DOMContentLoaded', function () {
     // Vérifier si l'utilisateur a déjà fait un choix de cookies
     if (localStorage.getItem('cookiesChoice') === null) {

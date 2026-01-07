@@ -255,6 +255,7 @@ include 'header.php';
     </main>
 
     <?php include 'footer.php'; ?>
+    <script src="js/script.min.js" defer></script>
 </body>
 
 </html>

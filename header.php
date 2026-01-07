@@ -4,6 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
 
+// Générer un nonce unique pour les scripts inline
 $nonce = base64_encode(random_bytes(16));
 
 // Détecter si on est en localhost pour adapter les headers de sécurité
@@ -17,7 +18,7 @@ if (!headers_sent()) {
     header(
       "Content-Security-Policy: " .
         "default-src 'self' 'unsafe-inline' 'unsafe-eval'; " .
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com https://stackpath.bootstrapcdn.com; " .
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://ajax.googleapis.com https://stackpath.bootstrapcdn.com https://code.jquery.com; " .
         "style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://fonts.googleapis.com https://cdn.jsdelivr.net; " .
         "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; " .
         "img-src 'self' data: https:; " .
@@ -70,13 +71,3 @@ if (!headers_sent()) {
     </ul>
   </nav>
 </header>
-<script nonce="<?php echo $nonce; ?>">
-  document.addEventListener("DOMContentLoaded", function() {
-    var burger = document.getElementById("burger");
-    var menu = document.getElementById("menuderoulant");
-    burger.addEventListener("click", function() {
-      menu.classList.toggle("collapsed");
-      burger.classList.toggle("cross");
-    });
-  });
-</script>

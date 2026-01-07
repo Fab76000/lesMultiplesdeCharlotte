@@ -50,6 +50,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Administration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -255,8 +256,8 @@ try {
             <div class="articles-list">
                 <?php if (empty($recent_articles)): ?>
                     <p style="text-align: center; color: #666; padding: 2rem;">
-                        Aucun article pour le moment.
-                        <a href="manage-articles.php?action=new">Créer le premier article</a>
+                        Aucun article pour le moment.<br>
+                        <a href="manage-articles.php?action=new" class="mt-2 d-inline-block">Créer le premier article</a>
                     </p>
                 <?php else: ?>
                     <?php foreach ($recent_articles as $article): ?>
