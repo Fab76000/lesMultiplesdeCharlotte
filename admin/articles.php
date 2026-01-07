@@ -518,7 +518,29 @@ try {
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title">⚠️ Confirmer la suppression</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                </div>
+                                <form method="POST" action="articles.php">
+                                    <div class="modal-body">
+                                        <p>Êtes-vous sûr de vouloir supprimer l'article :</p>
+                                        <p class="text-center"><strong class="fs-5 text-primary" id="modal-article-name"></strong></p>
 
+                                        <input type="hidden" name="action" value="delete">
+                                        <input type="hidden" name="id" id="modal-article-id">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button type="submit" class="btn btn-danger">🗑️ Supprimer définitivement</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <?php if ($total_pages > 1): ?>
                         <div class="pagination">
                             <?php if ($page > 1): ?>
@@ -543,6 +565,8 @@ try {
 
         <?php endif; ?>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin-articles.js"></script>
 </body>
 
 </html>

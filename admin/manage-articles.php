@@ -19,12 +19,21 @@ try {
     $message_type = '';
 
     // Supprimer un article
-    if ($action === 'delete' && isset($_GET['id'])) {
-        $stmt = $pdo->prepare("DELETE FROM articles WHERE id = ?");
-        $stmt->execute([$_GET['id']]);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'delete') {
+        $id = intval($_POST['id'] ?? 0);
+        if ($id > 0) {
+            $stmt = $pdo->prepare("DELETE FROM articles WHERE id = ?");
+            if ($stmt->execute([$id])) {
+                header('Location: manage-articles.php?deleted=1');
+                exit;
+            }
+        }
+    }
+
+    // Message de suppression réussie
+    if (isset($_GET['deleted'])) {
         $message = "Article supprimé avec succès.";
         $message_type = "success";
-        $action = 'list';
     }
 
     // Changer le statut d'un article
@@ -508,11 +517,13 @@ try {
                                                 onclick="return confirm('Changer le statut de cet article ?')">
                                                 <?= $article['status'] === 'published' ? '📝' : '🚀' ?>
                                             </a>
-                                            <a href="?action=delete&id=<?= $article['id'] ?>"
-                                                class="btn btn-sm btn-danger" title="Supprimer"
-                                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')">
+                                            <button type="button"
+                                                class="btn btn-sm btn-danger btn-trigger-delete"
+                                                title="Supprimer"
+                                                data-id="<?= $article['id'] ?>"
+                                                data-name="<?= htmlspecialchars($article['title'], ENT_QUOTES) ?>">
                                                 🗑️
-                                            </a>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
@@ -544,6 +555,34 @@ try {
 
         <?php endif; ?>
     </div>
+
+    <!-- Modale de confirmation de suppression -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">⚠️ Confirmer la suppression</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form method="POST" action="manage-articles.php">
+                    <div class="modal-body">
+                        <p>Êtes-vous sûr de vouloir supprimer l'article :</p>
+                        <p class="text-center"><strong class="fs-5 text-primary" id="modal-article-name"></strong></p>
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="id" id="modal-article-id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-danger">🗑️ Supprimer définitivement</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin-articles.js"></script>
 </body>
 
 </html>
