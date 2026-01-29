@@ -50,6 +50,7 @@ node_modules/
 
 # Fichiers de configuration avec credentials
 php/db-config.php
+php/db-config-o2switch.php
 
 # Fichiers de test
 test-db.php
