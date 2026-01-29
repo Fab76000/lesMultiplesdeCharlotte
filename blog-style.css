@@ -4,6 +4,8 @@
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 2rem;
+    padding-top: 2rem;
+    min-height: calc(100vh - 200px);
     background-color: var(--background-color);
 }
 
