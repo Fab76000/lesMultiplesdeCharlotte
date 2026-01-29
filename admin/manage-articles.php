@@ -110,49 +110,8 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Articles - Administration</title>
+    <link rel="stylesheet" href="css/admin-style.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
-
-        .admin-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .admin-header h1 {
-            font-size: 1.5rem;
-        }
-
-        .admin-nav {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .admin-nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .admin-nav a:hover,
-        .admin-nav a.active {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
         .container {
             max-width: 1200px;
             margin: 2rem auto;

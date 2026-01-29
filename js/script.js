@@ -1,5 +1,5 @@
 // Menu burger
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
     var burger = document.getElementById("burger");
     var menu = document.getElementById("menuderoulant");
     if (burger && menu) {
@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             burger.classList.toggle("cross");
         });
     }
-});
 
-$(document).on('DOMContentLoaded', function () {
     // Vérifier si l'utilisateur a déjà fait un choix de cookies
     if (localStorage.getItem('cookiesChoice') === null) {
         $('#cookie-consent-banner').show();  // Affiche la bannière si aucun choix n'a été fait

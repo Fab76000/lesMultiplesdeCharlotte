@@ -1554,7 +1554,7 @@ figcaption {
     }
 
     .burger.cross .burger-line:nth-child(2) {
-        transform: rotate(-45deg) translate(7px, 0px);
+        transform: rotate(311deg) translate(-10px, 5px);
     }
 
     .burger.cross .burger-line:nth-child(3) {

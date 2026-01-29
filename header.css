@@ -288,7 +288,7 @@
     }
 
     .burger.cross .burger-line:nth-child(3) {
-        transform: rotate(-45deg) translateY(-12px) translateX(7px);
+        transform: rotate(311deg) translateY(-10px) translateX(5px);
     }
 }
 
