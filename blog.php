@@ -142,8 +142,8 @@ include 'header.php';
     ?>
 </head>
 
-<body>
-    <main class="blog-container">
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <main class="blog-container" style="flex: 1;">
         <?php if (isset($_GET['article']) && is_numeric($_GET['article'])): ?>
             <?php
             // Affichage d'un article complet
