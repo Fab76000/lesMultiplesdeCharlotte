@@ -47,3 +47,26 @@ PHPMailer/
 
 # Ignorer le node_modules
 node_modules/
+
+# Fichiers de configuration avec credentials
+php/db-config.php
+
+# Fichiers de test
+test-db.php
+test-*.php
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers IDE
+.vscode/
+.idea/
+
+# Fichiers temporaires
+*.log
+*.tmp
+
+# Dossiers de cache
+cache/
+tmp/
