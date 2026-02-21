@@ -1,0 +1,11 @@
+{
+    "name": "charlotte-goupil/multiples-charlotte",
+    "description": "Site web Charlotte Goupil - Multiples",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}

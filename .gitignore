@@ -75,3 +75,6 @@ tmp/
 
 php/db-config.php
 php/db-config-o2switch.php
+vendor/
+*.tar.gz
+*.zip
