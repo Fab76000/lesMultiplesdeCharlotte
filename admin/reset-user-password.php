@@ -50,9 +50,6 @@ try {
 if ($_POST && isset($_POST['reset_password'])) {
     $new_password = $_POST['new_password'] ?? '';
 
-    // Debug temporaire
-    $error .= "DEBUG: Formulaire soumis. User ID: $user_id. Mot de passe reçu: " . (strlen($new_password) > 0 ? "Oui (" . strlen($new_password) . " caractères)" : "Non") . ". ";
-
     // Validation mot de passe (CNIL : 12 caractères, 1 majuscule, 1 caractère spécial)
     $passwordValidation = validatePassword($new_password);
 
