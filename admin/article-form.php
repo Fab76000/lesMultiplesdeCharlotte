@@ -379,7 +379,7 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
 
 <body>
     <header class="admin-header">
-        <h1>🎨 Administration - Charlotte Goupil</h1>
+        <h1>🎨 Administration<br><small style="font-size: 0.75em; font-weight: normal; display: block; text-align: center; margin-left: 0.75rem;">Charlotte Goupil</small></h1>
         <nav class="admin-nav">
             <a href="dashboard.php">Dashboard</a>
             <a href="manage-articles.php" class="active">Articles</a>
