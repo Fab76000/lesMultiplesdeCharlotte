@@ -71,3 +71,6 @@ Thumbs.db
 # Dossiers de cache
 cache/
 tmp/
+
+php/db-config.php
+php/db-config-o2switch.php

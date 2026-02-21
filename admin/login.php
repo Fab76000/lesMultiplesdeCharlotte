@@ -216,6 +216,10 @@ if ($_POST) {
             <button type="submit" class="btn-login">
                 Se connecter
             </button>
+
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="forgot-password.php" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">Mot de passe oublié ?</a>
+            </div>
         </form>
 
         <div class="back-link">
