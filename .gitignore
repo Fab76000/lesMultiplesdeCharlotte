@@ -15,6 +15,7 @@ deploy-secure.ps1
 
 # CRITIQUE : Ignorer les fichiers de configuration avec identifiants
 php/db-config.php
+php/email-config.php
 
 # Ignorer les fichiers temporaires
 *.tmp

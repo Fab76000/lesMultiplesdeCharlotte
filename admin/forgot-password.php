@@ -8,6 +8,7 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
 }
 
 require_once '../php/db-config.php';
+require_once '../php/email-config.php';
 require_once '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -50,22 +51,28 @@ if ($_POST) {
                 $mail = new PHPMailer(true);
 
                 try {
-                    // Configuration SMTP (à adapter selon votre serveur)
-                    $mail->isSMTP();
-                    $mail->Host = 'localhost'; // Serveur SMTP local pour test
-                    $mail->SMTPAuth = false;
-                    $mail->Port = 25;
+                    // Configuration SMTP
+                    $isLocal = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
 
-                    // Pour production O2switch, utilisez :
-                    // $mail->Host = 'mail.charlottegoupil.fr';
-                    // $mail->SMTPAuth = true;
-                    // $mail->Username = 'noreply@charlottegoupil.fr';
-                    // $mail->Password = 'votre_mot_de_passe';
-                    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    // $mail->Port = 587;
+                    if ($isLocal) {
+                        // Local : serveur SMTP local (ou désactivé)
+                        $mail->isSMTP();
+                        $mail->Host = 'localhost';
+                        $mail->SMTPAuth = false;
+                        $mail->Port = 25;
+                    } else {
+                        // Production O2switch
+                        $mail->isSMTP();
+                        $mail->Host = EMAIL_HOST;
+                        $mail->SMTPAuth = true;
+                        $mail->Username = EMAIL_USERNAME;
+                        $mail->Password = EMAIL_PASSWORD;
+                        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                        $mail->Port = EMAIL_PORT;
+                    }
 
                     $mail->CharSet = 'UTF-8';
-                    $mail->setFrom('noreply@charlottegoupil.fr', 'Administration - Charlotte Goupil');
+                    $mail->setFrom(EMAIL_FROM, EMAIL_FROM_NAME);
                     $mail->addAddress($email, $user['full_name']);
 
                     $reset_link = SITE_URL . "/admin/reset-password.php?token=" . $token;
@@ -91,7 +98,7 @@ if ($_POST) {
                     $error = "Erreur lors de l'envoi de l'email : " . $mail->ErrorInfo;
                 }
             } else {
-                // Pour la sécurité, on affiche le même message même si l'email n'existe pas
+
                 $success = "Si cette adresse email existe dans notre système, vous recevrez un email de réinitialisation.";
             }
         } catch (PDOException $e) {
