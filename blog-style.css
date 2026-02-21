@@ -20,6 +20,8 @@
     font-size: 3rem;
     color: var(--red-color);
     margin-bottom: 1rem;
+    padding-top: 8rem;
+    padding-left: 2rem;
 }
 
 .blog-header p {
@@ -29,6 +31,7 @@
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
+    padding-left: 2rem;
 }
 
 .articles-grid {

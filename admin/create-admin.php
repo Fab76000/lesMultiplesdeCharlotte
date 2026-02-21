@@ -396,13 +396,15 @@ try {
                         required autocomplete="email"
                         placeholder="votre-email@exemple.com">
                 </div>
-
                 <div class="form-group">
                     <label for="password">Mot de passe :</label>
                     <input type="password" id="password" name="password"
                         required autocomplete="new-password"
-                        placeholder="12 caractères min., 1 maj,1 spécial"
+                        placeholder="Créez un mot de passe sécurisé"
                         minlength="12">
+                    <small style="display: block; margin-top: 0.5rem; color: #666; font-size: 0.85rem; line-height: 1.4;">
+                        Minimum 12 caractères avec au moins 1 majuscule et 1 caractère spécial (@#$%^&*!?-_=+)
+                    </small>
                 </div>
                 <button type="submit" class="btn-create">
                     Créer l'administrateur

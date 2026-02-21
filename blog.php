@@ -133,16 +133,12 @@ include 'header.php';
     $basePath = $isLocal ? '' : '/';
 
     foreach ($css_files as $file) {
-        if ($file === 'blog-style') {
-            echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.css?v=' . $timestamp . '">';
-        } else {
-            echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
-        }
+        echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
     }
     ?>
 </head>
 
-<body style="min-height: 100vh; display: flex; flex-direction: column;">
+<body>
     <main class="blog-container" style="flex: 1; padding-top: 2rem;">
         <?php if (isset($_GET['article']) && is_numeric($_GET['article'])): ?>
             <?php
