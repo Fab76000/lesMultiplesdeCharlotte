@@ -379,7 +379,7 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
 
 <body>
     <header class="admin-header">
-        <h1>🎨 Administration<br><small style="font-size: 0.75em; font-weight: normal; display: block; text-align: center; margin-left: 0.75rem;">Charlotte Goupil</small></h1>
+        <h1>🎨 Administration<br><small style="font-size: 0.75em; font-weight: normal; display: block; text-align: center; margin-left: 0.75rem;"><?= htmlspecialchars($_SESSION['admin_full_name'] ?? $_SESSION['admin_username']) ?></small></h1>
         <nav class="admin-nav">
             <a href="dashboard.php">Dashboard</a>
             <a href="manage-articles.php" class="active">Articles</a>
@@ -390,7 +390,7 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
             <a href="logout.php">Déconnexion</a>
         </nav>
         <div class="user-info">
-            Connecté en tant que : <strong><?= ucfirst(htmlspecialchars($_SESSION['admin_username'])) ?></strong>
+            Connecté en tant que : <strong><?= htmlspecialchars($_SESSION['admin_full_name'] ?? $_SESSION['admin_username']) ?></strong>
         </div>
     </header>
 

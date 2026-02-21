@@ -19,10 +19,11 @@ $error = '';
 
 if ($_POST) {
     $username = trim($_POST['username'] ?? '');
+    $full_name = trim($_POST['full_name'] ?? '');
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    if ($username && $email && $password) {
+    if ($username && $full_name && $email && $password) {
         // Validation mot de passe (CNIL : 12 caractères, 1 majuscule, 1 caractère spécial)
         require_once '../php/admin-functions.php';
         $passwordValidation = validatePassword($password);
@@ -47,11 +48,11 @@ if ($_POST) {
                     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
                     $stmt = $pdo->prepare("
-                    INSERT INTO admin_users (username, email, password_hash, role) 
-                    VALUES (?, ?, ?, 'admin')
+                    INSERT INTO admin_users (username, full_name, email, password_hash, role) 
+                    VALUES (?, ?, ?, ?, 'admin')
                 ");
 
-                    if ($stmt->execute([$username, $email, $password_hash])) {
+                    if ($stmt->execute([$username, $full_name, $email, $password_hash])) {
                         $success = 'Utilisateur admin créé avec succès ! Vous pouvez maintenant vous connecter.';
                     } else {
                         $error = 'Erreur lors de la création de l\'utilisateur.';
@@ -73,7 +74,7 @@ try {
     $admin_count = $stmt->fetchColumn();
 
     // Récupérer tous les utilisateurs pour affichage
-    $stmt = $pdo->query("SELECT id, username, email, role, created_at FROM admin_users ORDER BY created_at DESC");
+    $stmt = $pdo->query("SELECT id, username, full_name, email, role, created_at FROM admin_users ORDER BY created_at DESC");
     $existing_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     $admin_count = 0;
@@ -357,7 +358,7 @@ try {
         <div class="create-header">
             <h1>👥 Gestion des Utilisateurs</h1>
             <p style="color: #666; margin-bottom: 2rem;">
-                <strong>Connecté en tant que :</strong> <?= ucfirst(htmlspecialchars($_SESSION['admin_username'])) ?>
+                <strong>Connecté en tant que :</strong> <?= htmlspecialchars($_SESSION['admin_full_name'] ?? $_SESSION['admin_username']) ?>
                 | <a href="dashboard.php" style="color: #007bff;">← Retour au Dashboard</a>
             </p>
             <p>Ajouter un nouvel administrateur au système</p>
@@ -387,6 +388,14 @@ try {
                         value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"
                         required autocomplete="username"
                         placeholder="Ex: admin, charlotte, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="full_name">Prénom et Nom complet :</label>
+                    <input type="text" id="full_name" name="full_name"
+                        value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>"
+                        required autocomplete="name"
+                        placeholder="Ex: Charlotte Goupil, Fabienne Bergès">
                 </div>
 
                 <div class="form-group">
@@ -427,8 +436,8 @@ try {
                     <?php foreach ($existing_users as $user): ?>
                         <div class="user-card">
                             <div class="user-info">
-                                <strong><?= htmlspecialchars($user['username']) ?></strong>
-                                <span class="user-email"><?= htmlspecialchars($user['email']) ?></span>
+                                <strong><?= htmlspecialchars($user['full_name']) ?></strong>
+                                <span class="user-email">@<?= htmlspecialchars($user['username']) ?> - <?= htmlspecialchars($user['email']) ?></span>
                                 <span class="role-badge">
                                     <?= htmlspecialchars($user['role']) ?>
                                 </span>

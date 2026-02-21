@@ -226,7 +226,7 @@ if ($_POST && isset($_POST['reset_password'])) {
         <div class="reset-header">
             <h1>🔐 Réinitialiser Mot de Passe</h1>
             <p style="color: #666; margin-bottom: 1rem;">
-                <strong>Administrateur :</strong> <?= htmlspecialchars($_SESSION['admin_username']) ?>
+                <strong>Administrateur :</strong> <?= htmlspecialchars($_SESSION['admin_full_name'] ?? $_SESSION['admin_username']) ?>
                 | <a href="create-admin.php" style="color: #007bff;">← Retour à la gestion utilisateurs</a>
             </p>
         </div>

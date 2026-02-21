@@ -21,7 +21,7 @@ if ($_POST) {
 
             // Chercher l'utilisateur dans admin_users uniquement
             $stmt = $pdo->prepare("
-                SELECT id, username, password_hash, email, role
+                SELECT id, username, password_hash, email, role, full_name
                 FROM admin_users 
                 WHERE username = ? OR email = ?
                 LIMIT 1
@@ -39,6 +39,7 @@ if ($_POST) {
                 $_SESSION['admin_logged_in'] = true;
                 $_SESSION['admin_id'] = $user['id'];
                 $_SESSION['admin_username'] = $user['username'];
+                $_SESSION['admin_full_name'] = $user['full_name'];
                 $_SESSION['admin_email'] = $user['email'];
                 $_SESSION['admin_role'] = $user['role'];
 
