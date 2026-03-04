@@ -10,6 +10,15 @@ try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Vérifier si la colonne featured_image_height existe
+    $columnExists = false;
+    try {
+        $stmt = $pdo->query("SHOW COLUMNS FROM articles LIKE 'featured_image_height'");
+        $columnExists = $stmt->fetch() !== false;
+    } catch (PDOException $e) {
+        // Ignorer l'erreur
+    }
+
     // Pagination
     $page = max(1, intval($_GET['page'] ?? 1));
     $per_page = 6;
@@ -23,8 +32,11 @@ try {
     // Récupérer les articles publiés (avec LIMIT et OFFSET sécurisés)
     $per_page = intval($per_page);
     $offset = intval($offset);
+
+    // Construire la requête selon l'existence de la colonne
+    $heightColumn = $columnExists ? ", featured_image_height" : "";
     $stmt = $pdo->query("
-        SELECT id, title, content, excerpt, featured_image, featured_image_height, created_at 
+        SELECT id, title, content, excerpt, featured_image{$heightColumn}, created_at 
         FROM articles 
         WHERE status = 'published' 
         ORDER BY created_at DESC 

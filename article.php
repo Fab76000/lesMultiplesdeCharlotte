@@ -20,6 +20,15 @@ try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Vérifier si la colonne featured_image_height existe (pour compatibilité)
+    $columnExists = false;
+    try {
+        $stmt = $pdo->query("SHOW COLUMNS FROM articles LIKE 'featured_image_height'");
+        $columnExists = $stmt->fetch() !== false;
+    } catch (PDOException $e) {
+        // Ignorer l'erreur
+    }
+
     // Récupérer l'article
     $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = ? AND status = 'published'");
     $stmt->execute([$article_id]);
