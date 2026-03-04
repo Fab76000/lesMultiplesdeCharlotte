@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . '/php/db-config.php';
+require_once __DIR__ . '/php/blog-functions.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Initialiser Parsedown pour le Markdown
+$Parsedown = new Parsedown();
 
 // Vérifier qu'un ID d'article est fourni
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -49,39 +54,6 @@ try {
     $error = 'Erreur de connexion à la base de données.';
 }
 
-// Fonction pour convertir le Markdown simple en HTML
-function simpleMarkdownToHtml($text) {
-    // Titres
-    $text = preg_replace('/^### (.+)$/m', '<h3>$1</h3>', $text);
-    $text = preg_replace('/^## (.+)$/m', '<h2>$1</h2>', $text);
-    $text = preg_replace('/^# (.+)$/m', '<h1>$1</h1>', $text);
-
-    // Gras et italique
-    $text = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $text);
-    $text = preg_replace('/\*(.+?)\*/', '<em>$1</em>', $text);
-
-    // Liens
-    $text = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2" target="_blank">$1</a>', $text);
-
-    // Images
-    $text = preg_replace('/!\[(.+?)\]\((.+?)\)/', '<img src="$2" alt="$1" class="blog-article-image">', $text);
-
-    // Listes
-    $text = preg_replace('/^- (.+)$/m', '<li>$1</li>', $text);
-    $text = preg_replace('/(<li>.*<\/li>)/s', '<ul>$1</ul>', $text);
-
-    // Paragraphes
-    $text = preg_replace('/\n\n/', '</p><p>', $text);
-    $text = '<p>' . $text . '</p>';
-
-    // Nettoyer les paragraphes vides et mal formés
-    $text = preg_replace('/<p><\/p>/', '', $text);
-    $text = preg_replace('/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/', '$1', $text);
-    $text = preg_replace('/<p>(<ul>.*<\/ul>)<\/p>/s', '$1', $text);
-
-    return $text;
-}
-
 // Inclure le header AVANT le HTML pour les headers de sécurité
 include 'header.php';
 ?>
@@ -92,7 +64,10 @@ include 'header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($article['title']) ?> - Charlotte Goupil</title>
-    <meta name="description" content="<?= htmlspecialchars($article['excerpt'] ?: substr(strip_tags($article['content']), 0, 150)) ?>">
+    <meta name="description" content="<?php
+                                        $meta_desc = $article['excerpt'] ?: substr(strip_tags($article['content']), 0, 150);
+                                        echo htmlspecialchars(stripMarkdown($meta_desc));
+                                        ?>">
 
     <!-- Styles existants du site -->
     <?php
@@ -102,11 +77,7 @@ include 'header.php';
     $basePath = $isLocal ? '' : '/';
 
     foreach ($css_files as $file) {
-        if ($file === 'blog-style') {
-            echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.css?v=' . $timestamp . '">';
-        } else {
-            echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
-        }
+        echo '<link rel="stylesheet" type="text/css" href="' . $basePath . $file . '.min.css?v=' . $timestamp . '">';
     }
     ?>
 </head>
@@ -125,9 +96,13 @@ include 'header.php';
 
             <article class="full-article">
                 <?php if ($article['featured_image']): ?>
+                    <?php
+                    $imageHeight = !empty($article['featured_image_height']) ? (int)$article['featured_image_height'] : 300;
+                    ?>
                     <img src="<?= htmlspecialchars($article['featured_image']) ?>"
                         alt="<?= htmlspecialchars($article['title']) ?>"
-                        class="blog-article-image">
+                        class="blog-article-image"
+                        style="max-height: <?= $imageHeight ?>px; width: 100%; height: auto; object-fit: contain; display: block;">
                 <?php endif; ?>
 
                 <div class="article-date">
@@ -135,7 +110,7 @@ include 'header.php';
                 </div>
 
                 <div class="article-body">
-                    <?= simpleMarkdownToHtml($article['content']) ?>
+                    <?= $Parsedown->text($article['content']) ?>
                 </div>
             </article>
 

@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . '/php/db-config.php';
+require_once __DIR__ . '/php/blog-functions.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Initialiser Parsedown pour le Markdown
+$Parsedown = new Parsedown();
 
 try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
@@ -19,7 +24,7 @@ try {
     $per_page = intval($per_page);
     $offset = intval($offset);
     $stmt = $pdo->query("
-        SELECT id, title, content, excerpt, featured_image, created_at 
+        SELECT id, title, content, excerpt, featured_image, featured_image_height, created_at 
         FROM articles 
         WHERE status = 'published' 
         ORDER BY created_at DESC 
@@ -31,85 +36,10 @@ try {
     $error = 'Erreur de connexion à la base de données.';
 }
 
-// Fonction pour convertir le Markdown simple en HTML
-function simpleMarkdownToHtml($text) {
-    // Séparer en lignes pour un traitement plus propre
-    $lines = explode("\n", $text);
-    $result = [];
-    $in_list = false;
-
-    foreach ($lines as $line) {
-        $line = trim($line);
-
-        if (empty($line)) {
-            // Ligne vide - fermer la liste si ouverte
-            if ($in_list) {
-                $result[] = '</ul>';
-                $in_list = false;
-            }
-            $result[] = '<br>';
-            continue;
-        }
-
-        // Titres
-        if (preg_match('/^### (.+)$/', $line, $matches)) {
-            if ($in_list) {
-                $result[] = '</ul>';
-                $in_list = false;
-            }
-            $result[] = '<h3>' . $matches[1] . '</h3>';
-        } elseif (preg_match('/^## (.+)$/', $line, $matches)) {
-            if ($in_list) {
-                $result[] = '</ul>';
-                $in_list = false;
-            }
-            $result[] = '<h2>' . $matches[1] . '</h2>';
-        } elseif (preg_match('/^# (.+)$/', $line, $matches)) {
-            if ($in_list) {
-                $result[] = '</ul>';
-                $in_list = false;
-            }
-            $result[] = '<h1>' . $matches[1] . '</h1>';
-        }
-        // Listes
-        elseif (preg_match('/^- (.+)$/', $line, $matches)) {
-            if (!$in_list) {
-                $result[] = '<ul>';
-                $in_list = true;
-            }
-            // Traiter le gras/italique dans les éléments de liste
-            $item = $matches[1];
-            $item = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $item);
-            $item = preg_replace('/\*(.+?)\*/', '<em>$1</em>', $item);
-            $item = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2" target="_blank">$1</a>', $item);
-            $result[] = '<li>' . $item . '</li>';
-        }
-        // Paragraphe normal
-        else {
-            if ($in_list) {
-                $result[] = '</ul>';
-                $in_list = false;
-            }
-            // Traiter le gras/italique/liens/images
-            $line = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $line);
-            $line = preg_replace('/\*(.+?)\*/', '<em>$1</em>', $line);
-            $line = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2" target="_blank">$1</a>', $line);
-            $line = preg_replace('/!\[(.+?)\]\((.+?)\)/', '<img src="$2" alt="$1" class="blog-article-image">', $line);
-            $result[] = $line;
-        }
-    }
-
-    // Fermer la liste si elle est encore ouverte
-    if ($in_list) {
-        $result[] = '</ul>';
-    }
-
-    return implode("\n", $result);
-}
-
 // Fonction pour extraire les premiers mots d'un texte
 function getExcerpt($content, $length = 150) {
     $text = strip_tags($content);
+    $text = stripMarkdown($text);
     return strlen($text) > $length ? substr($text, 0, $length) . '...' : $text;
 }
 
@@ -154,9 +84,13 @@ include 'header.php';
 
                 <article class="full-article">
                     <?php if ($article['featured_image']): ?>
+                        <?php
+                        $imageHeight = !empty($article['featured_image_height']) ? (int)$article['featured_image_height'] : 300;
+                        ?>
                         <img src="<?= htmlspecialchars($article['featured_image']) ?>"
                             alt="<?= htmlspecialchars($article['title']) ?>"
-                            class="blog-article-image">
+                            class="blog-article-image"
+                            style="max-height: <?= $imageHeight ?>px; width: 100%; height: auto; object-fit: contain; display: block;">
                     <?php endif; ?>
 
                     <div class="article-date">
@@ -164,7 +98,7 @@ include 'header.php';
                     </div>
 
                     <div class="article-body">
-                        <?= simpleMarkdownToHtml($article['content']) ?>
+                        <?= $Parsedown->text($article['content']) ?>
                     </div>
                 </article>
             <?php else: ?>
@@ -197,9 +131,13 @@ include 'header.php';
                     <?php foreach ($articles as $article): ?>
                         <article class="article-card">
                             <?php if ($article['featured_image']): ?>
+                                <?php
+                                $imageHeight = !empty($article['featured_image_height']) ? (int)$article['featured_image_height'] : 300;
+                                ?>
                                 <img src="<?= htmlspecialchars($article['featured_image']) ?>"
                                     alt="<?= htmlspecialchars($article['title']) ?>"
-                                    class="blog-article-image">
+                                    class="blog-article-image"
+                                    style="max-height: <?= $imageHeight ?>px; width: 100%; height: auto; object-fit: contain; display: block;">
                             <?php else: ?>
                                 <div class="blog-article-image">
                                     ✍️
@@ -216,7 +154,12 @@ include 'header.php';
                                 </h2>
 
                                 <div class="article-excerpt">
-                                    <?= htmlspecialchars($article['excerpt'] ?: getExcerpt($article['content'])) ?>
+                                    <?php
+                                    $excerpt_text = $article['excerpt'] ?: getExcerpt($article['content']);
+                                    // Nettoyer les symboles markdown du résumé
+                                    $excerpt_text = stripMarkdown($excerpt_text);
+                                    echo htmlspecialchars($excerpt_text);
+                                    ?>
                                 </div>
 
                                 <a href="blog.php?article=<?= $article['id'] ?>" class="read-more">

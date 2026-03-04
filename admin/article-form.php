@@ -8,10 +8,23 @@ if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
 }
 
 require_once '../php/db-config.php';
+require_once '../php/blog-functions.php';
 
 try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Migration automatique : Vérifier et ajouter la colonne featured_image_height si nécessaire
+    try {
+        $stmt = $pdo->query("SHOW COLUMNS FROM articles LIKE 'featured_image_height'");
+        $columnExists = $stmt->fetch();
+
+        if (!$columnExists) {
+            $pdo->exec("ALTER TABLE articles ADD COLUMN featured_image_height INT DEFAULT 300 COMMENT 'Hauteur en pixels de l\'image mise en avant'");
+        }
+    } catch (PDOException $e) {
+        // Ignorer l'erreur si la colonne existe déjà ou autre problème mineur
+    }
 
     $action = $_GET['action'] ?? 'create';
     $article_id = $_GET['id'] ?? null;
@@ -42,9 +55,30 @@ try {
         $excerpt = trim($_POST['excerpt'] ?? '');
         $status = $_POST['status'] ?? 'draft';
         $featured_image = trim($_POST['featured_image'] ?? '');
+        $featured_image_height = !empty($_POST['featured_image_height']) ? (int)$_POST['featured_image_height'] : 300;
         $category_id = !empty($_POST['category_id']) ? (int)$_POST['category_id'] : null;
 
         $errors = [];
+
+        // Gestion de l'upload de l'image mise en avant
+        if (isset($_FILES['featured_image_file']) && $_FILES['featured_image_file']['error'] === UPLOAD_ERR_OK) {
+            $uploadDir = '../images/blog/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0755, true);
+            }
+
+            $fileExtension = strtolower(pathinfo($_FILES['featured_image_file']['name'], PATHINFO_EXTENSION));
+            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+            if (in_array($fileExtension, $allowedExtensions)) {
+                $fileName = 'featured_' . uniqid() . '.' . $fileExtension;
+                $filePath = $uploadDir . $fileName;
+
+                if (move_uploaded_file($_FILES['featured_image_file']['tmp_name'], $filePath)) {
+                    $featured_image = 'images/blog/' . $fileName;
+                }
+            }
+        }
 
         // Validation
         if (empty($title)) {
@@ -61,44 +95,11 @@ try {
 
         // Générer automatiquement l'extrait s'il est vide
         if (empty($excerpt) && !empty($content)) {
-            $excerpt = substr(strip_tags($content), 0, 200) . '...';
+            $excerpt = generateExcerpt($content, 200);
         }
 
-        // Générer le slug à partir du titre
-        function generateSlug($title, $pdo, $current_id = null) {
-            // Nettoyer et convertir le titre en slug
-            $slug = strtolower($title);
-            $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
-            $slug = trim($slug, '-');
-
-            // Vérifier l'unicité
-            $base_slug = $slug;
-            $counter = 1;
-
-            while (true) {
-                $check_sql = "SELECT id FROM articles WHERE slug = ?";
-                $params = [$slug];
-
-                if ($current_id) {
-                    $check_sql .= " AND id != ?";
-                    $params[] = $current_id;
-                }
-
-                $stmt = $pdo->prepare($check_sql);
-                $stmt->execute($params);
-
-                if (!$stmt->fetchColumn()) {
-                    break; // Slug disponible
-                }
-
-                $slug = $base_slug . '-' . $counter;
-                $counter++;
-            }
-
-            return $slug;
-        }
-
-        $slug = generateSlug($title, $pdo, $article_id);
+        // Générer le slug unique à partir du titre
+        $slug = generateUniqueSlug($title, $article_id);
 
         if (empty($errors)) {
             try {
@@ -106,20 +107,20 @@ try {
                     // Mise à jour
                     $stmt = $pdo->prepare("
                         UPDATE articles 
-                        SET title = ?, slug = ?, content = ?, excerpt = ?, status = ?, featured_image = ?, category_id = ?, updated_at = NOW()
+                        SET title = ?, slug = ?, content = ?, excerpt = ?, status = ?, featured_image = ?, featured_image_height = ?, category_id = ?, updated_at = NOW()
                         WHERE id = ?
                     ");
-                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $category_id, $article_id]);
+                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $featured_image_height, $category_id, $article_id]);
 
                     $message = "Article mis à jour avec succès.";
                     $message_type = "success";
                 } else {
                     // Création
                     $stmt = $pdo->prepare("
-                        INSERT INTO articles (title, slug, content, excerpt, status, featured_image, category_id, created_at) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
+                        INSERT INTO articles (title, slug, content, excerpt, status, featured_image, featured_image_height, category_id, created_at) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())
                     ");
-                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $category_id]);
+                    $stmt->execute([$title, $slug, $content, $excerpt, $status, $featured_image, $featured_image_height, $category_id]);
 
                     $article_id = $pdo->lastInsertId();
                     $message = "Article créé avec succès.";
@@ -163,6 +164,7 @@ $form_data = [
     'excerpt' => $article['excerpt'] ?? ($_POST['excerpt'] ?? ''),
     'status' => $article['status'] ?? ($_POST['status'] ?? 'draft'),
     'featured_image' => $article['featured_image'] ?? ($_POST['featured_image'] ?? ''),
+    'featured_image_height' => $article['featured_image_height'] ?? ($_POST['featured_image_height'] ?? 300),
     'category_id' => $article['category_id'] ?? ($_POST['category_id'] ?? ''),
 ];
 
@@ -374,6 +376,26 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
             font-size: 0.9rem;
             color: #666;
         }
+
+        .btn-upload-image {
+            padding: 0.5rem 1rem;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-upload-image:hover {
+            background: #0b5ed7;
+        }
+
+        .btn-upload-image:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
@@ -426,7 +448,7 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
             <?php endif; ?>
 
             <div class="form-container">
-                <form method="POST" id="articleForm">
+                <form method="POST" id="articleForm" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="title">Titre de l'article *</label>
@@ -482,11 +504,51 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
                     <div class="form-row">
                         <div class="form-group full-width">
                             <label for="featured_image">Image mise en avant</label>
+
+                            <!-- Aperçu de l'image -->
+                            <?php if (!empty($form_data['featured_image'])): ?>
+                                <div id="featuredImagePreview" style="margin-bottom: 10px;">
+                                    <img src="../<?= htmlspecialchars($form_data['featured_image']) ?>" alt="Image mise en avant" style="max-width: 300px; max-height: 200px; border-radius: 5px; border: 2px solid #ddd;">
+                                    <button type="button" onclick="removeFeaturedImage()" style="display: block; margin-top: 5px; padding: 5px 10px; background: #dc3545; color: white; border: none; border-radius: 3px; cursor: pointer;">🗑️ Supprimer l'image</button>
+                                </div>
+                            <?php else: ?>
+                                <div id="featuredImagePreview" style="margin-bottom: 10px; display: none;">
+                                    <img id="previewImg" src="" alt="Aperçu" style="max-width: 300px; max-height: 200px; border: 2px solid #ddd;">
+                                    <button type="button" onclick="removeFeaturedImage()" style="display: block; margin-top: 5px; padding: 5px 10px; background: #dc3545; color: white; border: none; border-radius: 3px; cursor: pointer;">🗑️ Supprimer l'image</button>
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Bouton pour uploader une image locale -->
+                            <div style="margin-bottom: 10px;">
+                                <button type="button" class="btn-upload-featured" onclick="document.getElementById('featuredImageFile').click()" style="padding: 8px 16px; background: #198754; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                                    Choisir une image locale
+                                </button>
+                                <input type="file" id="featuredImageFile" name="featured_image_file" accept="image/jpeg,image/jpg,image/png,image/gif,image/webp" style="display: none;">
+                            </div>
+
+                            <div style="text-align: center; margin: 10px 0; color: #6c757d;">ou</div>
+
+                            <!-- Champ URL conservé -->
                             <input type="url" id="featured_image" name="featured_image" class="form-control"
                                 value="<?= htmlspecialchars($form_data['featured_image']) ?>"
                                 placeholder="https://exemple.com/image.jpg">
                             <div class="form-help">
-                                URL de l'image principale de l'article (optionnel)
+                                Uploadez une image locale ou entrez l'URL d'une image en ligne (optionnel)
+                            </div>
+
+                            <!-- Champ pour la hauteur de l'image -->
+                            <div style="margin-top: 15px;">
+                                <label for="featured_image_height" style="display: block; margin-bottom: 5px; font-weight: 500;">
+                                    Hauteur de l'image (en pixels)
+                                </label>
+                                <input type="number" id="featured_image_height" name="featured_image_height"
+                                    class="form-control"
+                                    value="<?= htmlspecialchars($form_data['featured_image_height']) ?>"
+                                    min="100" max="800" step="10"
+                                    placeholder="300">
+                                <div class="form-help">
+                                    Hauteur maximum de l'image en pixels (défaut: 300px). Suggestions: Petite (200-250), Moyenne (300-400), Grande (500-600)
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,6 +586,15 @@ $page_title = $action === 'edit' ? 'Modifier l\'article' : 'Nouvel article';
                                         <strong style="color: #664d03;">💡 Astuce :</strong> <span style="color: #664d03;">Les titres doivent être sur une ligne séparée pour fonctionner !</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Bouton pour ajouter une image -->
+                            <div style="margin-bottom: 10px;">
+                                <button type="button" class="btn-upload-image" onclick="document.getElementById('imageUpload').click()">
+                                    📎 Ajouter une image
+                                </button>
+                                <input type="file" id="imageUpload" accept="image/jpeg,image/jpg,image/png,image/gif,image/webp,image/svg+xml" style="display: none;">
+                                <span id="uploadStatus" style="margin-left: 10px; font-size: 0.9em;"></span>
                             </div>
 
                             <textarea id="content" name="content" class="form-control content-editor" required
@@ -637,6 +708,147 @@ Vous pouvez écrire du **texte gras** et du *texte italique*.
             }
         }
 
+        // Gestion de l'upload d'images
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageUpload = document.getElementById('imageUpload');
+            const uploadBtn = document.querySelector('.btn-upload-image');
+            const uploadStatus = document.getElementById('uploadStatus');
+
+            if (imageUpload) {
+                imageUpload.addEventListener('change', async function(e) {
+                    const file = e.target.files[0];
+                    if (!file) return;
+
+                    // Vérifier le type de fichier
+                    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp', 'image/svg+xml'];
+                    if (!allowedTypes.includes(file.type)) {
+                        uploadStatus.textContent = '❌ Type de fichier non autorisé';
+                        uploadStatus.style.color = '#dc3545';
+                        return;
+                    }
+
+                    // Vérifier la taille (5MB max)
+                    if (file.size > 5 * 1024 * 1024) {
+                        uploadStatus.textContent = '❌ Fichier trop volumineux (max 5MB)';
+                        uploadStatus.style.color = '#dc3545';
+                        return;
+                    }
+
+                    // Afficher le statut de chargement
+                    uploadStatus.textContent = '⏳ Upload en cours...';
+                    uploadStatus.style.color = '#0d6efd';
+                    uploadBtn.disabled = true;
+
+                    // Créer le FormData
+                    const formData = new FormData();
+                    formData.append('image', file);
+
+                    try {
+                        const response = await fetch('upload-image.php', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Demander la hauteur souhaitée
+                            const heightPrompt = prompt(
+                                'Quelle hauteur souhaitez-vous pour cette image ?\n\n' +
+                                '• Tapez un nombre en pixels (ex: 300)\n' +
+                                '• Ou laissez vide pour la taille automatique\n\n' +
+                                'Tailles suggérées :\n' +
+                                '- Petite : 200-250px\n' +
+                                '- Moyenne : 300-400px\n' +
+                                '- Grande : 500-600px',
+                                '300'
+                            );
+
+                            let imageMarkdown;
+                            const altText = file.name.replace(/\.\w+$/, '');
+
+                            if (heightPrompt && !isNaN(heightPrompt) && heightPrompt.trim() !== '') {
+                                // Image avec hauteur personnalisée
+                                const height = parseInt(heightPrompt);
+                                imageMarkdown = `\n<img src="${result.url}" alt="${altText}" style="max-height: ${height}px; width: auto; height: auto;">\n`;
+                            } else {
+                                // Image en taille automatique (Markdown standard)
+                                imageMarkdown = `\n![${altText}](${result.url})\n`;
+                            }
+
+                            insertText(imageMarkdown);
+
+                            uploadStatus.textContent = '✅ Image ajoutée !';
+                            uploadStatus.style.color = '#28a745';
+
+                            // Réinitialiser après 3 secondes
+                            setTimeout(() => {
+                                uploadStatus.textContent = '';
+                                imageUpload.value = '';
+                            }, 3000);
+                        } else {
+                            uploadStatus.textContent = '❌ ' + result.message;
+                            uploadStatus.style.color = '#dc3545';
+                        }
+                    } catch (error) {
+                        console.error('Erreur upload:', error);
+                        uploadStatus.textContent = '❌ Erreur lors de l\'upload';
+                        uploadStatus.style.color = '#dc3545';
+                    } finally {
+                        uploadBtn.disabled = false;
+                    }
+                });
+            }
+        });
+
+        // Génération automatique de l'extrait
+        let excerptTimeout;
+        let userEditedExcerpt = false;
+
+        function autoGenerateExcerpt() {
+            const contentField = document.getElementById('content');
+            const excerptField = document.getElementById('excerpt');
+
+            if (!contentField || !excerptField) return;
+
+            // Si l'utilisateur a modifié manuellement l'extrait, ne pas écraser
+            if (userEditedExcerpt && excerptField.value.trim() !== '') return;
+
+            clearTimeout(excerptTimeout);
+            excerptTimeout = setTimeout(() => {
+                let content = contentField.value.trim();
+
+                if (!content) {
+                    if (!userEditedExcerpt) excerptField.value = '';
+                    return;
+                }
+
+                // Supprimer les symboles markdown
+                content = content.replace(/^#{1,6}\s+/gm, ''); // Titres
+                content = content.replace(/\*\*(.+?)\*\*/g, '$1'); // Gras
+                content = content.replace(/\*(.+?)\*/g, '$1'); // Italique
+                content = content.replace(/\[(.+?)\]\(.+?\)/g, '$1'); // Liens
+                content = content.replace(/!\[.*?\]\(.+?\)/g, ''); // Images
+                content = content.replace(/^[\-\*]\s+/gm, ''); // Listes
+                content = content.replace(/`(.+?)`/g, '$1'); // Code inline
+                content = content.replace(/\s+/g, ' '); // Espaces multiples
+                content = content.trim();
+
+                // Tronquer à 200 caractères au mot entier
+                const maxLength = 200;
+                if (content.length > maxLength) {
+                    content = content.substring(0, maxLength);
+                    const lastSpace = content.lastIndexOf(' ');
+                    if (lastSpace !== -1) {
+                        content = content.substring(0, lastSpace);
+                    }
+                    content += '...';
+                }
+
+                excerptField.value = content;
+            }, 500); // Délai de 500ms pour éviter trop de calculs
+        }
+
         // Auto-sauvegarde en brouillon (optionnel)
         let saveTimeout;
 
@@ -647,14 +859,59 @@ Vous pouvez écrire du **texte gras** et du *texte italique*.
             }, 30000);
         }
 
+        // Gestion de l'image mise en avant
+        function removeFeaturedImage() {
+            document.getElementById('featured_image').value = '';
+            document.getElementById('featuredImageFile').value = '';
+            const preview = document.getElementById('featuredImagePreview');
+            if (preview) {
+                preview.style.display = 'none';
+            }
+        }
+
+        // Prévisualisation de l'image mise en avant lors de la sélection
+        const featuredImageFile = document.getElementById('featuredImageFile');
+        if (featuredImageFile) {
+            featuredImageFile.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        const preview = document.getElementById('featuredImagePreview');
+                        const previewImg = document.getElementById('previewImg');
+                        if (preview && previewImg) {
+                            previewImg.src = event.target.result;
+                            preview.style.display = 'block';
+                        }
+                    };
+                    reader.readAsDataURL(file);
+
+                    // Vider le champ URL si une image locale est choisie
+                    document.getElementById('featured_image').value = '';
+                }
+            });
+        }
+
         // Initialisation des gestionnaires d'événements
         document.addEventListener('DOMContentLoaded', function() {
             // Auto-sauvegarde
             const titleField = document.getElementById('title');
             const contentField = document.getElementById('content');
+            const excerptField = document.getElementById('excerpt');
 
             if (titleField) titleField.addEventListener('input', autoSave);
-            if (contentField) contentField.addEventListener('input', autoSave);
+            if (contentField) {
+                contentField.addEventListener('input', autoSave);
+                // Génération automatique de l'extrait pendant la saisie du contenu
+                contentField.addEventListener('input', autoGenerateExcerpt);
+            }
+
+            // Détecter si l'utilisateur modifie manuellement l'extrait
+            if (excerptField) {
+                excerptField.addEventListener('input', function() {
+                    userEditedExcerpt = true;
+                });
+            }
 
             // Gestionnaires pour les boutons de l'éditeur
             const editorButtons = document.querySelectorAll('.editor-btn');

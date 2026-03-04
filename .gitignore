@@ -78,3 +78,7 @@ php/db-config-o2switch.php
 vendor/
 *.tar.gz
 *.zip
+
+# Images uploadées par les utilisateurs (ne pas versionner)
+images/blog/*
+!images/blog/.gitkeep

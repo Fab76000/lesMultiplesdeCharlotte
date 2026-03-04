@@ -1,5 +1,10 @@
 <?php
-require_once 'php/db-config.php';
+require_once '../php/db-config.php';
+require_once '../php/blog-functions.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Initialiser Parsedown pour le Markdown
+$Parsedown = new Parsedown();
 
 try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
@@ -29,39 +34,6 @@ try {
 } catch (PDOException $e) {
     $articles = [];
     $error = 'Erreur de connexion à la base de données.';
-}
-
-// Fonction pour convertir le Markdown simple en HTML
-function simpleMarkdownToHtml($text) {
-    // Titres
-    $text = preg_replace('/^### (.+)$/m', '<h3>$1</h3>', $text);
-    $text = preg_replace('/^## (.+)$/m', '<h2>$1</h2>', $text);
-    $text = preg_replace('/^# (.+)$/m', '<h1>$1</h1>', $text);
-
-    // Gras et italique
-    $text = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $text);
-    $text = preg_replace('/\*(.+?)\*/', '<em>$1</em>', $text);
-
-    // Liens
-    $text = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2" target="_blank">$1</a>', $text);
-
-    // Images
-    $text = preg_replace('/!\[(.+?)\]\((.+?)\)/', '<img src="$2" alt="$1" class="article-image">', $text);
-
-    // Listes
-    $text = preg_replace('/^- (.+)$/m', '<li>$1</li>', $text);
-    $text = preg_replace('/(<li>.*<\/li>)/s', '<ul>$1</ul>', $text);
-
-    // Paragraphes
-    $text = preg_replace('/\n\n/', '</p><p>', $text);
-    $text = '<p>' . $text . '</p>';
-
-    // Nettoyer les paragraphes vides et mal formés
-    $text = preg_replace('/<p><\/p>/', '', $text);
-    $text = preg_replace('/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/', '$1', $text);
-    $text = preg_replace('/<p>(<ul>.*<\/ul>)<\/p>/s', '$1', $text);
-
-    return $text;
 }
 
 // Fonction pour extraire les premiers mots d'un texte
@@ -362,7 +334,7 @@ function getExcerpt($content, $length = 150) {
                     </div>
 
                     <div class="article-body">
-                        <?= simpleMarkdownToHtml($article['content']) ?>
+                        <?= $Parsedown->text($article['content']) ?>
                     </div>
                 </article>
             <?php else: ?>

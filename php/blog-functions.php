@@ -24,14 +24,56 @@ function generateSlug($title) {
 }
 
 /**
+ * Supprime les symboles markdown d'un texte
+ * @param string $text Le texte contenant du markdown
+ * @return string Le texte sans symboles markdown
+ */
+function stripMarkdown($text) {
+    // Supprimer les titres markdown (##, ###, etc.)
+    $text = preg_replace('/^#{1,6}\s+/m', '', $text);
+
+    // Supprimer le gras (**texte** ou __texte__)
+    $text = preg_replace('/(\*\*|__)(.+?)(\*\*|__)/', '$2', $text);
+
+    // Supprimer l'italique (*texte* ou _texte_)
+    $text = preg_replace('/(\*|_)(.+?)(\*|_)/', '$2', $text);
+
+    // Supprimer les liens [texte](url)
+    $text = preg_replace('/\[([^\]]+)\]\([^\)]+\)/', '$1', $text);
+
+    // Supprimer les images ![alt](url)
+    $text = preg_replace('/!\[([^\]]*)\]\([^\)]+\)/', '', $text);
+
+    // Supprimer les listes (- ou *)
+    $text = preg_replace('/^[\-\*]\s+/m', '', $text);
+
+    // Supprimer les lignes horizontales (---, ___, ***)
+    $text = preg_replace('/^(\-{3,}|_{3,}|\*{3,})$/m', '', $text);
+
+    // Supprimer les backticks pour le code
+    $text = preg_replace('/`([^`]+)`/', '$1', $text);
+
+    // Nettoyer les espaces multiples
+    $text = preg_replace('/\s+/', ' ', $text);
+
+    return trim($text);
+}
+
+/**
  * Génère un excerpt à partir du contenu complet
  * @param string $content Le contenu complet de l'article
  * @param int $length Longueur maximum de l'excerpt (défaut: 200)
  * @return string L'excerpt généré
  */
 function generateExcerpt($content, $length = 200) {
-    // Suppression des balises HTML
-    $text = strip_tags($content);
+    // Supprimer les balises <img> HTML complètes
+    $text = preg_replace('/<img[^>]+>/i', '', $content);
+
+    // Suppression des balises HTML restantes
+    $text = strip_tags($text);
+
+    // Suppression des symboles markdown
+    $text = stripMarkdown($text);
 
     // Troncature propre (coupe au mot entier)
     if (strlen($text) > $length) {
