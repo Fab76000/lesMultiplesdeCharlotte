@@ -20,6 +20,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- PARTIE CHANGEMENT DE STATUT ---
+    const statusModalElement = document.getElementById('statusModal');
+
+    if (statusModalElement) {
+        const bootstrapStatusModal = new bootstrap.Modal(statusModalElement);
+        const modalHeader = document.getElementById('modal-status-header');
+        const modalTitle = document.getElementById('modal-status-title');
+        const modalQuestion = document.getElementById('modal-status-question');
+        const modalArticleName = document.getElementById('modal-status-article-name');
+        const modalConfirmBtn = document.getElementById('modal-status-confirm');
+
+        document.querySelectorAll('.btn-trigger-status').forEach(button => {
+            button.addEventListener('click', function () {
+                const id = this.getAttribute('data-id');
+                const name = this.getAttribute('data-name');
+                const currentStatus = this.getAttribute('data-status');
+                const newStatus = this.getAttribute('data-new-status');
+
+                // Configuration selon le nouveau statut
+                if (newStatus === 'published') {
+                    modalHeader.className = 'modal-header bg-success text-white';
+                    modalTitle.innerHTML = '🚀 Publier l\'article';
+                    modalQuestion.textContent = 'Voulez-vous publier l\'article :';
+                    modalConfirmBtn.className = 'btn btn-success';
+                    modalConfirmBtn.innerHTML = '🚀 Publier';
+                } else {
+                    modalHeader.className = 'modal-header bg-warning';
+                    modalTitle.innerHTML = '📝 Mettre en brouillon';
+                    modalQuestion.textContent = 'Voulez-vous mettre en brouillon l\'article :';
+                    modalConfirmBtn.className = 'btn btn-warning';
+                    modalConfirmBtn.innerHTML = '📝 Mettre en brouillon';
+                }
+
+                modalArticleName.textContent = name;
+                modalConfirmBtn.href = '?action=toggle_status&id=' + id;
+
+                bootstrapStatusModal.show();
+            });
+        });
+    }
+
     // --- PARTIE AUTO-SLUG ---
     const nameInput = document.getElementById('name');
     const slugInput = document.getElementById('slug');

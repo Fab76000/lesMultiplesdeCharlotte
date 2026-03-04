@@ -470,12 +470,15 @@ try {
                                                 class="btn btn-sm btn-primary" title="Modifier">
                                                 ✏️
                                             </a>
-                                            <a href="?action=toggle_status&id=<?= $article['id'] ?>"
-                                                class="btn btn-sm <?= $article['status'] === 'published' ? 'btn-warning' : 'btn-success' ?>"
+                                            <button type="button"
+                                                class="btn btn-sm <?= $article['status'] === 'published' ? 'btn-warning' : 'btn-success' ?> btn-trigger-status"
                                                 title="<?= $article['status'] === 'published' ? 'Mettre en brouillon' : 'Publier' ?>"
-                                                onclick="return confirm('Changer le statut de cet article ?')">
+                                                data-id="<?= $article['id'] ?>"
+                                                data-name="<?= htmlspecialchars($article['title'], ENT_QUOTES) ?>"
+                                                data-status="<?= $article['status'] ?>"
+                                                data-new-status="<?= $article['status'] === 'published' ? 'draft' : 'published' ?>">
                                                 <?= $article['status'] === 'published' ? '📝' : '🚀' ?>
-                                            </a>
+                                            </button>
                                             <button type="button"
                                                 class="btn btn-sm btn-danger btn-trigger-delete"
                                                 title="Supprimer"
@@ -535,6 +538,26 @@ try {
                         <button type="submit" class="btn btn-danger">🗑️ Supprimer définitivement</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de changement de statut -->
+    <div class="modal fade" id="statusModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-status-header">
+                    <h5 class="modal-title text-white" id="modal-status-title"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-status-question"></p>
+                    <p class="text-center"><strong class="fs-5 text-primary" id="modal-status-article-name"></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <a href="#" id="modal-status-confirm" class="btn"></a>
+                </div>
             </div>
         </div>
     </div>

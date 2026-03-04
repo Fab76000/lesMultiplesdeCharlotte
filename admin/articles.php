@@ -102,6 +102,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Articles - Administration</title>
     <link rel="stylesheet" href="css/admin-style.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container {
             max-width: 1200px;
@@ -460,23 +461,30 @@ try {
                                                 class="btn btn-sm btn-primary" title="Modifier">
                                                 ✏️
                                             </a>
-                                            <a href="?action=toggle_status&id=<?= $article['id'] ?>"
-                                                class="btn btn-sm <?= $article['status'] === 'published' ? 'btn-warning' : 'btn-success' ?>"
+                                            <button type="button"
+                                                class="btn btn-sm <?= $article['status'] === 'published' ? 'btn-warning' : 'btn-success' ?> btn-trigger-status"
                                                 title="<?= $article['status'] === 'published' ? 'Mettre en brouillon' : 'Publier' ?>"
-                                                onclick="return confirm('Changer le statut de cet article ?')">
+                                                data-id="<?= $article['id'] ?>"
+                                                data-name="<?= htmlspecialchars($article['title'], ENT_QUOTES) ?>"
+                                                data-status="<?= $article['status'] ?>"
+                                                data-new-status="<?= $article['status'] === 'published' ? 'draft' : 'published' ?>">
                                                 <?= $article['status'] === 'published' ? '📝' : '🚀' ?>
-                                            </a>
-                                            <a href="?action=delete&id=<?= $article['id'] ?>"
-                                                class="btn btn-sm btn-danger" title="Supprimer"
-                                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')">
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-sm btn-danger btn-trigger-delete"
+                                                title="Supprimer"
+                                                data-id="<?= $article['id'] ?>"
+                                                data-name="<?= htmlspecialchars($article['title'], ENT_QUOTES) ?>">
                                                 🗑️
-                                            </a>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+
+                    <!-- Modal de suppression -->
                     <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -497,6 +505,26 @@ try {
                                         <button type="submit" class="btn btn-danger">🗑️ Supprimer définitivement</button>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal de changement de statut -->
+                    <div class="modal fade" id="statusModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" id="modal-status-header">
+                                    <h5 class="modal-title text-white" id="modal-status-title"></h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="modal-status-question"></p>
+                                    <p class="text-center"><strong class="fs-5 text-primary" id="modal-status-article-name"></strong></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                    <a href="#" id="modal-status-confirm" class="btn"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
