@@ -63,14 +63,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<main>
 		<section class="Hero">
 			<article class="Bio">
-				<figure class="bio-figure" style="width:500px; height:480px; margin:0 auto; position:relative;">
+				<figure class="bio-figure" style="position:relative; display:inline-block; margin:0 auto;">
 					<picture>
 						<source srcset="images/Charlotte_Narcisse_small_500.webp" type="image/webp" media="(max-width: 674px)">
 						<source srcset="images/Charlotte_Narcisse_small.webp" type="image/webp">
 						<source srcset="images/Charlotte_Narcisse_small.jpg" type="image/jpeg">
 						<img src="images/Charlotte_Narcisse_small.webp" srcset="images/Charlotte_Narcisse_500_small.webp 500w, images/Charlotte_Narcisse.webp 1200w" width="500" height="480" alt="Portrait de Charlotte Goupil" style="display:block;">
 					</picture>
-					<figcaption class="bio-figcaption" style="position:absolute;bottom:0;right:0;width:100%;color:rgba(255,255,255,0.9);padding:10px;min-height:32px;box-sizing:border-box;">© Steeve Narcisse</figcaption>
+					<figcaption class="bio-figcaption">© Steeve Narcisse</figcaption>
 				</figure>
 			</article>
 			<h2 class="presentation stable-title" style="min-height:2.8em;">Charlotte Goupil, artiste normande et sans frontières</h2>

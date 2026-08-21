@@ -15,41 +15,43 @@
     align-items: center;
 }
 
-.Bio figure {
-    position: relative;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
 .Bio img {
-    margin: 10px auto 20px;
+    margin: 10px auto 0;
     max-width: 100%;
     width: auto;
     height: auto;
     display: block;
 }
 
-figure {
+.Bio figure {
     position: relative;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    width: auto;
 }
 
 figcaption {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: auto;
     color: rgba(255, 255, 255, 0.9);
     padding: 10px;
 }
 
 .Bio figcaption {
-    color: rgba(255, 255, 255, 0.9);
     position: absolute;
-    bottom: 20px;
-    left: -210px;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: auto;
     text-align: right;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 10px;
+}
+
+figure {
+    position: relative;
 }
 
 .presentation {
@@ -165,12 +167,20 @@ label {
         max-width: 100%;
         height: auto;
         width: auto;
-        margin: 10px auto 20px;
+        margin: 10px auto 0;
+    }
+
+    .Bio figure {
+        display: inline-block;
+        width: auto;
+        margin: 0 0 20px 0;
     }
 
     .Bio figcaption {
-
-        left: -60px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: auto;
     }
 
     .presentation {
